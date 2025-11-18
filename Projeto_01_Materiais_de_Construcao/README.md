@@ -1,8 +1,8 @@
-# README - Projeto 01: Materiais de Construção 📊
-
 ## 🏪 Contexto
 
 Os dados foram obtidos a partir de uma **loja de materiais de construção local**, que enfrentava dificuldades na **visualização e compreensão de suas vendas**. O objetivo do projeto foi realizar uma **Análise Exploratória de Dados (EDA)**, promovendo a limpeza, organização e transformação das informações em insights acionáveis.
+
+<br>
 
 ## 🧹 Limpeza de Dados
 
@@ -14,7 +14,9 @@ O conjunto inicial possuía registros com inconsistências, valores faltantes e 
 
 Após a limpeza, restaram apenas os registros válidos para análise, garantindo a confiabilidade dos resultados.
 
-## 🎯 Análises Realizadas
+<br>
+
+## ✅ Análises Realizadas
 
 ### 1. KPIs gerais
 
@@ -32,11 +34,15 @@ A análise permitiu identificar os principais clientes, bem como calcular o tick
 
 Foi realizada a comparação do faturamento por cidade, com visualizações gráficas para evidenciar os locais com maior volume de vendas.
 
+<br>
+
 ## 📊 Visualizações e Ferramentas
 
 - **Tabelas dinâmicas** para sumarização rápida de produtos, clientes e cidades.
 - **Gráficos** (barras, colunas e rosquinha) para apresentação visual dos insights.
 - **Excel** como ferramenta principal para análise, cálculo e criação de gráficos.
+
+<br>
 
 ## 📝 Conclusão
 
