@@ -36,6 +36,22 @@ Foi realizada a comparação do faturamento por cidade, com visualizações grá
 
 <br>
 
+## 🧪 Análise de Qualidade dos Dados
+
+Início do processo estruturado de **Avaliação da Qualidade dos Dados** a fim de mensurar a integridade e identificar os tipos de erros mais comuns no dataset original.
+
+Atividades realizadas:
+
+- **Criação de colunas auxiliares** para detectar erros automaticamente.
+- **Métricas calculadas**:
+  - % de registros OK
+  - Total de registros com erro
+  - % de registros com erro
+  - Contagem por tipo de erro
+- Base preparada para criação de **tabelas dinâmicas e gráficos**.
+
+<br>
+
 ## 📊 Visualizações e Ferramentas
 
 - **Tabelas dinâmicas** para sumarização rápida de produtos, clientes e cidades.
