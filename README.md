@@ -1,6 +1,6 @@
 # **EDA - Análises Exploratórias** 📊
 
-## ✅ Objetivos
+## ✔️ Objetivos
 - Explorar e compreender conjuntos de dados diversos.
 - Limpar e preparar dados para análise.
 - Gerar **KPIs** (indicadores-chave) para monitorar desempenho.
@@ -8,7 +8,7 @@
 - Documentar insights para apoiar tomadas de decisão.
 
 ## 📁 Estrutura do repositório
-Sugestão de organização:  
+Organização atual:  
 ```
 EDA - Análises Exploratórias/
 │
@@ -24,6 +24,3 @@ EDA - Análises Exploratórias/
 - KPIs: faturamento, ticket médio, quantidade vendida, entre outros
 - Gráficos de produto, cliente, cidade, vendas ao longo do tempo
 - Observações e insights da análise
-
-## 🛠 Ferramentas utilizadas atualmente
-- Excel (Tabelas, Fórmulas, Tabelas Dinâmicas, Gráficos)
