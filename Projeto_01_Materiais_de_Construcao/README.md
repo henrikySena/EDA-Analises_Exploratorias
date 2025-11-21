@@ -28,7 +28,7 @@ registros incorretos. As principais etapas realizas foram:
 -   Criação de colunas derivadas (ex.: valor total por venda).
 -   Validação final para garantir a integridade após o tratamento.
 
-O resultado foi uma base confiável, adequada para análises e
+O resultado foi uma base pequena porém confiável, adequada para análises e
 visualizações.
 
 <br>
@@ -38,7 +38,7 @@ visualizações.
 ### 1. KPIs Gerais
 
 Foram calculadas métricas essenciais do desempenho do negócio: - Valor
-total das vendas
+total das vendas:
 - Quantidade total vendida
 - Ticket médio
 - Quantidade média por venda
@@ -63,8 +63,7 @@ desempenho por meio de gráficos de linha e coluna.
 
 ## 🧪 Análise da Qualidade dos Dados
 
-Foi iniciado um processo estruturado de **Avaliação da Qualidade dos
-Dados**, incluindo:
+Foi conduzido um processo estruturado de Avaliação da Qualidade dos Dados, que envolveu:
 
 -   Criação de colunas auxiliares para identificação automática de
     erros.
@@ -78,14 +77,10 @@ Dados**, incluindo:
 
 <br>
 
-## 📊 Visualizações e Ferramentas
+## ⚙️ Ferramentas utilizadas
 
 -   **Excel** como ferramenta central (limpeza, modelagem, cálculos e
-    gráficos).
--   **Tabelas dinâmicas** para sumarização de produtos, clientes e
-    cidades.
--   **Gráficos** de barras, colunas e rosquinha para explorar padrões e
-    tendências.
+    visualizações).
 -   **Figma** para criação e prototipação dos dashboards em alta fidelidade.
 
 <br>
@@ -93,17 +88,7 @@ Dados**, incluindo:
 ## 📝 Conclusão
 
 Mesmo com a redução de registros após a limpeza, foi possível extrair
-**insights relevantes sobre vendas, clientes e produtos**.
-O projeto demonstra como a **análise exploratória estruturada** consegue
-transformar dados brutos em informações estratégicas para tomada de
-decisão.
-
-------------------------------------------------------------------------
-
-## 🚀 Próximos Passos
-
--   Construção de um **dashboard interativo** para monitoramento
-    contínuo.\
--   Atualização automática com novos dados conforme as vendas
-    ocorrerem.\
--   Expansão da análise para séries temporais e previsões.
+**insights relevantes sobre vendas, clientes e produtos**, demosntrando
+como a **Análise Exploratória Estruturada** consegue
+transformar dados brutos em informações estratégicas para a tomada de
+decisões.
