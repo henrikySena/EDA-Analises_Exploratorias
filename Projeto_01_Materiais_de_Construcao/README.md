@@ -3,7 +3,7 @@
 -   **Dashboard Geral (EDA)**\
     ![Dashboard EDA](dashboard-eda.png)
 
--   **Dashboard de Qualidade dos Dados**\
+-   **Dashboard de Qualidade dos Dados (DQ)**\
     *(Em desenvolvimento -- será adicionado em breve)*
 
 <br>
