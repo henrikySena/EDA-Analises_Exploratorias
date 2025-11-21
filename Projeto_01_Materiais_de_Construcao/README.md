@@ -81,7 +81,7 @@ Foi conduzido um processo estruturado de Avaliação da Qualidade dos Dados, que
 
 -   **Excel** como ferramenta central (limpeza, modelagem, cálculos e
     visualizações).
--   **Figma** para criação e prototipação dos dashboards em alta fidelidade.
+-   **Figma** para criação e prototipação dos dashboards em alta qualidade, garantindo a fidelidade das informações.
 
 <br>
 
