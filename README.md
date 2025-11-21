@@ -1,5 +1,3 @@
-# **EDA - Análises Exploratórias** 📊
-
 ## ✔️ Objetivos
 - Explorar e compreender conjuntos de dados diversos.
 - Limpar e preparar dados para análise.
