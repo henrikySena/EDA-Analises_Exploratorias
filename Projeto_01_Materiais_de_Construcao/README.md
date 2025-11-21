@@ -33,7 +33,7 @@ visualizações.
 
 <br>
 
-## ✅ Análises Realizadas
+## ✔️ Análises Realizadas
 
 ### 1. KPIs Gerais
 
