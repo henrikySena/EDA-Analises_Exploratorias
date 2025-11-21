@@ -14,8 +14,7 @@ Os dados foram obtidos a partir de uma **Loja de Materiais de Construção
 local** que enfrentava dificuldades para **visualizar, entender e
 acompanhar suas vendas**.
 O objetivo deste projeto foi conduzir uma **Análise Exploratória de
-Dados (EDA)** completa, promovendo limpeza, organização e estruturação
-do conjunto de dados para gerar **insights acionáveis**.
+Dados (EDA)** completa, incluindo uma avaliação detalhada da qualidade dos dados, além da limpeza, organização e estruturação do conjunto, garantindo confiabilidade nas informações e possibilitando a geração de insights acionáveis.
 
 <br>
 
