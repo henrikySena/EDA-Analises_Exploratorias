@@ -1,5 +1,3 @@
-# 🛠️ Análise Exploratória de Dados --- Loja de Materiais de Construção
-
 ## 📉 Dashboards Desenvolvidos
 
 -   **Dashboard Geral (EDA)**\
@@ -12,14 +10,14 @@
 
 ## 🏪 Contexto
 
-Os dados foram obtidos a partir de uma **loja de materiais de construção
+Os dados foram obtidos a partir de uma **Loja de Materiais de Construção
 local** que enfrentava dificuldades para **visualizar, entender e
-acompanhar suas vendas**.\
+acompanhar suas vendas**.
 O objetivo deste projeto foi conduzir uma **Análise Exploratória de
 Dados (EDA)** completa, promovendo limpeza, organização e estruturação
 do conjunto de dados para gerar **insights acionáveis**.
 
-`<br>`{=html}
+<br>
 
 ## 🧹 Limpeza e Preparação dos Dados
 
@@ -41,9 +39,9 @@ visualizações.
 ### 1. KPIs Gerais
 
 Foram calculadas métricas essenciais do desempenho do negócio: - Valor
-total das vendas\
-- Quantidade total vendida\
-- Ticket médio\
+total das vendas
+- Quantidade total vendida
+- Ticket médio
 - Quantidade média por venda
 
 ### 2. Produtos
@@ -53,8 +51,8 @@ quantidade vendida, com tabelas dinâmicas e gráficos de barra.
 
 ### 3. Clientes
 
-Avaliação dos principais clientes, incluindo: - Faturamento por cliente\
-- Ticket médio individual\
+Avaliação dos principais clientes, incluindo: - Faturamento por cliente
+- Ticket médio individual
 - Comparação entre tipos de cliente
 
 ### 4. Cidades
@@ -70,12 +68,12 @@ Foi iniciado um processo estruturado de **Avaliação da Qualidade dos
 Dados**, incluindo:
 
 -   Criação de colunas auxiliares para identificação automática de
-    erros.\
+    erros.
 -   Cálculo das métricas:
-    -   Percentual de registros OK\
-    -   Registros com erro\
-    -   Percentual de erros\
-    -   Tipos de erro mais comuns\
+    -   Percentual de registros OK
+    -   Registros com erro
+    -   Percentual de erros
+    -   Tipos de erro mais comuns
 -   Preparação da base para uso em tabelas dinâmicas e gráficos de
     auditoria.
 
@@ -84,18 +82,19 @@ Dados**, incluindo:
 ## 📊 Visualizações e Ferramentas
 
 -   **Excel** como ferramenta central (limpeza, modelagem, cálculos e
-    gráficos).\
+    gráficos).
 -   **Tabelas dinâmicas** para sumarização de produtos, clientes e
-    cidades.\
+    cidades.
 -   **Gráficos** de barras, colunas e rosquinha para explorar padrões e
     tendências.
+-   **Figma** para criação e prototipação dos dashboards em alta fidelidade.
 
 <br>
 
 ## 📝 Conclusão
 
 Mesmo com a redução de registros após a limpeza, foi possível extrair
-**insights relevantes sobre vendas, clientes e produtos**.\
+**insights relevantes sobre vendas, clientes e produtos**.
 O projeto demonstra como a **análise exploratória estruturada** consegue
 transformar dados brutos em informações estratégicas para tomada de
 decisão.
