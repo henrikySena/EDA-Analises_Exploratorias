@@ -1,6 +1,6 @@
 # 🛠️ Análise Exploratória de Dados --- Loja de Materiais de Construção
 
-## 📊 Dashboards
+## 📉 Dashboards Desenvolvidos
 
 -   **Dashboard Geral (EDA)**\
     ![Dashboard EDA](dashboard_eda.png)
