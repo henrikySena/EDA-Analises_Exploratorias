@@ -1,7 +1,7 @@
 ## 📉 Dashboards Desenvolvidos
 
 -   **Dashboard Geral (EDA)**\
-    ![Dashboard EDA](dashboard_eda.png)
+    ![Dashboard EDA](dashboard-eda.png)
 
 -   **Dashboard de Qualidade dos Dados**\
     *(Em desenvolvimento -- será adicionado em breve)*
