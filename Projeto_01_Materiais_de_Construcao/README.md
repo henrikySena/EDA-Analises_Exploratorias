@@ -87,7 +87,7 @@ Foi conduzido um processo estruturado de Avaliação da Qualidade dos Dados, que
 
 ## 📝 Conclusão
 
-Mesmo com a redução de registros após a limpeza, foi possível extrair
+Mesmo com uma redução significativa de registros após a limpeza, foi possível extrair
 **insights relevantes sobre vendas, clientes e produtos**, demosntrando
 como a **Análise Exploratória Estruturada** consegue
 transformar dados brutos em informações estratégicas para a tomada de
