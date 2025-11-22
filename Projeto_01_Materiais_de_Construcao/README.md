@@ -35,18 +35,41 @@ Dados (EDA)** completa, incluindo uma avaliação detalhada da qualidade dos dad
 
 <br>
 
-## 🧹 Limpeza e Preparação dos Dados
+## 🖼️ Etapas da Limpeza dos Dados (Antes → Processo → Depois)
 
-O dataset inicial apresentava inconsistências, valores ausentes e
-registros incorretos. As principais etapas realizas foram:
+Para evidenciar o impacto da limpeza e preparação da base, abaixo estão
+as principais etapas acompanhadas de exemplos visuais da planilha:
 
--   Identificação e remoção de registros incompletos
--   Padronização de datas, formatos e valores monetários
--   Criação de colunas derivadas (ex.: valor total por venda)
--   Validação final para garantir a integridade após o tratamento
+### **1. 📥 Base Original (Antes da Limpeza)**
 
-O resultado foi uma base pequena porém confiável, adequada para análises e
-visualizações.
+A planilha inicial apresentava múltiplas inconsistências: campos vazios,
+datas fora de padrão, valores monetários sem formatação e registros
+incompletos.
+
+![Base Original](Planilha_Original.png)
+
+------------------------------------------------------------------------
+
+### **2. 🔧 Processo de Tratamento e Estruturação**
+
+Nesta etapa foram aplicadas regras de validação, criação de colunas
+auxiliares, fórmulas de identificação de erros e padronização dos
+campos. É aqui que ocorre a maior parte do trabalho técnico.
+
+> *Insira aqui o print mostrando o processo de limpeza (colunas
+> auxiliares, fórmulas, marcações de erro)*\
+> `![Processo de Limpeza](CAMINHO-DA-IMAGEM-2.png)`
+
+------------------------------------------------------------------------
+
+### **3. 📊 Base Final Após a Limpeza**
+
+Depois do tratamento, a base ficou padronizada, organizada e pronta para
+análises e criação de dashboards. Só essa transformação já garante
+confiabilidade muito maior às métricas geradas.
+
+> *Insira aqui o print da base tratada e limpa*\
+> `![Base Tratada](CAMINHO-DA-IMAGEM-3.png)`
 
 <br>
 
