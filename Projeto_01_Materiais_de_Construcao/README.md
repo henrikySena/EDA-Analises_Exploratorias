@@ -35,37 +35,35 @@ Dados (EDA)** completa, incluindo uma avaliação detalhada da qualidade dos dad
 
 <br>
 
-## 🖼️ Etapas da Limpeza dos Dados (Antes → Processo → Depois)
+## 🧹 Processo da Limpeza dos Dados
 
 Para evidenciar o impacto da limpeza e preparação da base, abaixo estão
-as principais etapas acompanhadas de exemplos visuais da planilha:
+as etapas que foram realizadas, acompanhadas de exemplos visuais das planilha:
 
-### **1. 📥 Base Original (Antes da Limpeza)**
+### **1. Base Original (Antes da Limpeza)**
 
-A planilha inicial apresentava múltiplas inconsistências: campos vazios,
-datas fora de padrão, valores monetários sem formatação e registros
-incompletos.
+A planilha inicial apresentava múltiplas inconsistências: campos vazios, registros errados, valores monetários sem formatação e inforamações incompletas
 
 ![Base Original](Planilha_Original.png)
 
 ------------------------------------------------------------------------
 
-### **2. 🔧 Processo de Tratamento e Estruturação**
+### **2. Processo de Tratamento e Estruturação**
 
 Nesta etapa foram aplicadas regras de validação, criação de colunas
 auxiliares, fórmulas de identificação de erros e padronização dos
-campos. É aqui que ocorre a maior parte do trabalho técnico.
+campos
 
 
 ![Processo de Limpeza](Processo_Limpeza.png)
 
 ------------------------------------------------------------------------
 
-### **3. 📊 Base Final Após a Limpeza**
+### **3. Base Final Após a Limpeza**
 
 Depois do tratamento, a base ficou padronizada, organizada e pronta para
-análises e criação de dashboards. Só essa transformação já garante
-confiabilidade muito maior às métricas geradas.
+análises e criação de dashboards. A limpeza correta dos dados garante maior
+confiabilidade às métricas geradas.
 
 ![Base Tratada](Dados_Limpos.png)
 
