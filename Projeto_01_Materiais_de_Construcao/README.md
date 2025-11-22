@@ -1,3 +1,20 @@
+## 📝 Resumo do Projeto
+
+Este projeto apresenta uma **Análise Exploratória de Dados (EDA)** aplicada a um conjunto de vendas de uma **Loja de Materiais de Construção** local.
+O trabalho incluiu:
+
+- Limpeza e avaliação da Qualidade dos Dados (DQ)
+
+- Estruturação e padronização do dataset
+
+- Criação de dashboards visuais através da plataforma Figma
+
+- Análises sobre produtos, clientes, cidades e desempenho geral
+
+Mesmo com um dataset reduzido após o tratamento, foi possível extrair insights consistentes, demonstrando como dados brutos podem ser convertidos em informações estratégicas para a tomada de decisão.
+
+<br>
+
 ## 📉 Dashboards Desenvolvidos
 
 -   **Dashboard Geral (EDA)**\
@@ -23,10 +40,10 @@ Dados (EDA)** completa, incluindo uma avaliação detalhada da qualidade dos dad
 O dataset inicial apresentava inconsistências, valores ausentes e
 registros incorretos. As principais etapas realizas foram:
 
--   Identificação e remoção de registros incompletos.
--   Padronização de datas, formatos e valores monetários.
--   Criação de colunas derivadas (ex.: valor total por venda).
--   Validação final para garantir a integridade após o tratamento.
+-   Identificação e remoção de registros incompletos
+-   Padronização de datas, formatos e valores monetários
+-   Criação de colunas derivadas (ex.: valor total por venda)
+-   Validação final para garantir a integridade após o tratamento
 
 O resultado foi uma base pequena porém confiável, adequada para análises e
 visualizações.
@@ -37,8 +54,8 @@ visualizações.
 
 ### 1. KPIs Gerais
 
-Foram calculadas métricas essenciais do desempenho do negócio: - Valor
-total das vendas:
+Foram calculadas métricas essenciais do desempenho do negócio: 
+- Valor total das vendas
 - Quantidade total vendida
 - Ticket médio
 - Quantidade média por venda
@@ -46,7 +63,7 @@ total das vendas:
 ### 2. Produtos
 
 Identificação dos produtos de maior impacto no faturamento e na
-quantidade vendida, com tabelas dinâmicas e gráficos de barra.
+quantidade vendida, através de tabelas dinâmicas e gráficos de barra.
 
 ### 3. Clientes
 
@@ -68,10 +85,10 @@ Foi conduzido um processo estruturado de Avaliação da Qualidade dos Dados, que
 -   Criação de colunas auxiliares para identificação automática de
     erros.
 -   Cálculo das métricas:
-    -   Percentual de registros OK
-    -   Registros com erro
-    -   Percentual de erros
-    -   Tipos de erro mais comuns
+    -   Percentual de registros válidos
+    -   Registros inválidos
+    -   Percentual de registros inválidos
+    -   Tipos de erros mais comuns
 -   Preparação da base para uso em tabelas dinâmicas e gráficos de
     auditoria.
 
@@ -79,16 +96,28 @@ Foi conduzido um processo estruturado de Avaliação da Qualidade dos Dados, que
 
 ## ⚙️ Ferramentas utilizadas
 
--   **Excel** como ferramenta central (limpeza, modelagem, cálculos e
-    visualizações).
--   **Figma** para criação e prototipação dos dashboards em alta qualidade, garantindo a fidelidade das informações.
+-   **Excel** como principal ferramenta (limpeza, modelagem, cálculos e
+    visualizações primárias).
+-   **Figma** para criação e prototipação e dashboards em alta qualidade, garantindo a fidelidade das informações.
 
 <br>
 
 ## 📝 Conclusão
 
-Mesmo com uma redução significativa de registros após a limpeza, foi possível extrair
-**insights relevantes sobre vendas, clientes e produtos**, demosntrando
-como a **Análise Exploratória Estruturada** consegue
-transformar dados brutos em informações estratégicas para a tomada de
-decisões.
+Apesar de apenas **8% dos registros** estarem completamente válidos no
+conjunto inicial, o processo de limpeza permitiu recuperar uma base
+confiável para análise. Os erros mais frequentes estavam relacionados a
+**campos vazios**, principalmente em *Quantidade do produto* e *Preço*, indicando
+falhas importantes no processo de coleta e registro das informações.
+
+Mesmo com o dataset reduzido, foi possível identificar **padrões
+relevantes**: produtos que concentram boa parte do faturamento, clientes
+com comportamento de compra consistente e cidades que se destacam tanto
+em volume quanto em valor.
+
+Esse resultado mostra que, mesmo partindo de dados limitados e de baixa
+qualidade, uma **Análise Exploratória Estruturada** aliada a uma revisão
+sólida da qualidade dos dados é capaz de transformar registros brutos em
+**informações realmente úteis para a tomada de decisão**.
+
+<br>
