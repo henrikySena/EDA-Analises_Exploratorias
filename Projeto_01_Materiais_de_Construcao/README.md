@@ -56,9 +56,8 @@ Nesta etapa foram aplicadas regras de validação, criação de colunas
 auxiliares, fórmulas de identificação de erros e padronização dos
 campos. É aqui que ocorre a maior parte do trabalho técnico.
 
-> *Insira aqui o print mostrando o processo de limpeza (colunas
-> auxiliares, fórmulas, marcações de erro)*\
-> `![Processo de Limpeza](CAMINHO-DA-IMAGEM-2.png)`
+
+![Processo de Limpeza](Processo_Limpeza.png)
 
 ------------------------------------------------------------------------
 
@@ -68,8 +67,7 @@ Depois do tratamento, a base ficou padronizada, organizada e pronta para
 análises e criação de dashboards. Só essa transformação já garante
 confiabilidade muito maior às métricas geradas.
 
-> *Insira aqui o print da base tratada e limpa*\
-> `![Base Tratada](CAMINHO-DA-IMAGEM-3.png)`
+![Base Tratada](Dados_Limpos.png)
 
 <br>
 
