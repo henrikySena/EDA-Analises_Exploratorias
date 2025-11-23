@@ -11,9 +11,11 @@ Organização atual:
 EDA - Análises Exploratórias/
 │
 ├── Projeto_01_Materiais_de_Construcao/
-    ├── Materiais_de_Construcao.xlsx
-    └── README.md
-
+|    ├── Materiais_de_Construcao.xlsx
+|    └── README.md
+│
+├── Projeto_02_Producao_Agricola/
+    ├── Producao_Agricola.xlsx
 ```
 
 ## 🗂 Conteúdo típico de cada projeto
