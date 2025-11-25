@@ -18,10 +18,10 @@ Mesmo com um dataset reduzido após o tratamento, foi possível extrair insights
 ## 📉 Dashboards Desenvolvidos
 
 -   **Dashboard Geral (EDA)**\
-    ![Dashboard EDA](dashboard-eda.png)
+    ![Dashboard EDA](Dashboard_EDA.png)
 
 -   **Dashboard de Qualidade dos Dados (DQ)**\
-    ![Dashboard DQ](dashboard-dq.png)
+    ![Dashboard DQ](Dashboard_DQ.png)
 
 <br>
 
