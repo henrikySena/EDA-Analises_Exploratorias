@@ -42,7 +42,12 @@ O dataset contém as seguintes colunas principais:
 
 <br>
 
-## 📌 **3. KPIs do Projeto**
+## 📉 **3. Dashboards**
+*[em breve]*
+
+<br>
+
+## 📌 **4. KPIs do Projeto**
 
 ### 🌾 **Produtividade**
 | Indicador | Valor |
@@ -70,7 +75,7 @@ O dataset contém as seguintes colunas principais:
 
 <br>
 
-## 📈 **4. Principais Insights**
+## 📈 **5. Principais Insights**
 - A produtividade média geral é boa, mas ainda há grande variação entre culturas.
 - Apenas um terço dos solos possui pH ideal, indicando necessidade de correção.
 - O ciclo médio de 166 dias é coerente para culturas de longa duração.
@@ -82,7 +87,7 @@ O dataset contém as seguintes colunas principais:
 
 <br>
 
-## 🛠️ **5. Tecnologias e Ferramentas**
+## 🛠️ **6. Tecnologias e Ferramentas**
 - Excel
   - Limpeza de dados
   - Criação de variáveis derivadas
@@ -92,7 +97,7 @@ O dataset contém as seguintes colunas principais:
 
 <br>
 
-## 📝 **6. Próximos Passos**
+## 📝 **7. Próximos Passos**
 - Migrar o projeto para Power BI com visualizações mais ricas
 - Criar ranking por cultura, região e qualidade
 - Explorar elasticidade de preço e simulações de lucro
@@ -100,7 +105,7 @@ O dataset contém as seguintes colunas principais:
 
 <br>
 
-## 🧾 **7. Conclusão do Projeto**
+## 🧾 **8. Conclusão do Projeto**
 
 A análise revelou desafios importantes no desempenho agrícola, como a baixa proporção de solos com pH ideal e os elevados custos médios de produção — fatores que contribuem para o prejuízo médio por hectare observado no dataset. Apesar disso, a produtividade geral se mantém em um patamar razoável, com destaque para o trigo como cultura mais eficiente em termos de rendimento.
 
