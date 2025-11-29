@@ -112,7 +112,7 @@ O dataset contém as seguintes colunas principais:
 <br>
 
 8. **Não existe uma relação clara entre quantidade de chuva e pH do solo:**
-   - A análise entre pH e volume de chuva não apresentou correlação significativa. As médias de chuva permanecem estáveis entre as diferentes faixas de pH, indicando que, neste dataset, o regime de chuvas não exerce influência relevante sobre a acidez do solo. Outros fatores, como composição do solo e fertilizantes, parecem ser mais determinantes.
+   - A análise entre pH e volume de chuva não apresentou correlação significativa. As médias de chuva permanecem estáveis entre as diferentes faixas de pH, indicando que, neste dataset, o regime de chuvas não exerce influência relevante sobre a acidez do solo. Outros fatores, como o uso de certos fertilizantes, parecem ser mais determinantes.
 
 
 <br>
