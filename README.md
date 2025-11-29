@@ -16,6 +16,7 @@ EDA - Análises Exploratórias/
 │
 ├── Projeto_02_Producao_Agricola/
     ├── Producao_Agricola.xlsx
+    └── README.md
 ```
 
 ## 🗂 Conteúdo típico de cada projeto
