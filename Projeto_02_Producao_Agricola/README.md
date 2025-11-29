@@ -121,10 +121,9 @@ O dataset contém as seguintes colunas principais:
 
 ## 🧾 **8. Conclusão do Projeto**
 
-A análise revelou desafios importantes no desempenho agrícola, como a baixa proporção de solos com pH ideal e os elevados custos médios de produção — fatores que contribuem para o prejuízo médio por hectare observado no dataset. Apesar disso, a produtividade geral se mantém em um patamar razoável, com destaque para o trigo como cultura mais eficiente em termos de rendimento.
+A análise identificou desafios importantes, como a baixa proporção de solos com pH ideal e os elevados custos médios de produção, que contribuem para o prejuízo médio por hectare.  
+Apesar disso, a produtividade geral se mantém razoável, com destaque para o trigo como cultura mais eficiente.  
 
-Os insights também mostram que o uso de pesticidas não afeta diretamente a qualidade, e que não há relação clara entre os níveis de chuva e o pH do solo, indicando que esses fatores podem depender de variáveis externas ou de análises mais específicas.
-
-De forma geral, o estudo fornece um panorama sólido para compreender fatores agronômicos, operacionais e financeiros que influenciam os resultados no setor agrícola. O projeto ainda abre espaço para evoluções futuras, como visualizações em Power BI, análises por região, simulações econômicas e implementação de modelos preditivos.
+De forma geral, o estudo fornece um panorama sólido para compreender fatores agronômicos, operacionais e financeiros que influenciam os resultados no setor agrícola brasileiro.
 
 <br>
