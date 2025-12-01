@@ -46,6 +46,7 @@ O dataset contém as seguintes colunas principais:
 ### 🔹 BLOCO 1 — Produtividade (Desempenho Agrícola)
 
 ![Dashboard](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-01_Dashboard.png)
+![KPI](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-BLOCO-01_KPIs.png)
 
 ### 🔹 BLOCO 2 — Qualidade do Produto
 *(Em Breve)*
