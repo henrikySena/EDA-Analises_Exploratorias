@@ -47,6 +47,14 @@ O dataset contém as seguintes colunas principais:
 
 ![Dashboard](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-01_Dashboard.png)
 
+### 🔹 BLOCO 2 — Qualidade do Produto
+*(Em Breve)*
+
+### 🔹 BLOCO 3 — Receita, Lucro e Custos
+*(Em Breve)*
+
+### 🔹 BLOCO 4 — Eficiência Operacional
+*(Em Breve)*
 
 <br>
 
