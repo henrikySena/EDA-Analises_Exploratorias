@@ -43,7 +43,10 @@ O dataset contém as seguintes colunas principais:
 <br>
 
 ## 📉 **3. Dashboards**
-*[em breve]*
+### 🔹 BLOCO 1 — Produtividade (Desempenho Agrícola)
+
+![Dashboard](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-01_Dashboard.png)
+
 
 <br>
 
