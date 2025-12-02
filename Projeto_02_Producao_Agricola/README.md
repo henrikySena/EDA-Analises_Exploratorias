@@ -67,6 +67,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis und
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
 <br>
+
 ### 🔹 BLOCO 3 — Receita, Lucro e Custos
 *(Em Breve)*
 
