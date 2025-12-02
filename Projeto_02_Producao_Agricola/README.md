@@ -49,7 +49,7 @@ O dataset contém as seguintes colunas principais:
 ![KPI](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-01_KPI.png)
 
 ### 🔹 BLOCO 2 — Qualidade do Produto
-*(Em Breve)*
+![Dashboard](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-02_Dashboard.png)
 
 ### 🔹 BLOCO 3 — Receita, Lucro e Custos
 *(Em Breve)*
