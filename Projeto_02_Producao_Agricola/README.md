@@ -46,7 +46,6 @@ O dataset contém as seguintes colunas principais:
 ### 🔹 BLOCO 1 — Produtividade (Desempenho Agrícola)
 
 ![Dashboard](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-01_Dashboard.png)
-
 ![KPI](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-01_KPI.png)
 
 
@@ -58,7 +57,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis und
 
 ### 🔹 BLOCO 2 — Qualidade do Produto
 ![Dashboard](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-02_Dashboard.png)
-
 ![KPI](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-02_KPI.png)
 
 
@@ -69,10 +67,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis und
 <br>
 
 ### 🔹 BLOCO 3 — Receita, Lucro e Custos
-*(Em Breve)*
+![Dashboard](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-03_Dashboard.png)
+![KPI](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-03_KPI.png)
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+
+<br>
 
 ### 🔹 BLOCO 4 — Eficiência Operacional
-![Dashboard](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-03_Dashboard.png)
+
 
 <br>
 
