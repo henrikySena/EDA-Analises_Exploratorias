@@ -59,7 +59,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis und
 ### 🔹 BLOCO 2 — Qualidade do Produto
 ![Dashboard](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-02_Dashboard.png)
 
-![KPI](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-02_KPI1.png)
+![KPI](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-02_KPI.png)
 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
@@ -72,7 +72,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis und
 *(Em Breve)*
 
 ### 🔹 BLOCO 4 — Eficiência Operacional
-*(Em Breve)*
+![Dashboard](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-03_Dashboard.png)
 
 <br>
 
