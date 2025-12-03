@@ -86,7 +86,7 @@ Por fim, foi investigada a relação entre quantidade de chuvas e pH do solo, co
 ![Dashboard](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-03_Dashboard.png)
 ![KPI](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-03_KPI.png)
 
-### Neste bloco são avaliados os resultados financeiros do dataset, explorando a relação entre custos operacionais, rendimento e retorno econômico das culturas.
+### O bloco em questão avalia os resultados financeiros do dataset, explorando a relação entre custos operacionais, rendimento e retorno econômico das culturas.
 
 <br>
 
@@ -105,7 +105,9 @@ Mesmo em caráter fictício, o café permanece como a cultura mais lucrativa, o 
 ### 🔹 BLOCO 4 — Eficiência Operacional
 ![KPI](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-04_KPI.png)
 
-### O último bloco aborda variáveis relacionadas ao desempenho operacional das fazendas, com foco em tempo e uso do espaço.
+### Por fim, este bloco aborda variáveis relacionadas ao desempenho operacional das fazendas, com foco em tempo e uso do espaço.
+
+<br>
 
 - O ciclo médio de cultivo, estimado em 6 meses, indica um período relativamente uniforme entre plantio e colheita, sugerindo estruturas produtivas com ritmos semelhantes entre culturas. Em análises reais, essa métrica é essencial para planejamento de safras, rotação de culturas e otimização do calendário agrícola.
 
