@@ -98,9 +98,9 @@ Por fim, foi investigada a relação entre quantidade de chuvas e pH do solo, co
 
 Mesmo em caráter fictício, o café permanece como a cultura mais lucrativa, o que acompanha tendências reais de mercado em que o produto costuma manter alta valorização devido à forte demanda e preço agregado.
 
----
-
 <br>
+
+---
 
 ### 🔹 BLOCO 4 — Eficiência Operacional
 ![KPI](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-04_KPI.png)
@@ -109,41 +109,15 @@ Mesmo em caráter fictício, o café permanece como a cultura mais lucrativa, o 
 
 <br>
 
-- O ciclo médio de cultivo, estimado em 6 meses, indica um período relativamente uniforme entre plantio e colheita, sugerindo estruturas produtivas com ritmos semelhantes entre culturas. Em análises reais, essa métrica é essencial para planejamento de safras, rotação de culturas e otimização do calendário agrícola.
+- O ciclo médio de cultivo, estimado em **6 meses**, indica um período relativamente uniforme entre plantio e colheita, sugerindo estruturas produtivas com ritmos semelhantes entre culturas. Em análises reais, essa métrica é essencial para planejamento de safras, rotação de culturas e otimização do calendário agrícola.
 
 A área média plantada reflete o porte médio das operações representadas no dataset. Esse indicador é relevante para entender a escala produtiva, avaliar a viabilidade econômica e comparar resultados entre propriedades de diferentes tamanhos.
 
 <br>
 
-## 📌 **4. KPIs do Projeto**
+---
 
-### 🌾 **Produtividade**
-| Indicador | Valor |
-|----------|-------|
-| Produtividade Média Geral (ton/ha) | **3,97** |
-| Produtividade Média por Região (ton/ha) | **3,93** |
-| Produtividade Máxima | **6,5 ton/ha** |
-| Produtividade Mínima | **1,50 ton/ha** |
-| Cultura Mais Produtiva | **Trigo** |
-
-### 🌱 **Operacionais**
-| Indicador | Valor |
-|----------|-------|
-| Área Média Plantada | **152,35 ha** |
-| Ciclo Médio (dias) | **166 dias** |
-| Ciclo Médio (meses) | **6 meses** |
-| Percentual de Solos com pH Ideal (6–7) | **33,2%** |
-
-### 💰 **Financeiros**
-| Indicador | Valor |
-|----------|-------|
-| Receita Total Estimada | **R$ 852.912.851,51** |
-| Lucro Médio por ha | **–217,23** (prejuízo médio por hectare) |
-| Custo Médio por Cultura | **R$ 191.937,50** |
-
-<br>
-
-## 📈 **5. Principais Insights**   
+## 📈 **4. Principais Insights**   
 1. **Apenas um terço dos solos possui pH ideal, indicando necessidade de correção:**
    - A maioria dos solos é levemente ácida, o que reduz a eficiência na absorção de nutrientes. Isso indica necessidade de correção, como calagem, para melhorar a fertilidade e elevar a produtividade.
 
@@ -169,7 +143,7 @@ A área média plantada reflete o porte médio das operações representadas no 
 
 <br>
 
-## 🛠️ **6. Tecnologias e Ferramentas**
+## 🛠️ **5. Tecnologias e Ferramentas**
 - Excel
   - Limpeza de dados
   - Criação de variáveis derivadas
@@ -179,7 +153,7 @@ A área média plantada reflete o porte médio das operações representadas no 
 
 <br>
 
-## 📝 **7. Próximos Passos**
+## 📝 **6. Próximos Passos**
 - Migrar o projeto para Power BI com visualizações mais ricas
 - Criar ranking por cultura, região e qualidade
 - Explorar elasticidade de preço e simulações de lucro
@@ -187,11 +161,16 @@ A área média plantada reflete o porte médio das operações representadas no 
 
 <br>
 
-## 🧾 **8. Conclusão do Projeto**
+## 🧾 **7. Conclusão do Projeto**
 
-A análise identificou desafios importantes, como a baixa proporção de solos com pH ideal e os elevados custos médios de produção, que contribuem para o prejuízo médio por hectare.  
-Apesar disso, a produtividade geral se mantém razoável, com destaque para o trigo como cultura mais eficiente.  
+A análise exploratória permitiu compreender os principais aspectos produtivos, qualitativos e financeiros do dataset agrícola. Mesmo sendo um conjunto de dados didático, as etapas de limpeza, criação de métricas e visualizações revelaram padrões importantes, seguindo os preceitos fundamentais das etapas aplicadas em uma análise de dados."
 
-De forma geral, o estudo fornece um panorama sólido para compreender fatores agronômicos, operacionais e financeiros que influenciam os resultados no setor agrícola brasileiro.
+- O trigo destacou-se em produtividade, enquanto o café apresentou a maior lucratividade. Por outro lado, a maior parte das culturas registrou lucro negativo, evidenciando desequilíbrios entre custos e retorno — um ponto que reforça a importância de avaliar manejo, uso de insumos e planejamento operacional.
+
+- As análises de qualidade e irrigação não mostraram relações consistentes, refletindo a natureza sintética do dataset, mas servindo para ilustrar como esse tipo de investigação é essencial em cenários reais.
+
+- Iindicadores de eficiência, como ciclo médio de cultivo e área plantada, complementaram a visão geral do sistema produtivo.
+
+O projeto demonstra como uma EDA estruturada pode apoiar decisões no contexto agropecuário, integrando produtividade, qualidade e resultados econômicos de forma clara e acessível.
 
 <br>
