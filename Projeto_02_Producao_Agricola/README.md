@@ -77,7 +77,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis und
 <br>
 
 ### 🔹 BLOCO 4 — Eficiência Operacional
-
+![KPI](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-04_KPI.png)
 
 <br>
 
