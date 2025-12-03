@@ -154,8 +154,7 @@ A área média plantada reflete o porte médio das operações representadas no 
 <br>
 
 ## 📝 **6. Próximos Passos**
-- Migrar o projeto para Power BI com visualizações mais ricas
-- Criar ranking por cultura, região e qualidade
+- Migrar o projeto para Power BI com visualizações e filtragens mais ricas
 - Explorar elasticidade de preço e simulações de lucro
 - Incluir modelos preditivos (futuro)
 
