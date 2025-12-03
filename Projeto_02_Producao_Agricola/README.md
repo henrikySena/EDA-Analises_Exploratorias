@@ -1,5 +1,5 @@
 # 🌾 **Projeto 02 — Análise de Produção Agrícola**
-
+![Capa_do_Projeto](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/Capa_Projeto02.png)
 <br>
 
 ## **Relatório Técnico do Projeto**
