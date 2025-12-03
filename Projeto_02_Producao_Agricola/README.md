@@ -149,7 +149,9 @@ A área média plantada reflete o porte médio das operações representadas no 
   - Criação de variáveis derivadas
   - Tabelas e cálculos estatísticos
   - Gráficos e análises
-- (Opcional futuramente: Power BI, Python, SQL)
+- Figma
+   - Dashboards
+   - KPIs
 
 <br>
 
