@@ -51,6 +51,8 @@ O dataset contém as seguintes colunas principais:
 
 ### Este bloco apresenta uma análise do desempenho produtivo das culturas, considerando diferenças regionais, manejo e características agronômicas.
 
+<br>
+
 - Embora o trigo tenha sido a cultura **mais produtiva**, ele não foi a **mais lucrativa**. Esse contraste pode estar relacionado a fatores como manejo eficiente, resistência natural a pragas e variações climáticas, adaptação a solos mais ácidos ou secos, e maior capacidade de transformar fertilizantes e recursos hídricos em biomassa.
 
 - É importante ressaltar que produtividade elevada nem sempre se converte em lucratividade, já que custos operacionais, preço de mercado, sensibilidade logística e nível de mecanização podem reduzir o retorno financeiro.
@@ -68,30 +70,46 @@ Em um dataset didático, essa dinâmica aparece de forma simplificada, mas ancor
 
 ### Este bloco examina elementos associados à qualidade das safras e fatores que poderiam influenciá-la, como uso de pesticidas, método de irrigação e condições ambientais.
 
+<br>
+
 - A análise da relação entre a média qualitativa (A, B e C) e o uso de pesticidas não mostrou associação significativa no dataset. É importante reforçar que estes dados são didáticos e não refletem comportamentos reais já que na agricultura prática, o controle de pragas tem impacto direto sobre perdas, padrão do grão e qualidade final.
 
-- O estudo também avaliou a influência dos métodos de irrigação na produtividade, comparando sequeiro, pivô central, gotejamento e aspersão. De forma inesperada, o sequeiro apresentou o melhor desempenho, resultado que contraria evidências agronômicas reais — já que o gotejamento tende a ser o método mais eficiente em aproveitamento hídrico e estabilidade produtiva. A explicação está na própria natureza do dataset, construído para fins de EDA e sem compromisso com tendências agronômicas reais.
+- O estudo também avaliou a influência dos métodos de irrigação na produtividade, comparando sequeiro, pivô central, gotejamento e aspersão. De forma inesperada, o sequeiro apresentou o melhor desempenho, resultado que contraria evidências agronômicas reais - já que o gotejamento tende a ser o método mais eficiente em aproveitamento hídrico e estabilidade produtiva. A explicação está na própria natureza do dataset, construído para fins de EDA e sem compromisso com tendências agronômicas reais.
 
 Por fim, foi investigada a relação entre quantidade de chuvas e pH do solo, considerando a hipótese de que maior precipitação poderia aumentar a *lixiviação* e alterar a acidez. Não foi observada correlação entre essas variáveis, sugerindo que, no dataset, o pH depende mais de características do solo do que de fatores climáticos.
 
 <br>
 
+---
+
 ### 🔹 BLOCO 3 — Receita, Lucro e Custos
 ![Dashboard](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-03_Dashboard.png)
 ![KPI](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-03_KPI.png)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+### Neste bloco são avaliados os resultados financeiros do dataset, explorando a relação entre custos operacionais, rendimento e retorno econômico das culturas.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+<br>
+
+- O gráfico de **Lucro por Região e Tipo de Cultura** mostra que a maioria das culturas apresentou lucro negativo, com exceção do feijão, que ficou próximo do ponto de equilíbrio, e do café, que se destacou como a cultura mais lucrativa — ainda que com valores discretos, condizentes com o caráter didático dos dados.
+
+- A receita estimada total foi de **R$ 852.912.851,51**, mas o lucro médio por hectare atingiu **R$ –217,23**, evidenciando inconsistências operacionais, possível mau manejo ou subaproveitamento de recursos. Esse desempenho negativo pode estar ligado a custos excessivos, perdas elevadas, baixa eficiência no uso de insumos ou problemas de planejamento agronômico. Tal ocorrêcia, em um cenário realístico, necessitaria de averiguação e pesquisa imediata.
+
+- O custo médio por cultura, de **R$ 191.937,50**, reforça a necessidade de investigar desequilíbrios entre investimento e retorno. Em um cenário real, valores tão altos combinados com produtividade moderada tendem a comprometer a margem de lucro. Aqui, esse comportamento é um reflexo da natureza do dataset, destacando a importância de análises criteriosas de custo-benefício.
+
+Mesmo em caráter fictício, o café permanece como a cultura mais lucrativa, o que acompanha tendências reais de mercado em que o produto costuma manter alta valorização devido à forte demanda e preço agregado.
+
+---
 
 <br>
 
 ### 🔹 BLOCO 4 — Eficiência Operacional
 ![KPI](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-04_KPI.png)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+### O último bloco aborda variáveis relacionadas ao desempenho operacional das fazendas, com foco em tempo e uso do espaço.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+- O ciclo médio de cultivo, estimado em 6 meses, indica um período relativamente uniforme entre plantio e colheita, sugerindo estruturas produtivas com ritmos semelhantes entre culturas. Em análises reais, essa métrica é essencial para planejamento de safras, rotação de culturas e otimização do calendário agrícola.
+
+A área média plantada reflete o porte médio das operações representadas no dataset. Esse indicador é relevante para entender a escala produtiva, avaliar a viabilidade econômica e comparar resultados entre propriedades de diferentes tamanhos.
 
 <br>
 
