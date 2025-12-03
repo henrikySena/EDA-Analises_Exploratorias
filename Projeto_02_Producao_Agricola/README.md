@@ -1,4 +1,4 @@
-# 🌾 **Projeto 02 — Análise de Produção Agrícola**
+## 🌾 **Projeto 02 — Análise de Produção Agrícola**
 ![Capa_do_Projeto](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/Capa_Projeto02.png)
 <br>
 
@@ -170,7 +170,7 @@ A análise exploratória permitiu compreender os principais aspectos produtivos,
 
 - As análises de qualidade e irrigação não mostraram relações consistentes, refletindo a natureza sintética do dataset, mas servindo para ilustrar como esse tipo de investigação é essencial em cenários reais.
 
-- Iindicadores de eficiência, como ciclo médio de cultivo e área plantada, complementaram a visão geral do sistema produtivo.
+- Indicadores de eficiência, como ciclo médio de cultivo e área plantada, complementaram a visão geral do sistema produtivo.
 
 O projeto demonstra como uma EDA estruturada pode apoiar decisões no contexto agropecuário, integrando produtividade, qualidade e resultados econômicos de forma clara e acessível.
 
