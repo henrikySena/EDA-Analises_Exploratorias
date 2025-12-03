@@ -51,7 +51,9 @@ O dataset contém as seguintes colunas principais:
 
 ### Este bloco apresenta uma análise do desempenho produtivo das culturas, considerando diferenças regionais, manejo e características agronômicas.
 
-Embora o trigo tenha sido a cultura **mais produtiva**, ele não foi a **mais lucrativa**. Esse contraste pode estar relacionado a fatores como manejo eficiente, resistência natural a pragas e variações climáticas, adaptação a solos mais ácidos ou secos, e maior capacidade de transformar fertilizantes e recursos hídricos em biomassa. Porém, produtividade elevada nem sempre se converte em lucratividade, já que custos operacionais, preço de mercado, sensibilidade logística e nível de mecanização podem reduzir o retorno financeiro.
+- Embora o trigo tenha sido a cultura **mais produtiva**, ele não foi a **mais lucrativa**. Esse contraste pode estar relacionado a fatores como manejo eficiente, resistência natural a pragas e variações climáticas, adaptação a solos mais ácidos ou secos, e maior capacidade de transformar fertilizantes e recursos hídricos em biomassa.
+
+- É importante ressaltar que produtividade elevada nem sempre se converte em lucratividade, já que custos operacionais, preço de mercado, sensibilidade logística e nível de mecanização podem reduzir o retorno financeiro.
 
 Em um dataset didático, essa dinâmica aparece de forma simplificada, mas ancora tendências presentes no setor agrícola real.
 
@@ -60,13 +62,17 @@ Em um dataset didático, essa dinâmica aparece de forma simplificada, mas ancor
 ---
 
 ### 🔹 BLOCO 2 — Qualidade do Produto
+
 ![Dashboard](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-02_Dashboard.png)
 ![KPI](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-02_KPI.png)
 
+### Este bloco examina elementos associados à qualidade das safras e fatores que poderiam influenciá-la, como uso de pesticidas, método de irrigação e condições ambientais.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+- A análise da relação entre a média qualitativa (A, B e C) e o uso de pesticidas não mostrou associação significativa no dataset. É importante reforçar que estes dados são didáticos e não refletem comportamentos reais já que na agricultura prática, o controle de pragas tem impacto direto sobre perdas, padrão do grão e qualidade final.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+- O estudo também avaliou a influência dos métodos de irrigação na produtividade, comparando sequeiro, pivô central, gotejamento e aspersão. De forma inesperada, o sequeiro apresentou o melhor desempenho, resultado que contraria evidências agronômicas reais — já que o gotejamento tende a ser o método mais eficiente em aproveitamento hídrico e estabilidade produtiva. A explicação está na própria natureza do dataset, construído para fins de EDA e sem compromisso com tendências agronômicas reais.
+
+Por fim, foi investigada a relação entre quantidade de chuvas e pH do solo, considerando a hipótese de que maior precipitação poderia aumentar a *lixiviação* e alterar a acidez. Não foi observada correlação entre essas variáveis, sugerindo que, no dataset, o pH depende mais de características do solo do que de fatores climáticos.
 
 <br>
 
