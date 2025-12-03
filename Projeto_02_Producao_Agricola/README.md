@@ -49,11 +49,15 @@ O dataset contém as seguintes colunas principais:
 ![KPI](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-01_KPI.png)
 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+### Este bloco apresenta uma análise do desempenho produtivo das culturas, considerando diferenças regionais, manejo e características agronômicas.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+Embora o trigo tenha sido a cultura **mais produtiva**, ele não foi a **mais lucrativa**. Esse contraste pode estar relacionado a fatores como manejo eficiente, resistência natural a pragas e variações climáticas, adaptação a solos mais ácidos ou secos, e maior capacidade de transformar fertilizantes e recursos hídricos em biomassa. Porém, produtividade elevada nem sempre se converte em lucratividade, já que custos operacionais, preço de mercado, sensibilidade logística e nível de mecanização podem reduzir o retorno financeiro.
+
+Em um dataset didático, essa dinâmica aparece de forma simplificada, mas ancora tendências presentes no setor agrícola real.
 
 <br>
+
+---
 
 ### 🔹 BLOCO 2 — Qualidade do Produto
 ![Dashboard](https://raw.githubusercontent.com/henrikySena/EDA-Analises_Exploratorias/main/Projeto_02_Producao_Agricola/BLOCO-02_Dashboard.png)
