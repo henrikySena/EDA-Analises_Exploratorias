@@ -1,0 +1,12 @@
+Dataset Oficial - Média Tensão (UCMT)
+-------------------------------------
+
+Este arquivo contém o link para download do dataset oficial utilizado nesta parte do projeto.
+
+Nível de Tensão: Média Tensão  
+Nome do arquivo original: ucmt_pj.csv  
+Fonte: Banco de Dados do Setor Elétrico (BDGD - ANEEL)  
+URL oficial: https://dadosabertos.aneel.gov.br/dataset/base-de-dados-geografica-da-distribuidora-bdgd
+
+URL para download:
+[em breve]
