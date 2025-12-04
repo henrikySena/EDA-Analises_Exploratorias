@@ -1,9 +1,9 @@
-# 📘 Projeto 03 — Consumo Elétrico (BDGD / ANEEL)  
+##  Projeto 03 — Consumo Elétrico (BDGD / ANEEL)  
 **Análise da Distribuição e Consumo de Energia Elétrica no Brasil com base na Base de Dados Geográfica da Distribuidora (BDGD), disponibilizada pela ANEEL.**
 
 ---
 
-## 🧭 Visão Geral do Projeto
+## 📘 Visão Geral do Projeto
 
 Este projeto tem como objetivo explorar, analisar e compreender o consumo e a distribuição de energia elétrica no Brasil por meio dos dados oficiais fornecidos pela **ANEEL**.
 
@@ -29,6 +29,7 @@ Limpeza avançada, manipulação de grandes volumes de dados e análises escalá
 
 ## 📂 Estrutura da Pasta
 
+`
 Projeto_03_Consumo_Eletrico/
 │
 ├── docs/
@@ -45,7 +46,8 @@ Projeto_03_Consumo_Eletrico/
 │
 └── Projeto_03.3_Baixa_Tensao_Python/
 └── Dataset/
-└── UCBT_PJ.txt
+└── ucbt_pj.txt
+`
 
 ---
 
@@ -85,3 +87,4 @@ A base contém informações relacionadas a:
 
 ## 📌 Status do Projeto  
 *Em desenvolvimento.*
+
