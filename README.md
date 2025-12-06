@@ -5,6 +5,8 @@
 - Criar **gráficos e tabelas** para facilitar a interpretação.
 - Documentar insights para apoiar tomadas de decisão.
 
+<br>
+
 ## 📁 Estrutura do repositório
 Organização atual:  
 ```
@@ -41,6 +43,7 @@ EDA - Análises Exploratórias/
 │       └── Dataset/
 │           └── ucbt_pj.txt
 ```
+<br>
 
 ## 🗂 Conteúdo típico de cada projeto
 - Dados brutos e tratados
@@ -48,3 +51,5 @@ EDA - Análises Exploratórias/
 - KPIs: faturamento, ticket médio, quantidade vendida, entre outros
 - Gráficos de produto, cliente, cidade, vendas ao longo do tempo
 - Observações e insights da análise
+
+<br>
