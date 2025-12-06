@@ -100,8 +100,9 @@ A base contém informações relacionadas a:
 
 ## ⚙️ Status do Projeto
 
-*Em desenvolvimento.*
+*em desenvolvimento  :]*
 
 <br>
+
 
 
