@@ -36,13 +36,19 @@ O projeto foi dividido em três análises independentes, cada uma explorando um 
 ```
 Projeto_03_Consumo_Eletrico/
 │
-├── docs/
+├── Docs/
 │   ├── Manual_de_Instruções_da_BDGD.pdf
+│   └── Modulo10_PRODIST.pdf
 │   └── URL_Dataset_Oficial_BDGD.txt
 │
 ├── Projeto_03.1_Alta_Tensao_PowerBI/
 │   └── Dataset/
 │       └── ucat_pj.csv
+│       └── ucat_pj.txt
+|   └── Docs/
+│       └── dicionario_das_siglas_das_colunas-ucat_pj.txt
+|   └── EDA/
+│       └── BDGD_AltaTensao_PBI.pbix
 │
 ├── Projeto_03.2_Media_Tensao_PostgreSQL/
 │   └── Dataset/
@@ -97,4 +103,5 @@ A base contém informações relacionadas a:
 *Em desenvolvimento.*
 
 <br>
+
 
