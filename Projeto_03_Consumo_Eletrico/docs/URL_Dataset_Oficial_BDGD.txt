@@ -1,9 +1,0 @@
-URL oficial do dataset BDGD – ANEEL
-Este arquivo registra a fonte oficial utilizada para obtenção dos dados do Projeto 03.
-
-Link:
-https://dadosabertos.aneel.gov.br/dataset/base-de-dados-geografica-da-distribuidora-bdgd
-
-Responsável: Agência Nacional de Energia Elétrica (ANEEL)
-Acesso: Público
-Finalidade: Documentação da origem e confiabilidade dos dados utilizados
