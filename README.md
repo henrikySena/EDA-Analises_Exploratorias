@@ -10,7 +10,7 @@
 ## 📁 Estrutura do repositório
 Organização atual:  
 ```
-EDA - Análises Exploratórias/
+EDA-Analises_Exploratorias/
 │
 ├── Projeto_01_Materiais_de_Construcao/
 │   ├── Materiais_de_Construcao.xlsx
