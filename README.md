@@ -11,12 +11,35 @@ Organização atual:
 EDA - Análises Exploratórias/
 │
 ├── Projeto_01_Materiais_de_Construcao/
-|    ├── Materiais_de_Construcao.xlsx
-|    └── README.md
+│   ├── Materiais_de_Construcao.xlsx
+│   └── README.md
 │
 ├── Projeto_02_Producao_Agricola/
-    ├── Producao_Agricola.xlsx
-    └── README.md
+│   ├── Producao_Agricola.xlsx
+│   └── README.md
+│
+├── Projeto_03_Consumo_Eletrico/
+│   ├── Docs/
+│   │   ├── Manual_de_Instrucoes_da_BDGD.pdf
+│   │   ├── Modulo10_PRODIST.pdf
+│   │   └── URL_Dataset_Oficial_BDGD.txt
+│   │
+│   ├── Projeto_03.1_Alta_Tensao_PowerBI/
+│   │   ├── Dataset/
+│   │   │   ├── ucat_pj.csv
+│   │   │   └── ucat_pj.txt
+│   │   ├── Docs/
+│   │   │   └── dicionario_das_siglas_das_colunas-ucat_pj.txt
+│   │   └── EDA/
+│   │       └── BDGD_AltaTensao_PBI.pbix
+│   │
+│   ├── Projeto_03.2_Media_Tensao_PostgreSQL/
+│   │   └── Dataset/
+│   │       └── ucmt_pj.txt
+│   │
+│   └── Projeto_03.3_Baixa_Tensao_Python/
+│       └── Dataset/
+│           └── ucbt_pj.txt
 ```
 
 ## 🗂 Conteúdo típico de cada projeto
