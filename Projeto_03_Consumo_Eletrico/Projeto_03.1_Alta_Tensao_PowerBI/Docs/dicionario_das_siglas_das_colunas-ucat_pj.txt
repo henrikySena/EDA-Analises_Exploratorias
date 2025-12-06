@@ -1,0 +1,77 @@
+CAMPO | TIPO | TAMANHO MÁXIMO | OBRIGATÓRIO | CHAVE | PADRÃO | DESCRIÇÃO
+
+1 COD_ID Texto 20 Sim Sim Distribuidora Código identificador da unidade consumidora
+2 PN_CON Vinculado Sim Sim PONNOT (COD_ID) Código do ponto notável
+3 DIST Código externo Sim BASE DE AGENTES Código da distribuidora no cadastro ANEEL
+4 PAC Texto 20 Sim Ponto de acoplamento comum elétrico
+5 CEG Código externo Não BASE DE GERADORES Código Único de Empreendimentos de Geração (CEG)
+6 CTAT Vinculado Sim Sim CTAT (COD_ID) Código do circuito de alta tensão
+7 SUB Vinculado Sim Sim SUB (COD_ID) Código da subestação
+8 CONJ Vinculado Sim Sim CONJ (COD_ID) Código do conjunto de unidades consumidoras
+9 MUN Código externo Sim MALHA MUNICIPAL DIGITAL Código do município na malha municipal digital
+10 LGRD Texto 255 Sim Logradouro da unidade consumidora
+11 BRR Texto 255 Sim Bairro da unidade consumidora
+12 CEP Texto 8 Sim CEP da unidade consumidora
+13 CLAS_SUB Código DDA Sim TCLASUBCLA (COD_ID) Código de referência da classe e subclasse
+14 CNAE Código externo Sim CNAE Código da atividade econômica
+15 TIP_CC Texto 20 Sim Código da tipologia de curva de carga associada
+16 FAS_CON Código DDA Sim TFASCON (COD_ID) Código de referência das fases de conexão
+17 GRU_TEN Código DDA Sim TGRUTEN (COD_ID) Código de referência do grupo de tensão
+18 TEN_FORN Código DDA Sim TTEN (COD_ID) Código de referência da tensão de fornecimento
+19 GRU_TAR Código DDA Sim TGRUTAR (COD_ID) Código de referência do grupo tarifário
+20 SIT_ATIV Código DDA Sim TSITATI (COD_ID) Código de referência da situação de ativação
+21 DAT_CON Texto 10 Sim DD/MM/AAAA Data de conexão
+22 CAR_INST Decimal Sim Carga instalada (kW)
+23 LIV Inteiro Sim (0=Falso ou 1=Verdadeiro) Indica se é consumidor livre ou parcialmente livre
+24 ARE_LOC Código DDA Sim TARE (COD_ID) Código de referência da área em que a unidade consumidora está localizada
+25 DEM_P_01 Decimal Sim Demanda ativa máxima medida na ponta do 1º período (kW)
+26 DEM_P_02 Decimal Sim Demanda ativa máxima medida na ponta do 2º período (kW)
+27 DEM_P_03 Decimal Sim Demanda ativa máxima medida na ponta do 3º período (kW)
+28 DEM_P_04 Decimal Sim Demanda ativa máxima medida na ponta do 4º período (kW)
+29 DEM_P_05 Decimal Sim Demanda ativa máxima medida na ponta do 5º período (kW)
+30 DEM_P_06 Decimal Sim Demanda ativa máxima medida na ponta do 6º período (kW)
+31 DEM_P_07 Decimal Sim Demanda ativa máxima medida na ponta do 7º período (kW)
+32 DEM_P_08 Decimal Sim Demanda ativa máxima medida na ponta do 8º período (kW)
+33 DEM_P_09 Decimal Sim Demanda ativa máxima medida na ponta do 9º período (kW)
+34 DEM_P_10 Decimal Sim Demanda ativa máxima medida na ponta do 10º período (kW)
+35 DEM_P_11 Decimal Sim Demanda ativa máxima medida na ponta do 11º período (kW)
+36 DEM_P_12 Decimal Sim Demanda ativa máxima medida na ponta do 12º período (kW)
+37 DEM_F_01 Decimal Sim Demanda ativa máxima medida fora de ponta do 1º período (kW)
+38 DEM_F_02 Decimal Sim Demanda ativa máxima medida fora de ponta do 2º período (kW)
+39 DEM_F_03 Decimal Sim Demanda ativa máxima medida fora de ponta do 3º período (kW)
+40 DEM_F_04 Decimal Sim Demanda ativa máxima medida fora de ponta do 4º período (kW)
+41 DEM_F_05 Decimal Sim Demanda ativa máxima medida fora de ponta do 5º período (kW)
+42 DEM_F_06 Decimal Sim Demanda ativa máxima medida fora de ponta do 6º período (kW)
+43 DEM_F_07 Decimal Sim Demanda ativa máxima medida fora de ponta do 7º período (kW)
+44 DEM_F_08 Decimal Sim Demanda ativa máxima medida fora de ponta do 8º período (kW)
+45 DEM_F_09 Decimal Sim Demanda ativa máxima medida fora de ponta do 9º período (kW)
+46 DEM_F_10 Decimal Sim Demanda ativa máxima medida fora de ponta do 10º período (kW)
+47 DEM_F_11 Decimal Sim Demanda ativa máxima medida fora de ponta do 11º período (kW)
+48 DEM_F_12 Decimal Sim Demanda ativa máxima medida fora de ponta do 12º período (kW)
+49 ENE_P_01 Decimal Sim Energia ativa medida na ponta do 1º período (kWh)
+50 ENE_P_02 Decimal Sim Energia ativa medida na ponta do 2º período (kWh)
+51 ENE_P_03 Decimal Sim Energia ativa medida na ponta do 3º período (kWh)
+52 ENE_P_04 Decimal Sim Energia ativa medida na ponta do 4º período (kWh)
+53 ENE_P_05 Decimal Sim Energia ativa medida na ponta do 5º período (kWh)
+54 ENE_P_06 Decimal Sim Energia ativa medida na ponta do 6º período (kWh)
+55 ENE_P_07 Decimal Sim Energia ativa medida na ponta do 7º período (kWh)
+56 ENE_P_08 Decimal Sim Energia ativa medida na ponta do 8º período (kWh)
+57 ENE_P_09 Decimal Sim Energia ativa medida na ponta do 9º período (kWh)
+58 ENE_P_10 Decimal Sim Energia ativa medida na ponta do 10º período (kWh)
+59 ENE_P_11 Decimal Sim Energia ativa medida na ponta do 11º período (kWh)
+60 ENE_P_12 Decimal Sim Energia ativa medida na ponta do 12º período (kWh)
+61 ENE_F_01 Decimal Sim Energia ativa medida fora de ponta do 1º período (kWh)
+62 ENE_F_02 Decimal Sim Energia ativa medida fora de ponta do 2º período (kWh)
+63 ENE_F_03 Decimal Sim Energia ativa medida fora de ponta do 3º período (kWh)
+64 ENE_F_04 Decimal Sim Energia ativa medida fora de ponta do 4º período (kWh)
+65 ENE_F_05 Decimal Sim Energia ativa medida fora de ponta do 5º período (kWh)
+66 ENE_F_06 Decimal Sim Energia ativa medida fora de ponta do 6º período (kWh)
+67 ENE_F_07 Decimal Sim Energia ativa medida fora de ponta do 7º período (kWh)
+68 ENE_F_08 Decimal Sim Energia ativa medida fora de ponta do 8º período (kWh)
+69 ENE_F_09 Decimal Sim Energia ativa medida fora de ponta do 9º período (kWh)
+70 ENE_F_10 Decimal Sim Energia ativa medida fora de ponta do 10º período (kWh)
+71 ENE_F_11 Decimal Sim Energia ativa medida fora de ponta do 11º período (kWh)
+72 ENE_F_12 Decimal Sim Energia ativa medida fora de ponta do 12º período (kWh)
+73 DIC Decimal Sim DIC apurado no período (horas)
+74 FIC Decimal Sim FIC apurado no período
+75 DESCR Texto 255 Não Descrição livre do registro
