@@ -98,11 +98,20 @@ A base contém informações relacionadas a:
 
 <br>
 
-## ⚙️ Status do Projeto
+## 🔹 Progresso do Projeto
 
-*em desenvolvimento  :]*
+Dia 08, dezembro 2025
+- Criada tabela duplicada para tratamento: 01_AltaTensao_Tratamento
+- Tabela original preservada como: 00_AltaTensao_Original
+- Tipos de dados revisados no Power Query
+- Todas as colunas apresentam tipos corretos (numéricos, texto, data, etc.)
+- Valores nulos identificados como válidos, sem necessidade de substituição
+- Base considerada limpa o suficiente para seguir para a fase de modelagem
+
+Próximo passo: mapear colunas categóricas, entender possibilidades de análise e iniciar primeiras medidas no Power BI
 
 <br>
+
 
 
 
