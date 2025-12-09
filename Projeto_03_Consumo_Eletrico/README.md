@@ -100,7 +100,7 @@ A base contém informações relacionadas a:
 
 ## 🔹 Progresso do Projeto
 
-Dia 08, dezembro 2025
+Dia 08 dezembro, 2025
 - Criada tabela duplicada para tratamento: 01_AltaTensao_Tratamento
 - Tabela original preservada como: 00_AltaTensao_Original
 - Tipos de dados revisados no Power Query
@@ -111,6 +111,92 @@ Dia 08, dezembro 2025
 Próximo passo: mapear colunas categóricas, entender possibilidades de análise e iniciar primeiras medidas no Power BI
 
 <br>
+
+Dia 09 de dezembro, 2025
+- Organização das variáveis do dataset em blocos lógicos, incluindo o campo **TIP_SIST**, que será utilizado nas análises e no relatório final.
+
+---
+
+## 🔵 A — Identificação da Unidade Consumidora (UC)
+
+Variáveis que identificam **quem** e **onde** é a Unidade Consumidora.
+
+| Sigla     | Descrição                                      |
+|-----------|------------------------------------------------|
+| COD_ID    | Identificador único da UC                      |
+| PN_CON    | Ponto notável (ex.: rural, urbano)             |
+| COD_LOC   | Código do local / município                    |
+| NOM_MUN   | Nome do município                              |
+| COD_UF    | Estado                                          |
+| SUBSIST   | Subsistema elétrico do SIN (SE/NE/S/NO)        |
+
+---
+
+## 🟣 B — Tipo de Sistema (TIP_SIST)
+
+Campo incluído mesmo sem constar no manual oficial ANEEL, pois agrega valor analítico.
+
+| Sigla     | Descrição                                      |
+|-----------|------------------------------------------------|
+| TIP_SIST  | Tipo de sistema: **RED_INTERLIG** ou **RED_ISOLADA** |
+
+---
+
+## 🟢 C — Demanda / Carga
+
+Variáveis relacionadas ao uso e capacidade de energia.
+
+| Sigla     | Descrição                                      |
+|-----------|------------------------------------------------|
+| DEMANDA   | Demanda registrada (kW)                        |
+| CARGA     | Carga instalada (kW)                           |
+
+---
+
+## 🟠 D — Contratação / Modalidade Tarifária
+
+| Sigla       | Descrição                                                |
+|-------------|----------------------------------------------------------|
+| MOD_CONTR   | Modalidade de contratação (convencional, horo-sazonal)   |
+| TENS_NOM    | Tensão nominal (kV)                                      |
+| CLASSE      | Classe de consumo (industrial, comercial, rural, etc.)   |
+
+---
+
+## 🔴 E — Informações de Fornecimento
+
+| Sigla     | Descrição                                      |
+|-----------|------------------------------------------------|
+| FASES     | Número de fases (mono / bi / trifásico)        |
+| TIP_FORN  | Tipo de fornecimento (aéreo, subterrâneo, etc.)|
+| TP_ATR    | Tipo de atendimento                            |
+
+---
+
+## 🟡 F — Consumo / Energia
+
+| Sigla     | Descrição                                      |
+|-----------|------------------------------------------------|
+| CONS_BI   | Consumo faturado (kWh)                         |
+| CONS_MES  | Consumo do mês                                 |
+| FAT_MES   | Faturamento do mês                             |
+
+---
+
+## 🧩 Resumo dos Blocos
+
+1. Identificação da UC  
+2. **Tipo de Sistema (TIP_SIST)**  
+3. Demanda e Carga  
+4. Modalidade Tarifária  
+5. Fornecimento  
+6. Consumo e Faturamento  
+
+---
+
+
+<br>
+
 
 
 
