@@ -194,8 +194,25 @@ Variáveis relacionadas ao uso e capacidade de energia.
 
 ---
 
-
 <br>
+
+Dia 10 de dezembro, 2025
+- Desenvolvimento do EDA Visual através dos Blocos A e B: Criação dos mapas e gráficos interativos para compreender a distribuição geográfica das Unidades Consumidoras e o perfil do tipo de sistema e consumidores livres/cativos.
+
+### Bloco A — Identificação da UC
+- Criamos mapas de **Total de UCs por CEP** e **por UF**  
+- Criamos mapa **coroplético por UF** (mesmo tom, só visual de distribuição)  
+- Tratamos o campo **UF** a partir do código do município (MUN)  
+- Observamos que **SP e MG concentram ~80% das UCs**  
+
+### Bloco B — Tipo de Sistema (TIP_SIST) e LIV
+- Visualizamos **TIP_SIST** com gráfico de rosca → 93,78% de Rede Interligada  
+- Adicionamos **LIV** (Consumidor Livre / Cativo)  
+  - Criamos a coluna **LIV_Status** para legenda legível  
+  - Gráfico de rosca agora **interativo** com outros gráficos  
+- Criamos base para futuros gráficos de **TIP_SIST × LIV** ou distribuição por UF  
+
+
 
 
 
