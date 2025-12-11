@@ -210,14 +210,9 @@ Dia 10 de dezembro, 2025
 - Adicionamos **LIV** (Consumidor Livre / Cativo)  
   - Criamos a coluna **LIV_Status** para legenda legível  
   - Gráfico de rosca agora **interativo** com outros gráficos  
-- Criamos base para futuros gráficos de **TIP_SIST × LIV** ou distribuição por UF  
-
+- Criamos base para futuros gráficos de **TIP_SIST × LIV** ou distribuição por UF
 ---
 
 <br>
-
-
-
-
 
 
