@@ -11,20 +11,42 @@
 - Visualizamos **TIP_SIST** com gráfico de rosca → 93,78% de Rede Interligada
 - Adicionamos **LIV** (Consumidor Livre / Cativo)
   - Criamos a coluna **LIV_Status** para legenda legível  
-  - Gráfico de rosca agora **interativo** com outros gráficos  
-- Criamos base para futuros gráficos de **TIP_SIST × LIV** ou distribuição por UF
+  - Gráfico de rosca agora **interativo** com outros gráficos
+---
+<br>
+
+## Bloco C - Demanda/Carga: Identificação e Correção de Erro Sistemático
+
+## 🔍 1. O PROBLEMA INICIAL: Valores Implausíveis
+
+### Evidência 1: Números Absurdos
+Ao calcular a demanda média para 2003-2024:
+- **Resultado bruto**: 2,96 **bilhões** de kW
+- **Problema**: 15× maior que **toda a capacidade instalada do Brasil** (~200 GW)
+
+### Evidência 2: Salto Temporal Inexplicável
+```
+2003: ~300 milhões kW
+2004: ~7 bilhões kW
+Crescimento: +2.233% em 1 ano (vs crescimento econômico real: ~5,7%)
+```
+
+### Evidência 3: Padrão Temporal Claro
+- **1960-2002**: Linha estável, valores plausíveis (~214 kW)
+- **2003+**: Disparo abrupto
+- **Conclusão**: Mudança sistemática em 2003
+
+### Descoberta Documental
+> "Entre o período de 2002 a 2004, a unidade de verificação de consumo de energia para fins de cálculo de subvenção e faturamento da ANEEL foi definida em MWh (Megawatt-hora)."
+>
+> *Fonte: LegisWeb - Legislação ANEEL*
 
 ---
 <br>
 
-## Bloco C - Demanda / Carga
+## 🔬 2. VALIDAÇÃO: Teste de Consistência Interna
 
-
-# Análise de Correção de Demanda e CAR_INST — BDGD / ANEEL
-
-## 1. Razão Demanda / CAR_INST
-
-**Medida DAX**
+### Razão Demanda/CAR_INST
 ```dax
 Razao_Demanda_CAR_INST =
 DIVIDE([Demanda_Media_2003_2024], [CAR_INST_Media_2003_2024])
@@ -33,50 +55,49 @@ DIVIDE([Demanda_Media_2003_2024], [CAR_INST_Media_2003_2024])
 **Resultado:** 0,62 (62%)
 
 **Interpretação:**
-- Valor perfeitamente normal para fator de demanda  
-- Indica que as variáveis são consistentes entre si  
-- O problema é sistemático (afeta todas as medidas igualmente)
+- Valor perfeitamente normal para fator de demanda
+- Variáveis consistentes entre si
+- Erro sistemático (afeta todas as medidas)
 
 ---
+<br>
 
-## 2. Comparação com Padrões do Setor
+## 📊 3. COMPARAÇÃO COM PADRÕES DO SETOR
 
-| Métrica | Faixa Esperada | Resultado Obtido (Corrigido) | Status |
-|------|--------------|-----------------------------|-------|
+| Métrica | Faixa Esperada | Resultado Corrigido | Status |
+|-------|---------------|-------------------|-------|
 | Fator de Demanda | 30–80% | 62% | ✅ Normal |
 | Demanda Média por UC | 0,5–10 MW | 2,96 MW | ✅ Plausível |
 | CAR_INST Média por UC | 1–20 MW | 4,77 MW | ✅ Plausível |
 
 ---
+<br>
 
-## 3. Correção Aplicada
+## 🛠️ 4. CORREÇÃO APLICADA
 
 ### Determinação do Fator de Correção
+```
+Valor original pós-2002: 2.960.000.000
+Valor esperado plausível: ~2.960 kW (2,96 MW)
 
-- Valor original pós-2002: **2.960.000.000 unidades**
-- Valor esperado plausível: **~2.960 kW (2,96 MW)**
+Fator necessário = 1.000.000
+```
 
-**Fator necessário:**  
-`2.960.000.000 ÷ 2.960 = 1.000.000`
+### Composição do Fator
+- Erro documental: kW → W (1.000×)
+- Erro adicional de escala: 1.000×
 
-### Composição do Fator 1.000.000
-
-- Erro documental ANEEL: kW → W (**1.000×**)
-- Documentação oficial especifica kW  
-- Dados reais estão em W  
-- Erro adicional de escala: **1.000×**
-
-**Possíveis causas:**
-- Sistema de coleta em mW (milivatt)
-- Inserção sistemática de zeros extras
-- Problema na conversão entre sistemas
+Possíveis causas:
+- Coleta em mW
+- Inserção de zeros extras
+- Conversão incorreta de sistemas
 
 ---
+<br>
 
-## 4. Fórmulas de Correção Implementadas
+## 📝 5. FÓRMULAS DE CORREÇÃO
 
 ```dax
-// Demanda corrigida para período pós-2002
 Demanda_Corrigida_MW =
 IF(
     [ANO_CONEXAO] >= 2003,
@@ -84,7 +105,6 @@ IF(
     [Demanda_Bruta]
 )
 
-// CAR_INST corrigida
 CAR_INST_Corrigida_MW =
 IF(
     [ANO_CONEXAO] >= 2003,
@@ -94,124 +114,23 @@ IF(
 ```
 
 ---
-
-## 5. Resultados Após Correção
-
-### Valores Corrigidos e Validados
-
-| Métrica | 1960–2002 | 2003–2024 (Corrigido) | Comparação |
-|------|----------|---------------------|-----------|
-| Demanda Média | 214 kW | 2,96 MW | 13,8× maior |
-| CAR_INST Média | Unidade incerta* | 4,77 MW | — |
-| Razão Demanda/CAR_INST | 0,13% (anômalo) | 62% (típico) | Métodos diferentes |
-
-\* CAR_INST pré-2002 apresenta unidade não confirmada — uso com ressalva.
-
-### Evolução Real Revelada
-
-- Consumidores pré-2002: **~214 kW** demanda média
-- Consumidores pós-2002: **~2,96 MW** demanda média
-- Crescimento real: **~14×** em capacidade média
-
-**Interpretação:** reflete maior industrialização e plantas modernas.
-
----
-
-## 6. Limitações Identificadas
-
-- Razão Demanda/CAR_INST pré-2002: **0,13% (anômalo)**
-- Razão Demanda/CAR_INST pós-2002: **62% (normal)**
-
-**Conclusão:** métodos de medição e definição mudaram fundamentalmente.
-
----
-
-## 7. Implicações para Análise
-
-| Tipo de Análise | 1960–2002 | 2003–2024 |
-|---------------|----------|-----------|
-| Valores absolutos | ✅ Demanda válida / ⚠️ CAR_INST questionável | ✅ Ambos válidos |
-| Comparações temporais | ⚠️ Com ressalvas | ✅ Válidas |
-| Relações entre variáveis | ❌ Não confiável | ✅ Confiável |
-
----
-
-## 8. Abordagem Analítica Recomendada
-
-### Análises Quantitativas
-```dax
-Demanda_Analise = [Demanda_Corrigida_MW]
-CAR_INST_Analise = [CAR_INST_Corrigida_MW]
-```
-
-### Análises Qualitativas / Tendências
-- Dados brutos podem ser usados para proporções
-- Padrões temporais relativos permanecem válidos
-- Crescimento da base de UCs não é afetado
-
-### Análises por Período Separado
-- **Pré-2002:** tendências históricas
-- **Pós-2002:** análises técnicas detalhadas
-
----
-
-## 9. Cartões Essenciais para Dashboard
-
-- ⚠️ Aviso metodológico (correção aplicada)
-- Demanda média pré-2002: **214 kW**
-- Demanda média pós-2002: **2,96 MW**
-- Fator de crescimento: **13,8×**
-- Razão Demanda/CAR_INST pós-2002: **62%**
-- Salto metodológico 2003→2004: **+2.233% bruto**
-
----
-
-## 10. Conclusões e Recomendações
-
-### Para Pesquisadores / Analistas
-> Utilize divisor **1.000.000** para dados quantitativos pós-2002.  
-> Analise períodos separadamente, reconhecendo mudanças metodológicas.
-
-### Para a ANEEL (se aplicável)
-- Revisão da documentação de unidades
-- Publicação de nota técnica sobre a descontinuidade
-- Correção oficial do dataset
-
-### Para Próximos Blocos do Projeto
-- Validar consistência interna
-- Comparar com referências setoriais
-- Documentar limitações
-
----
-
-## 11. Valor do Trabalho Realizado
-
-### Contribuições Técnicas
-- Identificação de erro sistemático em dados oficiais
-- Validação por múltiplas abordagens
-- Correção com fator estatístico
-- Documentação completa
-
-### Habilidades Demonstradas
-- Pensamento crítico em qualidade de dados
-- Validação estatística cruzada
-- Comunicação técnica clara
-- Solução prática para dados imperfeitos
-
-### Impacto Potencial
-- Melhoria da qualidade analítica do setor elétrico
-- Base para estudos mais confiáveis
-- Caso de estudo em qualidade de dados
-
----
-
-**Documento atualizado em:** Fevereiro de 2024  
-*Baseado em análise do dataset ANEEL / BDGD (1960–2024)*  
-*Correção validada por consistência interna (Razão Demanda/CAR_INST = 0,62)*
-* **Análises econométricas** que dependam de magnitudes.
-
---- 
 <br>
 
+## 📈 6. RESULTADOS APÓS CORREÇÃO
 
+| Métrica | 1960–2002 | 2003–2024 | Comparação |
+|-------|-----------|-----------|-----------|
+| Demanda Média | 214 kW | 2,96 MW | 13,8× |
+| CAR_INST Média | Incerta | 4,77 MW | — |
+| Razão Dem/CAR | 0,13% | 62% | Método distinto |
+
+---
+<br>
+
+### ⚠️ 7. LIMITAÇÕES
+- Mudança metodológica entre períodos
+- Comparações de valores diretos, como carga, energia e demanda exigem cautela
+
+---
+<br>
 
