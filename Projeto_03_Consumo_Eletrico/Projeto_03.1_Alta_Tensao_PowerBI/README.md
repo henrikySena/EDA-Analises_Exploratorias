@@ -69,10 +69,10 @@ Foi detectada uma **mudança abrupta e significativa na escala dos valores de da
 
 | Hipótese | Evidência | Status |
 | :--- | :--- | :--- |
-| **✅ Hipótese 1: Mudança de Unidade (kW → W)** | Fator ~1.000× entre kW e W | **Parcialmente confirmada** (explica parte do fator) |
-| **✅ Hipótese 2: Acumulação Histórica** | Fator adicional ~14× além da mudança de unidade | **FORTEMENTE INDICADA** |
-| **✅ Hipótese 3: Preenchimento Retroativo** | Valores aumentam com idade da UC | **PROVÁVEL** |
-| **✅ Hipótese 4: Erro Sistêmico na Migração** | Mudança abrupta em ano específico (2003) | **CONSISTENTE COM DADOS** |
+| **✅ Hipótese 1: Mudança de Unidade (kW → W)** | Fator ~1.000× entre kW e W | **Forte Indicação** (explica parte do fator) |
+| **✅ Hipótese 2: Acumulação Histórica** | Fator adicional ~14× além da mudança de unidade | **Razoavelmente provável** |
+| **✅ Hipótese 3: Preenchimento Retroativo** | Valores aumentam com idade da UC | **Provável em partes** |
+| **✅ Hipótese 4: Erro Sistêmico na Migração** | Mudança abrupta em ano específico (2003) | **Consistente com os dados** |
 
 *Cenário plausível: UC conectada em 2010 recebeu dados acumulados desde 1980.*
 *Contexto histórico: Atualizações de sistemas governamentais em ~2003.*
@@ -98,4 +98,5 @@ Foi detectada uma **mudança abrupta e significativa na escala dos valores de da
 
 --- 
 <br>
+
 
