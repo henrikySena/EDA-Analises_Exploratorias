@@ -1,3 +1,22 @@
+## Bloco A — Identificação da UC
+
+- Criamos mapas de **Total de UCs por CEP** e **por UF**  
+- Tratamos o campo **UF** a partir do código do município (MUN)  
+- Observamos que **SP e MG concentram ~80% das UCs**  
+
+---
+<br>
+
+## Bloco B — Tipo de Sistema (TIP_SIST) e LIV
+- Visualizamos **TIP_SIST** com gráfico de rosca → 93,78% de Rede Interligada
+- Adicionamos **LIV** (Consumidor Livre / Cativo)
+  - Criamos a coluna **LIV_Status** para legenda legível  
+  - Gráfico de rosca agora **interativo** com outros gráficos  
+- Criamos base para futuros gráficos de **TIP_SIST × LIV** ou distribuição por UF
+
+---
+<br>
+
 ## Bloco C - Demanda / Carga
 
 ### ⚠️ Descoberta Crítica: Descontinuidade Metodológica em Dados de Consumo
@@ -79,3 +98,4 @@ Foi detectada uma **mudança abrupta e significativa na escala dos valores de da
 
 --- 
 <br>
+
