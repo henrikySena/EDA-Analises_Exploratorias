@@ -73,10 +73,10 @@ Razao_Demanda_CAR_INST = DIVIDE([Demanda_Media], [CAR_INST_Media])
 
 ## 🛠️ 4. Observações sobre a Mudança de Unidade
 
-- Dados históricos (C1) estão em W ou kW conforme cadastro original
+- Dados históricos (C1) provavelmente estão em W ou kW conforme cadastro original
 - Dados recentes (C2) estão em kW
 - Alteração da unidade pela ANEEL entre 2002–2004 (de W/kW para MWh) deve ser considerada para interpretação
-- Mantivemos os dados **na forma original do dataset** para evidenciar possíveis inconsistências de registro
+- Os dados foram mantidos **na forma original do dataset** para evidenciar possíveis inconsistências de registro
 
 ---
 
@@ -102,5 +102,6 @@ Razao_Demanda_CAR_INST = DIVIDE([Demanda_Media], [CAR_INST_Media])
 - **C1**: dados históricos consistentes, referência para comparação
 - **C2**: dados recentes plausíveis, evidenciam mudanças metodológicas e possíveis erros de captação
 - Bloco C estruturado em **C1 e C2**, com KPIs unificados e comparação direta, permitindo **validação das hipóteses sobre inconsistências históricas**
+
 
 
