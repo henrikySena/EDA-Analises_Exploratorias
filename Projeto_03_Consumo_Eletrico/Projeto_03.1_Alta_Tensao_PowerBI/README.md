@@ -15,14 +15,14 @@
 ---
 <br>
 
-## Bloco C - Demanda/Carga: Identificação e Correção de Erro Sistemático
+## Bloco C - Demanda/Carga: Análise e Comparação Histórica
 
-## 🔍 1. O PROBLEMA INICIAL: Valores Implausíveis
+## 🔍 1. Contexto e Problema Inicial
+
+Durante a análise da demanda das Unidades Consumidoras (UCs), identificamos valores **implausíveis e discrepâncias históricas**:
 
 ### Evidência 1: Números Absurdos
-Ao calcular a demanda média para 2003-2024:
-- **Resultado bruto**: 2,96 **bilhões** de kW
-- **Problema**: 15× maior que **toda a capacidade instalada do Brasil** (~200 GW)
+- Período 2003–2024: Demanda média atingiu valores muito superiores ao esperado (~5,13 Bi kW), muito acima da capacidade instalada real do Brasil.
 
 ### Evidência 2: Salto Temporal Inexplicável
 ```
@@ -31,106 +31,76 @@ Ao calcular a demanda média para 2003-2024:
 Crescimento: +2.233% em 1 ano (vs crescimento econômico real: ~5,7%)
 ```
 
-### Evidência 3: Padrão Temporal Claro
-- **1960-2002**: Linha estável, valores plausíveis (~214 kW)
-- **2003+**: Disparo abrupto
-- **Conclusão**: Mudança sistemática em 2003
+### Evidência 3: Padrão Histórico Diferente
+- **1960–2002**: Valores estáveis e plausíveis (~820 mil kW)
+- **2003+**: Disparo abrupto, indicando mudança de metodologia ou unidade
 
-### Descoberta Documental
+### Descoberta Documental Importante
 > "Entre o período de 2002 a 2004, a unidade de verificação de consumo de energia para fins de cálculo de subvenção e faturamento da ANEEL foi definida em MWh (Megawatt-hora)."
 >
 > *Fonte: LegisWeb - Legislação ANEEL*
 
 ---
-<br>
 
-## 🔬 2. VALIDAÇÃO: Teste de Consistência Interna
+## 🔬 2. KPIs e Validação Interna
 
-### Razão Demanda/CAR_INST
+KPIs utilizados para ambos os períodos (1960–2002 e 2003–2024):
+- Demanda Média por UC
+- Demanda Mediana por UC
+- Carga Instalada (CAR_INST) Média por UC
+- Razão Demanda / CAR_INST
+
+### Teste de Consistência
 ```dax
-Razao_Demanda_CAR_INST =
-DIVIDE([Demanda_Media_2003_2024], [CAR_INST_Media_2003_2024])
+Razao_Demanda_CAR_INST = DIVIDE([Demanda_Media], [CAR_INST_Media])
 ```
-
-**Resultado:** 0,62 (62%)
-
 **Interpretação:**
-- Valor perfeitamente normal para fator de demanda
-- Variáveis consistentes entre si
-- Erro sistemático (afeta todas as medidas)
+- C1 (1960–2002): 0,01 → baixa utilização histórica
+- C2 (2003–2024): 0,85 → demanda próxima à capacidade instalada, valores plausíveis pós-ajuste
 
 ---
-<br>
 
-## 📊 3. COMPARAÇÃO COM PADRÕES DO SETOR
+## 📊 3. Comparação Histórica e Setorial
 
-| Métrica | Faixa Esperada | Resultado Corrigido | Status |
-|-------|---------------|-------------------|-------|
-| Fator de Demanda | 30–80% | 62% | ✅ Normal |
-| Demanda Média por UC | 0,5–10 MW | 2,96 MW | ✅ Plausível |
-| CAR_INST Média por UC | 1–20 MW | 4,77 MW | ✅ Plausível |
-
----
-<br>
-
-## 🛠️ 4. CORREÇÃO APLICADA
-
-### Determinação do Fator de Correção
-```
-Valor original pós-2002: 2.960.000.000
-Valor esperado plausível: ~2.960 kW (2,96 MW)
-
-Fator necessário = 1.000.000
-```
-
-### Composição do Fator
-- Erro documental: kW → W (1.000×)
-- Erro adicional de escala: 1.000×
-
-Possíveis causas:
-- Coleta em mW
-- Inserção de zeros extras
-- Conversão incorreta de sistemas
+| Métrica | 1960–2002 | 2003–2024 | Observação |
+|---------|------------|-----------|------------|
+| Demanda Média por UC | 820,64 mil kW | 5,13 Bi kW | Mudança de escala e metodologia |
+| Demanda Mediana por UC | 54,85 mil kW | 64,30 mil kW | Valores mais consistentes no período recente |
+| CAR_INST Média por UC | 168,41 Mi kW | 5,99 Bi kW | Aumento de capacidade instalada |
+| Razão Demanda/CAR_INST | 0,01 | 0,85 | Diferença entre períodos históricos e recentes |
 
 ---
-<br>
 
-## 📝 5. FÓRMULAS DE CORREÇÃO
+## 🛠️ 4. Observações sobre a Mudança de Unidade
 
-```dax
-Demanda_Corrigida_MW =
-IF(
-    [ANO_CONEXAO] >= 2003,
-    [Demanda_Bruta] / 1000000,
-    [Demanda_Bruta]
-)
-
-CAR_INST_Corrigida_MW =
-IF(
-    [ANO_CONEXAO] >= 2003,
-    [CAR_INST_Bruta] / 1000000,
-    [CAR_INST_Bruta]
-)
-```
+- Dados históricos (C1) estão em W ou kW conforme cadastro original
+- Dados recentes (C2) estão em kW
+- Alteração da unidade pela ANEEL entre 2002–2004 (de W/kW para MWh) deve ser considerada para interpretação
+- Mantivemos os dados **na forma original do dataset** para evidenciar possíveis inconsistências de registro
 
 ---
-<br>
 
-## 📈 6. RESULTADOS APÓS CORREÇÃO
+## 📈 5. Gráficos e Visualizações
 
-| Métrica | 1960–2002 | 2003–2024 | Comparação |
-|-------|-----------|-----------|-----------|
-| Demanda Média | 214 kW | 2,96 MW | 13,8× |
-| CAR_INST Média | Incerta | 4,77 MW | — |
-| Razão Dem/CAR | 0,13% | 62% | Método distinto |
+- Linha temporal de Demanda Média e Mediana por UC
+- Segmentação por `ANO_CONEXAO`, `LIV_Status` e `TIP_SIST`
+- KPIs destacados no topo do relatório
+- Outliers identificados e analisados para contexto histórico
 
 ---
-<br>
 
-### ⚠️ 7. LIMITAÇÕES
+## ⚠️ 6. Limitações
+
 - Mudança metodológica entre períodos
-- Comparações de valores diretos, como carga, energia e demanda exigem cautela
+- Comparações diretas devem considerar diferenças de unidade
+- Razão Demanda/CAR_INST muito baixa em C1 indica **consumo histórico médio**, não máximo
 
 ---
-<br>
+
+## ✅ 7. Conclusão Técnica
+
+- **C1**: dados históricos consistentes, referência para comparação
+- **C2**: dados recentes plausíveis, evidenciam mudanças metodológicas e possíveis erros de captação
+- Bloco C estruturado em **C1 e C2**, com KPIs unificados e comparação direta, permitindo **validação das hipóteses sobre inconsistências históricas**
+
 
