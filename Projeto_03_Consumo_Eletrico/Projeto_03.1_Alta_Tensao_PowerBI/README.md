@@ -19,7 +19,7 @@
 
 ## 🔍 1. Contexto e Problema Inicial
 
-Durante a análise da demanda das Unidades Consumidoras (UCs), identificamos valores **implausíveis e discrepâncias históricas**:
+Durante a análise da demanda das Unidades Consumidoras (UCs), foi identificado valores **implausíveis e discrepâncias históricas**:
 
 ### Evidência 1: Números Absurdos
 - Período 2003–2024: Demanda média atingiu valores muito superiores ao esperado (~5,13 Bi kW), muito acima da capacidade instalada real do Brasil.
@@ -102,6 +102,7 @@ Razao_Demanda_CAR_INST = DIVIDE([Demanda_Media], [CAR_INST_Media])
 - **C1**: dados históricos consistentes, referência para comparação
 - **C2**: dados recentes plausíveis, evidenciam mudanças metodológicas e possíveis erros de captação
 - Bloco C estruturado em **C1 e C2**, com KPIs unificados e comparação direta, permitindo **validação das hipóteses sobre inconsistências históricas**
+
 
 
 
