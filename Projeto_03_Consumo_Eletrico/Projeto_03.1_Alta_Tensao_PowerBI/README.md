@@ -15,94 +15,130 @@
 ---
 <br>
 
-## Bloco C - Demanda/Carga: Análise e Comparação Histórica
+## Bloco C — Demanda / Carga: Análise Histórica, Ruptura Estrutural e Avaliação de Unidade
 
 ## 🔍 1. Contexto e Problema Inicial
 
-Durante a análise da demanda das Unidades Consumidoras (UCs), foi identificado valores **implausíveis e discrepâncias históricas**:
+Durante a análise da demanda das Unidades Consumidoras (UCs), foram identificados **valores implausíveis e uma ruptura estrutural clara na série histórica**, concentrada no início dos anos 2000.
 
-### Evidência 1: Números Absurdos
-- Período 2003–2024: Demanda média atingiu valores muito superiores ao esperado (~5,13 Bi kW), muito acima da capacidade instalada real do Brasil.
+### Evidência 1 — Ordens de Grandeza Incompatíveis
+- **Período 2003–2024 (análise observada)**: a Demanda Média por UC atinge valores da ordem de **bilhões de kW**, incompatíveis com a capacidade instalada do sistema elétrico brasileiro e com limites físicos conhecidos.
 
-### Evidência 2: Salto Temporal Inexplicável
+### Evidência 2 — Salto Temporal Inexplicável
+
 ```
-2003: ~300 milhões kW
-2004: ~7 bilhões kW
-Crescimento: +2.233% em 1 ano (vs crescimento econômico real: ~5,7%)
+2003: ~300 milhões
+2004: ~7 bilhões
+Variação: +2.233% em 1 ano
 ```
 
-### Evidência 3: Padrão Histórico Diferente
-- **1960–2002**: Valores estáveis e plausíveis (~820 mil kW)
-- **2003+**: Disparo abrupto, indicando mudança de metodologia ou unidade
+Esse crescimento não encontra respaldo em variáveis macroeconômicas, expansão de infraestrutura ou mudanças conhecidas no perfil de carga do período.
 
-### Descoberta Documental Importante
-> "Entre o período de 2002 a 2004, a unidade de verificação de consumo de energia para fins de cálculo de subvenção e faturamento da ANEEL foi definida em MWh (Megawatt-hora)."
->
-> *Fonte: LegisWeb - Legislação ANEEL*
+### Evidência 3 — Quebra de Padrão Histórico
+- **1960–2002 (C1)**: valores estáveis e fisicamente plausíveis
+- **2003 em diante (C2)**: mudança abrupta de escala, sugerindo alteração cadastral, metodológica ou semântica
 
 ---
+<br>
 
-## 🔬 2. KPIs e Validação Interna
+##  2. Estrutura Analítica do Bloco C
 
-KPIs utilizados para ambos os períodos (1960–2002 e 2003–2024):
+Para tratar adequadamente essa ruptura, o Bloco C foi segmentado da seguinte forma:
+
+- **C1 — Demanda / Carga (1960–2002)**: análise do período histórico pré-ruptura
+- **C2 — Demanda / Carga (2003–2024)**: análise observada do período pós-ruptura
+- **C2.1 — Hipótese de Unidade e Rotulagem (W × kW)**
+- **C2.2 — Demanda Ajustada (Avaliação do Impacto da Hipótese)**
+
+Essa estrutura permite separar claramente:
+- o comportamento observado do dado
+- a hipótese explicativa
+- a avaliação quantitativa do impacto da interpretação correta da unidade
+
+---
+<br>
+
+## 🔬 3. KPIs Utilizados e Validação Interna
+
+KPIs aplicados de forma consistente em todos os períodos:
 - Demanda Média por UC
 - Demanda Mediana por UC
-- Carga Instalada (CAR_INST) Média por UC
+- Capacidade Instalada Média por UC (CAR_INST)
 - Razão Demanda / CAR_INST
 
-### Teste de Consistência
-```dax
-Razao_Demanda_CAR_INST = DIVIDE([Demanda_Media], [CAR_INST_Media])
+### Teste de Consistência Estrutural
+
+```DAX
+Razao_Demanda_CAR_INST = DIVIDE([Demanda Média por UC], [CAR_INST Média por UC])
 ```
-**Interpretação:**
-- C1 (1960–2002): 0,01 → baixa utilização histórica
-- C2 (2003–2024): 0,85 → demanda próxima à capacidade instalada, valores plausíveis pós-ajuste
+
+**Resultados:**
+- **C1 (1960–2002)**: razão ≈ **0,01**, compatível com utilização média histórica
+- **C2 (2003–2024)**: razão ≈ **0,85**, indicando elevada utilização e coerência interna
+
+A preservação dessa razão ao longo das análises sugere que o problema identificado não está na relação entre as variáveis, mas na **escala absoluta dos valores registrados**.
 
 ---
+<br>
 
-## 📊 3. Comparação Histórica e Setorial
+## 🧠 4. C2.1 — Hipótese de Unidade e Rotulagem (W → kW)
 
-| Métrica | 1960–2002 | 2003–2024 | Observação |
-|---------|------------|-----------|------------|
-| Demanda Média por UC | 820,64 mil kW | 5,13 Bi kW | Mudança de escala e metodologia |
-| Demanda Mediana por UC | 54,85 mil kW | 64,30 mil kW | Valores mais consistentes no período recente |
-| CAR_INST Média por UC | 168,41 Mi kW | 5,99 Bi kW | Aumento de capacidade instalada |
-| Razão Demanda/CAR_INST | 0,01 | 0,85 | Diferença entre períodos históricos e recentes |
+A hipótese central deste trabalho é que os valores de demanda registrados a partir de 2003 **permaneceram numericamente em watts (W)**, porém passaram a ser **rotulados como quilowatts (kW)** no dicionário de dados, sem que a conversão numérica correspondente (divisão por 1.000) fosse realizada.
 
----
+Sob essa hipótese:
+- os números registrados não estariam incorretos
+- o problema residiria na **semântica da unidade**, e não na integridade do dado
 
-## 🛠️ 4. Observações sobre a Mudança de Unidade
-
-- Dados históricos (C1) provavelmente estão em W ou kW conforme cadastro original
-- Dados recentes (C2) estão em kW
-- Alteração da unidade pela ANEEL entre 2002–2004 (de W/kW para MWh) deve ser considerada para interpretação
-- Os dados foram mantidos **na forma original do dataset** para evidenciar possíveis inconsistências de registro
+Essa interpretação explica simultaneamente:
+- os picos extremos observados
+- a coerência interna entre demanda e capacidade instalada
+- a ruptura abrupta a partir de 2003
 
 ---
+<br>
 
-## 📈 5. Gráficos e Visualizações
+## 5. C2.2 — Avaliação Quantitativa sob a Hipótese W → kW
 
-- Linha temporal de Demanda Média e Mediana por UC
-- Segmentação por `ANO_CONEXAO`, `LIV_Status` e `TIP_SIST`
-- KPIs destacados no topo do relatório
-- Outliers identificados e analisados para contexto histórico
+Aplicando-se um fator de conversão uniforme (W → kW), exclusivamente para fins analíticos, obtêm-se os seguintes resultados ajustados para o período 2003–2024:
+
+- **Demanda Média por UC (ajustada)**: **5,13 MW**
+- **Demanda Mediana por UC (ajustada)**: **64,30 kW**
+- **CAR_INST Média por UC (ajustada)**: **5,99 MW**
+- **Razão Demanda / CAR_INST**: **0,85**
+
+Esses valores apresentam **ordens de grandeza fisicamente plausíveis** para consumidores conectados em alta tensão e preservam integralmente as relações estruturais observadas nos dados originais.
+
+A elevada diferença entre média e mediana evidencia uma distribuição fortemente assimétrica, na qual um subconjunto reduzido de grandes consumidores exerce influência significativa sobre a média do período.
 
 ---
+<br>
 
-## ⚠️ 6. Limitações
+## 6. Visualizações e Exploração
 
-- Mudança metodológica entre períodos
-- Comparações diretas devem considerar diferenças de unidade
-- Razão Demanda/CAR_INST muito baixa em C1 indica **consumo histórico médio**, não máximo
+- Séries temporais de demanda média e mediana por UC
+- Comparação entre valores observados e ajustados (C2 × C2.2)
+- Segmentações por `ANO_CONEXAO`, `LIV_Status` e `TIP_SIST`
+- Identificação e contextualização de outliers históricos
 
 ---
+<br>
 
-## ✅ 7. Conclusão Técnica
+## ⚠️ 7. Limitações
 
-- **C1**: dados históricos consistentes, referência para comparação
-- **C2**: dados recentes plausíveis, evidenciam mudanças metodológicas e possíveis erros de captação
-- Bloco C estruturado em **C1 e C2**, com KPIs unificados e comparação direta, permitindo **validação das hipóteses sobre inconsistências históricas**
+- A conversão W → kW é tratada como **hipótese analítica**, não como correção oficial da base
+- Mudanças metodológicas e cadastrais entre períodos limitam comparações diretas
+- O estudo não substitui validação documental formal junto à ANEEL
 
+---
+<br>
+
+## ✔ 8. Conclusão Técnica
+
+A análise do Bloco C evidencia uma **ruptura estrutural clara** na série de demanda a partir de 2003. Os resultados indicam que os valores registrados mantêm coerência interna, mas apresentam ordens de grandeza incompatíveis quando interpretados diretamente como kW.
+
+A hipótese de erro de rotulagem de unidade (W → kW) mostrou-se capaz de restaurar a plausibilidade física dos indicadores sem alterar suas relações estruturais, permitindo uma leitura mais realista do comportamento da carga no período recente.
+
+Essa abordagem reforça a importância da validação semântica de unidades em análises de dados históricos de grande escala, especialmente em contextos de transição metodológica.
 
 
 
