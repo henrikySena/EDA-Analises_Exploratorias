@@ -92,7 +92,6 @@ Esse crescimento não encontra respaldo em variáveis macroeconômicas, expansã
 - **1960–2002 (C1)**: valores estáveis e fisicamente plausíveis
 - **2003 em diante (C2)**: mudança abrupta de escala, sugerindo alteração cadastral, metodológica ou semântica
 
----
 <br>
 
 ##  2. Estrutura Analítica do Bloco C
@@ -109,7 +108,6 @@ Essa estrutura permite separar claramente:
 - a hipótese explicativa
 - a avaliação quantitativa do impacto da interpretação correta da unidade
 
----
 <br>
 
 ## 🔬 3. KPIs Utilizados e Validação Interna
@@ -132,7 +130,6 @@ Razao_Demanda_CAR_INST = DIVIDE([Demanda Média por UC], [CAR_INST Média por UC
 
 A preservação dessa razão ao longo das análises sugere que o problema identificado não está na relação entre as variáveis, mas na **escala absoluta dos valores registrados**.
 
----
 <br>
 
 ## 🧠 4. C2.1 — Hipótese de Unidade e Rotulagem (W → kW)
@@ -148,7 +145,6 @@ Essa interpretação explica simultaneamente:
 - a coerência interna entre demanda e capacidade instalada
 - a ruptura abrupta a partir de 2003
 
----
 <br>
 
 ## 5. C2.2 — Avaliação Quantitativa sob a Hipótese W → kW
@@ -164,26 +160,23 @@ Esses valores apresentam **ordens de grandeza fisicamente plausíveis** para con
 
 A elevada diferença entre média e mediana evidencia uma distribuição fortemente assimétrica, na qual um subconjunto reduzido de grandes consumidores exerce influência significativa sobre a média do período.
 
----
 <br>
 
-## 6. Visualizações e Exploração
+## 6. 📉 Visualizações e Exploração
 
 - Séries temporais de demanda média e mediana por UC
 - Comparação entre valores observados e ajustados (C2 × C2.2)
 - Segmentações por `ANO_CONEXAO`, `LIV_Status` e `TIP_SIST`
 - Identificação e contextualização de outliers históricos
 
----
 <br>
 
-## ⚠️ 7. Limitações
+## 7. Limitações
 
 - A conversão W → kW é tratada como **hipótese analítica**, não como correção oficial da base
 - Mudanças metodológicas e cadastrais entre períodos limitam comparações diretas
 - O estudo não substitui validação documental formal junto à ANEEL
 
----
 <br>
 
 ## ✔ 8. Conclusão Técnica
@@ -193,6 +186,7 @@ A análise do Bloco C evidencia uma **ruptura estrutural clara** na série de de
 A hipótese de erro de rotulagem de unidade (W → kW) mostrou-se capaz de restaurar a plausibilidade física dos indicadores sem alterar suas relações estruturais, permitindo uma leitura mais realista do comportamento da carga no período recente.
 
 Essa abordagem reforça a importância da validação semântica de unidades em análises de dados históricos de grande escala, especialmente em contextos de transição metodológica.
+
 
 
 
