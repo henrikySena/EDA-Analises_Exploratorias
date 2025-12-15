@@ -1,19 +1,73 @@
-## Bloco A — Identificação da UC
+## 🗺️ Bloco A — Identificação da Unidade Consumidora (UC)
 
-- Criamos mapas de **Total de UCs por CEP** e **por UF**  
-- Tratamos o campo **UF** a partir do código do município (MUN)  
-- Observamos que **SP e MG concentram ~80% das UCs**  
+### 🔍 Objetivo Analítico
+O Bloco A tem como objetivo **compreender a distribuição espacial das Unidades Consumidoras (UCs)** presentes na base de dados, estabelecendo o contexto geográfico necessário para as análises posteriores de perfil, sistema elétrico e demanda.
 
----
 <br>
 
-## Bloco B — Tipo de Sistema (TIP_SIST) e LIV
-- Visualizamos **TIP_SIST** com gráfico de rosca → 93,78% de Rede Interligada
-- Adicionamos **LIV** (Consumidor Livre / Cativo)
-  - Criamos a coluna **LIV_Status** para legenda legível  
-  - Gráfico de rosca agora **interativo** com outros gráficos
----
+### ⚙️ Tratamentos Realizados
+
+- Utilização do **CEP** como principal identificador espacial, dada a ausência de um campo explícito de município em parte da base
+- Derivação do campo **UF** a partir do código do município (**MUN**), garantindo consistência territorial
+- Padronização dos campos geográficos para uso em mapas e segmentações
+
+Esses tratamentos permitiram preservar o máximo de granularidade espacial possível sem introduzir inferências artificiais.
+
 <br>
+
+### 📉 Visualizações Desenvolvidas
+
+- Mapa de **Total de UCs por CEP**
+- Mapa de **Total de UCs por UF**
+
+Essas visualizações possibilitam identificar rapidamente padrões de concentração regional e servem como base para cruzamentos posteriores com variáveis técnicas e de consumo.
+
+<br>
+
+### 🧠 Principais Achados
+
+- Observa-se uma **forte concentração de UCs nos estados de São Paulo (SP) e Minas Gerais (MG)**
+- Em conjunto, esses dois estados concentram aproximadamente **80% das Unidades Consumidoras analisadas**
+
+Esse resultado é coerente com o perfil histórico de industrialização e densidade econômica dessas regiões, reforçando a validade espacial da base de dados.
+
+<br>
+
+## 🔌 Bloco B — Tipo de Sistema (TIP_SIST) e Regime de Contratação (LIV)
+
+### 🔍 Objetivo Analítico
+O Bloco B busca caracterizar as Unidades Consumidoras quanto ao **tipo de sistema elétrico ao qual estão conectadas** e ao **regime de contratação**, fornecendo o pano de fundo institucional e operacional para a análise de demanda.
+
+<br>
+
+### 🛠️ Tratamentos e Modelagem
+
+- Análise do campo **TIP_SIST**, que classifica o tipo de sistema elétrico
+- Criação da coluna derivada **LIV_Status**, traduzindo o campo técnico **LIV** em categorias semanticamente legíveis:
+  - Consumidor Livre
+  - Consumidor Cativo
+
+Esse tratamento permitiu maior clareza interpretativa nas visualizações e facilitou a interação entre filtros e gráficos.
+
+<br>
+
+### 📉 Visualizações Desenvolvidas
+
+- Gráfico de rosca do **TIP_SIST**
+- Gráfico de rosca do **LIV_Status**, totalmente interativo com os demais elementos do relatório
+
+
+
+### 🧠 Principais Achados
+
+- Aproximadamente **93,78% das UCs estão conectadas à Rede Interligada**, confirmando a predominância do Sistema Interligado Nacional (SIN)
+- A segmentação por **Consumidor Livre / Cativo** permite análises comparativas relevantes nos blocos seguintes, especialmente no estudo de demanda e carga
+
+---
+
+**[NOTA]:** Esses dois blocos estabelecem a **base estrutural e institucional** do projeto, garantindo que as análises de demanda realizadas no Bloco C sejam interpretadas à luz da distribuição geográfica, do tipo de sistema elétrico e do regime de contratação das Unidades Consumidoras.
+
+---
 
 ## Bloco C — Demanda / Carga: Análise Histórica, Ruptura Estrutural e Avaliação de Unidade
 
@@ -139,6 +193,7 @@ A análise do Bloco C evidencia uma **ruptura estrutural clara** na série de de
 A hipótese de erro de rotulagem de unidade (W → kW) mostrou-se capaz de restaurar a plausibilidade física dos indicadores sem alterar suas relações estruturais, permitindo uma leitura mais realista do comportamento da carga no período recente.
 
 Essa abordagem reforça a importância da validação semântica de unidades em análises de dados históricos de grande escala, especialmente em contextos de transição metodológica.
+
 
 
 
