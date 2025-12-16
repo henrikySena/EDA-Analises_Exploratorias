@@ -56,7 +56,7 @@ Esse tratamento permitiu maior clareza interpretativa nas visualizações e faci
 - Gráfico de rosca do **TIP_SIST**
 - Gráfico de rosca do **LIV_Status**, totalmente interativo com os demais elementos do relatório
 
-
+<br>
 
 ### 🧠 Principais Achados
 
@@ -186,6 +186,7 @@ A análise do Bloco C evidencia uma **ruptura estrutural clara** na série de de
 A hipótese de erro de rotulagem de unidade (W → kW) mostrou-se capaz de restaurar a plausibilidade física dos indicadores sem alterar suas relações estruturais, permitindo uma leitura mais realista do comportamento da carga no período recente.
 
 Essa abordagem reforça a importância da validação semântica de unidades em análises de dados históricos de grande escala, especialmente em contextos de transição metodológica.
+
 
 
 
