@@ -125,10 +125,10 @@ Razao_Demanda_CAR_INST = DIVIDE([Demanda Média por UC], [CAR_INST Média por UC
 ```
 
 **Resultados:**
-- **C1 (1960–2002)**: razão ≈ **0,01**, compatível com utilização média histórica
+- **C1 (1960–2002)**: razão ≈ **0,01**, significativamente inferior à observada em C2, com valor extremamente baixo para uma razão dessa natureza, sugerindo erro estrutural na forma de registro dos dados
 - **C2 (2003–2024)**: razão ≈ **0,85**, indicando elevada utilização e coerência interna
 
-A preservação dessa razão ao longo das análises sugere que o problema identificado não está na relação entre as variáveis, mas na **escala absoluta dos valores registrados**.
+A preservação dessa razão ao longo das análises indica que a inconsistência observada não está na relação entre as variáveis, mas na escala absoluta dos valores registrados.
 
 <br>
 
@@ -186,6 +186,7 @@ A análise do Bloco C evidencia uma **ruptura estrutural clara** na série de de
 A hipótese de erro de rotulagem de unidade (W → kW) mostrou-se capaz de restaurar a plausibilidade física dos indicadores sem alterar suas relações estruturais, permitindo uma leitura mais realista do comportamento da carga no período recente.
 
 Essa abordagem reforça a importância da validação semântica de unidades em análises de dados históricos de grande escala, especialmente em contextos de transição metodológica.
+
 
 
 
