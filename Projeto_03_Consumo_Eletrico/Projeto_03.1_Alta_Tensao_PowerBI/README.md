@@ -116,7 +116,7 @@ KPIs aplicados em todos os períodos:
 - Demanda Média por UC
 - Demanda Mediana por UC
 - Capacidade Instalada Média por UC (CAR_INST)
-- Razão Demanda / CAR_INST
+- Razão Demanda (DEM_P e DEM_F) / Carga Instalada (CAR_INST)
 
 ### Teste de Consistência Estrutural
 
@@ -186,6 +186,7 @@ A análise do Bloco C evidencia uma **ruptura estrutural clara** na série de de
 A hipótese de erro de rotulagem de unidade (W → kW) mostrou-se capaz de restaurar a plausibilidade física dos indicadores sem alterar suas relações estruturais, permitindo uma leitura mais realista do comportamento da carga no período recente.
 
 Essa abordagem reforça a importância da validação semântica de unidades em análises de dados históricos de grande escala, especialmente em contextos de transição metodológica.
+
 
 
 
