@@ -160,7 +160,7 @@ Esses valores apresentam **ordens de grandeza fisicamente plausíveis** para con
 
 A elevada diferença entre média e mediana evidencia uma distribuição fortemente assimétrica, na qual um subconjunto reduzido de grandes consumidores exerce influência significativa sobre a média do período.
 
-Essa assimetria observada sugere a presença de valores extremos distribuídos ao longo do período analisado, cuja natureza,requer investigação específica posterior.
+Essa assimetria observada sugere a presença de valores extremos distribuídos ao longo do período analisado, cuja natureza, requer investigação específica posterior.
 
 <br>
 
@@ -188,6 +188,7 @@ A análise do Bloco C evidencia uma **ruptura estrutural clara** na série de de
 A hipótese de erro de rotulagem de unidade (W → kW) mostrou-se capaz de restaurar a plausibilidade física dos indicadores sem alterar suas relações estruturais, permitindo uma leitura mais realista do comportamento da carga no período recente.
 
 Essa abordagem reforça a importância da validação semântica de unidades em análises de dados históricos de grande escala, especialmente em contextos de transição metodológica.
+
 
 
 
