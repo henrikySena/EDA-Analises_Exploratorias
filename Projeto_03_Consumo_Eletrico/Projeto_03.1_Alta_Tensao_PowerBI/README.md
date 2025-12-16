@@ -1,4 +1,4 @@
-## 🗺️ Bloco A — Identificação da Unidade Consumidora (UC)
+## Bloco A — Identificação da Unidade Consumidora (UC)
 
 ### 🔍 Objetivo Analítico
 O Bloco A tem como objetivo **compreender a distribuição espacial das Unidades Consumidoras (UCs)** presentes na base de dados, estabelecendo o contexto geográfico necessário para as análises posteriores de perfil, sistema elétrico e demanda.
@@ -15,7 +15,7 @@ Esses tratamentos permitiram preservar o máximo de granularidade espacial poss�
 
 <br>
 
-### 📉 Visualizações Desenvolvidas
+### 🗺️ Visualizações Desenvolvidas
 
 - Mapa de **Total de UCs por CEP**
 - Mapa de **Total de UCs por UF**
@@ -33,7 +33,7 @@ Esse resultado é coerente com o perfil histórico de industrialização e densi
 
 <br>
 
-## 🔌 Bloco B — Tipo de Sistema (TIP_SIST) e Regime de Contratação (LIV)
+## Bloco B — Tipo de Sistema (TIP_SIST) e Regime de Contratação (LIV)
 
 ### 🔍 Objetivo Analítico
 O Bloco B busca caracterizar as Unidades Consumidoras quanto ao **tipo de sistema elétrico ao qual estão conectadas** e ao **regime de contratação**, fornecendo o pano de fundo institucional e operacional para a análise de demanda.
@@ -186,6 +186,7 @@ A análise do Bloco C evidencia uma **ruptura estrutural clara** na série de de
 A hipótese de erro de rotulagem de unidade (W → kW) mostrou-se capaz de restaurar a plausibilidade física dos indicadores sem alterar suas relações estruturais, permitindo uma leitura mais realista do comportamento da carga no período recente.
 
 Essa abordagem reforça a importância da validação semântica de unidades em análises de dados históricos de grande escala, especialmente em contextos de transição metodológica.
+
 
 
 
