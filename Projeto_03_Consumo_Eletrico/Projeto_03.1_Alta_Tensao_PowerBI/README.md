@@ -89,8 +89,8 @@ Variação: +2.233% em 1 ano
 Esse crescimento não encontra respaldo em variáveis macroeconômicas, expansão de infraestrutura ou mudanças conhecidas no perfil de carga do período.
 
 ### Evidência 3 — Quebra de Padrão Histórico
-- **1960–2002 (C1)**: valores estáveis e fisicamente plausíveis
-- **2003 em diante (C2)**: mudança abrupta de escala, sugerindo alteração cadastral, metodológica ou semântica
+- **1960–2002 (Bloco C1)**: valores estáveis e fisicamente plausíveis
+- **2003 em diante (Bloco C2)**: mudança abrupta de escala, sugerindo alteração cadastral, metodológica ou semântica
 
 <br>
 
@@ -186,6 +186,7 @@ A análise do Bloco C evidencia uma **ruptura estrutural clara** na série de de
 A hipótese de erro de rotulagem de unidade (W → kW) mostrou-se capaz de restaurar a plausibilidade física dos indicadores sem alterar suas relações estruturais, permitindo uma leitura mais realista do comportamento da carga no período recente.
 
 Essa abordagem reforça a importância da validação semântica de unidades em análises de dados históricos de grande escala, especialmente em contextos de transição metodológica.
+
 
 
 
