@@ -45,6 +45,8 @@ O Bloco B busca caracterizar as Unidades Consumidoras quanto ao **tipo de sistem
 ### 🛠️ Tratamentos e Modelagem
 
 - Análise do campo **TIP_SIST**, que classifica o tipo de sistema elétrico
+> **Nota metodológica**: o campo **TIP_SIST não consta no dicionário oficial de dados** disponibilizado para o conjunto analisado. Ainda assim, optou-se por incluí-lo no estudo devido à sua **alta relevância analítica**, uma vez que permite distinguir estruturalmente o tipo de sistema elétrico ao qual as Unidades Consumidoras estão conectadas. Sua utilização mostrou-se consistente ao longo das análises exploratórias e agregou valor interpretativo ao EDA.
+
 - Criação da coluna derivada **LIV_Status**, traduzindo o campo técnico **LIV** em categorias semanticamente legíveis:
   - Consumidor Livre
   - Consumidor Cativo
@@ -206,6 +208,7 @@ econômica nesta etapa.
 
 Os resultados deste bloco servem como base para análises comparativas posteriores e para
 compreensão do contexto regulatório e operacional da base de dados.
+
 
 
 
