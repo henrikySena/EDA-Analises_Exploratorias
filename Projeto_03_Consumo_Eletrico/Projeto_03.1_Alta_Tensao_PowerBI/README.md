@@ -214,6 +214,40 @@ ou avaliação econômica nesta etapa.
 Os resultados deste bloco servem como base para análises comparativas posteriores e para a
 compreensão do contexto regulatório e operacional da base de dados.
 
+<br>
+
+### 📃 Grupos Tarifários — Referência (Manual ANEEL)
+
+A tabela abaixo foi construída a partir da documentação oficial `Manual_de_Instruções_da_BDGD.pf`, sendo utilizada
+como referência conceitual ao longo do projeto.
+
+| Código | Descrição |
+|------|----------|
+| 0 | Não informado |
+| A1 | Subgrupo A1 – tensão de fornecimento igual ou superior a 230 kV |
+| A2 | Subgrupo A2 – tensão de fornecimento de 88 kV a 138 kV |
+| A3 | Subgrupo A3 – tensão de fornecimento de 69 kV |
+| A3A | Subgrupo A3a – tensão de fornecimento de 30 kV a 44 kV |
+| A4 | Subgrupo A4 – tensão de fornecimento de 2,3 kV a 25 kV |
+| AS | Subgrupo AS |
+| B1 | Subgrupo B1 – residencial |
+| B1BR | Subgrupo B1 – residencial baixa renda |
+| B2RU | Subgrupo B2 – rural |
+| B2CO | Subgrupo B2 – cooperativa de eletrificação rural |
+| B2SP | Subgrupo B2 – serviço público de irrigação |
+| B3 | Subgrupo B3 – demais classes |
+| B4A | Subgrupo B4 – iluminação pública – propriedade do poder público |
+| B4B | Subgrupo B4 – iluminação pública – propriedade da distribuidora |
+
+<br>
+
+### Situação Atual do Bloco D
+
+- Bloco iniciado no Power BI
+- Modelo preparado com tabela de referência de grupos tarifários
+- Visual âncora criado para análise da evolução temporal das Unidades Consumidoras por
+  subgrupo tarifário (A1, A2 e A3)
+- Análises interpretativas e comparativas serão desenvolvidas nas próximas etapas
 
 
 
