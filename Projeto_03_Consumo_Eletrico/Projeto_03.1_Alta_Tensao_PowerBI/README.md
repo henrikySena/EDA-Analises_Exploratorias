@@ -33,6 +33,8 @@ Esse resultado é coerente com o perfil histórico de industrialização e densi
 
 <br>
 
+---
+
 ## Bloco B — Tipo de Sistema (TIP_SIST) e Regime de Contratação (LIV)
 
 ### 🔍 Objetivo Analítico
@@ -181,13 +183,29 @@ Essa assimetria observada sugere a presença de valores extremos distribuídos a
 
 <br>
 
-## ✔ 8. Conclusão Técnica
+## 8. Conclusão Técnica do Bloco
 
 A análise do Bloco C evidencia uma **ruptura estrutural clara** na série de demanda a partir de 2003. Os resultados indicam que os valores registrados mantêm coerência interna, mas apresentam ordens de grandeza incompatíveis quando interpretados diretamente como kW.
 
 A hipótese de erro de rotulagem de unidade (W → kW) mostrou-se capaz de restaurar a plausibilidade física dos indicadores sem alterar suas relações estruturais, permitindo uma leitura mais realista do comportamento da carga no período recente.
 
 Essa abordagem reforça a importância da validação semântica de unidades em análises de dados históricos de grande escala, especialmente em contextos de transição metodológica.
+
+<br>
+
+---
+
+## Bloco D — Contratação / Modalidade Tarifária
+
+Este bloco tem como objetivo analisar o perfil de contratação das Unidades Consumidoras,
+explorando a distribuição e a evolução das modalidades tarifárias ao longo do tempo.
+
+A análise é de caráter exploratório, buscando identificar padrões, mudanças estruturais
+e diferenças por tipo de sistema e recortes geográficos, sem inferência causal ou avaliação
+econômica nesta etapa.
+
+Os resultados deste bloco servem como base para análises comparativas posteriores e para
+compreensão do contexto regulatório e operacional da base de dados.
 
 
 
