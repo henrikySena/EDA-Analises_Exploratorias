@@ -202,11 +202,16 @@ Essa abordagem reforça a importância da validação semântica de unidades em 
 Este bloco tem como objetivo analisar o perfil de contratação das Unidades Consumidoras,
 explorando a distribuição e a evolução das modalidades tarifárias ao longo do tempo.
 
-A análise é de caráter exploratório, buscando identificar padrões, mudanças estruturais
-e diferenças por tipo de sistema e recortes geográficos, sem inferência causal ou avaliação
-econômica nesta etapa.
+- Neste contexto, a modalidade tarifária é tratada como a **forma contratual sob a qual a
+Unidade Consumidora se conecta ao sistema elétrico**, refletindo regras de acesso,
+faturamento e enquadramento regulatório, e não seu nível de consumo ou desempenho energético.
 
-Os resultados deste bloco servem como base para análises comparativas posteriores e para
+- A análise é de caráter exploratório, buscando identificar padrões, mudanças estruturais
+e diferenças na distribuição das modalidades ao longo do tempo, considerando recortes
+por tipo de sistema e geográficos apenas como lentes de observação, sem inferência causal
+ou avaliação econômica nesta etapa.
+
+Os resultados deste bloco servem como base para análises comparativas posteriores e para a
 compreensão do contexto regulatório e operacional da base de dados.
 
 
