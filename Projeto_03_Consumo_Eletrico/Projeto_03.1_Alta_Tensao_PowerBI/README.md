@@ -254,7 +254,7 @@ como referência conceitual ao longo do projeto.
   - Subgrupo A2 (88–138 kV)  
   - Subgrupo A3 (69 kV)
 
----
+<br>
 
 ### 1️⃣ Período anterior aos anos 1980
 
@@ -271,7 +271,7 @@ de UCs nesse período, mas pode refletir limitações históricas relacionadas a
 Assim, o baixo volume observado pode estar mais associado à **formalização e documentação
 progressiva** das Unidades Consumidoras do que à dinâmica real de conexão ao sistema elétrico.
 
----
+<br>
 
 ### 2️⃣ Intensificação a partir dos anos 1980
 
@@ -287,7 +287,7 @@ Este comportamento pode estar associado, de forma exploratória, a:
 Esta hipótese não é afirmada como causal, mas surge como um **contexto histórico plausível**
 para a mudança observada no gráfico.
 
----
+<br>
 
 ### 3️⃣ Subgrupo A1 (≥ 230 kV)
 
@@ -297,7 +297,7 @@ de zero e sem variações relevantes.
 Este comportamento indica que, dentro da base analisada, as conexões em tensões iguais ou
 superiores a 230 kV representam uma parcela muito pequena do total de UCs.
 
----
+<br>
 
 ### 4️⃣ Subgrupo A2 (88–138 kV): volatilidade e picos
 
@@ -310,7 +310,7 @@ O subgrupo A2 passa a apresentar crescimento após os anos 1980, caracterizado p
 Esse padrão sugere que o comportamento do A2 pode estar associado a **eventos pontuais** ou
 processos concentrados em determinados períodos, em vez de uma expansão gradual.
 
----
+<br>
 
 ### 5️⃣ Subgrupo A3 (69 kV): crescimento mais gradual
 
@@ -329,7 +329,7 @@ Esse padrão sugere hipóteses exploratórias como:
 - mudanças nos critérios regulatórios de enquadramento,
 - estratégias contratuais adotadas por consumidores e distribuidoras.
 
----
+<br>
 
 ### 6️⃣ Anos 2000 em diante: mudança estrutural visível
 
@@ -343,7 +343,7 @@ Essa mudança estrutural é visível exclusivamente a partir do comportamento da
 Como contexto interpretativo, esse período é compatível com uma fase de maior dinamismo
 econômico e tecnológico no Brasil, embora esta análise não estabeleça relações causais.
 
----
+<br>
 
 ### 🧠 Considerações finais desta etapa
 
@@ -355,6 +355,7 @@ Esta interpretação inicial cumpre o papel de:
 
 As conclusões aqui apresentadas servem como **base para análises comparativas posteriores**
 e para eventual incorporação de contexto histórico-regulatório em etapas futuras do projeto.
+
 
 
 
