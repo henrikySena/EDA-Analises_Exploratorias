@@ -267,40 +267,7 @@ superiores a 230 kV representam uma parcela muito pequena do total de UCs.
 
 <br>
 
-
-### 2️⃣ Período anterior aos anos 1980
-
-O gráfico indica que, até o final da década de 1970, o volume de registros de UCs conectadas
-em alta tensão é reduzido e apresenta pouca variação entre os subgrupos.
-
-É importante ressaltar que este comportamento não implica necessariamente a inexistência de UCs nesse período, mas pode refletir limitações históricas relacionadas a:
-
-- processos de regulamentação do setor elétrico;
-- ausência de padronização nacional;
-- registro incompleto das informações nas bases de dados;
-- ou ainda à descontinuidade institucional de empresas responsáveis pela operação, registro ou regulação dessas Unidades Consumidoras, o que pode ter resultado na perda ou não incorporação de dados históricos aos sistemas atuais.
-
-Assim, o baixo volume observado pode estar mais associado à formalização, consolidação institucional e documentação progressiva das Unidades Consumidoras do que à dinâmica real de conexão ao sistema elétrico.
-
-<br>
-
-### 3️⃣ Intensificação a partir dos anos 1980
-
-A partir dos anos 1980, observa-se um aumento claro no volume de registros, indicando uma
-mudança no padrão da série temporal.
-
-Este comportamento pode estar associado, de forma exploratória, a:
-
-- avanços institucionais no setor elétrico,
-- maior organização regulatória,
-- fortalecimento dos mecanismos de registro e acompanhamento das UCs.
-
-Esta hipótese não é afirmada como causal, mas surge como um **contexto histórico plausível**
-para a mudança observada no gráfico.
-
-<br>
-
-### 4️⃣ Subgrupo A2 (88–138 kV): volatilidade e picos
+### 2️⃣ Subgrupo A2 (88–138 kV): volatilidade e picos
 
 O subgrupo A2 passa a apresentar crescimento após os anos 1980, caracterizado por:
 
@@ -313,7 +280,7 @@ processos concentrados em determinados períodos, em vez de uma expansão gradua
 
 <br>
 
-### 5️⃣ Subgrupo A3 (69 kV): crescimento mais gradual
+### 3️⃣ Subgrupo A3 (69 kV): crescimento mais gradual
 
 Em contraste com o A2, o subgrupo A3 apresenta:
 
@@ -331,6 +298,40 @@ Esse padrão sugere hipóteses exploratórias como:
 - estratégias contratuais adotadas por consumidores e distribuidoras.
 
 <br>
+
+### 4️⃣ Período anterior aos anos 1980
+
+O gráfico indica que, até o final da década de 1970, o volume de registros de UCs conectadas
+em alta tensão é reduzido e apresenta pouca variação entre os subgrupos.
+
+É importante ressaltar que este comportamento não implica necessariamente a inexistência de UCs nesse período, mas pode refletir limitações históricas relacionadas a:
+
+- processos de regulamentação do setor elétrico;
+- ausência de padronização nacional;
+- registro incompleto das informações nas bases de dados;
+- ou ainda à descontinuidade institucional de empresas responsáveis pela operação, registro ou regulação dessas Unidades Consumidoras, o que pode ter resultado na perda ou não incorporação de dados históricos aos sistemas atuais.
+
+Assim, o baixo volume observado pode estar mais associado à formalização, consolidação institucional e documentação progressiva das Unidades Consumidoras do que à dinâmica real de conexão ao sistema elétrico.
+
+<br>
+
+### 5️⃣ Intensificação a partir dos anos 1980
+
+A partir dos anos 1980, observa-se um aumento claro no volume de registros, indicando uma
+mudança no padrão da série temporal.
+
+Este comportamento pode estar associado, de forma exploratória, a:
+
+- avanços institucionais no setor elétrico,
+- maior organização regulatória,
+- fortalecimento dos mecanismos de registro e acompanhamento das UCs.
+
+Esta hipótese não é afirmada como causal, mas surge como um **contexto histórico plausível**
+para a mudança observada no gráfico.
+
+<br>
+
+
 
 ### 6️⃣ Anos 2000 em diante: mudança estrutural visível
 
@@ -356,6 +357,7 @@ Esta interpretação inicial cumpre o papel de:
 
 As conclusões aqui apresentadas servem como **base para análises comparativas posteriores**
 e para eventual incorporação de contexto histórico-regulatório em etapas futuras do projeto.
+
 
 
 
