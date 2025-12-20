@@ -262,15 +262,15 @@ como referência conceitual ao longo do projeto.
 O gráfico indica que, até o final da década de 1970, o volume de registros de UCs conectadas
 em alta tensão é reduzido e apresenta pouca variação entre os subgrupos.
 
-É importante ressaltar que este comportamento **não implica necessariamente** a inexistência
-de UCs nesse período, mas pode refletir limitações históricas relacionadas a:
+É importante ressaltar que este comportamento não implica necessariamente a inexistência de UCs nesse período, mas pode refletir limitações históricas relacionadas a:
 
-- processos de regulamentação do setor elétrico,
-- ausência de padronização nacional,
-- ou registro incompleto das informações nas bases de dados.
+- processos de regulamentação do setor elétrico;
+- ausência de padronização nacional;
+- registro incompleto das informações nas bases de dados;
+- ou ainda à descontinuidade institucional de empresas responsáveis pela operação, registro ou regulação dessas Unidades Consumidoras, o que pode ter resultado na perda ou não incorporação de dados históricos aos sistemas atuais.
 
-Assim, o baixo volume observado pode estar mais associado à **formalização e documentação
-progressiva** das Unidades Consumidoras do que à dinâmica real de conexão ao sistema elétrico.
+Assim, o baixo volume observado pode estar mais associado à formalização, consolidação institucional e documentação progressiva das Unidades Consumidoras do que à dinâmica real de conexão ao sistema elétrico.
+
 
 <br>
 
@@ -356,6 +356,7 @@ Esta interpretação inicial cumpre o papel de:
 
 As conclusões aqui apresentadas servem como **base para análises comparativas posteriores**
 e para eventual incorporação de contexto histórico-regulatório em etapas futuras do projeto.
+
 
 
 
