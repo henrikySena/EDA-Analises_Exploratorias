@@ -241,18 +241,11 @@ como referência conceitual ao longo do projeto.
 
 <br>
 
-### Situação Atual do Bloco D
-
-- Bloco iniciado no Power BI
-- Modelo preparado com tabela de referência de grupos tarifários
-- Visual âncora criado para análise da evolução temporal das Unidades Consumidoras por
-  subgrupo tarifário (A1, A2 e A3)
-- Análises interpretativas e comparativas serão desenvolvidas nas próximas etapas
-
+![Gráfico de linhas — Subgrupos Tarifários A (Bloco D)](/Images/grafico_linhas_subgrupoD.png)
 
 ---
 
-## 🔎 Descrição do Visual Analisado
+### 🔎 Descrição do Visual Analisado
 
 - **Eixo X**: Ano de conexão da UC  
 - **Eixo Y**: Quantidade de Unidades Consumidoras  
@@ -263,7 +256,7 @@ como referência conceitual ao longo do projeto.
 
 ---
 
-## 1️⃣ Período anterior aos anos 1980
+### 1️⃣ Período anterior aos anos 1980
 
 O gráfico indica que, até o final da década de 1970, o volume de registros de UCs conectadas
 em alta tensão é reduzido e apresenta pouca variação entre os subgrupos.
@@ -280,7 +273,7 @@ progressiva** das Unidades Consumidoras do que à dinâmica real de conexão ao 
 
 ---
 
-## 2️⃣ Intensificação a partir dos anos 1980
+### 2️⃣ Intensificação a partir dos anos 1980
 
 A partir dos anos 1980, observa-se um aumento claro no volume de registros, indicando uma
 mudança no padrão da série temporal.
@@ -296,7 +289,7 @@ para a mudança observada no gráfico.
 
 ---
 
-## 3️⃣ Subgrupo A1 (≥ 230 kV)
+### 3️⃣ Subgrupo A1 (≥ 230 kV)
 
 O subgrupo A1 permanece **residual ao longo de toda a série histórica**, com valores próximos
 de zero e sem variações relevantes.
@@ -306,7 +299,7 @@ superiores a 230 kV representam uma parcela muito pequena do total de UCs.
 
 ---
 
-## 4️⃣ Subgrupo A2 (88–138 kV): volatilidade e picos
+### 4️⃣ Subgrupo A2 (88–138 kV): volatilidade e picos
 
 O subgrupo A2 passa a apresentar crescimento após os anos 1980, caracterizado por:
 
@@ -319,7 +312,7 @@ processos concentrados em determinados períodos, em vez de uma expansão gradua
 
 ---
 
-## 5️⃣ Subgrupo A3 (69 kV): crescimento mais gradual
+### 5️⃣ Subgrupo A3 (69 kV): crescimento mais gradual
 
 Em contraste com o A2, o subgrupo A3 apresenta:
 
@@ -338,7 +331,7 @@ Esse padrão sugere hipóteses exploratórias como:
 
 ---
 
-## 6️⃣ Anos 2000 em diante: mudança estrutural visível
+### 6️⃣ Anos 2000 em diante: mudança estrutural visível
 
 A partir dos anos 2000, o gráfico apresenta uma **mudança clara de patamar**, caracterizada por:
 
@@ -352,7 +345,7 @@ econômico e tecnológico no Brasil, embora esta análise não estabeleça rela�
 
 ---
 
-## 🧠 Considerações finais desta etapa
+### 🧠 Considerações finais desta etapa
 
 Esta interpretação inicial cumpre o papel de:
 
@@ -362,6 +355,7 @@ Esta interpretação inicial cumpre o papel de:
 
 As conclusões aqui apresentadas servem como **base para análises comparativas posteriores**
 e para eventual incorporação de contexto histórico-regulatório em etapas futuras do projeto.
+
 
 
 
