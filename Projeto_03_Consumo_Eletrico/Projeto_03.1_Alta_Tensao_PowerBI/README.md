@@ -1,3 +1,25 @@
+# Projeto 03 - Alta Tensão [PowerBI]
+
+Este repositório documenta uma análise exploratória de dados (EDA) sobre o consumo elétrico no Brasil,
+com foco em Unidades Consumidoras de alta tensão, a partir da base BDGD/ANEEL.
+
+A análise foi desenvolvida utilizando o **Power BI** e corresponde ao **primeiro de três conjuntos de dados**
+que compõem o **Projeto 03 — Consumo Elétrico**, o qual foi estruturado em etapas distintas conforme o
+nível de tensão das Unidades Consumidoras.
+
+Atualmente, este dataset encontra-se organizado e analisado por meio de quatro blocos analíticos:
+
+- **Bloco A** — Identificação das Unidades Consumidoras  
+- **Bloco B** — Distribuição geográfica e características gerais  
+- **Bloco C** — Demanda/Carga e identificação de erro sistemático nos dados  
+- **Bloco D** — Contratação e modalidade tarifária  
+
+Cada bloco possui objetivos específicos e documentação própria, compondo de forma progressiva
+a compreensão da estrutura, qualidade e comportamento da base de dados analisada.
+
+---
+<br>
+
 ## Bloco A — Identificação da Unidade Consumidora (UC)
 
 ### 🔍 Objetivo Analítico
@@ -357,6 +379,7 @@ Esta interpretação inicial cumpre o papel de:
 
 As conclusões aqui apresentadas servem como **base para análises comparativas posteriores**
 e para eventual incorporação de contexto histórico-regulatório em etapas futuras do projeto.
+
 
 
 
