@@ -309,7 +309,7 @@ em alta tensão é reduzido e apresenta pouca variação entre os subgrupos.
 - processos de regulamentação do setor elétrico;
 - ausência de padronização nacional;
 - registro incompleto das informações nas bases de dados;
-- ou ainda à descontinuidade institucional de empresas responsáveis pela operação, registro ou regulação dessas Unidades Consumidoras, o que pode ter resultado na perda ou não incorporação de dados históricos aos sistemas atuais.
+- descontinuidade institucional de empresas responsáveis pela operação, registro ou regulação dessas Unidades Consumidoras, o que pode ter resultado na perda ou não incorporação de dados históricos aos sistemas atuais.
 
 Assim, o baixo volume observado pode estar mais associado à formalização, consolidação institucional e documentação progressiva das Unidades Consumidoras do que à dinâmica real de conexão ao sistema elétrico.
 
@@ -357,6 +357,7 @@ Esta interpretação inicial cumpre o papel de:
 
 As conclusões aqui apresentadas servem como **base para análises comparativas posteriores**
 e para eventual incorporação de contexto histórico-regulatório em etapas futuras do projeto.
+
 
 
 
