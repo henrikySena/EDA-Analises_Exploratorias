@@ -250,6 +250,118 @@ como referência conceitual ao longo do projeto.
 - Análises interpretativas e comparativas serão desenvolvidas nas próximas etapas
 
 
+---
+
+## 🔎 Descrição do Visual Analisado
+
+- **Eixo X**: Ano de conexão da UC  
+- **Eixo Y**: Quantidade de Unidades Consumidoras  
+- **Legenda**:  
+  - Subgrupo A1 (≥ 230 kV)  
+  - Subgrupo A2 (88–138 kV)  
+  - Subgrupo A3 (69 kV)
+
+---
+
+## 1️⃣ Período anterior aos anos 1980
+
+O gráfico indica que, até o final da década de 1970, o volume de registros de UCs conectadas
+em alta tensão é reduzido e apresenta pouca variação entre os subgrupos.
+
+É importante ressaltar que este comportamento **não implica necessariamente** a inexistência
+de UCs nesse período, mas pode refletir limitações históricas relacionadas a:
+
+- processos de regulamentação do setor elétrico,
+- ausência de padronização nacional,
+- ou registro incompleto das informações nas bases de dados.
+
+Assim, o baixo volume observado pode estar mais associado à **formalização e documentação
+progressiva** das Unidades Consumidoras do que à dinâmica real de conexão ao sistema elétrico.
+
+---
+
+## 2️⃣ Intensificação a partir dos anos 1980
+
+A partir dos anos 1980, observa-se um aumento claro no volume de registros, indicando uma
+mudança no padrão da série temporal.
+
+Este comportamento pode estar associado, de forma exploratória, a:
+
+- avanços institucionais no setor elétrico,
+- maior organização regulatória,
+- fortalecimento dos mecanismos de registro e acompanhamento das UCs.
+
+Esta hipótese não é afirmada como causal, mas surge como um **contexto histórico plausível**
+para a mudança observada no gráfico.
+
+---
+
+## 3️⃣ Subgrupo A1 (≥ 230 kV)
+
+O subgrupo A1 permanece **residual ao longo de toda a série histórica**, com valores próximos
+de zero e sem variações relevantes.
+
+Este comportamento indica que, dentro da base analisada, as conexões em tensões iguais ou
+superiores a 230 kV representam uma parcela muito pequena do total de UCs.
+
+---
+
+## 4️⃣ Subgrupo A2 (88–138 kV): volatilidade e picos
+
+O subgrupo A2 passa a apresentar crescimento após os anos 1980, caracterizado por:
+
+- picos abruptos em anos específicos,
+- alta variabilidade ao longo do tempo,
+- ausência de crescimento estritamente contínuo.
+
+Esse padrão sugere que o comportamento do A2 pode estar associado a **eventos pontuais** ou
+processos concentrados em determinados períodos, em vez de uma expansão gradual.
+
+---
+
+## 5️⃣ Subgrupo A3 (69 kV): crescimento mais gradual
+
+Em contraste com o A2, o subgrupo A3 apresenta:
+
+- crescimento mais progressivo,
+- menor volatilidade relativa,
+- aumento consistente principalmente nos anos mais recentes.
+
+Adicionalmente, observa-se que, em determinados períodos, há um comportamento alternado entre
+A2 e A3, em que a redução de um coincide com o aumento do outro.
+
+Esse padrão sugere hipóteses exploratórias como:
+
+- possíveis reclassificações tarifárias ao longo do tempo,
+- mudanças nos critérios regulatórios de enquadramento,
+- estratégias contratuais adotadas por consumidores e distribuidoras.
+
+---
+
+## 6️⃣ Anos 2000 em diante: mudança estrutural visível
+
+A partir dos anos 2000, o gráfico apresenta uma **mudança clara de patamar**, caracterizada por:
+
+- aumento do volume médio de UCs conectadas,
+- maior variabilidade na série,
+- novo regime visual em relação ao período anterior.
+
+Essa mudança estrutural é visível exclusivamente a partir do comportamento da série temporal.
+Como contexto interpretativo, esse período é compatível com uma fase de maior dinamismo
+econômico e tecnológico no Brasil, embora esta análise não estabeleça relações causais.
+
+---
+
+## 🧠 Considerações finais desta etapa
+
+Esta interpretação inicial cumpre o papel de:
+
+- descrever padrões observáveis no gráfico,
+- levantar hipóteses plausíveis e testáveis,
+- reconhecer limitações históricas e regulatórias da base de dados.
+
+As conclusões aqui apresentadas servem como **base para análises comparativas posteriores**
+e para eventual incorporação de contexto histórico-regulatório em etapas futuras do projeto.
 
 
 
