@@ -241,7 +241,8 @@ como referência conceitual ao longo do projeto.
 
 <br>
 
-![Gráfico de linhas — Subgrupos Tarifários A (Bloco D)](../Images/grafico_linhas_subgrupoD.png)
+### Evolução das Unidades Consumidoras por Subgrupo Tarifário (Alta Tensão)
+![Gráfico de linhas — Subgrupos Tarifários (Bloco D)](Images/grafico_linhas_subgrupoD.png)
 
 ---
 
@@ -355,6 +356,7 @@ Esta interpretação inicial cumpre o papel de:
 
 As conclusões aqui apresentadas servem como **base para análises comparativas posteriores**
 e para eventual incorporação de contexto histórico-regulatório em etapas futuras do projeto.
+
 
 
 
