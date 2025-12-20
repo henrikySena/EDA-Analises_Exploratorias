@@ -320,18 +320,18 @@ Assim, o baixo volume observado pode estar mais associado à formalização, con
 A partir dos anos 1980, observa-se um aumento claro no volume de registros, indicando uma
 mudança no padrão da série temporal.
 
-Este comportamento pode estar associado, de forma exploratória, a:
+Este comportamento pode estar associado, de forma exploratória, a processos de reorganização
+institucional e regulatória do setor elétrico brasileiro, incluindo:
 
-- avanços institucionais no setor elétrico,
-- maior organização regulatória,
-- fortalecimento dos mecanismos de registro e acompanhamento das UCs.
+- avanços institucionais no setor elétrico;
+- maior organização regulatória ao longo das décadas seguintes;
+- fortalecimento progressivo dos mecanismos de registro e acompanhamento das Unidades Consumidoras;
+- criação e consolidação de órgãos reguladores, como a Agência Nacional de Energia Elétrica (ANEEL), instituída em 1996, que contribuiu para a padronização e centralização das informações do setor.
 
 Esta hipótese não é afirmada como causal, mas surge como um **contexto histórico plausível**
-para a mudança observada no gráfico.
+para a mudança observada no comportamento da série temporal.
 
 <br>
-
-
 
 ### 6️⃣ Anos 2000 em diante: mudança estrutural visível
 
@@ -357,6 +357,7 @@ Esta interpretação inicial cumpre o papel de:
 
 As conclusões aqui apresentadas servem como **base para análises comparativas posteriores**
 e para eventual incorporação de contexto histórico-regulatório em etapas futuras do projeto.
+
 
 
 
