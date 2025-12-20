@@ -218,7 +218,7 @@ compreensão do contexto regulatório e operacional da base de dados.
 
 ### 📃 Grupos Tarifários — Referência (Manual ANEEL)
 
-A tabela abaixo foi construída a partir da documentação oficial `Manual_de_Instruções_da_BDGD.pf`, sendo utilizada
+A tabela abaixo foi construída a partir da documentação oficial `Manual_de_Instruções_da_BDGD.pdf`, sendo utilizada
 como referência conceitual ao longo do projeto.
 
 | Código | Descrição |
@@ -248,6 +248,7 @@ como referência conceitual ao longo do projeto.
 - Visual âncora criado para análise da evolução temporal das Unidades Consumidoras por
   subgrupo tarifário (A1, A2 e A3)
 - Análises interpretativas e comparativas serão desenvolvidas nas próximas etapas
+
 
 
 
