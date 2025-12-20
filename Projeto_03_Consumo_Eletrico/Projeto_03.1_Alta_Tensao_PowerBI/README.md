@@ -257,7 +257,18 @@ como referência conceitual ao longo do projeto.
 
 <br>
 
-### 1️⃣ Período anterior aos anos 1980
+### 1️⃣ Subgrupo A1 (≥ 230 kV)
+
+O subgrupo A1 permanece **residual ao longo de toda a série histórica**, com valores próximos
+de zero e sem variações relevantes.
+
+Este comportamento indica que, dentro da base analisada, as conexões em tensões iguais ou
+superiores a 230 kV representam uma parcela muito pequena do total de UCs.
+
+<br>
+
+
+### 2️⃣ Período anterior aos anos 1980
 
 O gráfico indica que, até o final da década de 1970, o volume de registros de UCs conectadas
 em alta tensão é reduzido e apresenta pouca variação entre os subgrupos.
@@ -271,10 +282,9 @@ em alta tensão é reduzido e apresenta pouca variação entre os subgrupos.
 
 Assim, o baixo volume observado pode estar mais associado à formalização, consolidação institucional e documentação progressiva das Unidades Consumidoras do que à dinâmica real de conexão ao sistema elétrico.
 
-
 <br>
 
-### 2️⃣ Intensificação a partir dos anos 1980
+### 3️⃣ Intensificação a partir dos anos 1980
 
 A partir dos anos 1980, observa-se um aumento claro no volume de registros, indicando uma
 mudança no padrão da série temporal.
@@ -287,16 +297,6 @@ Este comportamento pode estar associado, de forma exploratória, a:
 
 Esta hipótese não é afirmada como causal, mas surge como um **contexto histórico plausível**
 para a mudança observada no gráfico.
-
-<br>
-
-### 3️⃣ Subgrupo A1 (≥ 230 kV)
-
-O subgrupo A1 permanece **residual ao longo de toda a série histórica**, com valores próximos
-de zero e sem variações relevantes.
-
-Este comportamento indica que, dentro da base analisada, as conexões em tensões iguais ou
-superiores a 230 kV representam uma parcela muito pequena do total de UCs.
 
 <br>
 
@@ -356,6 +356,7 @@ Esta interpretação inicial cumpre o papel de:
 
 As conclusões aqui apresentadas servem como **base para análises comparativas posteriores**
 e para eventual incorporação de contexto histórico-regulatório em etapas futuras do projeto.
+
 
 
 
