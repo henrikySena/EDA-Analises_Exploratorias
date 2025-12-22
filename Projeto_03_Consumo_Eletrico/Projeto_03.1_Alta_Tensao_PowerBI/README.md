@@ -453,7 +453,7 @@ Avaliação da completude e representatividade das informações de fornecimento
 **Pontos de atenção:**
 - Campos com alto volume de valores ausentes
 - Categorias raras ou pouco representativas
-- Necessidade de agrupamentos ou exclusões justificadas
+- Necessidade de agrupamentos ou exclusões metodologicamente justificadas
 
 **Entregas esperadas:**
 - Lista sintética de limitações
@@ -475,6 +475,7 @@ Ao final do Bloco E, espera-se responder de forma clara:
 > “Quais são os padrões de fornecimento de energia elétrica para Unidades Consumidoras de alta tensão no Brasil, e como esses padrões se relacionam com fatores geográficos, sistêmicos e contratuais, respeitando os limites do dado analisado.”
 
 Este bloco servirá como base interpretativa para análises posteriores e como documentação estruturada do perfil de fornecimento presente na BDGD.
+
 
 
 
