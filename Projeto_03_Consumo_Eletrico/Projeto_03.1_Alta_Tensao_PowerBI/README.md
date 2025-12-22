@@ -262,6 +262,8 @@ como referência conceitual ao longo do projeto.
 | B4A | Subgrupo B4 – iluminação pública – propriedade do poder público |
 | B4B | Subgrupo B4 – iluminação pública – propriedade da distribuidora |
 
+> Embora a tabela apresente todos os grupos tarifários previstos no manual da ANEEL, este projeto analisa, neste momento, apenas os subgrupos de alta tensão efetivamente presentes no dataset.
+
 <br>
 
 ### Evolução das Unidades Consumidoras por Subgrupo Tarifário (Alta Tensão)
@@ -473,6 +475,7 @@ Ao final do Bloco E, espera-se responder de forma clara:
 > “Quais são os padrões de fornecimento de energia elétrica para Unidades Consumidoras de alta tensão no Brasil, e como esses padrões se relacionam com fatores geográficos, sistêmicos e contratuais, respeitando os limites do dado analisado.”
 
 Este bloco servirá como base interpretativa para análises posteriores e como documentação estruturada do perfil de fornecimento presente na BDGD.
+
 
 
 
