@@ -385,7 +385,7 @@ e para eventual incorporação de contexto histórico-regulatório em etapas fut
 
 ## Bloco E — Informações de Fornecimento
 
-O Bloco E tem como objetivo analisar **as características do fornecimento de energia elétrica** das Unidades Consumidoras (UCs) de alta tensão, buscando compreender **como a energia é entregue**, sob quais condições técnicas e contratuais, e quais padrões emergem a partir dos dados disponíveis na BDGD.
+O Bloco E tem como objetivo analisar **as características do fornecimento de energia elétrica** das Unidades Consumidoras (UCs), buscando compreender **como a energia é entregue**, sob quais condições técnicas e contratuais, e quais padrões emergem a partir dos dados disponíveis na BDGD.
 
 Este bloco é **descritivo e exploratório**, funcionando como uma ponte entre os aspectos contratuais (Bloco D) e as análises mais técnicas e quantitativas do projeto.
 
@@ -472,3 +472,4 @@ Ao final do Bloco E, espera-se responder de forma clara:
 > “Quais são os padrões de fornecimento de energia elétrica para Unidades Consumidoras de alta tensão no Brasil, e como esses padrões se relacionam com fatores geográficos, sistêmicos e contratuais, respeitando os limites do dado analisado.”
 
 Este bloco servirá como base interpretativa para análises posteriores e como documentação estruturada do perfil de fornecimento presente na BDGD.
+
