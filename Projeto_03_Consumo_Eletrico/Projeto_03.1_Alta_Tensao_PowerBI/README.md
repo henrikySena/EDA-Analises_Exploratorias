@@ -380,25 +380,95 @@ Esta interpretação inicial cumpre o papel de:
 As conclusões aqui apresentadas servem como **base para análises comparativas posteriores**
 e para eventual incorporação de contexto histórico-regulatório em etapas futuras do projeto.
 
+---
+<br>
 
+## Bloco E — Informações de Fornecimento
 
+O Bloco E tem como objetivo analisar **as características do fornecimento de energia elétrica** das Unidades Consumidoras (UCs) de alta tensão, buscando compreender **como a energia é entregue**, sob quais condições técnicas e contratuais, e quais padrões emergem a partir dos dados disponíveis na BDGD.
 
+Este bloco é **descritivo e exploratório**, funcionando como uma ponte entre os aspectos contratuais (Bloco D) e as análises mais técnicas e quantitativas do projeto.
 
+> Enquanto o **Bloco D** analisa *como a energia é contratada*, o **Bloco E** analisa *como a energia é fornecida*.
 
+<br>
 
+### 🧱 Estrutura Analítica do Bloco E
 
+#### **E1 — Visão Geral do Fornecimento**
+Análise inicial da distribuição dos tipos de fornecimento presentes no dataset.
 
+**Perguntas orientadoras:**
+- Quais são os principais tipos de fornecimento cadastrados?
+- Existe concentração em poucos padrões dominantes?
+- O fornecimento é homogêneo ou diverso entre as UCs?
 
+**Entregas esperadas:**
+- Gráfico de distribuição (barra ou rosca)
+- Breve descrição interpretativa
 
+<br>
 
+#### **E2 — Fornecimento × Localização**
+Análise da relação entre os tipos de fornecimento e a distribuição geográfica das UCs.
 
+**Cruzamentos sugeridos:**
+- Fornecimento × UF
+- Fornecimento × Região (se aplicável)
+- Fornecimento × TIP_SIST
 
+**Perguntas orientadoras:**
+- Existem padrões regionais claros?
+- Certos tipos de fornecimento são predominantes em áreas específicas?
 
+**Entregas esperadas:**
+- Gráficos comparativos (barras empilhadas ou matriz)
+- Comentário analítico sobre padrões espaciais
 
+<br>
 
+#### **E3 — Fornecimento × Perfil da Unidade Consumidora**
+Avaliação do fornecimento em relação ao perfil contratual e tarifário das UCs.
 
+**Cruzamentos sugeridos:**
+- Fornecimento × Grupo/Subgrupo Tarifário
+- Fornecimento × LIV (Consumidor Livre / Cativo)
 
+**Perguntas orientadoras:**
+- Consumidores livres concentram determinados tipos de fornecimento?
+- O perfil técnico do fornecimento é coerente com o perfil contratual da UC?
 
+**Entregas esperadas:**
+- Visualizações comparativas
+- Análise crítica de coerência técnica
 
+<br>
 
+#### **E4 — Qualidade dos Dados e Limitações**
+Avaliação da completude e representatividade das informações de fornecimento.
 
+**Pontos de atenção:**
+- Campos com alto volume de valores ausentes
+- Categorias raras ou pouco representativas
+- Necessidade de agrupamentos ou exclusões justificadas
+
+**Entregas esperadas:**
+- Lista sintética de limitações
+- Visual simples (quando aplicável)
+
+<br>
+
+### Escopo Delimitado (O que não será analisado)
+Para evitar extrapolações indevidas, este bloco **não contempla**:
+- Inferências sobre eficiência energética
+- Análises de consumo ou demanda (tratadas em blocos anteriores)
+- Deduções técnicas não explicitamente presentes no dataset (ex.: espessura de condutores inferida)
+
+<br>
+
+### 🧠 Resultado Esperado
+Ao final do Bloco E, espera-se responder de forma clara:
+
+> “Quais são os padrões de fornecimento de energia elétrica para Unidades Consumidoras de alta tensão no Brasil, e como esses padrões se relacionam com fatores geográficos, sistêmicos e contratuais, respeitando os limites do dado analisado.”
+
+Este bloco servirá como base interpretativa para análises posteriores e como documentação estruturada do perfil de fornecimento presente na BDGD.
