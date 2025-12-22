@@ -12,7 +12,8 @@ Atualmente, este dataset encontra-se organizado e analisado por meio de quatro b
 - **Bloco A** — Identificação das Unidades Consumidoras  
 - **Bloco B** — Distribuição geográfica e características gerais  
 - **Bloco C** — Demanda/Carga e identificação de erro sistemático nos dados  
-- **Bloco D** — Contratação e modalidade tarifária  
+- **Bloco D** — Contratação e modalidade tarifária
+- **Bloco E** — Informações de Fornecimento
 
 Cada bloco possui objetivos específicos e documentação própria, compondo de forma progressiva
 a compreensão da estrutura, qualidade e comportamento da base de dados analisada.
@@ -472,4 +473,5 @@ Ao final do Bloco E, espera-se responder de forma clara:
 > “Quais são os padrões de fornecimento de energia elétrica para Unidades Consumidoras de alta tensão no Brasil, e como esses padrões se relacionam com fatores geográficos, sistêmicos e contratuais, respeitando os limites do dado analisado.”
 
 Este bloco servirá como base interpretativa para análises posteriores e como documentação estruturada do perfil de fornecimento presente na BDGD.
+
 
