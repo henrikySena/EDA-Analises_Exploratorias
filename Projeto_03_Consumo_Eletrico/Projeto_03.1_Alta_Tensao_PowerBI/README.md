@@ -54,9 +54,8 @@ Essas visualizações possibilitam identificar rapidamente padrões de concentra
 
 Esse resultado é coerente com o perfil histórico de industrialização e densidade econômica dessas regiões, reforçando a validade espacial da base de dados.
 
-<br>
-
 ---
+<br>
 
 ## Bloco B — Tipo de Sistema (TIP_SIST) e Regime de Contratação (LIV)
 
@@ -95,6 +94,7 @@ Esse tratamento permitiu maior clareza interpretativa nas visualizações e faci
 **[NOTA]:** Esses dois blocos estabelecem a **base estrutural e institucional** do projeto, garantindo que as análises de demanda realizadas no Bloco C sejam interpretadas à luz da distribuição geográfica, do tipo de sistema elétrico e do regime de contratação das Unidades Consumidoras.
 
 ---
+<br>
 
 ## Bloco C — Demanda / Carga: Análise Histórica, Ruptura Estrutural e Avaliação de Unidade
 
@@ -216,9 +216,8 @@ A hipótese de erro de rotulagem de unidade (W → kW) mostrou-se capaz de resta
 
 Essa abordagem reforça a importância da validação semântica de unidades em análises de dados históricos de grande escala, especialmente em contextos de transição metodológica.
 
-<br>
-
 ---
+<br>
 
 ## Bloco D — Contratação / Modalidade Tarifária
 
@@ -585,5 +584,6 @@ do dashboard final do projeto.
 
 ---
 <br>
+
 
 
