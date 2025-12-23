@@ -386,97 +386,203 @@ e para eventual incorporação de contexto histórico-regulatório em etapas fut
 ---
 <br>
 
-## Bloco E — Informações de Fornecimento
+## Bloco E — Informações de Fornecimento  
 
-O Bloco E tem como objetivo analisar **as características do fornecimento de energia elétrica** das Unidades Consumidoras (UCs), buscando compreender **como a energia é entregue**, sob quais condições técnicas e contratuais, e quais padrões emergem a partir dos dados disponíveis na BDGD.
+O Bloco E tem como objetivo analisar as **características técnicas do fornecimento de energia elétrica**
+das Unidades Consumidoras (UCs) de alta tensão presentes na base BDGD, buscando compreender
+**como a energia é entregue**, sob quais padrões técnicos, e como esses padrões se distribuem
+entre diferentes sistemas, perfis contratuais e recortes geográficos.
 
-Este bloco é **descritivo e exploratório**, funcionando como uma ponte entre os aspectos contratuais (Bloco D) e as análises mais técnicas e quantitativas do projeto.
-
-> Enquanto o **Bloco D** analisa *como a energia é contratada*, o **Bloco E** analisa *como a energia é fornecida*.
-
-<br>
-
-### 🧱 Estrutura Analítica do Bloco E
-
-#### **E1 — Visão Geral do Fornecimento**
-Análise inicial da distribuição dos tipos de fornecimento presentes no dataset.
-
-**Perguntas orientadoras:**
-- Quais são os principais tipos de fornecimento cadastrados?
-- Existe concentração em poucos padrões dominantes?
-- O fornecimento é homogêneo ou diverso entre as UCs?
-
-**Entregas esperadas:**
-- Gráfico de distribuição (barra ou rosca)
-- Breve descrição interpretativa
+Este bloco possui caráter **descritivo e exploratório**, não realizando inferências causais,
+avaliações de eficiência ou análises de consumo energético, as quais são tratadas em outros
+blocos do projeto.
 
 <br>
 
-#### **E2 — Fornecimento × Localização**
-Análise da relação entre os tipos de fornecimento e a distribuição geográfica das UCs.
+### 🔍 Considerações Metodológicas Iniciais
 
-**Cruzamentos sugeridos:**
-- Fornecimento × UF
-- Fornecimento × Região (se aplicável)
-- Fornecimento × TIP_SIST
+Os campos analisados neste bloco incluem, principalmente:
 
-**Perguntas orientadoras:**
-- Existem padrões regionais claros?
-- Certos tipos de fornecimento são predominantes em áreas específicas?
+- **`TEN_FORN`** — código de referência da tensão de fornecimento  
+- **`GRU_TEN`** — grupo de tensão (Alta Tensão)  
+- **`TIP_SIST`** — tipo de sistema (Rede Interligada ou Rede Isolada)  
+- **`GRU_TAR`** — grupo tarifário (A1, A2, A3)  
+- **Localização geográfica** (UF)
 
-**Entregas esperadas:**
-- Gráficos comparativos (barras empilhadas ou matriz)
-- Comentário analítico sobre padrões espaciais
+O campo **`TEN_FORN`** representa **códigos de domínio definidos pela BDGD**, não correspondendo
+diretamente a valores numéricos de tensão em kV. A interpretação técnica desses códigos foi
+realizada por meio de consulta ao **Manual de Instruções da BDGD**, sendo a tradução para kV
+utilizada apenas como **camada interpretativa**, sem alteração da estrutura original dos dados.
 
-<br>
-
-#### **E3 — Fornecimento × Perfil da Unidade Consumidora**
-Avaliação do fornecimento em relação ao perfil contratual e tarifário das UCs.
-
-**Cruzamentos sugeridos:**
-- Fornecimento × Grupo/Subgrupo Tarifário
-- Fornecimento × LIV (Consumidor Livre / Cativo)
-
-**Perguntas orientadoras:**
-- Consumidores livres concentram determinados tipos de fornecimento?
-- O perfil técnico do fornecimento é coerente com o perfil contratual da UC?
-
-**Entregas esperadas:**
-- Visualizações comparativas
-- Análise crítica de coerência técnica
+Além disso, este bloco **não realiza segmentação temporal**, diferentemente do Bloco C.  
+Como as variáveis analisadas representam **características técnicas e cadastrais**, e não valores
+medidos, as análises são conduzidas considerando o **conjunto completo da série histórica**,
+com cautela quanto à interpretação de registros residuais ou históricos.
 
 <br>
 
-#### **E4 — Qualidade dos Dados e Limitações**
-Avaliação da completude e representatividade das informações de fornecimento.
+### 📄 Referência Técnica — Códigos de Tensão de Fornecimento (`TEN_FORN`)
 
-**Pontos de atenção:**
-- Campos com alto volume de valores ausentes
-- Categorias raras ou pouco representativas
-- Necessidade de agrupamentos ou exclusões metodologicamente justificadas
+A interpretação dos códigos de tensão de fornecimento utilizados neste bloco foi realizada com
+base na documentação oficial da BDGD, conforme apresentado no **Manual de Instruções da BDGD**.
 
-**Entregas esperadas:**
-- Lista sintética de limitações
-- Visual simples (quando aplicável)
+A tabela abaixo é utilizada como **referência conceitual**, permitindo associar os códigos
+presentes no dataset aos respectivos níveis de tensão, **sem alterar os valores originais dos
+dados**, que permanecem representados por seus códigos de domínio.
+
+| Código (`TEN_FORN`) | Descrição | Nível de Tensão |
+|--------------------|-----------|-----------------|
+| 82 | Alta Tensão | 69 kV |
+| 83 | Alta Tensão | 88 kV |
+| 84 | Alta Tensão | 138 kV |
+| 94 | Alta Tensão | 230 kV |
+| 95 | Alta Tensão | 345 kV |
+| 96 | Alta Tensão | ≥ 440 kV |
+
+> **Nota metodológica:**  
+> Os códigos de tensão foram mantidos nos gráficos e cruzamentos analíticos (`TEN_FORN`), sendo
+> a conversão para valores em kV utilizada exclusivamente como apoio interpretativo, conforme
+> documentação oficial, sem qualquer transformação ou recodificação da base original.
 
 <br>
 
-### Escopo Delimitado (O que não será analisado)
-Para evitar extrapolações indevidas, este bloco **não contempla**:
-- Inferências sobre eficiência energética
-- Análises de consumo ou demanda (tratadas em blocos anteriores)
-- Deduções técnicas não explicitamente presentes no dataset (ex.: espessura de condutores inferida)
+## E1 — Visão Geral do Fornecimento
+
+A análise inicial da distribuição das Unidades Consumidoras por código de tensão de fornecimento
+(`TEN_FORN`) indica **forte concentração em poucos padrões técnicos**.
+
+Observa-se que a maior parte das UCs de alta tensão está associada a um **conjunto restrito de
+códigos**, com clara predominância de alguns níveis específicos, enquanto os demais aparecem de
+forma residual. Esse comportamento sugere que o fornecimento de energia elétrica em alta tensão,
+na base analisada, **não apresenta grande diversidade técnica**, operando majoritariamente em
+padrões bem definidos.
+
+Adicionalmente, verificou-se **coerência técnica** entre os campos `TEN_FORN` e `GRU_TEN`, sendo
+o primeiro responsável pela granularidade analítica do fornecimento e o segundo pela
+identificação do macrogrupo de tensão (Alta Tensão).
 
 <br>
 
-### 🧠 Resultado Esperado
-Ao final do Bloco E, espera-se responder de forma clara:
+## E2 — Fornecimento × Tipo de Sistema
 
-> “Quais são os padrões de fornecimento de energia elétrica para Unidades Consumidoras de alta tensão no Brasil, e como esses padrões se relacionam com fatores geográficos, sistêmicos e contratuais, respeitando os limites do dado analisado.”
+### Distribuição geral por tipo de sistema
 
-Este bloco servirá como base interpretativa para análises posteriores e como documentação estruturada do perfil de fornecimento presente na BDGD.
+A análise da distribuição das UCs por tipo de sistema (`TIP_SIST`) evidencia **forte predominância
+da Rede Interligada**, que concentra a maior parte das Unidades Consumidoras de alta tensão da base
+analisada. As Redes Isoladas representam uma **parcela significativamente menor** do total de
+registros.
 
+Este resultado é utilizado como **contexto analítico**, servindo de base para a interpretação
+dos cruzamentos entre fornecimento técnico e tipo de sistema.
 
+<br>
 
+### Códigos de tensão por tipo de sistema
 
+Ao cruzar os códigos de tensão de fornecimento (`TEN_FORN`) com o tipo de sistema (`TIP_SIST`),
+observa-se uma **diferença clara na diversidade técnica** entre os sistemas:
+
+- A **Rede Interligada** apresenta **maior variedade de códigos de tensão**, com seis códigos
+  distintos identificados, sendo os mais representativos:
+  - `TEN_FORN = 94` (predominante),
+  - seguido por `TEN_FORN = 82`,
+  - e `TEN_FORN = 84`.
+
+- As **Redes Isoladas** operam com um **conjunto mais restrito**, no qual aparecem apenas três
+  códigos:
+  - `TEN_FORN = 94` (claramente dominante),
+  - seguido por `TEN_FORN = 84`,
+  - e `TEN_FORN = 82`, com menor participação.
+
+O código **`TEN_FORN = 96`**, associado a níveis mais elevados de tensão, aparece de forma
+**extremamente residual** na Rede Interligada (10 UCs) e **não está presente** nas Redes Isoladas.
+
+Esse padrão sugere que sistemas isolados operam com **maior padronização técnica**, enquanto a
+Rede Interligada concentra a maior diversidade de níveis de tensão de fornecimento.
+
+<br>
+
+### E2 — Fornecimento × Localização Geográfica
+
+A análise espacial dos códigos de tensão de fornecimento, considerando o recorte por Unidade
+Federativa (UF), revela padrões relevantes:
+
+- **São Paulo (SP)** e **Minas Gerais (MG)** concentram a maior parte das Unidades Consumidoras.
+- Em **São Paulo**, os códigos mais frequentes são:
+  - `TEN_FORN = 94`,
+  - seguido por `TEN_FORN = 84`.
+- Em **Minas Gerais**, observa-se predominância de:
+  - `TEN_FORN = 95`,
+  - seguido por `TEN_FORN = 94`.
+
+De forma relevante, o código **`TEN_FORN = 96` não aparece** nos estados com maior volume de UCs
+(SP e MG), estando presente apenas de maneira pontual em:
+
+- **Rio Grande do Sul** (1 UC),
+- **Pernambuco** (4 UCs),
+- **Bahia** (5 UCs).
+
+Nos demais estados, observa-se essencialmente a presença dos códigos **94 e 82**, indicando um
+padrão técnico ainda mais concentrado.
+
+Embora esses padrões sugiram possíveis diferenças regionais na adoção de níveis de tensão,
+**a base de dados analisada não permite inferências causais** sobre os fatores estruturais ou
+históricos que expliquem tal distribuição.
+
+<br>
+
+### E3 — Fornecimento × Perfil Tarifário da Unidade Consumidora
+
+O cruzamento entre os códigos de tensão de fornecimento (`TEN_FORN`) e os grupos tarifários
+(`GRU_TAR`) indica **elevada coerência técnica** entre o nível de tensão fornecido e o
+enquadramento tarifário predominante das UCs.
+
+- **Grupo A1**:
+  - Predominância de `TEN_FORN = 96` (10 UCs),
+  - Ocorrência residual de `TEN_FORN = 82` (1 UC).
+
+- **Grupo A2**:
+  - Predominância de `TEN_FORN = 95`, `94` e `84`,
+  - Presença de `TEN_FORN = 82` em 9 UCs.
+
+- **Grupo A3**:
+  - Predominância clara de `TEN_FORN = 82`,
+  - Presenças residuais de `TEN_FORN = 83` (2 UCs) e `TEN_FORN = 94` (2 UCs).
+
+As exceções observadas representam **volumes muito reduzidos** e não descaracterizam o padrão
+geral de coerência entre fornecimento e enquadramento tarifário. Esses registros podem estar
+associados a reclassificações tarifárias, contratos específicos ou registros históricos mantidos
+na base, não sendo possível classificá-los como inconsistências apenas com base nos dados
+disponíveis.
+
+<br>
+
+### E4 — Qualidade dos Dados e Limitações
+
+A análise do Bloco E identificou alguns pontos de atenção:
+
+- Existência de códigos de tensão com **baixa representatividade**, como `TEN_FORN = 96` e
+  `TEN_FORN = 83`, que não sustentam análises isoladas;
+- Ocorrências pontuais de códigos fora do padrão dominante de determinados grupos tarifários;
+- Presença de registros históricos e ausência de informações que permitam validação normativa
+  ou reconstrução do contexto regulatório individual de cada UC.
+
+Essas limitações **não invalidam** as análises realizadas, mas delimitam seu escopo interpretativo,
+reforçando o caráter exploratório do bloco.
+
+<br>
+
+### 🧠 Conclusão do Bloco E
+
+O Bloco E evidencia que o fornecimento de energia elétrica às Unidades Consumidoras de alta tensão
+no Brasil é **fortemente concentrado em poucos padrões técnicos**, apresentando elevada coerência
+com o tipo de sistema, o enquadramento tarifário e a distribuição geográfica das UCs.
+
+As exceções identificadas são raras, bem delimitadas e metodologicamente reconhecidas, contribuindo
+para uma leitura crítica e realista da base BDGD. O bloco cumpre seu papel ao documentar **como a
+energia é fornecida**, estabelecendo uma base sólida para análises posteriores e para a construção
+do dashboard final do projeto.
+
+---
+<br>
 
