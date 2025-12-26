@@ -573,17 +573,17 @@ reforçando o caráter exploratório do bloco.
 
 ### 🧠 Conclusão do Bloco E
 
-O Bloco E evidencia que o fornecimento de energia elétrica às Unidades Consumidoras de alta tensão
-no Brasil é **fortemente concentrado em poucos padrões técnicos**, apresentando elevada coerência
-com o tipo de sistema, o enquadramento tarifário e a distribuição geográfica das UCs.
+Observou-se que a maior parte das Unidades Consumidoras opera sob um conjunto restrito de códigos de tensão, com predominância clara de poucos padrões técnicos. Esse comportamento se mantém consistente nos recortes por Rede Interligada e Redes Isoladas, sendo que estas últimas operam com menor diversidade técnica, enquanto a Rede Interligada concentra praticamente toda a variedade de níveis de tensão identificados.
 
-As exceções identificadas são raras, bem delimitadas e metodologicamente reconhecidas, contribuindo
-para uma leitura crítica e realista da base BDGD. O bloco cumpre seu papel ao documentar **como a
-energia é fornecida**, estabelecendo uma base sólida para análises posteriores e para a construção
-do dashboard final do projeto.
+Do ponto de vista espacial, a concentração de Unidades Consumidoras em São Paulo e Minas Gerais reflete-se também nos padrões de fornecimento predominantes, ao passo que níveis de tensão mais elevados aparecem apenas de forma pontual em outros estados.
+
+O cruzamento entre **tensão de fornecimento** e **grupos tarifários** revelou elevada coerência técnica, com exceções raras e numericamente irrelevantes, compatíveis com registros históricos, reclassificações ou contratos específicos, não configurando inconsistências estruturais.
+
+As limitações identificadas delimitam o escopo interpretativo do bloco, sem comprometer a validade dos achados. O Bloco E cumpre, assim, seu papel ao documentar como o fornecimento é estruturado, oferecendo base técnica consistente para a interpretação dos demais blocos do projeto e para análises futuras.
 
 ---
 <br>
+
 
 
 
