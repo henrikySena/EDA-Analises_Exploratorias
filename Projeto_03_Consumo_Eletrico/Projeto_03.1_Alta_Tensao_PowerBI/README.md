@@ -575,23 +575,11 @@ A análise do Bloco E identificou alguns pontos de atenção:
 Essas limitações **não invalidam** as análises realizadas, mas delimitam seu escopo interpretativo,
 reforçando o caráter exploratório do bloco.
 
-<br>
-
-### 🧠 Conclusão do Bloco E
-
-Observou-se que a maior parte das Unidades Consumidoras opera sob um conjunto restrito de códigos de tensão, com predominância clara de poucos padrões técnicos. Esse comportamento se mantém consistente nos recortes por Rede Interligada e Redes Isoladas, sendo que estas últimas operam com menor diversidade técnica, enquanto a Rede Interligada concentra praticamente toda a variedade de níveis de tensão identificados.
-
-Do ponto de vista espacial, a concentração de Unidades Consumidoras em São Paulo e Minas Gerais reflete-se também nos padrões de fornecimento predominantes, ao passo que níveis de tensão mais elevados aparecem apenas de forma pontual e residual em outros estados.
-
-O cruzamento entre **tensão de fornecimento** e **grupos tarifários** revelou elevada coerência técnica, com exceções raras e numericamente irrelevantes, compatíveis com registros históricos, reclassificações ou contratos específicos, não configurando inconsistências estruturais.
-
-As limitações identificadas delimitam o escopo interpretativo do bloco, sem comprometer a validade dos achados. O Bloco E cumpre, assim, seu papel ao documentar como o fornecimento é estruturado, oferecendo base técnica consistente para a interpretação dos demais blocos do projeto e para análises futuras.
-
 ---
 <br>
 
 <a id="conclusao-geral"></a>
-## Conclusão Geral — Projeto 03.1 (Alta Tensão)
+## Conclusão Geral do Projeto 03.1 - Alta Tensão
 
 ### Visão Geral do Projeto
 O Projeto 03.1 apresentou uma **análise exploratória estruturada** das Unidades Consumidoras de alta tensão a partir da base BDGD/ANEEL. O foco esteve na organização, validação e interpretação crítica dos dados, respeitando seus limites históricos, cadastrais e metodológicos.
@@ -687,6 +675,7 @@ O Projeto 03.1 cumpre plenamente seu objetivo ao **organizar, qualificar e inter
 Ao longo do trabalho, a Análise Exploratória de Dados (EDA) mostrou-se fundamental não apenas para descrever padrões, mas para **revelar rupturas estruturais, inconsistências semânticas e limitações históricas** da base, em especial aquelas relacionadas a mudanças cadastrais, metodológicas e de rotulagem de unidades. Esses achados reforçam a importância de considerar a coerência interna, a escala dos valores e o contexto regulatório na interpretação dos dados.
 
 Mais do que produzir métricas finais, este projeto demonstra o papel da EDA como **etapa crítica de validação e entendimento do dado**, capaz de evitar conclusões equivocadas e de orientar decisões analíticas mais robustas nas fases subsequentes. Assim, o Projeto 03.1 consolida-se como um **alicerce metodológico** para o aprofundamento das análises de consumo elétrico, garantindo maior confiabilidade e consistência às investigações futuras.
+
 
 
 
