@@ -575,7 +575,7 @@ reforçando o caráter exploratório do bloco.
 
 Observou-se que a maior parte das Unidades Consumidoras opera sob um conjunto restrito de códigos de tensão, com predominância clara de poucos padrões técnicos. Esse comportamento se mantém consistente nos recortes por Rede Interligada e Redes Isoladas, sendo que estas últimas operam com menor diversidade técnica, enquanto a Rede Interligada concentra praticamente toda a variedade de níveis de tensão identificados.
 
-Do ponto de vista espacial, a concentração de Unidades Consumidoras em São Paulo e Minas Gerais reflete-se também nos padrões de fornecimento predominantes, ao passo que níveis de tensão mais elevados aparecem apenas de forma pontual em outros estados.
+Do ponto de vista espacial, a concentração de Unidades Consumidoras em São Paulo e Minas Gerais reflete-se também nos padrões de fornecimento predominantes, ao passo que níveis de tensão mais elevados aparecem apenas de forma pontual e residual em outros estados.
 
 O cruzamento entre **tensão de fornecimento** e **grupos tarifários** revelou elevada coerência técnica, com exceções raras e numericamente irrelevantes, compatíveis com registros históricos, reclassificações ou contratos específicos, não configurando inconsistências estruturais.
 
@@ -614,18 +614,19 @@ Nesse contexto, a hipótese de **erro de rotulagem de unidade (W → kW)** mostr
 
 Os resultados reforçam a importância de uma **EDA crítica e semântica**, especialmente em bases históricas sujeitas a mudanças metodológicas e cadastrais, e delimitam claramente os limites de comparabilidade entre os períodos analisados.
 
-
-
-
 <br>
 
-### 📄 Contratação e Modalidade Tarifária (Bloco D)
-A análise do Bloco D contribuiu para a compreensão do **perfil de contratação das Unidades Consumidoras**, revelando:
-- diferenças de comportamento entre subgrupos tarifários;
-- mudanças estruturais ao longo do tempo;
-- padrões compatíveis com processos de reorganização regulatória.
+## 🧾 Conclusão do Bloco D — Contratação / Modalidade Tarifária
 
-As interpretações mantiveram caráter **descritivo e exploratório**, sem atribuição de causalidade.
+A análise do Bloco D permitiu caracterizar o perfil de contratação das Unidades Consumidoras de alta tensão ao longo do tempo, evidenciando padrões distintos entre os subgrupos tarifários e mudanças estruturais na série histórica.
+
+Os resultados indicam que os subgrupos A1, A2 e A3 apresentam comportamentos heterogêneos, com o A1 mantendo participação residual, o A2 exibindo maior volatilidade associada a eventos pontuais e o A3 demonstrando crescimento mais gradual e consistente. A alternância observada entre A2 e A3 em determinados períodos sugere possíveis processos de reclassificação tarifária ou ajustes regulatórios ao longo do tempo.
+
+Adicionalmente, o baixo volume de registros anterior aos anos 1980 e a intensificação progressiva a partir desse período apontam para limitações históricas de registro e para o fortalecimento institucional e regulatório do setor elétrico brasileiro, mais do que para variações reais no número de conexões.
+
+A partir dos anos 2000, observa-se uma mudança clara de patamar na série, caracterizada por maior volume e variabilidade de Unidades Consumidoras, indicando um novo regime estrutural nos dados de contratação.
+
+Este bloco cumpre, portanto, o papel de contextualizar a dimensão contratual e regulatória da base de dados, fornecendo suporte interpretativo para análises posteriores e reforçando a necessidade de considerar transições institucionais e cadastrais na leitura de séries históricas do setor elétrico.
 
 <br>
 
@@ -641,7 +642,48 @@ As limitações identificadas foram contextualizadas como inerentes à natureza 
 
 <br>
 
-### Considerações Finais
-O Projeto 03.1 cumpre seu objetivo ao **organizar, validar e interpretar criticamente** o conjunto de dados de alta tensão, estabelecendo uma base técnica sólida para as próximas etapas do **Projeto 03 — Consumo Elétrico**, dedicadas às análises de média e baixa tensão.
 
-Mais do que produzir indicadores finais, este trabalho evidencia o valor de uma **EDA rigorosa**, capaz de revelar rupturas estruturais, inconsistências semânticas e limites interpretativos que análises superficiais não capturam.
+
+A análise do Bloco E permitiu caracterizar, de forma descritiva, **como o fornecimento de energia elétrica em alta tensão está estruturado** na base BDGD, a partir de seus padrões técnicos, sistêmicos, tarifários e espaciais.
+
+<br>
+
+- ### Padronização Técnica do Fornecimento
+Observou-se que a grande maioria das Unidades Consumidoras opera sob um **conjunto restrito de códigos de tensão (`TEN_FORN`)**, com clara predominância de poucos padrões técnicos. Esse comportamento indica **baixa diversidade técnica** no fornecimento em alta tensão, concentrado em níveis amplamente consolidados.
+
+<br>
+
+- ### Tipo de Sistema Elétrico
+A **Rede Interligada** concentra praticamente todo o volume de UCs analisadas e apresenta a **maior diversidade de níveis de tensão**, enquanto as **Redes Isoladas** operam com um conjunto significativamente mais restrito de códigos, evidenciando maior padronização técnica nesses sistemas.
+
+<br>
+
+- ### Distribuição Geográfica
+A forte concentração de Unidades Consumidoras em **São Paulo (SP)** e **Minas Gerais (MG)** reflete-se também nos padrões de fornecimento predominantes nesses estados. Níveis de tensão mais elevados aparecem de forma **pontual e residual** em outras UFs, sem impacto estrutural sobre o conjunto da base.
+
+<br>
+
+- ### Coerência com o Perfil Tarifário
+O cruzamento entre **tensão de fornecimento (`TEN_FORN`)** e **grupo tarifário (`GRU_TAR`)** revelou **elevada coerência técnica**, com associações consistentes entre níveis de tensão e enquadramento tarifário. As exceções observadas são raras, numericamente irrelevantes e compatíveis com registros históricos, reclassificações ou contratos específicos.
+
+<br>
+
+- ### Limitações e Escopo
+A presença de códigos com baixa representatividade e de registros históricos delimita o escopo interpretativo das análises, sem comprometer sua validade. O bloco mantém caráter **exploratório**, sem inferência normativa ou causal.
+
+<br>
+
+O Bloco E cumpre seu papel ao documentar **como o fornecimento de energia é tecnicamente estruturado** na base analisada, fornecendo um **contexto técnico sólido** para a interpretação integrada dos demais blocos do projeto e para análises futuras mais específicas.
+
+<br>
+
+---
+
+## 🧩 Considerações Finais
+
+O Projeto 03.1 cumpre plenamente seu objetivo ao **organizar, qualificar e interpretar criticamente** o conjunto de dados de **Unidades Consumidoras de alta tensão**, estabelecendo uma **base técnica consistente e confiável** para as próximas etapas do Projeto 03 — Consumo Elétrico, dedicadas às análises de média e baixa tensão.
+
+Ao longo do trabalho, a Análise Exploratória de Dados (EDA) mostrou-se fundamental não apenas para descrever padrões, mas para **revelar rupturas estruturais, inconsistências semânticas e limitações históricas** da base, em especial aquelas relacionadas a mudanças cadastrais, metodológicas e de rotulagem de unidades. Esses achados evidenciam que a interpretação correta dos dados exige atenção à **coerência interna, à escala dos valores e ao contexto regulatório**, e não apenas à leitura direta dos indicadores.
+
+Mais do que produzir métricas finais, este projeto demonstra o papel da EDA como **etapa crítica de validação e entendimento do dado**, capaz de evitar conclusões equivocadas e de orientar decisões analíticas mais robustas nas fases subsequentes. Assim, o Projeto 03.1 consolida-se como um **alicerce metodológico** para o aprofundamento das análises de consumo elétrico, garantindo maior confiabilidade e consistência às investigações futuras.
+
