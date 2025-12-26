@@ -10,11 +10,11 @@ nível de tensão das Unidades Consumidoras.
 Atualmente, este dataset encontra-se organizado e analisado por meio de quatro blocos analíticos:
 
 - [**Bloco A** — Identificação das Unidades Consumidoras](#bloco-a)
-- **Bloco B** — Distribuição geográfica e características gerais  
-- **Bloco C** — Demanda/Carga e identificação de erro sistemático nos dados  
-- **Bloco D** — Contratação e modalidade tarifária
-- **Bloco E** — Informações de Fornecimento
-- **Conclusão Geral** — Projeto 03.1 (Alta Tensão)
+- [**Bloco B** — Distribuição geográfica e características gerais](#bloco-b)
+- [**Bloco C** — Demanda/Carga e identificação de erro sistemático nos dados](#bloco-c)
+- [**Bloco D** — Contratação e modalidade tarifária](#bloco-d)
+- [**Bloco E** — Informações de Fornecimento](#bloco-e)
+- [**Conclusão Geral** — Projeto 03.1 (Alta Tensão)](#conclusao-geral)
 
 Cada bloco possui objetivos específicos e documentação própria, compondo de forma progressiva
 a compreensão da estrutura, qualidade e comportamento da base de dados analisada.
@@ -59,6 +59,7 @@ Esse resultado é coerente com o perfil histórico de industrialização e densi
 ---
 <br>
 
+<a id="bloco-b"></a>
 ## Bloco B — Tipo de Sistema (TIP_SIST) e Regime de Contratação (LIV)
 
 ### 🔍 Objetivo Analítico
@@ -98,6 +99,7 @@ Esse tratamento permitiu maior clareza interpretativa nas visualizações e faci
 ---
 <br>
 
+<a id="bloco-c"></a>
 ## Bloco C — Demanda / Carga: Análise Histórica, Ruptura Estrutural e Avaliação de Unidade
 
 ## 🔍 1. Contexto e Problema Inicial
@@ -221,6 +223,7 @@ Essa abordagem reforça a importância da validação semântica de unidades em 
 ---
 <br>
 
+<a id="bloco-d"></a>
 ## Bloco D — Contratação / Modalidade Tarifária
 
 Este bloco tem como objetivo analisar o perfil de contratação das Unidades Consumidoras,
@@ -387,6 +390,7 @@ e para eventual incorporação de contexto histórico-regulatório em etapas fut
 ---
 <br>
 
+<a id="bloco-e"></a>
 ## Bloco E — Informações de Fornecimento  
 
 O Bloco E tem como objetivo analisar as **características técnicas do fornecimento de energia elétrica**
@@ -586,7 +590,8 @@ As limitações identificadas delimitam o escopo interpretativo do bloco, sem co
 ---
 <br>
 
-## 🧾 Conclusão Geral — Projeto 03.1 (Alta Tensão)
+<a id="conclusao-geral"></a>
+## 🧩 Conclusão Geral — Projeto 03.1 (Alta Tensão)
 
 ### Visão Geral do Projeto
 O Projeto 03.1 apresentou uma **análise exploratória estruturada** das Unidades Consumidoras de alta tensão a partir da base BDGD/ANEEL. O foco esteve na organização, validação e interpretação crítica dos dados, respeitando seus limites históricos, cadastrais e metodológicos.
@@ -688,6 +693,7 @@ O Projeto 03.1 cumpre plenamente seu objetivo ao **organizar, qualificar e inter
 Ao longo do trabalho, a Análise Exploratória de Dados (EDA) mostrou-se fundamental não apenas para descrever padrões, mas para **revelar rupturas estruturais, inconsistências semânticas e limitações históricas** da base, em especial aquelas relacionadas a mudanças cadastrais, metodológicas e de rotulagem de unidades. Esses achados reforçam a importância de considerar a coerência interna, a escala dos valores e o contexto regulatório na interpretação dos dados.
 
 Mais do que produzir métricas finais, este projeto demonstra o papel da EDA como **etapa crítica de validação e entendimento do dado**, capaz de evitar conclusões equivocadas e de orientar decisões analíticas mais robustas nas fases subsequentes. Assim, o Projeto 03.1 consolida-se como um **alicerce metodológico** para o aprofundamento das análises de consumo elétrico, garantindo maior confiabilidade e consistência às investigações futuras.
+
 
 
 
