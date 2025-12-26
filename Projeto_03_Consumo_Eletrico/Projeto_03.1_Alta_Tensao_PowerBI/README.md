@@ -600,7 +600,7 @@ A abordagem adotada priorizou a **construção progressiva do entendimento da ba
 
 <br>
 
-### 🗺️ Contexto Espacial e Institucional (Blocos A e B)
+### 🗺️ Blocos A e B - Contexto Espacial e Institucional 
 Os Blocos A e B cumpriram o papel de estabelecer o **alicerce estrutural do Projeto 03.1**, fornecendo o contexto espacial, sistêmico e institucional necessário para a interpretação adequada das análises posteriores.
 
 - No Bloco A, a distribuição geográfica das Unidades Consumidoras evidenciou uma **forte concentração regional**, com São Paulo e Minas Gerais respondendo por aproximadamente 80% das UCs analisadas. Esse padrão mostrou-se coerente com a estrutura econômica e industrial dessas regiões, reforçando a **consistência espacial da base de dados** após os tratamentos realizados.
@@ -611,7 +611,7 @@ Em conjunto, esses blocos garantem que as análises de demanda, contratação e 
 
 <br>
 
-### ⚡ Conclusão — Bloco C (Demanda / Carga)
+### ⚡ Bloco C - Demanda / Carga
 
 O Bloco C identificou uma **ruptura estrutural clara na série histórica de demanda** das Unidades Consumidoras a partir de 2003, caracterizada por mudanças abruptas de escala e ordens de grandeza incompatíveis quando os valores são interpretados diretamente como quilowatts (kW).
 
@@ -623,7 +623,7 @@ Os resultados reforçam a importância de uma **EDA crítica e semântica**, esp
 
 <br>
 
-## 📃 Conclusão do Bloco D — Contratação / Modalidade Tarifária
+### 📃 Conclusão do Bloco D — Contratação / Modalidade Tarifária
 
 A análise do Bloco D permitiu caracterizar o perfil de contratação das Unidades Consumidoras de alta tensão ao longo do tempo, evidenciando padrões distintos entre os subgrupos tarifários e mudanças estruturais na série histórica.
 
@@ -637,7 +637,7 @@ Este bloco cumpre, portanto, o papel de contextualizar a dimensão contratual e 
 
 <br>
 
-### 🔌 Fornecimento e Padrões Técnicos (Bloco E)
+### 🔌 Bloco E - Fornecimento e Padrões Técnicos
 O Bloco E documentou como a energia elétrica é **tecnicamente fornecida** às Unidades Consumidoras de alta tensão.
 
 Os principais achados incluem:
@@ -693,6 +693,7 @@ O Projeto 03.1 cumpre plenamente seu objetivo ao **organizar, qualificar e inter
 Ao longo do trabalho, a Análise Exploratória de Dados (EDA) mostrou-se fundamental não apenas para descrever padrões, mas para **revelar rupturas estruturais, inconsistências semânticas e limitações históricas** da base, em especial aquelas relacionadas a mudanças cadastrais, metodológicas e de rotulagem de unidades. Esses achados reforçam a importância de considerar a coerência interna, a escala dos valores e o contexto regulatório na interpretação dos dados.
 
 Mais do que produzir métricas finais, este projeto demonstra o papel da EDA como **etapa crítica de validação e entendimento do dado**, capaz de evitar conclusões equivocadas e de orientar decisões analíticas mais robustas nas fases subsequentes. Assim, o Projeto 03.1 consolida-se como um **alicerce metodológico** para o aprofundamento das análises de consumo elétrico, garantindo maior confiabilidade e consistência às investigações futuras.
+
 
 
 
