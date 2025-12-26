@@ -591,7 +591,7 @@ As limitações identificadas delimitam o escopo interpretativo do bloco, sem co
 <br>
 
 <a id="conclusao-geral"></a>
-## 🧩 Conclusão Geral — Projeto 03.1 (Alta Tensão)
+## Conclusão Geral — Projeto 03.1 (Alta Tensão)
 
 ### Visão Geral do Projeto
 O Projeto 03.1 apresentou uma **análise exploratória estruturada** das Unidades Consumidoras de alta tensão a partir da base BDGD/ANEEL. O foco esteve na organização, validação e interpretação crítica dos dados, respeitando seus limites históricos, cadastrais e metodológicos.
@@ -623,7 +623,7 @@ Os resultados reforçam a importância de uma **EDA crítica e semântica**, esp
 
 <br>
 
-## 🧾 Conclusão do Bloco D — Contratação / Modalidade Tarifária
+## 📃 Conclusão do Bloco D — Contratação / Modalidade Tarifária
 
 A análise do Bloco D permitiu caracterizar o perfil de contratação das Unidades Consumidoras de alta tensão ao longo do tempo, evidenciando padrões distintos entre os subgrupos tarifários e mudanças estruturais na série histórica.
 
@@ -693,6 +693,7 @@ O Projeto 03.1 cumpre plenamente seu objetivo ao **organizar, qualificar e inter
 Ao longo do trabalho, a Análise Exploratória de Dados (EDA) mostrou-se fundamental não apenas para descrever padrões, mas para **revelar rupturas estruturais, inconsistências semânticas e limitações históricas** da base, em especial aquelas relacionadas a mudanças cadastrais, metodológicas e de rotulagem de unidades. Esses achados reforçam a importância de considerar a coerência interna, a escala dos valores e o contexto regulatório na interpretação dos dados.
 
 Mais do que produzir métricas finais, este projeto demonstra o papel da EDA como **etapa crítica de validação e entendimento do dado**, capaz de evitar conclusões equivocadas e de orientar decisões analíticas mais robustas nas fases subsequentes. Assim, o Projeto 03.1 consolida-se como um **alicerce metodológico** para o aprofundamento das análises de consumo elétrico, garantindo maior confiabilidade e consistência às investigações futuras.
+
 
 
 
