@@ -683,7 +683,8 @@ O Bloco E cumpre seu papel ao documentar **como o fornecimento de energia é tec
 
 O Projeto 03.1 cumpre plenamente seu objetivo ao **organizar, qualificar e interpretar criticamente** o conjunto de dados de **Unidades Consumidoras de alta tensão**, estabelecendo uma **base técnica consistente e confiável** para as próximas etapas do Projeto 03 — Consumo Elétrico, dedicadas às análises de média e baixa tensão.
 
-Ao longo do trabalho, a Análise Exploratória de Dados (EDA) mostrou-se fundamental não apenas para descrever padrões, mas para **revelar rupturas estruturais, inconsistências semânticas e limitações históricas** da base, em especial aquelas relacionadas a mudanças cadastrais, metodológicas e de rotulagem de unidades. Esses achados evidenciam que a interpretação correta dos dados exige atenção à **coerência interna, à escala dos valores e ao contexto regulatório**, e não apenas à leitura direta dos indicadores.
+Ao longo do trabalho, a Análise Exploratória de Dados (EDA) mostrou-se fundamental não apenas para descrever padrões, mas para **revelar rupturas estruturais, inconsistências semânticas e limitações históricas** da base, em especial aquelas relacionadas a mudanças cadastrais, metodológicas e de rotulagem de unidades. Esses achados reforçam a importância de considerar a coerência interna, a escala dos valores e o contexto regulatório na interpretação dos dados.
 
 Mais do que produzir métricas finais, este projeto demonstra o papel da EDA como **etapa crítica de validação e entendimento do dado**, capaz de evitar conclusões equivocadas e de orientar decisões analíticas mais robustas nas fases subsequentes. Assim, o Projeto 03.1 consolida-se como um **alicerce metodológico** para o aprofundamento das análises de consumo elétrico, garantindo maior confiabilidade e consistência às investigações futuras.
+
 
