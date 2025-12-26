@@ -7,7 +7,7 @@ A análise foi desenvolvida utilizando o **Power BI** e corresponde ao **primeir
 que compõem o **Projeto 03 — Consumo Elétrico**, o qual foi estruturado em etapas distintas conforme o
 nível de tensão das Unidades Consumidoras.
 
-Atualmente, o trabalho analítico desenvolvido sobre este dataset encontra-se estruturado em cinco blocos analíticos, seguidos por uma conclusão geral.
+Atualmente, o estudo desenvolvido sobre este dataset encontra-se estruturado em cinco blocos analíticos, seguidos por uma conclusão geral.
 
 - [**Bloco A** — Identificação das Unidades Consumidoras](#bloco-a)
 - [**Bloco B** — Distribuição geográfica e características gerais](#bloco-b)
@@ -675,6 +675,7 @@ O Projeto 03.1 cumpre plenamente seu objetivo ao **organizar, qualificar e inter
 Ao longo do trabalho, a Análise Exploratória de Dados (EDA) mostrou-se fundamental não apenas para descrever padrões, mas para **revelar rupturas estruturais, inconsistências semânticas e limitações históricas** da base, em especial aquelas relacionadas a mudanças cadastrais, metodológicas e de rotulagem de unidades. Esses achados reforçam a importância de considerar a coerência interna, a escala dos valores e o contexto regulatório na interpretação dos dados.
 
 Mais do que produzir métricas finais, este projeto demonstra o papel da EDA como **etapa crítica de validação e entendimento do dado**, capaz de evitar conclusões equivocadas e de orientar decisões analíticas mais robustas nas fases subsequentes. Assim, o Projeto 03.1 consolida-se como um **alicerce metodológico** para o aprofundamento das análises de consumo elétrico, garantindo maior confiabilidade e consistência às investigações futuras.
+
 
 
 
