@@ -584,6 +584,64 @@ As limitações identificadas delimitam o escopo interpretativo do bloco, sem co
 ---
 <br>
 
+## 🧾 Conclusão Geral — Projeto 03.1 (Alta Tensão)
+
+### Visão Geral do Projeto
+O Projeto 03.1 apresentou uma **análise exploratória estruturada** das Unidades Consumidoras de alta tensão a partir da base BDGD/ANEEL. O foco esteve na organização, validação e interpretação crítica dos dados, respeitando seus limites históricos, cadastrais e metodológicos.
+
+A abordagem adotada priorizou a **construção progressiva do entendimento da base**, evitando inferências não suportadas e reforçando a leitura técnica do conjunto de dados.
+
+<br>
+
+### 🗺️ Contexto Espacial e Institucional (Blocos A e B)
+Os Blocos A e B cumpriram o papel de estabelecer o **alicerce estrutural do Projeto 03.1**, fornecendo o contexto espacial, sistêmico e institucional necessário para a interpretação adequada das análises posteriores.
+
+- No Bloco A, a distribuição geográfica das Unidades Consumidoras evidenciou uma **forte concentração regional**, com São Paulo e Minas Gerais respondendo por aproximadamente 80% das UCs analisadas. Esse padrão mostrou-se coerente com a estrutura econômica e industrial dessas regiões, reforçando a **consistência espacial da base de dados** após os tratamentos realizados.
+
+- O Bloco B complementou essa leitura ao caracterizar as UCs quanto ao **tipo de sistema elétrico** e ao **regime de contratação**. Observou-se ampla predominância da **Rede Interligada**, confirmando o papel central do SIN - Sistema Interligado Nacional, enquanto a distinção entre **Consumidores Livres e Cativos** foi consolidada como eixo analítico relevante para comparações nos blocos seguintes.
+
+Em conjunto, esses blocos garantem que as análises de demanda, contratação e fornecimento sejam interpretadas à luz de um **contexto geográfico e institucional bem definido**, evitando leituras isoladas ou descontextualizadas dos indicadores técnicos.
+
+<br>
+
+### ⚡ Conclusão — Bloco C (Demanda / Carga)
+
+O Bloco C identificou uma **ruptura estrutural clara na série histórica de demanda** das Unidades Consumidoras a partir de 2003, caracterizada por mudanças abruptas de escala e ordens de grandeza incompatíveis quando os valores são interpretados diretamente como quilowatts (kW).
+
+A análise revelou a existência de **dois regimes historicamente distintos**. No período pré-2003, a razão Demanda / Capacidade Instalada apresentou valor extremamente baixo (≈ 0,01), indicando fragilidade estrutural ou limitações metodológicas no registro dos dados históricos. Já no período pós-2003, apesar da ruptura evidente na escala absoluta dos valores, observou-se **elevada coerência interna** entre demanda e capacidade instalada, com razão próxima de 0,85, compatível com padrões técnicos esperados para consumidores de alta tensão.
+
+Nesse contexto, a hipótese de **erro de rotulagem de unidade (W → kW)** mostrou-se capaz de restaurar a plausibilidade física dos indicadores do período recente **sem alterar suas relações estruturais**, indicando que a inconsistência observada está associada à semântica da unidade e não à integridade relacional do dado.
+
+Os resultados reforçam a importância de uma **EDA crítica e semântica**, especialmente em bases históricas sujeitas a mudanças metodológicas e cadastrais, e delimitam claramente os limites de comparabilidade entre os períodos analisados.
 
 
 
+
+<br>
+
+### 📄 Contratação e Modalidade Tarifária (Bloco D)
+A análise do Bloco D contribuiu para a compreensão do **perfil de contratação das Unidades Consumidoras**, revelando:
+- diferenças de comportamento entre subgrupos tarifários;
+- mudanças estruturais ao longo do tempo;
+- padrões compatíveis com processos de reorganização regulatória.
+
+As interpretações mantiveram caráter **descritivo e exploratório**, sem atribuição de causalidade.
+
+<br>
+
+### 🔌 Fornecimento e Padrões Técnicos (Bloco E)
+O Bloco E documentou como a energia elétrica é **tecnicamente fornecida** às Unidades Consumidoras de alta tensão.
+
+Os principais achados incluem:
+- forte **padronização nos códigos de tensão**;
+- elevada **coerência técnica** entre fornecimento e enquadramento tarifário;
+- maior diversidade técnica na **Rede Interligada**, em contraste com a padronização das Redes Isoladas.
+
+As limitações identificadas foram contextualizadas como inerentes à natureza histórica da base, sem comprometer a validade dos padrões observados.
+
+<br>
+
+### Considerações Finais
+O Projeto 03.1 cumpre seu objetivo ao **organizar, validar e interpretar criticamente** o conjunto de dados de alta tensão, estabelecendo uma base técnica sólida para as próximas etapas do **Projeto 03 — Consumo Elétrico**, dedicadas às análises de média e baixa tensão.
+
+Mais do que produzir indicadores finais, este trabalho evidencia o valor de uma **EDA rigorosa**, capaz de revelar rupturas estruturais, inconsistências semânticas e limites interpretativos que análises superficiais não capturam.
