@@ -9,11 +9,12 @@ nível de tensão das Unidades Consumidoras.
 
 Atualmente, este dataset encontra-se organizado e analisado por meio de quatro blocos analíticos:
 
-- **Bloco A** — Identificação das Unidades Consumidoras  
+- [**Bloco A** — Identificação das Unidades Consumidoras](#bloco-a)
 - **Bloco B** — Distribuição geográfica e características gerais  
 - **Bloco C** — Demanda/Carga e identificação de erro sistemático nos dados  
 - **Bloco D** — Contratação e modalidade tarifária
 - **Bloco E** — Informações de Fornecimento
+- **Conclusão Geral** — Projeto 03.1 (Alta Tensão)
 
 Cada bloco possui objetivos específicos e documentação própria, compondo de forma progressiva
 a compreensão da estrutura, qualidade e comportamento da base de dados analisada.
@@ -21,6 +22,7 @@ a compreensão da estrutura, qualidade e comportamento da base de dados analisad
 ---
 <br>
 
+<a id="bloco-a"></a>
 ## Bloco A — Identificação da Unidade Consumidora (UC)
 
 ### 🔍 Objetivo Analítico
@@ -686,5 +688,6 @@ O Projeto 03.1 cumpre plenamente seu objetivo ao **organizar, qualificar e inter
 Ao longo do trabalho, a Análise Exploratória de Dados (EDA) mostrou-se fundamental não apenas para descrever padrões, mas para **revelar rupturas estruturais, inconsistências semânticas e limitações históricas** da base, em especial aquelas relacionadas a mudanças cadastrais, metodológicas e de rotulagem de unidades. Esses achados reforçam a importância de considerar a coerência interna, a escala dos valores e o contexto regulatório na interpretação dos dados.
 
 Mais do que produzir métricas finais, este projeto demonstra o papel da EDA como **etapa crítica de validação e entendimento do dado**, capaz de evitar conclusões equivocadas e de orientar decisões analíticas mais robustas nas fases subsequentes. Assim, o Projeto 03.1 consolida-se como um **alicerce metodológico** para o aprofundamento das análises de consumo elétrico, garantindo maior confiabilidade e consistência às investigações futuras.
+
 
 
