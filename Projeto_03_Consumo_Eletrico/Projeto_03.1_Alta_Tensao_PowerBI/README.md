@@ -635,38 +635,26 @@ Os principais achados incluem:
 
 As limitações identificadas foram contextualizadas como inerentes à natureza histórica da base, sem comprometer a validade dos padrões observados.
 
-A análise do Bloco E permitiu caracterizar, de forma descritiva, **como o fornecimento de energia elétrica em alta tensão está estruturado** na base BDGD, a partir de seus padrões técnicos, sistêmicos, tarifários e espaciais:
+A análise do Bloco E permitiu caracterizar, de forma descritiva, **como o fornecimento de energia elétrica em alta tensão está estruturado** na base BDGD, a partir de seus padrões técnicos, sistêmicos, tarifários e espaciais tais como:
 
-- ### 1️⃣ Padronização Técnica do Fornecimento
-Observou-se que a grande maioria das Unidades Consumidoras opera sob um **conjunto restrito de códigos de tensão (`TEN_FORN`)**, com clara predominância de poucos padrões técnicos. Esse comportamento indica **baixa diversidade técnica** no fornecimento em alta tensão, concentrado em níveis amplamente consolidados.
-
-<br>
+- ### 1️ Padronização Técnica do Fornecimento
+> Observou-se que a grande maioria das Unidades Consumidoras opera sob um **conjunto restrito de códigos de tensão (`TEN_FORN`)**, com clara predominância de poucos padrões técnicos. Esse comportamento indica **baixa diversidade técnica** no fornecimento em alta tensão, concentrado em níveis amplamente consolidados.
 
 - ### 2️⃣ Tipo de Sistema Elétrico
-A **Rede Interligada** concentra praticamente todo o volume de UCs analisadas e apresenta a **maior diversidade de níveis de tensão**, enquanto as **Redes Isoladas** operam com um conjunto significativamente mais restrito de códigos, evidenciando maior padronização técnica nesses sistemas.
-
-<br>
+> A **Rede Interligada** concentra praticamente todo o volume de UCs analisadas e apresenta a **maior diversidade de níveis de tensão**, enquanto as **Redes Isoladas** operam com um conjunto significativamente mais restrito de códigos, evidenciando maior padronização técnica nesses sistemas.
 
 - ### 3️⃣ Distribuição Geográfica
-A forte concentração de Unidades Consumidoras em **São Paulo (SP)** e **Minas Gerais (MG)** reflete-se também nos padrões de fornecimento predominantes nesses estados. Níveis de tensão mais elevados aparecem de forma **pontual e residual** em outras UFs, sem impacto estrutural sobre o conjunto da base.
-
-<br>
+> A forte concentração de Unidades Consumidoras em **São Paulo (SP)** e **Minas Gerais (MG)** reflete-se também nos padrões de fornecimento predominantes nesses estados. Níveis de tensão mais elevados aparecem de forma **pontual e residual** em outras UFs, sem impacto estrutural sobre o conjunto da base.
 
 - ### 4️⃣ Coerência com o Perfil Tarifário
-O cruzamento entre **tensão de fornecimento (`TEN_FORN`)** e **grupo tarifário (`GRU_TAR`)** revelou **elevada coerência técnica**, com associações consistentes entre níveis de tensão e enquadramento tarifário. As exceções observadas são raras, numericamente irrelevantes e compatíveis com registros históricos, reclassificações ou contratos específicos.
-
-<br>
+> O cruzamento entre **tensão de fornecimento (`TEN_FORN`)** e **grupo tarifário (`GRU_TAR`)** revelou **elevada coerência técnica**, com associações consistentes entre níveis de tensão e enquadramento tarifário. As exceções observadas são raras, numericamente irrelevantes e compatíveis com registros históricos, reclassificações ou contratos específicos.
 
 - ### 5️⃣ Limitações e Escopo
-A presença de códigos com baixa representatividade e de registros históricos delimita o escopo interpretativo das análises, sem comprometer sua validade. O bloco mantém caráter **exploratório**, sem inferência normativa ou causal.
-
-<br>
+> A presença de códigos com baixa representatividade e de registros históricos delimita o escopo interpretativo das análises, sem comprometer sua validade. O bloco mantém caráter **exploratório**, sem inferência normativa ou causal.
 
 O Bloco E cumpre seu papel ao documentar **como o fornecimento de energia é tecnicamente estruturado** na base analisada, fornecendo um **contexto técnico sólido** para a interpretação integrada dos demais blocos do projeto e para análises futuras mais específicas.
 
 <br>
-
----
 
 ## 🧩 Considerações Finais
 
@@ -675,6 +663,7 @@ O Projeto 03.1 cumpre plenamente seu objetivo ao **organizar, qualificar e inter
 Ao longo do trabalho, a Análise Exploratória de Dados (EDA) mostrou-se fundamental não apenas para descrever padrões, mas para **revelar rupturas estruturais, inconsistências semânticas e limitações históricas** da base, em especial aquelas relacionadas a mudanças cadastrais, metodológicas e de rotulagem de unidades. Esses achados reforçam a importância de considerar a coerência interna, a escala dos valores e o contexto regulatório na interpretação dos dados.
 
 Mais do que produzir métricas finais, este projeto demonstra o papel da EDA como **etapa crítica de validação e entendimento do dado**, capaz de evitar conclusões equivocadas e de orientar decisões analíticas mais robustas nas fases subsequentes. Assim, o Projeto 03.1 consolida-se como um **alicerce metodológico** para o aprofundamento das análises de consumo elétrico, garantindo maior confiabilidade e consistência às investigações futuras.
+
 
 
 
