@@ -370,9 +370,9 @@ A partir dos anos 2000, o gráfico apresenta uma **mudança clara de patamar**, 
 - maior variabilidade na série,
 - novo regime visual em relação ao período anterior.
 
-Essa mudança estrutural é visível exclusivamente a partir do comportamento da série temporal.
-Como contexto interpretativo, esse período é compatível com uma fase de maior dinamismo
-econômico e tecnológico no Brasil, embora esta análise não estabeleça relações causais.
+Essa mudança estrutural é visível exclusivamente a partir do comportamento da série temporal e mostra-se coerente com a ruptura técnica identificada no [**Bloco C**](#bloco-c), reforçando a existência de um novo regime nos dados a partir dos anos 2000, agora observado sob a ótica contratual.
+
+Como contexto interpretativo, esse período é compatível com uma fase de maior dinamismo econômico e tecnológico no Brasil, embora esta análise não estabeleça relações causais.
 
 <br>
 
@@ -675,6 +675,7 @@ O Projeto 03.1 cumpre plenamente seu objetivo ao **organizar, qualificar e inter
 Ao longo do trabalho, a Análise Exploratória de Dados (EDA) mostrou-se fundamental não apenas para descrever padrões, mas para **revelar rupturas estruturais, inconsistências semânticas e limitações históricas** da base, em especial aquelas relacionadas a mudanças cadastrais, metodológicas e de rotulagem de unidades. Esses achados reforçam a importância de considerar a coerência interna, a escala dos valores e o contexto regulatório na interpretação dos dados.
 
 Mais do que produzir métricas finais, este projeto demonstra o papel da EDA como **etapa crítica de validação e entendimento do dado**, capaz de evitar conclusões equivocadas e de orientar decisões analíticas mais robustas nas fases subsequentes. Assim, o Projeto 03.1 consolida-se como um **alicerce metodológico** para o aprofundamento das análises de consumo elétrico, garantindo maior confiabilidade e consistência às investigações futuras.
+
 
 
 
