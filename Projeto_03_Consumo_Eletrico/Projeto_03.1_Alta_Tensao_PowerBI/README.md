@@ -1,13 +1,37 @@
-# Projeto 03.1 - Alta Tensão [PowerBI]
+# ⚡ Projeto 03.1 - Alta Tensão [PowerBI]
 
-Este repositório documenta uma análise exploratória de dados (EDA) sobre o consumo elétrico no Brasil,
-com foco em Unidades Consumidoras de alta tensão, a partir da base BDGD/ANEEL.
+## Resumo Executivo
+
+Análise exploratória das Unidades Consumidoras de **alta tensão** da base BDGD/ANEEL, com foco na organização, validação e interpretação crítica dos dados. O principal achado do projeto é a identificação de uma **ruptura estrutural na série histórica de demanda a partir de 2003**, para a qual se propõe, de forma analítica, a hipótese de **erro de rotulagem de unidade (W → kW)**, capaz de restaurar a plausibilidade física dos indicadores sem comprometer a coerência relacional dos dados.
+
+<br>
+
+**Principais pontos do projeto:**
+- **Escopo e dados:** análise da base BDGD/ANEEL para Unidades Consumidoras de alta tensão, utilizando Power BI como ferramenta de EDA, com tratamentos de padronização cadastral e geográfica.
+
+<br>
+
+- **Contexto espacial e institucional:** forte concentração das UCs em São Paulo e Minas Gerais (≈80%), predominância da Rede Interligada e uso dos campos `TIP_SIST` e `LIV` como eixos estruturantes de segmentação.
+
+<br>
+
+- **Achado central:** ruptura clara na série de demanda a partir de 2003, com valores incompatíveis quando interpretados diretamente como quilowatts (kW).
+
+<br>
+
+- **Hipótese analítica:** evidências indicam manutenção dos valores numéricos em watts (W), rotulados como kW a partir de 2003; a conversão analítica W → kW (÷1000) torna os indicadores fisicamente plausíveis.
+
+<br>
+
+- **Limitações e postura metodológica:** a conversão é tratada como hipótese exploratória, não como correção oficial da base, sendo recomendada validação documental junto à ANEEL para usos regulatórios ou decisórios.
+
+<br>
 
 A análise foi desenvolvida utilizando o **Power BI** e corresponde ao **primeiro de três conjuntos de dados**
 que compõem o **Projeto 03 — Consumo Elétrico**, o qual foi estruturado em etapas distintas conforme o
 nível de tensão das Unidades Consumidoras.
 
-Atualmente, o estudo desenvolvido sobre este dataset encontra-se estruturado em cinco blocos analíticos, seguidos por uma conclusão geral.
+Atualmente, o estudo desenvolvido sobre este dataset encontra-se estruturado em cinco blocos analíticos, seguidos por uma conclusão geral:
 
 - [**Bloco A** — Identificação das Unidades Consumidoras](#bloco-a)
 - [**Bloco B** — Distribuição geográfica e características gerais](#bloco-b)
@@ -21,6 +45,8 @@ a compreensão da estrutura, qualidade e comportamento da base de dados analisad
 
 ---
 <br>
+
+
 
 <a id="bloco-a"></a>
 ## Bloco A — Identificação da Unidade Consumidora (UC)
@@ -663,6 +689,7 @@ O Projeto 03.1 cumpre plenamente seu objetivo ao **organizar, qualificar e inter
 Ao longo do trabalho, a Análise Exploratória de Dados (EDA) mostrou-se fundamental não apenas para descrever padrões, mas para **revelar rupturas estruturais, inconsistências semânticas e limitações históricas** da base, em especial aquelas relacionadas a mudanças cadastrais, metodológicas e de rotulagem de unidades. Esses achados reforçam a importância de considerar a coerência interna, a escala dos valores e o contexto regulatório na interpretação dos dados.
 
 Mais do que produzir métricas finais, este projeto demonstra o papel da EDA como **etapa crítica de validação e entendimento do dado**, capaz de evitar conclusões equivocadas e de orientar decisões analíticas mais robustas nas fases subsequentes. Assim, o Projeto 03.1 consolida-se como um **alicerce metodológico** para o aprofundamento das análises de consumo elétrico, garantindo maior confiabilidade e consistência às investigações futuras.
+
 
 
 
