@@ -56,7 +56,7 @@ O Bloco A tem como objetivo **compreender a distribuição espacial das Unidades
 
 <br>
 
-### ⚙️ Tratamentos Realizados
+### ⚙️ Tratamentos e Modelagem
 
 - Utilização do **CEP** como principal identificador espacial, dada a ausência de um campo explícito de município em parte da base
 - Derivação do campo **UF** a partir do código do município (**MUN**), garantindo consistência territorial
@@ -93,7 +93,7 @@ O Bloco B busca caracterizar as Unidades Consumidoras quanto ao **tipo de sistem
 
 <br>
 
-### 🛠️ Tratamentos e Modelagem
+### ⚙️ Tratamentos e Modelagem
 
 - Análise do campo **TIP_SIST**, que classifica o tipo de sistema elétrico
 > **Nota metodológica**: o campo **TIP_SIST não consta no dicionário oficial de dados** disponibilizado para o conjunto analisado. Ainda assim, optou-se por incluí-lo no estudo devido à sua **alta relevância analítica**, uma vez que permite distinguir estruturalmente o tipo de sistema elétrico ao qual as Unidades Consumidoras estão conectadas. Sua utilização mostrou-se consistente ao longo das análises exploratórias e agregou valor interpretativo ao EDA.
@@ -689,6 +689,7 @@ O Projeto 03.1 cumpre plenamente seu objetivo ao **organizar, qualificar e inter
 Ao longo do trabalho, a Análise Exploratória de Dados (EDA) mostrou-se fundamental não apenas para descrever padrões, mas para **revelar rupturas estruturais, inconsistências semânticas e limitações históricas** da base, em especial aquelas relacionadas a mudanças cadastrais, metodológicas e de rotulagem de unidades. Esses achados reforçam a importância de considerar a coerência interna, a escala dos valores e o contexto regulatório na interpretação dos dados.
 
 Mais do que produzir métricas finais, este projeto demonstra o papel da EDA como **etapa crítica de validação e entendimento do dado**, capaz de evitar conclusões equivocadas e de orientar decisões analíticas mais robustas nas fases subsequentes. Assim, o Projeto 03.1 consolida-se como um **alicerce metodológico** para o aprofundamento das análises de consumo elétrico, garantindo maior confiabilidade e consistência às investigações futuras.
+
 
 
 
