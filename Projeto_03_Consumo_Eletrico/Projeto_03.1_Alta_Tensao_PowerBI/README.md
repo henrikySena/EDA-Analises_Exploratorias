@@ -33,6 +33,7 @@ nível de tensão das Unidades Consumidoras.
 
 Os resultados detalhados estão organizados em cinco blocos analíticos, apresentados a seguir:
 
+- [**Dashboard Analítico**](#dashboard)
 - [**Bloco A** — Identificação das Unidades Consumidoras](#bloco-a)
 - [**Bloco B** — Distribuição geográfica e características gerais](#bloco-b)
 - [**Bloco C** — Demanda/Carga e identificação de erro sistemático nos dados](#bloco-c)
@@ -46,8 +47,9 @@ a compreensão da estrutura, qualidade e comportamento da base de dados analisad
 ---
 <br>
 
-## Dashboard Principal
-O dashboard principal do projeto foi desenvolvido com o objetivo de consolidar e comunicar os principais padrões, achados e hipóteses identificados ao longo da análise exploratória dos dados.
+<a id="dashboard"></a>
+## Dashboard Analítico
+O dashboard a baixo foi desenvolvido com o objetivo de consolidar e comunicar os principais padrões, achados e hipóteses identificados ao longo da análise exploratória dos dados.
 
 As informações apresentadas encontram-se deliberadamente resumidas, com foco em favorecer a compreensão global dos fenômenos analisados, sem substituir a análise detalhada conduzida nos blocos analíticos subsequentes.
 
@@ -705,6 +707,7 @@ O Projeto 03.1 cumpre plenamente seu objetivo ao **organizar, qualificar e inter
 Ao longo do trabalho, a Análise Exploratória de Dados (EDA) mostrou-se fundamental não apenas para descrever padrões, mas para **revelar rupturas estruturais, inconsistências semânticas e limitações históricas** da base, em especial aquelas relacionadas a mudanças cadastrais, metodológicas e de rotulagem de unidades. Esses achados reforçam a importância de considerar a coerência interna, a escala dos valores e o contexto regulatório na interpretação dos dados.
 
 Mais do que produzir métricas finais, este projeto demonstra o papel da EDA como **etapa crítica de validação e entendimento do dado**, capaz de evitar conclusões equivocadas e de orientar decisões analíticas mais robustas nas fases subsequentes. Assim, o Projeto 03.1 consolida-se como um **alicerce metodológico** para o aprofundamento das análises de consumo elétrico, garantindo maior confiabilidade e consistência às investigações futuras.
+
 
 
 
