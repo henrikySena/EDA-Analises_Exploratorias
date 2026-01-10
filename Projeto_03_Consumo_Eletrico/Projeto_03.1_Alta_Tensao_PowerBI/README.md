@@ -49,19 +49,23 @@ a compreensão da estrutura, qualidade e comportamento da base de dados analisad
 
 <a id="dashboard"></a>
 ## Dashboard Analítico
-O dashboard a baixo foi desenvolvido com o objetivo de consolidar e comunicar os principais padrões, achados e hipóteses identificados ao longo da análise exploratória dos dados.
+O dashboard abaixo foi desenvolvido com o objetivo de consolidar e comunicar os principais padrões, achados e hipóteses identificados ao longo da análise exploratória dos dados.
 
-As informações apresentadas encontram-se deliberadamente resumidas, com foco em favorecer a compreensão global dos fenômenos analisados, sem substituir a análise detalhada conduzida nos blocos analíticos subsequentes.
+As informações apresentadas encontram-se deliberadamente resumidas, com foco em favorecer a compreensão global dos padrões, as rupturas identificados nos dados e os fenômenos analisados, sem substituir a análise detalhada conduzida nos blocos analíticos subsequentes.
 
 Para a correta interpretação dos resultados e de suas limitações metodológicas, recomenda-se a leitura dos blocos apresentados a seguir.
 
+### Contexto das Unidades Consumidoras
+![Contexto](Images/dashboard3.png)
 
-![Imagem Dashboard 01)](Images/dashboard1.png)
-![Imagem Dashboard 02)](Images/dashboard2.png)
-![Imagem Dashboard 03)](Images/dashboard3.png)
-![Imagem Dashboard 04)](Images/dashboard4.png)
-![Imagem Dashboard 05)](Images/dashboard5.png)
-![Imagem Dashboard 06)](Images/dashboard6.png)
+### Demanda Elétrica e Ruptura Estrutural
+![Demanda](Images/dashboard4.png)
+
+### Contratação e regime tarifário
+![Contratação 05)](Images/dashboard5.png)
+
+### Informações de Fornecimento
+![Fornecimento)](Images/dashboard6.png)
 
 ---
 <br>
@@ -707,6 +711,7 @@ O Projeto 03.1 cumpre plenamente seu objetivo ao **organizar, qualificar e inter
 Ao longo do trabalho, a Análise Exploratória de Dados (EDA) mostrou-se fundamental não apenas para descrever padrões, mas para **revelar rupturas estruturais, inconsistências semânticas e limitações históricas** da base, em especial aquelas relacionadas a mudanças cadastrais, metodológicas e de rotulagem de unidades. Esses achados reforçam a importância de considerar a coerência interna, a escala dos valores e o contexto regulatório na interpretação dos dados.
 
 Mais do que produzir métricas finais, este projeto demonstra o papel da EDA como **etapa crítica de validação e entendimento do dado**, capaz de evitar conclusões equivocadas e de orientar decisões analíticas mais robustas nas fases subsequentes. Assim, o Projeto 03.1 consolida-se como um **alicerce metodológico** para o aprofundamento das análises de consumo elétrico, garantindo maior confiabilidade e consistência às investigações futuras.
+
 
 
 
