@@ -11,7 +11,8 @@ Análise exploratória das Unidades Consumidoras de **alta tensão** da base BDG
 
 <br>
 
-- **Contexto espacial e institucional:** forte concentração das UCs em São Paulo e Minas Gerais (≈80%), predominância da Rede Interligada e uso dos campos `TIP_SIST` e `LIV` como eixos estruturantes de segmentação.
+- **Contexto espacial e institucional:** a análise utilizou como base as colunas descritas no manual e no dicionário de dados da BDGD/ANEEL disponibilizados junto aos datasets, garantindo consistência com a documentação oficial. A partir dessas variáveis, observou-se forte concentração das Unidades Consumidoras em São Paulo e Minas Gerais (≈80%) e a predominância da Rede Interligada — o que condiz com a realidade do sistema nacional.
+Durante a exploração dos dados, os campos TIP_SIST e LIV — não descritos no manual/dicionário — mostraram-se fundamentais para explicar diferenças institucionais e operacionais entre as UCs. Por esse motivo, foram incorporados à análise e utilizados como eixos de segmentação, apesar de sua ausência na documentação formal.
 
 <br>
 
@@ -711,6 +712,7 @@ O Projeto 03.1 cumpre plenamente seu objetivo ao **organizar, qualificar e inter
 Ao longo do trabalho, a Análise Exploratória de Dados (EDA) mostrou-se fundamental não apenas para descrever padrões, mas para **revelar rupturas estruturais, inconsistências semânticas e limitações históricas** da base, em especial aquelas relacionadas a mudanças cadastrais, metodológicas e de rotulagem de unidades. Esses achados reforçam a importância de considerar a coerência interna, a escala dos valores e o contexto regulatório na interpretação dos dados.
 
 Mais do que produzir métricas finais, este projeto demonstra o papel da EDA como **etapa crítica de validação e entendimento do dado**, capaz de evitar conclusões equivocadas e de orientar decisões analíticas mais robustas nas fases subsequentes. Assim, o Projeto 03.1 consolida-se como um **alicerce metodológico** para o aprofundamento das análises de consumo elétrico, garantindo maior confiabilidade e consistência às investigações futuras.
+
 
 
 
