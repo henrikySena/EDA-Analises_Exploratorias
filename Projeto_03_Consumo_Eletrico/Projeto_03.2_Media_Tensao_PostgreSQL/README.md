@@ -1,4 +1,4 @@
-# ⚡ Projeto 03.2 — Média Tensão [PostgreSQL]
+# 🔌 Projeto 03.2 — Média Tensão [PostgreSQL]
 
 ## Resumo Executivo
 
