@@ -19,10 +19,10 @@ Os dados foram divididos em três níveis de tensão: **alta**, **média** e **b
 
 O projeto foi dividido em três análises independentes, cada uma explorando um nível de tensão e utilizando uma ferramenta específica:
 
-- ### 🔗 Acesse: [**Projeto 03.1 - Alta Tensão [PowerBI]**](https://github.com/henrikySena/EDA-Analises_Exploratorias/tree/main/Projeto_03_Consumo_Eletrico/Projeto_03.1_Alta_Tensao_PowerBI)
+- ### 🔗 Acesse: [**Projeto 03.1 – Alta Tensão [PowerBI]**](https://github.com/henrikySena/EDA-Analises_Exploratorias/tree/main/Projeto_03_Consumo_Eletrico/Projeto_03.1_Alta_Tensao_PowerBI)
     Visualização, painéis interativos e análise geográfica.
 
-- ### 🔗 Acesse: [**3.2 – Média Tensão → PostgreSQL**](https://github.com/henrikySena/EDA-Analises_Exploratorias/blob/main/Projeto_03_Consumo_Eletrico/Projeto_03.2_Media_Tensao_PostgreSQL/README.md)
+- ### 🔗 Acesse: [**Projeto 03.2 – Média Tensão [PostgreSQL]**](https://github.com/henrikySena/EDA-Analises_Exploratorias/blob/main/Projeto_03_Consumo_Eletrico/Projeto_03.2_Media_Tensao_PostgreSQL/README.md)
     Consultas otimizadas, modelagem relacional e análise via SQL.
 
 - ### **3.3 – Baixa Tensão → Python**
@@ -97,6 +97,7 @@ A base contém informações relacionadas a:
 * **Projeto 03.3 [Python]** – limpeza, tratamento e análise de grandes datasets.
 
 <br>
+
 
 
 
