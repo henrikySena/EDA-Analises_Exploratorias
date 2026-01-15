@@ -137,6 +137,49 @@ Essa abordagem permitiu a ingestão completa dos dados **sem perda de informaç�
 ---
 <br>
 
+## Rastreabilidade das Queries Executadas
+
+Com o objetivo de garantir **rastreabilidade total**, transparência analítica e reprodutibilidade do processo, todas as queries executadas durante a fase de inspeção inicial são documentadas abaixo.
+
+### Inspeção inicial do conteúdo RAW
+
+Query utilizada para validação da ingestão e inspeção visual do conteúdo armazenado na tabela RAW:
+
+```sql
+SELECT *
+FROM bdgd_media_tensao_raw
+LIMIT 5;
+```
+
+**Objetivo:**
+- Confirmar que os registros foram carregados corretamente;
+- Verificar a existência de uma única coluna (`linha`);
+- Inspecionar visualmente o formato bruto de cada linha do CSV original.
+
+---
+
+### Contagem de delimitadores e estimativa de colunas
+
+Query utilizada para identificar o delimitador real do arquivo e estimar o número de colunas por registro:
+
+```sql
+SELECT
+    length(linha) - length(replace(linha, ';', '')) AS qtd_delimitadores,
+    (length(linha) - length(replace(linha, ';', '')) + 1) AS qtd_colunas_estimadas
+FROM bdgd_media_tensao_raw
+LIMIT 1;
+```
+
+**Resultado observado:**
+- **79 delimitadores (`;`)**
+- **80 colunas estimadas por linha**
+
+**Objetivo:**
+- Determinar mecanicamente a estrutura do CSV sem assumir headers ou semântica;
+- Servir como base técnica para validações de consistência e futura criação da tabela stage.
+
+---
+
 ## Observações Metodológicas
 
 - O dado bruto é preservado integralmente
