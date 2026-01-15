@@ -74,6 +74,19 @@ O subprojeto **03.2 — Média Tensão** surge como continuidade natural do 03.1
 - Cada linha original do CSV foi preservada integralmente em uma única coluna (`linha`)
 - Nenhuma tipagem, limpeza ou transformação foi aplicada até o momento
 
+### Inspeção Inicial da Estrutura
+
+- Foi realizada inspeção direta do conteúdo da coluna `linha`
+- Identificado o delimitador real do arquivo: **`;` (ponto e vírgula)**
+- Contagem de delimitadores em uma linha revelou:
+  - **79 delimitadores (`;`)**
+  - **80 colunas estimadas por registro**
+
+⚠️ Nesta etapa, **não foram assumidos nomes, tipos ou significados semânticos das colunas**. A validação da estrutura completa dependerá de:
+- consistência do número de campos entre todas as linhas;
+- identificação de header (se existente);
+- consulta ao dicionário oficial da BDGD.
+
 ### Justificativa Metodológica
 
 Essa estratégia foi adotada para:
@@ -109,7 +122,8 @@ Essa abordagem permitiu a ingestão completa dos dados **sem perda de informaç�
 
 ### Curto Prazo
 
-- Identificação e validação da estrutura real do CSV
+- Validação da consistência do número de colunas (79 delimitadores) em todo o dataset
+- Identificação oficial da estrutura do CSV (headers e ordem dos campos)
 - Quebra da coluna `linha` em colunas reais
 - Criação de tabela estruturada (`bdgd_media_tensao_stage` ou equivalente)
 - Validação inicial de qualidade dos dados (nulos, datas, domínios)
@@ -126,6 +140,7 @@ Essa abordagem permitiu a ingestão completa dos dados **sem perda de informaç�
 ## Observações Metodológicas
 
 - O dado bruto é preservado integralmente
+- Nenhuma suposição estrutural é feita sem validação explícita
 - Todas as decisões técnicas são documentadas
 - Transformações futuras ocorrerão apenas em tabelas derivadas
 - O projeto prioriza **clareza analítica, rastreabilidade e consistência metodológica**
@@ -136,7 +151,7 @@ Essa abordagem permitiu a ingestão completa dos dados **sem perda de informaç�
 ## Status Geral
 
 🟢 **Projeto ativo**  
-🧱 **Fase atual:** Ingestão e preparação dos dados
+🧱 **Fase atual:** Ingestão e inspeção inicial da estrutura dos dados
 
 ---
 <br>
