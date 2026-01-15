@@ -59,7 +59,7 @@ Esta seção organiza o avanço do Projeto 03.2 em **etapas cronológicas**, per
 
 ---
 
-## Etapa 1 — Preparação de Ambiente e Ingestão RAW *(Sessão inicial)*
+## 0️⃣ Etapa Inicial — Preparação de Ambiente e Ingestão RAW
 
 ### Objetivo
 Preparar o ambiente PostgreSQL e realizar a ingestão **segura e integral** do dataset de média tensão, sem qualquer transformação estrutural.
@@ -91,7 +91,7 @@ Essa abordagem garantiu:
 
 ---
 
-## Etapa 2 — Inspeção Inicial da Estrutura do Dataset *(Sessão seguinte)*
+## 1️⃣ Primeira Etapa — Inspeção Inicial da Estrutura do Dataset
 
 ### Objetivo
 Inspecionar mecanicamente o conteúdo do dado bruto para identificar o delimitador real e estimar a estrutura do CSV **sem assumir headers ou semântica**.
