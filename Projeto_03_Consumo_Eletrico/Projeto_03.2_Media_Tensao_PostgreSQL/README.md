@@ -58,6 +58,7 @@ O subprojeto **03.2 — Média Tensão** surge como continuidade natural do 03.1
 Esta seção organiza o avanço do Projeto 03.2 em **etapas cronológicas**, permitindo rastreabilidade clara do que foi feito, quando e com qual objetivo técnico.
 
 ---
+<br>
 
 ## 0️⃣ Etapa Inicial — Preparação de Ambiente e Ingestão RAW
 
@@ -90,6 +91,7 @@ Essa abordagem garantiu:
 - base confiável para inspeção e estruturação posterior.
 
 ---
+<br>
 
 ## 1️⃣ Primeira Etapa — Inspeção Inicial da Estrutura do Dataset
 
@@ -145,6 +147,7 @@ LIMIT 1;
   - consulta ao dicionário oficial da BDGD
 
 ---
+<br>
 
 ## Próxima Etapa Planejada — Estruturação (Stage)
 
