@@ -53,97 +53,59 @@ O subprojeto **03.2 — Média Tensão** surge como continuidade natural do 03.1
 ---
 <br>
 
-## Status Atual do Projeto
+## Etapas do Projeto (Rastreabilidade Temporal)
 
-### ✅ Etapas Concluídas
+Esta seção organiza o avanço do Projeto 03.2 em **etapas cronológicas**, permitindo rastreabilidade clara do que foi feito, quando e com qual objetivo técnico.
 
+---
+
+## Etapa 1 — Preparação de Ambiente e Ingestão RAW *(Sessão inicial)*
+
+### Objetivo
+Preparar o ambiente PostgreSQL e realizar a ingestão **segura e integral** do dataset de média tensão, sem qualquer transformação estrutural.
+
+### Atividades Executadas
+
+- Instalação e configuração do PostgreSQL 18.1 (Windows x64)
+- Instalação e validação do pgAdmin 4
 - Criação do database dedicado `bdgd_media_tensao`
-- Preparação completa do ambiente PostgreSQL
+- Validação de conexão local (porta 5432, usuário `postgres`)
 - Criação da tabela de ingestão bruta:
   - `bdgd_media_tensao_raw`
-- Importação integral do dataset de média tensão
+- Importação integral do arquivo CSV de média tensão
 
 📊 **Total de registros carregados:** **312.074 linhas**
 
----
-<br>
+### Decisões Técnicas
 
-## Estado Atual dos Dados
+- Opção por ingestão em formato RAW (uma única coluna `linha`)
+- Uso de delimitador fictício (`|`) para evitar quebra incorreta de colunas
+- Encoding definido como `LATIN1`
 
-- Os dados encontram-se armazenados em **formato RAW**
-- Cada linha original do CSV foi preservada integralmente em uma única coluna (`linha`)
-- Nenhuma tipagem, limpeza ou transformação foi aplicada até o momento
+### Justificativa
 
-### Inspeção Inicial da Estrutura
-
-- Foi realizada inspeção direta do conteúdo da coluna `linha`
-- Identificado o delimitador real do arquivo: **`;` (ponto e vírgula)**
-- Contagem de delimitadores em uma linha revelou:
-  - **79 delimitadores (`;`)**
-  - **80 colunas estimadas por registro**
-
-⚠️ Nesta etapa, **não foram assumidos nomes, tipos ou significados semânticos das colunas**. A validação da estrutura completa dependerá de:
-- consistência do número de campos entre todas as linhas;
-- identificação de header (se existente);
-- consulta ao dicionário oficial da BDGD.
-
-### Justificativa Metodológica
-
-Essa estratégia foi adotada para:
-- garantir ingestão completa do dataset;
-- contornar problemas iniciais de delimitador, estrutura e encoding;
-- preservar o dado original como referência primária;
-- permitir tratamento posterior controlado e auditável.
+Essa abordagem garantiu:
+- preservação total do dado original;
+- ingestão sem perda de informação;
+- base confiável para inspeção e estruturação posterior.
 
 ---
-<br>
 
-## Desafios Técnicos Enfrentados
+## Etapa 2 — Inspeção Inicial da Estrutura do Dataset *(Sessão seguinte)*
 
-Durante a ingestão inicial do dataset, foram identificados e resolvidos os seguintes pontos:
+### Objetivo
+Inspecionar mecanicamente o conteúdo do dado bruto para identificar o delimitador real e estimar a estrutura do CSV **sem assumir headers ou semântica**.
 
-- Delimitador do CSV incompatível com a configuração padrão (`;` vs `,`)
-- Tentativa inicial de importação sem estrutura de colunas definida
-- Encoding incompatível com UTF-8 (dataset em `LATIN1`)
+### Atividades Executadas
 
-### Solução Adotada
+- Abertura do Query Tool no database `bdgd_media_tensao`
+- Inspeção visual do conteúdo da tabela RAW
+- Identificação do delimitador real do arquivo
+- Contagem de delimitadores para estimativa do número de colunas
 
-- Criação de tabela RAW com uma única coluna (`linha`)
-- Importação utilizando:
-  - delimitador fictício (`|`)
-  - encoding `LATIN1`
+### Queries Executadas
 
-Essa abordagem permitiu a ingestão completa dos dados **sem perda de informação**.
-
----
-<br>
-
-## Próximos Passos Planejados
-
-### Curto Prazo
-
-- Validação da consistência do número de colunas (79 delimitadores) em todo o dataset
-- Identificação oficial da estrutura do CSV (headers e ordem dos campos)
-- Quebra da coluna `linha` em colunas reais
-- Criação de tabela estruturada (`bdgd_media_tensao_stage` ou equivalente)
-- Validação inicial de qualidade dos dados (nulos, datas, domínios)
-
-### Médio Prazo
-
-- Análise Exploratória de Dados (EDA)
-- Comparação estrutural com o dataset de alta tensão (Projeto 03.1)
-- Identificação de padrões, inconsistências e possíveis rupturas históricas
-
----
-<br>
-
-## Rastreabilidade das Queries Executadas
-
-Com o objetivo de garantir **rastreabilidade total**, transparência analítica e reprodutibilidade do processo, todas as queries executadas durante a fase de inspeção inicial são documentadas abaixo.
-
-### Inspeção inicial do conteúdo RAW
-
-Query utilizada para validação da ingestão e inspeção visual do conteúdo armazenado na tabela RAW:
+#### Inspeção do conteúdo RAW
 
 ```sql
 SELECT *
@@ -152,15 +114,13 @@ LIMIT 5;
 ```
 
 **Objetivo:**
-- Confirmar que os registros foram carregados corretamente;
-- Verificar a existência de uma única coluna (`linha`);
-- Inspecionar visualmente o formato bruto de cada linha do CSV original.
+- Confirmar a correta ingestão dos dados;
+- Validar a existência de uma única coluna (`linha`);
+- Observar o formato bruto das linhas do CSV original.
 
 ---
 
-### Contagem de delimitadores e estimativa de colunas
-
-Query utilizada para identificar o delimitador real do arquivo e estimar o número de colunas por registro:
+#### Contagem de delimitadores e estimativa de colunas
 
 ```sql
 SELECT
@@ -170,33 +130,38 @@ FROM bdgd_media_tensao_raw
 LIMIT 1;
 ```
 
-**Resultado observado:**
-- **79 delimitadores (`;`)**
-- **80 colunas estimadas por linha**
+### Resultados Obtidos
 
-**Objetivo:**
-- Determinar mecanicamente a estrutura do CSV sem assumir headers ou semântica;
-- Servir como base técnica para validações de consistência e futura criação da tabela stage.
+- Delimitador identificado: **`;` (ponto e vírgula)**
+- **79 delimitadores por linha**
+- **80 colunas estimadas**
 
----
+### Observações Importantes
 
-## Observações Metodológicas
-
-- O dado bruto é preservado integralmente
-- Nenhuma suposição estrutural é feita sem validação explícita
-- Todas as decisões técnicas são documentadas
-- Transformações futuras ocorrerão apenas em tabelas derivadas
-- O projeto prioriza **clareza analítica, rastreabilidade e consistência metodológica**
+- Nenhum nome de coluna, tipo de dado ou significado semântico foi assumido
+- A estrutura completa dependerá de:
+  - validação da consistência do número de campos em todas as linhas;
+  - identificação de header (se existente);
+  - consulta ao dicionário oficial da BDGD
 
 ---
-<br>
+
+## Próxima Etapa Planejada — Estruturação (Stage)
+
+### Objetivos
+
+- Validar a consistência estrutural do dataset completo
+- Identificar oficialmente os campos do CSV
+- Quebrar a coluna `linha` em colunas reais
+- Criar tabela estruturada (`bdgd_media_tensao_stage`)
+
+---
 
 ## Status Geral
 
 🟢 **Projeto ativo**  
-🧱 **Fase atual:** Ingestão e inspeção inicial da estrutura dos dados
+🧱 **Fase atual:** Inspeção inicial concluída — pronto para estruturação
 
 ---
-<br>
 
-*README em construção contínua — seguirá o mesmo padrão narrativo e analítico do Projeto 03.1 (Alta Tensão).*
+*README organizado como relatório vivo, com rastreabilidade temporal das decisões e atividades executadas.*
