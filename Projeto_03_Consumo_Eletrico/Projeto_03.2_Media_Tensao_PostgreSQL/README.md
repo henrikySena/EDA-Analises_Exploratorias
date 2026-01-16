@@ -149,22 +149,77 @@ LIMIT 1;
 ---
 <br>
 
-## Próxima Etapa Planejada — Estruturação (Stage)
+## 2️⃣ Segunda Etapa — Validação Estrutural e Natureza dos Dados Ausentes
 
-### Objetivos
+### Objetivo
+Avaliar a **consistência estrutural global** do dataset e documentar corretamente a **natureza dos campos vazios**, evitando interpretações equivocadas durante as etapas de modelagem e análise.
 
-- Validar a consistência estrutural do dataset completo
-- Identificar oficialmente os campos do CSV
-- Quebrar a coluna `linha` em colunas reais
-- Criar tabela estruturada (`bdgd_media_tensao_stage`)
+### Atividades Executadas
+
+- Validação do número de delimitadores em todo o dataset
+- Identificação de variações estruturais no layout do arquivo
+- Inspeção manual de linhas com número de colunas superior ao padrão esperado
+- Análise contextual dos campos vazios à luz do domínio do problema (BDGD)
+
+### Queries Executadas
+
+#### Validação global de delimitadores
+
+```sql
+SELECT
+    COUNT(*) AS total_linhas,
+    MIN(length(linha) - length(replace(linha, ';', ''))) AS min_delimitadores,
+    MAX(length(linha) - length(replace(linha, ';', ''))) AS max_delimitadores
+FROM bdgd_media_tensao_raw;
+```
+
+#### Distribuição de padrões estruturais
+
+```sql
+SELECT
+    length(linha) - length(replace(linha, ';', '')) AS qtd_delimitadores,
+    COUNT(*) AS total_linhas
+FROM bdgd_media_tensao_raw
+GROUP BY qtd_delimitadores
+ORDER BY qtd_delimitadores;
+```
+
+### Resultados Obtidos
+
+- **Layout dominante:** 79 delimitadores (80 colunas) → ~98% do dataset
+- Existência de um subconjunto minoritário com **81 a 84 delimitadores**
+- As variações estruturais não são aleatórias, indicando **compatibilidade histórica de layouts**
+
+### Interpretação Técnica
+
+- A presença de delimitadores adicionais está associada a:
+  - campos opcionais adicionados em versões posteriores do layout;
+  - sequências de campos vazios (`;;;;;`);
+  - evolução histórica do cadastro da BDGD.
+
+- **Campos vazios neste dataset não devem ser interpretados como erro**, mas sim como:
+  - ausência legítima de ocorrência (ex.: interrupções de fornecimento inexistentes);
+  - atributos não aplicáveis àquela Unidade Consumidora;
+  - informações condicionais dependentes de eventos específicos.
+
+### Decisão Metodológica Importante
+
+- Dados ausentes (**NULL / vazio**) são tratados como **informação semântica válida**, e não como falha de ingestão.
+- Nenhuma linha será descartada nesta fase.
+- O dado bruto permanece preservado integralmente na tabela `RAW`.
+
+Essa interpretação é fundamental para evitar:
+- exclusões indevidas de registros;
+- distorções estatísticas futuras;
+- erros conceituais durante análises de continuidade de serviço e qualidade.
 
 ---
+<br>
 
-## Status Geral
+### Próxima Etapa Planejada
 
-🟢 **Projeto ativo**  
-🧱 **Fase atual:** Inspeção inicial concluída — pronto para estruturação
+- Definição da estratégia de **estruturação em tabela STAGE**
+- Criação de tabela estruturada com base no layout canônico (80 colunas)
+- Garantia de rastreabilidade entre `RAW` e `STAGE`
+- Posterior associação ao dicionário oficial da BDGD
 
----
-
-*README organizado como relatório vivo, com rastreabilidade temporal das decisões e atividades executadas.*
