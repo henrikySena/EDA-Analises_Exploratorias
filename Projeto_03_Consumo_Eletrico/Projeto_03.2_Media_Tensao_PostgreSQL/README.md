@@ -65,6 +65,8 @@ Esta seção organiza o avanço do Projeto 03.2 em **etapas cronológicas**, per
 ### Objetivo
 Preparar o ambiente PostgreSQL e realizar a ingestão **segura e integral** do dataset de média tensão, sem qualquer transformação estrutural.
 
+<br>
+
 ### Atividades Executadas
 
 - Instalação e configuração do PostgreSQL 18.1 (Windows x64)
@@ -77,11 +79,15 @@ Preparar o ambiente PostgreSQL e realizar a ingestão **segura e integral** do d
 
 📊 **Total de registros carregados:** **312.074 linhas**
 
+<br>
+
 ### Decisões Técnicas
 
 - Opção por ingestão em formato RAW (uma única coluna `linha`)
 - Uso de delimitador fictício (`|`) para evitar quebra incorreta de colunas
 - Encoding definido como `LATIN1`
+
+<br>
 
 ### Justificativa
 
@@ -98,12 +104,16 @@ Essa abordagem garantiu:
 ### Objetivo
 Inspecionar mecanicamente o conteúdo do dado bruto para identificar o delimitador real e estimar a estrutura do CSV **sem assumir headers ou semântica**.
 
+<br>
+
 ### Atividades Executadas
 
 - Abertura do Query Tool no database `bdgd_media_tensao`
 - Inspeção visual do conteúdo da tabela RAW
 - Identificação do delimitador real do arquivo
 - Contagem de delimitadores para estimativa do número de colunas
+
+<br>
 
 ### Queries Executadas
 
@@ -121,6 +131,7 @@ LIMIT 5;
 - Observar o formato bruto das linhas do CSV original.
 
 ---
+<br>
 
 #### Contagem de delimitadores e estimativa de colunas
 
@@ -131,12 +142,15 @@ SELECT
 FROM bdgd_media_tensao_raw
 LIMIT 1;
 ```
+<br>
 
 ### Resultados Obtidos
 
 - Delimitador identificado: **`;` (ponto e vírgula)**
 - **79 delimitadores por linha**
 - **80 colunas estimadas**
+
+<br>
 
 ### Observações Importantes
 
@@ -154,12 +168,16 @@ LIMIT 1;
 ### Objetivo
 Avaliar a **consistência estrutural global** do dataset e documentar corretamente a **natureza dos campos vazios**, evitando interpretações equivocadas durante as etapas de modelagem e análise.
 
+<br>
+
 ### Atividades Executadas
 
 - Validação do número de delimitadores em todo o dataset
 - Identificação de variações estruturais no layout do arquivo
 - Inspeção manual de linhas com número de colunas superior ao padrão esperado
 - Análise contextual dos campos vazios à luz do domínio do problema (BDGD)
+
+<br>
 
 ### Queries Executadas
 
@@ -172,6 +190,7 @@ SELECT
     MAX(length(linha) - length(replace(linha, ';', ''))) AS max_delimitadores
 FROM bdgd_media_tensao_raw;
 ```
+<br>
 
 #### Distribuição de padrões estruturais
 
@@ -183,12 +202,15 @@ FROM bdgd_media_tensao_raw
 GROUP BY qtd_delimitadores
 ORDER BY qtd_delimitadores;
 ```
+<br>
 
 ### Resultados Obtidos
 
 - **Layout dominante:** 79 delimitadores (80 colunas) → ~98% do dataset
 - Existência de um subconjunto minoritário com **81 a 84 delimitadores**
 - As variações estruturais não são aleatórias, indicando **compatibilidade histórica de layouts**
+
+<br>
 
 ### Interpretação Técnica
 
@@ -201,6 +223,8 @@ ORDER BY qtd_delimitadores;
   - ausência legítima de ocorrência (ex.: interrupções de fornecimento inexistentes);
   - atributos não aplicáveis àquela Unidade Consumidora;
   - informações condicionais dependentes de eventos específicos.
+
+<br>
 
 ### Decisão Metodológica Importante
 
