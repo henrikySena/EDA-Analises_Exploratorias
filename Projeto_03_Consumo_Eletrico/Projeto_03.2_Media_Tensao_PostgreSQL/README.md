@@ -240,10 +240,88 @@ Essa interpretação é fundamental para evitar:
 ---
 <br>
 
-### Próxima Etapa Planejada
+## 3️⃣ Terceira Etapa — Criação da Tabela *Stage* e Estruturação Inicial
 
-- Definição da estratégia de **estruturação em tabela STAGE**
-- Criação de tabela estruturada com base no layout canônico (80 colunas)
-- Garantia de rastreabilidade entre `RAW` e `STAGE`
-- Posterior associação ao dicionário oficial da BDGD
+### Objetivo  
+Estabelecer uma **camada intermediária (*stage*)** entre o dado bruto (`RAW`) e as futuras tabelas analíticas, permitindo a **quebra controlada da linha textual em colunas**, sem perda de informação e sem assumir, prematuramente, significados semânticos incorretos.
 
+Essa etapa tem como foco **organização estrutural**, não modelagem.
+
+---
+
+### Contexto Técnico
+
+Após a validação estrutural do arquivo, foi identificado que:
+
+- O **layout dominante possui 79 delimitadores**, resultando em **80 colunas**
+- Linhas com delimitadores adicionais (≥ 80) representam **variações históricas do layout**
+- O recorte seguro e consistente para estruturação inicial é de **80 colunas**
+
+---
+
+### Decisão Estrutural Importante
+
+- A tabela *stage* foi criada com **80 colunas genéricas (`col_01` a `col_80`)**
+- Nenhuma coluna recebe nome semântico nesta fase
+
+Essa abordagem garante:
+
+- **Neutralidade analítica**
+- **Rastreabilidade total** entre posição no CSV e coluna no banco
+- **Evita interpretações erradas** antes do cruzamento com dicionários oficiais da BDGD
+
+> Nesta fase, **posição é mais importante que significado**.
+
+---
+
+### Atividades Executadas
+
+- Criação da tabela `bdgd_media_tensao_stage`
+- Definição explícita de **80 colunas do tipo `TEXT`**
+- Preparação da estrutura para receber apenas o **layout dominante**
+- Planejamento de tratamento posterior para linhas com colunas excedentes
+
+---
+
+### Query Executada — Criação da Tabela *Stage*
+
+```sql
+CREATE TABLE bdgd_media_tensao_stage (
+    col_01 TEXT, col_02 TEXT, col_03 TEXT, col_04 TEXT, col_05 TEXT,
+    col_06 TEXT, col_07 TEXT, col_08 TEXT, col_09 TEXT, col_10 TEXT,
+    col_11 TEXT, col_12 TEXT, col_13 TEXT, col_14 TEXT, col_15 TEXT,
+    col_16 TEXT, col_17 TEXT, col_18 TEXT, col_19 TEXT, col_20 TEXT,
+    col_21 TEXT, col_22 TEXT, col_23 TEXT, col_24 TEXT, col_25 TEXT,
+    col_26 TEXT, col_27 TEXT, col_28 TEXT, col_29 TEXT, col_30 TEXT,
+    col_31 TEXT, col_32 TEXT, col_33 TEXT, col_34 TEXT, col_35 TEXT,
+    col_36 TEXT, col_37 TEXT, col_38 TEXT, col_39 TEXT, col_40 TEXT,
+    col_41 TEXT, col_42 TEXT, col_43 TEXT, col_44 TEXT, col_45 TEXT,
+    col_46 TEXT, col_47 TEXT, col_48 TEXT, col_49 TEXT, col_50 TEXT,
+    col_51 TEXT, col_52 TEXT, col_53 TEXT, col_54 TEXT, col_55 TEXT,
+    col_56 TEXT, col_57 TEXT, col_58 TEXT, col_59 TEXT, col_60 TEXT,
+    col_61 TEXT, col_62 TEXT, col_63 TEXT, col_64 TEXT, col_65 TEXT,
+    col_66 TEXT, col_67 TEXT, col_68 TEXT, col_69 TEXT, col_70 TEXT,
+    col_71 TEXT, col_72 TEXT, col_73 TEXT, col_74 TEXT, col_75 TEXT,
+    col_76 TEXT, col_77 TEXT, col_78 TEXT, col_79 TEXT, col_80 TEXT
+);
+```
+
+---
+
+### Interpretação Metodológica
+
+- A tabela *stage* **não representa o modelo final**
+- Ela funciona como uma **zona de transição controlada**
+- A semântica real das colunas será atribuída **somente após**:
+  - cruzamento com dicionários oficiais da BDGD;
+  - análise de conteúdo por posição;
+  - validação por amostragem.
+
+---
+
+### Planejamento para Próximas Etapas
+
+- Inserção dos dados do `RAW` na *stage* com **split controlado**
+- Tratamento explícito das linhas com colunas excedentes
+- Criação de uma tabela de **mapeamento coluna ↔ significado**
+- Evolução da *stage* para tabelas analíticas normalizadas
