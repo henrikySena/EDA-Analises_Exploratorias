@@ -219,7 +219,7 @@ ORDER BY qtd_delimitadores;
   - sequências de campos vazios (`;;;;;`);
   - evolução histórica do cadastro da BDGD.
 
-- **Campos vazios neste dataset não devem ser interpretados como erro**, mas sim como:
+> **Dada a natureza do dataset, campos vazios não devem ser interpretados como erro**, mas sim como:
   - ausência legítima de ocorrência (ex.: interrupções de fornecimento inexistentes);
   - atributos não aplicáveis àquela Unidade Consumidora;
   - informações condicionais dependentes de eventos específicos.
