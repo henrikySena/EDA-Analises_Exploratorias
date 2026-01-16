@@ -247,7 +247,7 @@ Estabelecer uma **camada intermediária (*stage*)** entre o dado bruto (`RAW`) e
 
 Essa etapa tem como foco **organização estrutural**, não modelagem.
 
----
+<br>
 
 ### Contexto Técnico
 
@@ -257,7 +257,7 @@ Após a validação estrutural do arquivo, foi identificado que:
 - Linhas com delimitadores adicionais (≥ 80) representam **variações históricas do layout**
 - O recorte seguro e consistente para estruturação inicial é de **80 colunas**
 
----
+<br>
 
 ### Decisão Estrutural Importante
 
@@ -272,7 +272,7 @@ Essa abordagem garante:
 
 > Nesta fase, **posição é mais importante que significado**.
 
----
+<br>
 
 ### Atividades Executadas
 
@@ -281,7 +281,7 @@ Essa abordagem garante:
 - Preparação da estrutura para receber apenas o **layout dominante**
 - Planejamento de tratamento posterior para linhas com colunas excedentes
 
----
+<br>
 
 ### Query Executada — Criação da Tabela *Stage*
 
@@ -306,7 +306,7 @@ CREATE TABLE bdgd_media_tensao_stage (
 );
 ```
 
----
+<br>
 
 ### Interpretação Metodológica
 
@@ -317,7 +317,7 @@ CREATE TABLE bdgd_media_tensao_stage (
   - análise de conteúdo por posição;
   - validação por amostragem.
 
----
+<br>
 
 ### Planejamento para Próximas Etapas
 
