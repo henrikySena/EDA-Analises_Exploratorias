@@ -394,3 +394,23 @@ Inspeção visual adicional confirmou:
 
 ---
 <br>
+
+## Nota Técnica — Ingestão do Header do CSV
+
+Durante a ingestão inicial do dataset de **Média Tensão (BDGD/ANEEL)** no PostgreSQL, o arquivo CSV original foi importado por meio do recurso **Import/Export Data** do pgAdmin 4.
+
+O arquivo CSV **possui header** (linha de nomes de colunas), conforme verificação direta no arquivo original. No momento da importação, a opção **“Header = Yes”** foi utilizada, fazendo com que o pgAdmin interpretasse corretamente a primeira linha como metadado e **não a inserisse como registro** na tabela de ingestão bruta.
+
+Como consequência:
+- a tabela `bdgd_media_tensao_raw` contém **exclusivamente dados válidos**, iniciando já na primeira Unidade Consumidora;
+- **nenhuma informação foi perdida** durante o processo de ingestão;
+- os nomes oficiais das colunas **não constam fisicamente no banco**, pois foram tratados como cabeçalho pelo mecanismo de importação.
+
+Essa decisão é **compatível com boas práticas de ingestão**, uma vez que preserva a integridade do dado e evita a mistura entre metadados e registros observacionais.
+
+Para garantir rastreabilidade e auditabilidade completas, foi criada uma **tabela paralela de metadados** (`bdgd_media_tensao_column_map`), destinada a armazenar o mapeamento entre a **posição das colunas no CSV** e seus **nomes oficiais**, mantendo a camada *stage* estritamente posicional e semanticamente neutra.
+
+Essa separação explícita entre **dados** e **metadados** assegura:
+- reprodutibilidade do pipeline;
+- clareza metodológica;
+- facilidade de manutenção e evolução do modelo analítico.
