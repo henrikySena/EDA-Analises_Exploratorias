@@ -63,6 +63,7 @@ Garantir a ingestão **integral e fiel** do dataset de Média Tensão, sem trans
 - Header não ingerido como dado
 
 ---
+<br>
 
 ## Seção Legacy — Experimento Exploratório Inicial (Descontinuado)
 
@@ -84,6 +85,7 @@ Apesar de válida como experimento exploratório, a abordagem foi **formalmente 
 Essa estratégia permanece apenas como **registro histórico (legacy)**.
 
 ---
+<br>
 
 ## Etapa 1 — Validação Controlada do Header (RAW Paralela)
 
@@ -127,6 +129,7 @@ Resultado observado:
 Essa validação fundamenta toda a estruturação posterior.
 
 ---
+<br>
 
 ## Etapa 2 — Criação da Camada STAGE (Schema Explícito)
 
@@ -263,6 +266,7 @@ Essas queries confirmaram:
 - alinhamento estrutural perfeito.
 
 ---
+<br>
 
 ## Status Atual do Projeto
 
