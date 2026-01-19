@@ -77,6 +77,27 @@ Garantir a ingestão **integral e fiel** do dataset de Média Tensão, sem trans
 
 ---
 
+## Seção Legacy — Abordagem Inicial (Descontinuada)
+
+### Contexto
+
+Foi testada inicialmente uma abordagem baseada em:
+- ingestão com delimitador fictício;
+- coluna única (`linha`);
+- quebra posicional em colunas genéricas.
+
+### Motivo do Abandono
+
+Apesar de válida como experimento exploratório, a abordagem foi **formalmente descartada**, pois:
+- não escala para ambientes profissionais;
+- introduz ambiguidade semântica;
+- dificulta governança e manutenção;
+- gera dívida técnica evitável.
+
+Essa estratégia permanece apenas como **registro histórico (legacy)**.
+
+---
+
 ## Etapa 1 — Validação Controlada do Header (RAW Paralela)
 
 ### Motivação
@@ -253,27 +274,6 @@ Essas queries confirmaram:
 - ordem fiel ao CSV original;
 - carga íntegra dos registros;
 - alinhamento estrutural perfeito.
-
----
-
-## Seção Legacy — Abordagem Inicial (Descontinuada)
-
-### Contexto
-
-Foi testada inicialmente uma abordagem baseada em:
-- ingestão com delimitador fictício;
-- coluna única (`linha`);
-- quebra posicional em colunas genéricas.
-
-### Motivo do Abandono
-
-Apesar de válida como experimento exploratório, a abordagem foi **formalmente descartada**, pois:
-- não escala para ambientes profissionais;
-- introduz ambiguidade semântica;
-- dificulta governança e manutenção;
-- gera dívida técnica evitável.
-
-Essa estratégia permanece apenas como **registro histórico (legacy)**.
 
 ---
 
