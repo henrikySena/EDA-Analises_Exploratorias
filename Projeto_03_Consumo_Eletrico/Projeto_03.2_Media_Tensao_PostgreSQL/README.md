@@ -2,16 +2,11 @@
 
 ## Resumo Executivo
 
-O **Projeto 03.2 — Média Tensão** integra o **Projeto 03 — Consumo Elétrico (BDGD/ANEEL)** e tem como objetivo a **ingestão, validação, estruturação, análise e modelagem dos dados** de **Unidades Consumidoras de Média Tensão**, cobrindo todo o ciclo analítico — da engenharia de dados à geração de insumos analíticos.
+O Projeto 03.2 — Média Tensão integra o Projeto 03 — Consumo Elétrico (BDGD/ANEEL) e tem como objetivo a ingestão, validação, estruturação, análise e modelagem dos dados de Unidades Consumidoras de Média Tensão, cobrindo todo o ciclo analítico — da ingestão e engenharia de dados à geração de insumos analíticos.
 
-O projeto adota uma abordagem **incremental e metodologicamente rigorosa**, iniciando pela construção de uma base sólida de ingestão e governança, evoluindo progressivamente para **validação semântica, tipagem, exploração analítica, modelagem e integração com camadas analíticas superiores**.
+O projeto adota uma abordagem incremental e metodologicamente rigorosa, iniciando pela construção de uma base sólida de ingestão e governança e evoluindo progressivamente para validação semântica, tipagem, exploração analítica, modelagem e integração com camadas analíticas superiores, em um contexto caracterizado por maior volume de registros, heterogeneidade histórica de layout e alta incidência de campos condicionais e dados ausentes legítimos.
 
-Este documento funciona como um **relatório vivo**, alinhado ao padrão do **Projeto 03.1 — Alta Tensão**, documentando decisões técnicas, aprendizados e evolução do pipeline de dados ao longo de todas as etapas do projeto.
-
-O subprojeto **03.2** aprofunda a abordagem de engenharia de dados, lidando com:
-- maior volume de registros;
-- maior heterogeneidade histórica de layout;
-- maior incidência de campos condicionais e dados ausentes legítimos.
+Este documento funciona como um relatório vivo, alinhado ao padrão do Projeto 03.1 — Alta Tensão, documentando decisões técnicas, aprendizados e a evolução do pipeline de dados ao longo de todas as etapas do projeto.
 
 ---
 
