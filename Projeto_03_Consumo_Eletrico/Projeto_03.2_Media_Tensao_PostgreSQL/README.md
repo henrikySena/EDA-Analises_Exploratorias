@@ -4,9 +4,9 @@
 
 O Projeto 03.2 — Média Tensão integra o Projeto 03 — Consumo Elétrico (BDGD/ANEEL) e tem como objetivo a ingestão, validação, estruturação, análise e modelagem dos dados de Unidades Consumidoras de Média Tensão, cobrindo todo o ciclo analítico — da ingestão e engenharia de dados à geração de insumos analíticos.
 
-O projeto adota uma abordagem incremental e metodologicamente rigorosa, iniciando pela construção de uma base sólida de ingestão e governança e evoluindo progressivamente para validação semântica, tipagem, exploração analítica, modelagem e integração com camadas analíticas superiores, em um contexto caracterizado por maior volume de registros, heterogeneidade histórica de layout e alta incidência de campos condicionais e dados ausentes legítimos.
+O projeto adota uma abordagem incremental e metodologicamente rigorosa, iniciando pela construção de uma base sólida de ingestão e governança e evoluindo progressivamente para validação semântica, tipagem, exploração analítica, modelagem e integração com camadas analíticas superiores, em um contexto caracterizado por maior volume de registros, heterogeneidade histórica de layout, alta incidência de campos condicionais e dados ausentes legítimos, além de um schema significativamente mais amplo e heterogêneo, com conjunto de colunas distinto e mais complexo em relação ao subprojeto 03.1 — Alta Tensão.
 
-Este documento funciona como um relatório vivo, alinhado ao padrão do Projeto 03.1 — Alta Tensão, documentando decisões técnicas, aprendizados e a evolução do pipeline de dados ao longo de todas as etapas do projeto.
+Este documento funciona como um relatório vivo, alinhado ao padrão do Projeto 03, documentando decisões técnicas, aprendizados e a evolução do pipeline de dados ao longo de todas as etapas do projeto.
 
 ---
 
