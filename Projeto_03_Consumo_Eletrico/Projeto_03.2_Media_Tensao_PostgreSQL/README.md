@@ -2,415 +2,191 @@
 
 ## Resumo Executivo
 
-Este projeto corresponde ao **Projeto 03.2 — Média Tensão**, continuação direta do **Projeto 03 — Consumo Elétrico (BDGD)**, e tem como objetivo a **preparação, ingestão e estruturação analítica** dos dados de **Unidades Consumidoras de média tensão** da base **BDGD/ANEEL**.
+O **Projeto 03.2 — Média Tensão** integra o **Projeto 03 — Consumo Elétrico (BDGD/ANEEL)** e tem como objetivo a **ingestão, validação estrutural e preparação analítica** dos dados de **Unidades Consumidoras de Média Tensão**, com foco em **engenharia de dados, rastreabilidade e governança**.
 
-Nesta etapa inicial, o foco está **exclusivamente na construção do ambiente técnico e na ingestão segura do dataset**, preservando integralmente o dado bruto e documentando todas as decisões metodológicas adotadas.
+Nesta fase, o projeto está **deliberadamente restrito à camada de ingestão e estruturação**, evitando qualquer modelagem prematura. Todas as decisões são documentadas para garantir **reprodutibilidade técnica** e **clareza metodológica**.
 
-Este README segue o **mesmo padrão estrutural e narrativo do Projeto 03.1 (Alta Tensão)**, funcionando como um **relatório vivo**, que será progressivamente expandido conforme o avanço das análises.
-
-<br>
-
-**Principais pontos até o momento:**
-- **Escopo e dados:** Unidades Consumidoras de média tensão — base BDGD/ANEEL.
-- **Abordagem:** ingestão controlada do dado bruto, com preservação total da informação original.
-- **Ferramentas:** PostgreSQL + pgAdmin 4 (preparação para análises posteriores).
+Este documento funciona como um **relatório vivo**, seguindo o mesmo padrão narrativo do **Projeto 03.1 — Alta Tensão**, porém incorporando aprendizados práticos específicos do contexto de Média Tensão.
 
 ---
-<br>
 
 ## Contexto do Projeto
 
-O Projeto 03 foi estruturado em três frentes analíticas distintas, conforme o nível de tensão das Unidades Consumidoras:
+O Projeto 03 foi estruturado em três frentes analíticas complementares:
 
 - **03.1 — Alta Tensão** (Power BI) ✔️
-- **03.2 — Média Tensão** (PostgreSQL) 🔄
+- **03.2 — Média Tensão** (PostgreSQL) 🔄 *(este projeto)*
 - **03.3 — Baixa Tensão** (planejado)
 
-O subprojeto **03.2 — Média Tensão** surge como continuidade natural do 03.1, permitindo:
-- reaproveitamento de aprendizados metodológicos;
-- comparação estrutural entre níveis de tensão;
-- identificação de similaridades e diferenças cadastrais e históricas na BDGD.
+O subprojeto **03.2** aprofunda a abordagem de engenharia de dados, pois lida com:
+- maior volume de registros;
+- maior heterogeneidade histórica de layout;
+- maior presença de campos condicionais e dados ausentes legítimos.
 
 ---
-<br>
 
 ## Ambiente Técnico
 
 ### Banco de Dados
 
-- **SGBD:** PostgreSQL
-- **Versão:** 18.1
+- **SGBD:** PostgreSQL 18.1
 - **Sistema Operacional:** Windows x64
 - **Ferramenta de administração:** pgAdmin 4
 - **Database dedicado:** `bdgd_media_tensao`
 
 ### Configurações Gerais
 
-- Porta padrão: **5432**
+- Porta: `5432`
 - Usuário: `postgres`
 - Conexão local validada
 
 ---
-<br>
 
-## Etapas do Projeto (Rastreabilidade Temporal)
+## Arquitetura de Ingestão — Visão Geral
 
-Esta seção organiza o avanço do Projeto 03.2 em **etapas cronológicas**, permitindo rastreabilidade clara do que foi feito, quando e com qual objetivo técnico.
+A arquitetura adotada segue o princípio de **separação explícita entre dado bruto, estrutura e semântica**:
+
+1. **RAW** — preservação integral do CSV
+2. **RAW de Validação** — verificação controlada de metadados (header)
+3. **STAGE** — estruturação com schema explícito baseado no header real
+
+Nenhuma camada assume significado semântico sem validação documental.
 
 ---
-<br>
 
-## 0️⃣ Etapa Inicial — Preparação de Ambiente e Ingestão RAW
+## Etapa 0 — Ingestão RAW (Versão Oficial)
 
 ### Objetivo
-Preparar o ambiente PostgreSQL e realizar a ingestão **segura e integral** do dataset de média tensão, sem qualquer transformação estrutural.
 
-<br>
+Garantir a ingestão **integral e fiel** do dataset de Média Tensão, sem transformação, limpeza ou inferência estrutural.
 
-### Atividades Executadas
+### Implementação
 
-- Instalação e configuração do PostgreSQL 18.1 (Windows x64)
-- Instalação e validação do pgAdmin 4
-- Criação do database dedicado `bdgd_media_tensao`
-- Validação de conexão local (porta 5432, usuário `postgres`)
-- Criação da tabela de ingestão bruta:
-  - `bdgd_media_tensao_raw`
-- Importação integral do arquivo CSV de média tensão
+- Criação da tabela `bdgd_media_tensao_raw`
+- Estrutura: **1 coluna (`linha` TEXT)**
+- Importação do CSV com:
+  - Delimitador real: `;`
+  - Encoding: `LATIN1`
+  - **HEADER = YES**
 
-📊 **Total de registros carregados:** **312.074 linhas**
+### Resultado
 
-<br>
+- **312.074 registros** carregados
+- Primeira linha já corresponde a dados válidos (UC)
+- Nenhuma perda de informação
 
-### Decisões Técnicas
-
-- Opção por ingestão em formato RAW (uma única coluna `linha`)
-- Uso de delimitador fictício (`|`) para evitar quebra incorreta de colunas
-- Encoding definido como `LATIN1`
-
-<br>
-
-### Justificativa
-
-Essa abordagem garantiu:
-- preservação total do dado original;
-- ingestão sem perda de informação;
-- base confiável para inspeção e estruturação posterior.
+Essa tabela representa a **fonte de verdade primária** do projeto.
 
 ---
-<br>
 
-## 1️⃣ Primeira Etapa — Inspeção Inicial da Estrutura do Dataset
+## Etapa 1 — Validação Controlada do Header (RAW Paralela)
 
-### Objetivo
-Inspecionar mecanicamente o conteúdo do dado bruto para identificar o delimitador real e estimar a estrutura do CSV **sem assumir headers ou semântica**.
+### Motivação
 
-<br>
+Durante a inspeção inicial, observou-se que os nomes das colunas não estavam fisicamente presentes no banco. Para eliminar qualquer dúvida sobre:
+- existência do header no CSV;
+- comportamento do pgAdmin durante a importação;
+- integridade do arquivo original;
 
-### Atividades Executadas
+foi realizado um **teste controlado e reproduzível**.
 
-- Abertura do Query Tool no database `bdgd_media_tensao`
-- Inspeção visual do conteúdo da tabela RAW
-- Identificação do delimitador real do arquivo
-- Contagem de delimitadores para estimativa do número de colunas
+### Procedimento
 
-<br>
+- Criação da tabela `bdgd_media_tensao_raw_v2` (1 coluna `linha`)
+- Importação do **mesmo CSV**, com:
+  - **HEADER = NO**
 
-### Queries Executadas
+### Evidência Obtida
 
-#### Inspeção do conteúdo RAW
+- A primeira linha ingerida foi:
+  ```
+  COD_ID_ENCR;DIST;PN_CON;PAC;...;POINT_X;POINT_Y
+  ```
 
-```sql
-SELECT *
-FROM bdgd_media_tensao_raw
-LIMIT 5;
-```
+### Conclusão Técnica
 
-**Objetivo:**
-- Confirmar a correta ingestão dos dados;
-- Validar a existência de uma única coluna (`linha`);
-- Observar o formato bruto das linhas do CSV original.
+- O CSV **possui header explícito**
+- O comportamento anterior foi **correto e esperado**
+- O header foi tratado como metadado, não como dado
 
----
-<br>
-
-#### Contagem de delimitadores e estimativa de colunas
-
-```sql
-SELECT
-    length(linha) - length(replace(linha, ';', '')) AS qtd_delimitadores,
-    (length(linha) - length(replace(linha, ';', '')) + 1) AS qtd_colunas_estimadas
-FROM bdgd_media_tensao_raw
-LIMIT 1;
-```
-<br>
-
-### Resultados Obtidos
-
-- Delimitador identificado: **`;` (ponto e vírgula)**
-- **79 delimitadores por linha**
-- **80 colunas estimadas**
-
-<br>
-
-### Observações Importantes
-
-- Nenhum nome de coluna, tipo de dado ou significado semântico foi assumido
-- A estrutura completa dependerá de:
-  - validação da consistência do número de campos em todas as linhas;
-  - identificação de header (se existente);
-  - consulta ao dicionário oficial da BDGD
+Essa validação fundamenta toda a estruturação posterior.
 
 ---
-<br>
 
-## 2️⃣ Segunda Etapa — Validação Estrutural e Natureza dos Dados Ausentes
+## Etapa 2 — Criação da Camada STAGE (Schema Explícito)
 
-### Objetivo
-Avaliar a **consistência estrutural global** do dataset e documentar corretamente a **natureza dos campos vazios**, evitando interpretações equivocadas durante as etapas de modelagem e análise.
+### Princípio Central
 
-<br>
+> Em projetos de dados reais, **colunas genéricas (`col_1`, `col_2`, …)** não são aceitáveis quando o schema original existe.
 
-### Atividades Executadas
+A camada *stage* deve **preservar semântica, governança e rastreabilidade**.
 
-- Validação do número de delimitadores em todo o dataset
-- Identificação de variações estruturais no layout do arquivo
-- Inspeção manual de linhas com número de colunas superior ao padrão esperado
-- Análise contextual dos campos vazios à luz do domínio do problema (BDGD)
+### Abordagem Adotada
 
-<br>
+- A tabela *stage* será criada **com base direta no header validado do CSV**
+- Cada coluna da *stage* corresponde **1:1** ao nome oficial do arquivo
+- Tipos inicialmente definidos como `TEXT`
 
-### Queries Executadas
+### Benefícios
 
-#### Validação global de delimitadores
+- Clareza estrutural imediata
+- Facilidade de validação cruzada com dicionários BDGD
+- Redução drástica de dívida técnica
+- Pipeline defensável em contexto profissional
 
-```sql
-SELECT
-    COUNT(*) AS total_linhas,
-    MIN(length(linha) - length(replace(linha, ';', ''))) AS min_delimitadores,
-    MAX(length(linha) - length(replace(linha, ';', ''))) AS max_delimitadores
-FROM bdgd_media_tensao_raw;
-```
-<br>
-
-#### Distribuição de padrões estruturais
-
-```sql
-SELECT
-    length(linha) - length(replace(linha, ';', '')) AS qtd_delimitadores,
-    COUNT(*) AS total_linhas
-FROM bdgd_media_tensao_raw
-GROUP BY qtd_delimitadores
-ORDER BY qtd_delimitadores;
-```
-<br>
-
-### Resultados Obtidos
-
-- **Layout dominante:** 79 delimitadores (80 colunas) → ~98% do dataset
-- Existência de um subconjunto minoritário com **81 a 84 delimitadores**
-- As variações estruturais não são aleatórias, indicando **compatibilidade histórica de layouts**
-
-<br>
-
-### Interpretação Técnica
-
-- A presença de delimitadores adicionais está associada a:
-  - campos opcionais adicionados em versões posteriores do layout;
-  - sequências de campos vazios (`;;;;;`);
-  - evolução histórica do cadastro da BDGD.
-
-> **Dada a natureza do dataset, campos vazios não devem ser interpretados como erro**, mas sim como:
-  - ausência legítima de ocorrência (ex.: interrupções de fornecimento inexistentes);
-  - atributos não aplicáveis àquela Unidade Consumidora;
-  - informações condicionais dependentes de eventos específicos.
-
-<br>
-
-### Decisão Metodológica Importante
-
-- Dados ausentes (**NULL / vazio**) são tratados como **informação semântica válida**, e não como falha de ingestão.
-- Nenhuma linha será descartada nesta fase.
-- O dado bruto permanece preservado integralmente na tabela `RAW`.
-
-Essa interpretação é fundamental para evitar:
-- exclusões indevidas de registros;
-- distorções estatísticas futuras;
-- erros conceituais durante análises de continuidade de serviço e qualidade.
+> A tipagem e normalização ocorrerão **apenas em camadas analíticas posteriores**.
 
 ---
-<br>
 
+## Seção Legacy — Abordagem Inicial (Descontinuada)
 
-## 3️⃣ Terceira Etapa — Criação da Tabela *Stage* e Estruturação Inicial
+### Contexto
 
-### Objetivo  
-Estabelecer uma **camada intermediária (*stage*)** entre o dado bruto (`RAW`) e as futuras tabelas analíticas, permitindo a **quebra controlada da linha textual em colunas**, sem perda de informação e sem assumir, prematuramente, significados semânticos incorretos.
+Na fase inicial do projeto, foi testada uma abordagem baseada em:
+- contagem de delimitadores;
+- criação de *stage* com colunas genéricas (`col_01` … `col_n`);
+- estruturação puramente posicional.
 
-Essa etapa tem como foco **organização estrutural**, não modelagem.
+### Motivo da Descontinuação
 
-<br>
+Embora tecnicamente válida como experimento exploratório, essa abordagem foi **formalmente abandonada** por:
 
-### Contexto Técnico
+- não refletir boas práticas de engenharia de dados;
+- introduzir ambiguidade semântica;
+- não escalar para ambientes de Big Data e governança;
+- tornar o pipeline difícil de manter e auditar.
 
-Após a validação estrutural do arquivo, foi identificado que:
+### Status
 
-- O **layout dominante possui 79 delimitadores**, resultando em **80 colunas**
-- Linhas com delimitadores adicionais (≥ 80) representam **variações históricas do layout**
-- O recorte seguro e consistente para estruturação inicial é de **80 colunas**
-
-<br>
-
-### Decisão Estrutural Importante
-
-- A tabela *stage* foi criada com **80 colunas genéricas (`col_01` a `col_80`)**
-- Nenhuma coluna recebe nome semântico nesta fase
-
-Essa abordagem garante:
-
-- **Neutralidade analítica**
-- **Rastreabilidade total** entre posição no CSV e coluna no banco
-- **Evita interpretações erradas** antes do cruzamento com dicionários oficiais da BDGD
-
-> Nesta fase, **posição é mais importante que significado**.
-
-<br>
-
-### Atividades Executadas
-
-- Criação da tabela `bdgd_media_tensao_stage`
-- Definição explícita de **80 colunas do tipo `TEXT`**
-- Preparação da estrutura para receber apenas o **layout dominante**
-- Planejamento de tratamento posterior para linhas com colunas excedentes
-
-<br>
-
-### Query Executada — Criação da Tabela *Stage*
-
-```sql
-CREATE TABLE bdgd_media_tensao_stage (
-    col_01 TEXT, col_02 TEXT, col_03 TEXT, col_04 TEXT, col_05 TEXT,
-    col_06 TEXT, col_07 TEXT, col_08 TEXT, col_09 TEXT, col_10 TEXT,
-    col_11 TEXT, col_12 TEXT, col_13 TEXT, col_14 TEXT, col_15 TEXT,
-    col_16 TEXT, col_17 TEXT, col_18 TEXT, col_19 TEXT, col_20 TEXT,
-    col_21 TEXT, col_22 TEXT, col_23 TEXT, col_24 TEXT, col_25 TEXT,
-    col_26 TEXT, col_27 TEXT, col_28 TEXT, col_29 TEXT, col_30 TEXT,
-    col_31 TEXT, col_32 TEXT, col_33 TEXT, col_34 TEXT, col_35 TEXT,
-    col_36 TEXT, col_37 TEXT, col_38 TEXT, col_39 TEXT, col_40 TEXT,
-    col_41 TEXT, col_42 TEXT, col_43 TEXT, col_44 TEXT, col_45 TEXT,
-    col_46 TEXT, col_47 TEXT, col_48 TEXT, col_49 TEXT, col_50 TEXT,
-    col_51 TEXT, col_52 TEXT, col_53 TEXT, col_54 TEXT, col_55 TEXT,
-    col_56 TEXT, col_57 TEXT, col_58 TEXT, col_59 TEXT, col_60 TEXT,
-    col_61 TEXT, col_62 TEXT, col_63 TEXT, col_64 TEXT, col_65 TEXT,
-    col_66 TEXT, col_67 TEXT, col_68 TEXT, col_69 TEXT, col_70 TEXT,
-    col_71 TEXT, col_72 TEXT, col_73 TEXT, col_74 TEXT, col_75 TEXT,
-    col_76 TEXT, col_77 TEXT, col_78 TEXT, col_79 TEXT, col_80 TEXT
-);
-```
-
-<br>
-
-### Interpretação Metodológica
-
-- A tabela *stage* **não representa o modelo final**
-- Ela funciona como uma **zona de transição controlada**
-- A semântica real das colunas será atribuída **somente após**:
-  - cruzamento com dicionários oficiais da BDGD;
-  - análise de conteúdo por posição;
-  - validação por amostragem.
-
-<br>
-
-### Atividades Executadas
-
-- Inserção completa dos dados da tabela `bdgd_media_tensao_raw` na tabela `bdgd_media_tensao_stage`
-- Quebra controlada da coluna textual `linha` em colunas posicionais
-- Preservação explícita de campos vazios (dados ausentes legítimos)
-- Validação de integridade da carga
-
-<br>
-
-### Query Executada — Inserção dos Dados na *Stage*
-
-```sql
-INSERT INTO bdgd_media_tensao_stage
-SELECT
-    arr[1],  arr[2],  arr[3],  arr[4],  arr[5],
-    arr[6],  arr[7],  arr[8],  arr[9],  arr[10],
-    arr[11], arr[12], arr[13], arr[14], arr[15],
-    arr[16], arr[17], arr[18], arr[19], arr[20],
-    arr[21], arr[22], arr[23], arr[24], arr[25],
-    arr[26], arr[27], arr[28], arr[29], arr[30],
-    arr[31], arr[32], arr[33], arr[34], arr[35],
-    arr[36], arr[37], arr[38], arr[39], arr[40],
-    arr[41], arr[42], arr[43], arr[44], arr[45],
-    arr[46], arr[47], arr[48], arr[49], arr[50],
-    arr[51], arr[52], arr[53], arr[54], arr[55],
-    arr[56], arr[57], arr[58], arr[59], arr[60],
-    arr[61], arr[62], arr[63], arr[64], arr[65],
-    arr[66], arr[67], arr[68], arr[69], arr[70],
-    arr[71], arr[72], arr[73], arr[74], arr[75],
-    arr[76], arr[77], arr[78], arr[79], arr[80]
-FROM (
-    SELECT string_to_array(linha, ';') AS arr
-    FROM bdgd_media_tensao_raw
-) t;
-```
-
-<br>
-
-### Resultado da Execução
-
-- **312.074 registros inseridos com sucesso**
-- Tempo de execução aproximado: **2 minutos**
-- Nenhuma linha descartada
-- Nenhum erro de parsing identificado
-
-<br>
-
-### Validação Pós-Carga
-
-```sql
-SELECT COUNT(*) FROM bdgd_media_tensao_stage;
-```
-
-Resultado obtido:
-
-- **312.074 linhas**, confirmando integridade total da carga
-
-Inspeção visual adicional confirmou:
-- correta separação dos dados por coluna;
-- alinhamento posicional consistente (`col_01` a `col_80`);
-- preservação de campos vazios como informação válida.
-
-<br>
-
-### Observação Metodológica Importante
-
-- Campos vazios na *stage* **não representam erro de ingestão**
-- Eles refletem:
-  - ausência legítima de eventos;
-  - atributos condicionais não aplicáveis;
-  - variações históricas do cadastro BDGD.
+- Mantida apenas como **referência histórica (legacy)**
+- **Não utilizada** em nenhuma análise futura
 
 ---
-<br>
 
-## Nota Técnica — Ingestão do Header do CSV
+## Status Atual do Projeto
 
-Durante a ingestão inicial do dataset de **Média Tensão (BDGD/ANEEL)** no PostgreSQL, o arquivo CSV original foi importado por meio do recurso **Import/Export Data** do pgAdmin 4.
+- ✔ Header do CSV validado empiricamente
+- ✔ Estratégia de ingestão redefinida e consolidada
+- ✔ RAW oficial preservada
+- 🔄 Criação da STAGE com schema explícito (próximo passo)
 
-O arquivo CSV **possui header** (linha de nomes de colunas), conforme verificação direta no arquivo original. No momento da importação, a opção **“Header = Yes”** foi utilizada, fazendo com que o pgAdmin interpretasse corretamente a primeira linha como metadado e **não a inserisse como registro** na tabela de ingestão bruta.
+---
 
-Como consequência:
-- a tabela `bdgd_media_tensao_raw` contém **exclusivamente dados válidos**, iniciando já na primeira Unidade Consumidora;
-- **nenhuma informação foi perdida** durante o processo de ingestão;
-- os nomes oficiais das colunas **não constam fisicamente no banco**, pois foram tratados como cabeçalho pelo mecanismo de importação.
+## Próximos Passos
 
-Essa decisão é **compatível com boas práticas de ingestão**, uma vez que preserva a integridade do dado e evita a mistura entre metadados e registros observacionais.
+1. Criar tabela `bdgd_media_tensao_stage` com colunas oficiais
+2. Inserir dados a partir da RAW
+3. Validar alinhamento semântico com dicionário BDGD
+4. Evoluir para camadas analíticas
 
-Para garantir rastreabilidade e auditabilidade completas, foi criada uma **tabela paralela de metadados** (`bdgd_media_tensao_column_map`), destinada a armazenar o mapeamento entre a **posição das colunas no CSV** e seus **nomes oficiais**, mantendo a camada *stage* estritamente posicional e semanticamente neutra.
+---
 
-Essa separação explícita entre **dados** e **metadados** assegura:
-- reprodutibilidade do pipeline;
-- clareza metodológica;
-- facilidade de manutenção e evolução do modelo analítico.
+## Observações Metodológicas Finais
+
+Este projeto prioriza:
+- decisões observáveis e testáveis;
+- documentação explícita de erros e correções;
+- abandono consciente de abordagens inadequadas;
+- aderência a práticas profissionais de engenharia de dados.
+
+Nada é assumido. Tudo é validado.
