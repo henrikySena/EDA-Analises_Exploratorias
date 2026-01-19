@@ -163,6 +163,146 @@ Embora tecnicamente válida como experimento exploratório, essa abordagem foi *
 
 ---
 
+## 🧩 Apêndice Técnico — Comandos e Queries Utilizadas
+
+Esta seção documenta **apenas os comandos que sustentam decisões arquiteturais e metodológicas** do Projeto 03.2. Não se trata de um tutorial de SQL, mas de um **registro técnico reproduzível** das validações realizadas.
+
+### 1️⃣ Validação da Presença de Header no CSV
+
+**Objetivo:** comprovar que o arquivo original possui header e entender o comportamento do pgAdmin durante a importação.
+
+Importação realizada com:
+- Delimitador: `;`
+- Encoding: `LATIN1`
+- **HEADER = NO** (forçando ingestão literal da primeira linha)
+
+Consulta de validação:
+
+```sql
+SELECT *
+FROM bdgd_media_tensao_raw_v2
+LIMIT 2;
+```
+
+**Resultado esperado:**
+- Primeira linha contendo os nomes das colunas (`COD_ID_ENCR;DIST;PN_CON;...`)
+- Segunda linha iniciando os dados reais
+
+Essa validação confirmou que o **header existe na origem** e que o comportamento observado anteriormente foi exclusivamente decorrente da configuração de importação.
+
+---
+
+### 2️⃣ Verificação de Integridade da Carga
+
+**Objetivo:** garantir que nenhuma linha foi perdida durante a ingestão.
+
+```sql
+SELECT COUNT(*)
+FROM bdgd_media_tensao_raw_v2;
+```
+
+O total de registros obtido é consistente com o volume esperado do dataset de média tensão da BDGD.
+
+---
+
+### 3️⃣ Criação da Tabela *Stage* com Schema Explícito (Abordagem Oficial)
+
+**Objetivo:** estabelecer a camada *stage* já com os **nomes oficiais das colunas**, conforme definidos no header do CSV, evitando qualquer estratégia baseada em colunas genéricas.
+
+```sql
+CREATE TABLE bdgd_media_tensao_stage (
+    COD_ID_ENCR TEXT,
+    DIST TEXT,
+    PN_CON TEXT,
+    PAC TEXT,
+    CTMT TEXT,
+    UNI_TR_AT TEXT,
+    SUB TEXT,
+    CONJ TEXT,
+    MUN TEXT,
+    CEG_GD TEXT,
+    LGRD TEXT,
+    BRR TEXT,
+    CEP TEXT,
+    CLAS_SUB TEXT,
+    CNAE TEXT,
+    TIP_CC TEXT,
+    FAS_CON TEXT,
+    GRU_TEN TEXT,
+    TEN_FORN TEXT,
+    GRU_TAR TEXT,
+    SIT_ATIV TEXT,
+    DAT_CON TEXT,
+    CAR_INST TEXT,
+    LIV TEXT,
+    ARE_LOC TEXT,
+    TIP_SIST TEXT,
+    DEM_CONT TEXT,
+    DEM_01 TEXT,
+    DEM_02 TEXT,
+    DEM_03 TEXT,
+    DEM_04 TEXT,
+    DEM_05 TEXT,
+    DEM_06 TEXT,
+    DEM_07 TEXT,
+    DEM_08 TEXT,
+    DEM_09 TEXT,
+    DEM_10 TEXT,
+    DEM_11 TEXT,
+    DEM_12 TEXT,
+    ENE_01 TEXT,
+    ENE_02 TEXT,
+    ENE_03 TEXT,
+    ENE_04 TEXT,
+    ENE_05 TEXT,
+    ENE_06 TEXT,
+    ENE_07 TEXT,
+    ENE_08 TEXT,
+    ENE_09 TEXT,
+    ENE_10 TEXT,
+    ENE_11 TEXT,
+    ENE_12 TEXT,
+    DIC_01 TEXT,
+    DIC_02 TEXT,
+    DIC_03 TEXT,
+    DIC_04 TEXT,
+    DIC_05 TEXT,
+    DIC_06 TEXT,
+    DIC_07 TEXT,
+    DIC_08 TEXT,
+    DIC_09 TEXT,
+    DIC_10 TEXT,
+    DIC_11 TEXT,
+    DIC_12 TEXT,
+    FIC_01 TEXT,
+    FIC_02 TEXT,
+    FIC_03 TEXT,
+    FIC_04 TEXT,
+    FIC_05 TEXT,
+    FIC_06 TEXT,
+    FIC_07 TEXT,
+    FIC_08 TEXT,
+    FIC_09 TEXT,
+    FIC_10 TEXT,
+    FIC_11 TEXT,
+    FIC_12 TEXT,
+    SEMRED TEXT,
+    DESCR TEXT,
+    DATA_BASE TEXT,
+    POINT_X TEXT,
+    POINT_Y TEXT
+);
+```
+
+Essa definição consolida a **estratégia oficial do projeto**, garantindo semântica explícita, governança e facilidade de evolução futura do modelo.
+
+---
+
+### Observação
+
+Comandos triviais de infraestrutura (criação de database, usuários, permissões) foram deliberadamente omitidos deste apêndice por não contribuírem para a compreensão das decisões analíticas ou arquiteturais do projeto.
+---
+
 ## Status Atual do Projeto
 
 - ✔ Header do CSV validado empiricamente
@@ -190,3 +330,6 @@ Este projeto prioriza:
 - aderência a práticas profissionais de engenharia de dados.
 
 Nada é assumido. Tudo é validado.
+
+
+---
