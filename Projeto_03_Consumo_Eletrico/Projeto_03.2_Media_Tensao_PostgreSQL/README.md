@@ -9,6 +9,7 @@ O projeto adota uma abordagem incremental e metodologicamente rigorosa, iniciand
 Este documento funciona como um relatório vivo, alinhado ao padrão do Projeto 03, documentando decisões técnicas, aprendizados e a evolução do pipeline de dados ao longo de todas as etapas do projeto.
 
 ---
+<br>
 
 ## Ambiente Técnico
 
@@ -25,19 +26,20 @@ Este documento funciona como um relatório vivo, alinhado ao padrão do Projeto 
 - Usuário: `postgres`
 - Conexão local validada
 
----
+<br>
 
 ## Arquitetura de Ingestão — Visão Geral
 
 A arquitetura adotada segue o princípio de **separação explícita entre dado bruto, estrutura e semântica**:
 
-1. **RAW** — preservação integral do CSV
-2. **RAW de Validação** — verificação controlada do header
-3. **STAGE** — estruturação com schema explícito baseado no layout oficial
+1. **RAW `(bdgd_media_tensao_raw)`** — preservação integral do CSV
+2. **RAW de Validação `(bdgd_media_tensao_raw_v2)`** — verificação controlada do header
+3. **STAGE `(bdgd_media_tensao_stage)`** — estruturação com schema explícito baseado no layout oficial
 
 Nenhuma camada assume significado semântico sem validação documental.
 
 ---
+<br>
 
 ## Etapa 0 — Ingestão RAW (Versão Oficial)
 
