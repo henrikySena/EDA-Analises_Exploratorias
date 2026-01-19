@@ -2,21 +2,11 @@
 
 ## Resumo Executivo
 
-O **Projeto 03.2 — Média Tensão** integra o **Projeto 03 — Consumo Elétrico (BDGD/ANEEL)** e tem como objetivo a **ingestão, validação estrutural e preparação analítica** dos dados de **Unidades Consumidoras de Média Tensão**, com foco em **engenharia de dados, rastreabilidade e governança**.
+O **Projeto 03.2 — Média Tensão** integra o **Projeto 03 — Consumo Elétrico (BDGD/ANEEL)** e tem como objetivo a **ingestão, validação, estruturação, análise e modelagem dos dados** de **Unidades Consumidoras de Média Tensão**, cobrindo todo o ciclo analítico — da engenharia de dados à geração de insumos analíticos.
 
-Nesta fase, o projeto está **deliberadamente restrito à camada de ingestão e estruturação**, evitando qualquer modelagem prematura. Todas as decisões técnicas são documentadas para garantir **reprodutibilidade**, **auditabilidade** e **clareza metodológica**.
+O projeto adota uma abordagem **incremental e metodologicamente rigorosa**, iniciando pela construção de uma base sólida de ingestão e governança, evoluindo progressivamente para **validação semântica, tipagem, exploração analítica, modelagem e integração com camadas analíticas superiores**.
 
-Este documento funciona como um **relatório vivo**, alinhado ao padrão do **Projeto 03.1 — Alta Tensão**, incorporando aprendizados práticos específicos do contexto de Média Tensão.
-
----
-
-## Contexto do Projeto
-
-O Projeto 03 foi estruturado em três frentes analíticas complementares:
-
-- **03.1 — Alta Tensão** (Power BI) ✔️
-- **03.2 — Média Tensão** (PostgreSQL) 🔄 *(este projeto)*
-- **03.3 — Baixa Tensão** (planejado)
+Este documento funciona como um **relatório vivo**, alinhado ao padrão do **Projeto 03.1 — Alta Tensão**, documentando decisões técnicas, aprendizados e evolução do pipeline de dados ao longo de todas as etapas do projeto.
 
 O subprojeto **03.2** aprofunda a abordagem de engenharia de dados, lidando com:
 - maior volume de registros;
