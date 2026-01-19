@@ -73,11 +73,11 @@ Garantir a ingestão **integral e fiel** do dataset de Média Tensão, sem trans
 
 - **312.074 registros** carregados
 - Primeira linha já corresponde a dados válidos (UC)
-- **Possível perda de informação (Headers)**
+- Header não ingerido como dado
 
 ---
 
-## Seção Legacy — Abordagem Inicial (Descontinuada)
+## Seção Legacy — Experimento Exploratório Inicial (Descontinuado)
 
 ### Contexto
 
@@ -289,8 +289,8 @@ Essas queries confirmaram:
 
 ## Próximos Passos
 
-1. Tipagem progressiva das colunas
-2. Validação semântica via dicionário BDGD
+1. Validação semântica via dicionário BDGD
+2. Tipagem progressiva das colunas
 3. Criação de camadas analíticas
 4. Integração com análises posteriores
 
