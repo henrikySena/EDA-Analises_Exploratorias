@@ -20,6 +20,8 @@ Este documento funciona como um relatório vivo, alinhado ao padrão do Projeto 
 - **Ferramenta de administração:** pgAdmin 4
 - **Database dedicado:** `bdgd_media_tensao`
 
+<br>
+
 ### Configurações Gerais
 
 - Porta: `5432`
@@ -56,6 +58,8 @@ Garantir a ingestão **integral e fiel** do dataset de Média Tensão, sem trans
   - Encoding: `LATIN1`
   - **HEADER = YES**
 
+<br>
+
 ### Resultado
 
 - **312.074 registros** carregados
@@ -73,6 +77,8 @@ Foi testada inicialmente uma abordagem baseada em:
 - ingestão com delimitador fictício;
 - coluna única (`linha`);
 - quebra posicional em colunas genéricas.
+
+<br>
 
 ### Motivo do Abandono
 
@@ -98,6 +104,8 @@ Para eliminar qualquer dúvida sobre:
 
 foi executado um **teste controlado, documentado e reproduzível**.
 
+<br>
+
 ### Procedimento
 
 - Criação da tabela `bdgd_media_tensao_raw_v2` (1 coluna `linha`)
@@ -105,6 +113,8 @@ foi executado um **teste controlado, documentado e reproduzível**.
   - Delimitador: `;`
   - Encoding: `LATIN1`
   - **HEADER = NO**
+
+<br>
 
 ### Evidência Empírica
 
@@ -119,6 +129,8 @@ LIMIT 2;
 Resultado observado:
 - Primeira linha contendo os nomes das colunas (`COD_ID_ENCR;DIST;PN_CON;...;POINT_Y`)
 - Segunda linha iniciando os dados reais
+
+<br>
 
 ### Conclusão Técnica
 
@@ -139,11 +151,15 @@ Essa validação fundamenta toda a estruturação posterior.
 
 A camada *stage* deve **preservar semântica, governança e rastreabilidade**.
 
+<br>
+
 ### Abordagem Adotada
 
 - Criação da tabela *stage* **diretamente a partir do header validado do CSV**
 - Correspondência **1:1** entre colunas da *stage* e colunas oficiais do arquivo
 - Tipos definidos inicialmente como `TEXT`
+
+<br>
 
 ### Query — Criação da Tabela *Stage*
 
@@ -231,6 +247,7 @@ CREATE TABLE bdgd_media_tensao_stage (
     POINT_Y TEXT
 );
 ```
+<br>
 
 ### Validações Estruturais Executadas
 
