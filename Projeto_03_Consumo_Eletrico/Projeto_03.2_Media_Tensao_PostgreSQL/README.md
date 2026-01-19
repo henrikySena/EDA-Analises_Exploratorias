@@ -4,9 +4,9 @@
 
 O **Projeto 03.2 — Média Tensão** integra o **Projeto 03 — Consumo Elétrico (BDGD/ANEEL)** e tem como objetivo a **ingestão, validação estrutural e preparação analítica** dos dados de **Unidades Consumidoras de Média Tensão**, com foco em **engenharia de dados, rastreabilidade e governança**.
 
-Nesta fase, o projeto está **deliberadamente restrito à camada de ingestão e estruturação**, evitando qualquer modelagem prematura. Todas as decisões são documentadas para garantir **reprodutibilidade técnica** e **clareza metodológica**.
+Nesta fase, o projeto está **deliberadamente restrito à camada de ingestão e estruturação**, evitando qualquer modelagem prematura. Todas as decisões técnicas são documentadas para garantir **reprodutibilidade**, **auditabilidade** e **clareza metodológica**.
 
-Este documento funciona como um **relatório vivo**, seguindo o mesmo padrão narrativo do **Projeto 03.1 — Alta Tensão**, porém incorporando aprendizados práticos específicos do contexto de Média Tensão.
+Este documento funciona como um **relatório vivo**, alinhado ao padrão do **Projeto 03.1 — Alta Tensão**, incorporando aprendizados práticos específicos do contexto de Média Tensão.
 
 ---
 
@@ -18,10 +18,10 @@ O Projeto 03 foi estruturado em três frentes analíticas complementares:
 - **03.2 — Média Tensão** (PostgreSQL) 🔄 *(este projeto)*
 - **03.3 — Baixa Tensão** (planejado)
 
-O subprojeto **03.2** aprofunda a abordagem de engenharia de dados, pois lida com:
+O subprojeto **03.2** aprofunda a abordagem de engenharia de dados, lidando com:
 - maior volume de registros;
 - maior heterogeneidade histórica de layout;
-- maior presença de campos condicionais e dados ausentes legítimos.
+- maior incidência de campos condicionais e dados ausentes legítimos.
 
 ---
 
@@ -47,8 +47,8 @@ O subprojeto **03.2** aprofunda a abordagem de engenharia de dados, pois lida co
 A arquitetura adotada segue o princípio de **separação explícita entre dado bruto, estrutura e semântica**:
 
 1. **RAW** — preservação integral do CSV
-2. **RAW de Validação** — verificação controlada de metadados (header)
-3. **STAGE** — estruturação com schema explícito baseado no header real
+2. **RAW de Validação** — verificação controlada do header
+3. **STAGE** — estruturação com schema explícito baseado no layout oficial
 
 Nenhuma camada assume significado semântico sem validação documental.
 
@@ -73,9 +73,7 @@ Garantir a ingestão **integral e fiel** do dataset de Média Tensão, sem trans
 
 - **312.074 registros** carregados
 - Primeira linha já corresponde a dados válidos (UC)
-- Nenhuma perda de informação
-
-Essa tabela representa a **fonte de verdade primária** do projeto.
+- **Possível perda de informação (Headers)**
 
 ---
 
@@ -83,31 +81,40 @@ Essa tabela representa a **fonte de verdade primária** do projeto.
 
 ### Motivação
 
-Durante a inspeção inicial, observou-se que os nomes das colunas não estavam fisicamente presentes no banco. Para eliminar qualquer dúvida sobre:
+Para eliminar qualquer dúvida sobre:
 - existência do header no CSV;
 - comportamento do pgAdmin durante a importação;
 - integridade do arquivo original;
 
-foi realizado um **teste controlado e reproduzível**.
+foi executado um **teste controlado, documentado e reproduzível**.
 
 ### Procedimento
 
 - Criação da tabela `bdgd_media_tensao_raw_v2` (1 coluna `linha`)
 - Importação do **mesmo CSV**, com:
+  - Delimitador: `;`
+  - Encoding: `LATIN1`
   - **HEADER = NO**
 
-### Evidência Obtida
+### Evidência Empírica
 
-- A primeira linha ingerida foi:
-  ```
-  COD_ID_ENCR;DIST;PN_CON;PAC;...;POINT_X;POINT_Y
-  ```
+Consulta executada:
+
+```sql
+SELECT *
+FROM bdgd_media_tensao_raw_v2
+LIMIT 2;
+```
+
+Resultado observado:
+- Primeira linha contendo os nomes das colunas (`COD_ID_ENCR;DIST;PN_CON;...;POINT_Y`)
+- Segunda linha iniciando os dados reais
 
 ### Conclusão Técnica
 
 - O CSV **possui header explícito**
-- O comportamento anterior foi **correto e esperado**
-- O header foi tratado como metadado, não como dado
+- O comportamento anterior do pgAdmin foi **correto e esperado**
+- O header foi tratado como **metadado**, não como dado
 
 Essa validação fundamenta toda a estruturação posterior.
 
@@ -123,91 +130,11 @@ A camada *stage* deve **preservar semântica, governança e rastreabilidade**.
 
 ### Abordagem Adotada
 
-- A tabela *stage* será criada **com base direta no header validado do CSV**
-- Cada coluna da *stage* corresponde **1:1** ao nome oficial do arquivo
-- Tipos inicialmente definidos como `TEXT`
+- Criação da tabela *stage* **diretamente a partir do header validado do CSV**
+- Correspondência **1:1** entre colunas da *stage* e colunas oficiais do arquivo
+- Tipos definidos inicialmente como `TEXT`
 
-### Benefícios
-
-- Clareza estrutural imediata
-- Facilidade de validação cruzada com dicionários BDGD
-- Redução drástica de dívida técnica
-- Pipeline defensável em contexto profissional
-
-> A tipagem e normalização ocorrerão **apenas em camadas analíticas posteriores**.
-
----
-
-## Seção Legacy — Abordagem Inicial (Descontinuada)
-
-### Contexto
-
-Na fase inicial do projeto, foi testada uma abordagem baseada em:
-- contagem de delimitadores;
-- criação de *stage* com colunas genéricas (`col_01` … `col_n`);
-- estruturação puramente posicional.
-
-### Motivo da Descontinuação
-
-Embora tecnicamente válida como experimento exploratório, essa abordagem foi **formalmente abandonada** por:
-
-- não refletir boas práticas de engenharia de dados;
-- introduzir ambiguidade semântica;
-- não escalar para ambientes de Big Data e governança;
-- tornar o pipeline difícil de manter e auditar.
-
-### Status
-
-- Mantida apenas como **referência histórica (legacy)**
-- **Não utilizada** em nenhuma análise futura
-
----
-
-## 🧩 Apêndice Técnico — Comandos e Queries Utilizadas
-
-Esta seção documenta **apenas os comandos que sustentam decisões arquiteturais e metodológicas** do Projeto 03.2. Não se trata de um tutorial de SQL, mas de um **registro técnico reproduzível** das validações realizadas.
-
-### 1️⃣ Validação da Presença de Header no CSV
-
-**Objetivo:** comprovar que o arquivo original possui header e entender o comportamento do pgAdmin durante a importação.
-
-Importação realizada com:
-- Delimitador: `;`
-- Encoding: `LATIN1`
-- **HEADER = NO** (forçando ingestão literal da primeira linha)
-
-Consulta de validação:
-
-```sql
-SELECT *
-FROM bdgd_media_tensao_raw_v2
-LIMIT 2;
-```
-
-**Resultado esperado:**
-- Primeira linha contendo os nomes das colunas (`COD_ID_ENCR;DIST;PN_CON;...`)
-- Segunda linha iniciando os dados reais
-
-Essa validação confirmou que o **header existe na origem** e que o comportamento observado anteriormente foi exclusivamente decorrente da configuração de importação.
-
----
-
-### 2️⃣ Verificação de Integridade da Carga
-
-**Objetivo:** garantir que nenhuma linha foi perdida durante a ingestão.
-
-```sql
-SELECT COUNT(*)
-FROM bdgd_media_tensao_raw_v2;
-```
-
-O total de registros obtido é consistente com o volume esperado do dataset de média tensão da BDGD.
-
----
-
-### 3️⃣ Criação da Tabela *Stage* com Schema Explícito (Abordagem Oficial)
-
-**Objetivo:** estabelecer a camada *stage* já com os **nomes oficiais das colunas**, conforme definidos no header do CSV, evitando qualquer estratégia baseada em colunas genéricas.
+### Query — Criação da Tabela *Stage*
 
 ```sql
 CREATE TABLE bdgd_media_tensao_stage (
@@ -294,42 +221,87 @@ CREATE TABLE bdgd_media_tensao_stage (
 );
 ```
 
-Essa definição consolida a **estratégia oficial do projeto**, garantindo semântica explícita, governança e facilidade de evolução futura do modelo.
+### Validações Estruturais Executadas
+
+```sql
+SELECT COUNT(*) 
+FROM information_schema.columns
+WHERE table_name = 'bdgd_media_tensao_stage';
+```
+
+```sql
+SELECT
+    ordinal_position,
+    column_name
+FROM information_schema.columns
+WHERE table_name = 'bdgd_media_tensao_stage'
+ORDER BY ordinal_position;
+```
+
+```sql
+SELECT COUNT(*) FROM bdgd_media_tensao_stage;
+```
+
+```sql
+SELECT *
+FROM bdgd_media_tensao_stage
+LIMIT 5;
+```
+
+Essas queries confirmaram:
+- número correto de colunas;
+- ordem fiel ao CSV original;
+- carga íntegra dos registros;
+- alinhamento estrutural perfeito.
 
 ---
 
-### Observação
+## Seção Legacy — Abordagem Inicial (Descontinuada)
 
-Comandos triviais de infraestrutura (criação de database, usuários, permissões) foram deliberadamente omitidos deste apêndice por não contribuírem para a compreensão das decisões analíticas ou arquiteturais do projeto.
+### Contexto
+
+Foi testada inicialmente uma abordagem baseada em:
+- ingestão com delimitador fictício;
+- coluna única (`linha`);
+- quebra posicional em colunas genéricas.
+
+### Motivo do Abandono
+
+Apesar de válida como experimento exploratório, a abordagem foi **formalmente descartada**, pois:
+- não escala para ambientes profissionais;
+- introduz ambiguidade semântica;
+- dificulta governança e manutenção;
+- gera dívida técnica evitável.
+
+Essa estratégia permanece apenas como **registro histórico (legacy)**.
+
 ---
 
 ## Status Atual do Projeto
 
-- ✔ Header do CSV validado empiricamente
-- ✔ Estratégia de ingestão redefinida e consolidada
-- ✔ RAW oficial preservada
-- 🔄 Criação da STAGE com schema explícito (próximo passo)
+- ✔ Header validado empiricamente
+- ✔ Estratégia de ingestão consolidada
+- ✔ RAW preservada
+- ✔ STAGE criada com schema explícito
+- ✔ Ordem e integridade conferidas
 
 ---
 
 ## Próximos Passos
 
-1. Criar tabela `bdgd_media_tensao_stage` com colunas oficiais
-2. Inserir dados a partir da RAW
-3. Validar alinhamento semântico com dicionário BDGD
-4. Evoluir para camadas analíticas
+1. Tipagem progressiva das colunas
+2. Validação semântica via dicionário BDGD
+3. Criação de camadas analíticas
+4. Integração com análises posteriores
 
 ---
 
 ## Observações Metodológicas Finais
 
-Este projeto prioriza:
-- decisões observáveis e testáveis;
-- documentação explícita de erros e correções;
-- abandono consciente de abordagens inadequadas;
-- aderência a práticas profissionais de engenharia de dados.
+Este projeto adota princípios de **engenharia de dados profissional**:
+- nada é assumido sem evidência;
+- erros são documentados, não escondidos;
+- decisões são rastreáveis;
+- pipelines são defensáveis.
 
-Nada é assumido. Tudo é validado.
-
-
----
+O ambiente está estável e pronto para evolução.
