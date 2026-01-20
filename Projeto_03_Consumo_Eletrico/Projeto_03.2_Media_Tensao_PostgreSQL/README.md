@@ -319,7 +319,7 @@ Com isso, a camada stage passa a atuar como base estrutural confiável para as p
 
 ## Observações Metodológicas Finais
 
-Este projeto adota princípios de **engenharia de dados profissional**:
+Este projeto adota princípios profissionais de **engenharia de dados** onde:
 - nada é assumido sem evidência;
 - erros são documentados, não escondidos;
 - decisões são rastreáveis;
