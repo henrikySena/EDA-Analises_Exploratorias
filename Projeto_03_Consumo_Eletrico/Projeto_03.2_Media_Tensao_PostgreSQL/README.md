@@ -284,6 +284,16 @@ Essas queries confirmaram:
 
 <br>
 
+### Exemplo de Resultado (recorte ilustrativo)
+
+| COD_ID_ENCR | DIST | PN_CON | PAC | CTMT | MUN | GRU_TAR | SIT_ATIV | DAT_CON | DEM_01 | ENE_01 | DATA_BASE |
+|------------|------|--------|-----|------|-----|---------|----------|---------|--------|--------|-----------|
+| D485CC53… | 385 | 2105244401 | SRP092105244401 | SRP01_AL009 | 3547502 | A4 | AT | 30/09/2017 | 115.584 | 104877 | 31DEC2024 |
+
+> *Valores apresentados apenas para fins ilustrativos; o dataset completo contém centenas de milhares de registros.
+
+<br>
+
 A execução da camada stage resultou em um schema estruturado, semanticamente explícito e fiel ao layout original do CSV, com as seguintes garantias técnicas:
 
 - ✔ Header validado empiricamente e utilizado como fonte única de definição do schema
