@@ -308,21 +308,89 @@ Com isso, a camada stage passa a atuar como base estrutural confiável para as p
 ---
 <br>
 
-## Próximos Passos
 
-1. Validação semântica via dicionário BDGD
-2. Tipagem progressiva das colunas
-3. Criação de camadas analíticas
-4. Integração com análises posteriores
+## Etapa 3 — Validação Semântica Oficial (Layout UCMT — PRODIST / ANEEL)
 
----
+### Motivação
 
-## Observações Metodológicas Finais
+Após a validação empírica do header e a consolidação da camada *stage* com schema explícito, tornou-se necessário **confirmar formalmente a semântica de cada campo** presente no dataset, garantindo aderência total ao **modelo regulatório oficial da ANEEL**.
 
-Este projeto adota princípios profissionais de **engenharia de dados** onde:
-- nada é assumido sem evidência;
-- erros são documentados, não escondidos;
-- decisões são rastreáveis;
-- pipelines são defensáveis.
+Essa etapa visa eliminar ambiguidades interpretativas, especialmente em campos codificados, métricas elétricas e variáveis temporais de demanda e energia.
 
-O ambiente está estável e pronto para evolução.
+<br>
+
+### Referencial Normativo Utilizado
+
+Foi identificado e isolado o **layout oficial da entidade UCMT (Unidade Consumidora de Média Tensão)**, conforme definido nos **Procedimentos de Distribuição (PRODIST)** da ANEEL:
+
+- Entidade: **UCMT — Unidade Consumidora de Média Tensão**
+- Modelagem: **UCMT**
+- Tipo geométrico: **Ponto**
+- Documento: **Estrutura da Base de Dados Geográfica da Distribuidora — BDGD**
+- Seção: **Anexo I**
+- Revisão: **2**
+- Vigência: **01/01/2021**
+
+Esse layout constitui o **dicionário de dados oficial** para interpretação semântica do conjunto analisado.
+
+<br>
+
+### Estrutura Conceitual da Entidade UCMT
+
+O layout UCMT define **53 campos oficiais**, organizáveis conceitualmente nos seguintes blocos funcionais:
+
+- **Identificação e Topologia Elétrica**  
+  Campos responsáveis pela identificação única da unidade consumidora e sua associação à rede de distribuição (ex.: `COD_ID`, `DIST`, `CTMT`, `SUB`, `CONJ`).
+
+- **Localização Geográfica e Enquadramento Territorial**  
+  Informações de município, endereço e área regulatória, utilizadas para análises espaciais e critérios de continuidade (ex.: `MUN`, `LGRD`, `BRR`, `CEP`, `ARE_LOC`).
+
+- **Perfil Econômico, Tarifário e Técnico**  
+  Campos que caracterizam o enquadramento econômico, tarifário e elétrico da unidade consumidora (ex.: `CNAE`, `CLAS_SUB`, `GRU_TAR`, `GRU_TEN`, `TEN_FORN`, `TIP_CC`, `FAS_CON`, `LIV`).
+
+- **Características Elétricas Declaradas**  
+  Informações de carga instalada conforme cadastro da distribuidora (ex.: `CAR_INST`).
+
+- **Séries Temporais de Demanda e Energia**  
+  Conjuntos de campos mensais (`DEM_01` a `DEM_12`, `ENE_01` a `ENE_12`) que representam, respectivamente:
+  - demanda ativa máxima (kW);
+  - energia ativa consumida (kWh);  
+  conforme valores medidos, faturados ou estimados, seguindo regras explícitas do PRODIST.
+
+- **Indicadores de Continuidade do Serviço**  
+  Métricas regulatórias anuais de interrupção individual (ex.: `DIC`, `FIC`).
+
+- **Campos de Controle e Observação**  
+  Indicadores auxiliares e descrição livre do registro (ex.: `SEMRED`, `DESCR`).
+
+<br>
+
+### Introdução Visual — Evidência Documental do Layout Oficial
+
+Para reforçar a rastreabilidade metodológica e destacar o alinhamento com o modelo regulatório, foram extraídos os **dois primeiros quadros descritivos do layout UCMT** diretamente do manual oficial, convertidos em imagens e incorporados ao README como evidência visual do dicionário de dados adotado.
+
+<!--
+Inserir aqui as imagens:
+- ucmt_dicionario2.png
+- ucmt_dicionario1.png
+-->
+
+Esses registros visuais documentam:
+- a definição formal da entidade UCMT;
+- a listagem oficial dos campos e seus significados;
+- o enquadramento regulatório utilizado como base semântica do projeto.
+
+<br>
+
+### Conclusão Técnica
+
+A validação semântica confirmou que:
+
+- o dataset analisado está conceitualmente alinhado à entidade **UCMT** definida pela ANEEL;
+- a camada *stage* preserva integralmente a semântica oficial dos campos;
+- o manual PRODIST passa a atuar como **fonte normativa explícita**, complementando a validação empírica realizada nas etapas anteriores.
+
+Com isso, o projeto passa a dispor de **base estrutural e semântica sólida**, apta para as próximas fases de:
+- tipagem definitiva;
+- validação de domínios;
+- modelagem analítica e exploração dos dados.
