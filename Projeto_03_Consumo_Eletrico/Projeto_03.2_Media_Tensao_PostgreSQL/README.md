@@ -367,7 +367,7 @@ O layout UCMT define **53 campos oficiais**, organizáveis conceitualmente nos s
 
 ### Introdução Visual — Evidência Documental do Layout Oficial
 
-Para reforçar a rastreabilidade metodológica e destacar o alinhamento com o modelo regulatório, foram extraídos os **dois primeiros quadros descritivos do layout UCMT (Unidades Consumidoras de Média Tensão) ** diretamente do manual oficial, convertidos em imagens e incorporados ao README como evidência visual do dicionário de dados adotado.
+Para reforçar a rastreabilidade metodológica e destacar o alinhamento com o modelo regulatório, foram extraídos os **dois primeiros quadros descritivos do layout UCMT (Unidades Consumidoras de Média Tensão)** diretamente do manual oficial, convertidos em imagens e incorporados ao `README.md` como evidência visual do dicionário de dados adotado.
 
 ![Dicionário UCMT 01](./Images/ucmt_dicionario1.jpg)
 ![Dicionário UCMT 01](./Images/ucmt_dicionario2.jpg)
