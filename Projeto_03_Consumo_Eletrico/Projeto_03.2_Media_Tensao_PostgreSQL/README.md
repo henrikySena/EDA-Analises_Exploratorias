@@ -435,9 +435,9 @@ Esse formato foi projetado para permitir **comparação direta** com a camada *s
 
 <br>
 
-### Extração — Campos Oficiais da UCMT
+## Extração — Campos Oficiais da UCMT
 
-#### 🔎 Identificação e Topologia Elétrica
+### 🔎 Identificação e Topologia Elétrica
 
 | campo_oficial | tipo_oficial | obrigatorio | dominio_referencia | descricao_oficial |
 |---------------|--------------|-------------|--------------------|-------------------|
@@ -453,7 +453,7 @@ Esse formato foi projetado para permitir **comparação direta** com a camada *s
 ---
 <br>
 
-#### 🗺 Localização Geográfica
+### 🗺 Localização Geográfica
 
 | campo_oficial | tipo_oficial | obrigatorio | dominio_referencia | descricao_oficial |
 |---------------|--------------|-------------|--------------------|-------------------|
@@ -465,7 +465,7 @@ Esse formato foi projetado para permitir **comparação direta** com a camada *s
 ---
 <br>
 
-#### 📄 Perfil Econômico, Tarifário e Técnico
+### 📄 Perfil Econômico, Tarifário e Técnico
 
 | campo_oficial | tipo_oficial | obrigatorio | dominio_referencia | descricao_oficial |
 |---------------|--------------|-------------|--------------------|-------------------|
@@ -485,7 +485,7 @@ Esse formato foi projetado para permitir **comparação direta** com a camada *s
 ---
 <br>
 
-#### 📉 Séries Temporais — Demanda
+### 📉 Séries Temporais — Demanda
 
 | campo_oficial | tipo_oficial | descricao_oficial |
 |---------------|--------------|-------------------|
@@ -496,7 +496,7 @@ Esse formato foi projetado para permitir **comparação direta** com a camada *s
 ---
 <br>
 
-#### 💡 Séries Temporais — Energia
+### 💡 Séries Temporais — Energia
 
 | campo_oficial | tipo_oficial | descricao_oficial |
 |---------------|--------------|-------------------|
@@ -507,7 +507,7 @@ Esse formato foi projetado para permitir **comparação direta** com a camada *s
 ---
 <br>
 
-#### ⚙ Continuidade e Controle
+### ⚙ Continuidade e Controle
 
 | campo_oficial | tipo_oficial | obrigatorio | descricao_oficial |
 |---------------|--------------|-------------|-------------------|
