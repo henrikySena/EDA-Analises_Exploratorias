@@ -451,6 +451,7 @@ Esse formato foi projetado para permitir **comparação direta** com a camada *s
 | CONJ | Vinculado | Sim | CONJ | Conjunto de unidades consumidoras |
 
 ---
+<br>
 
 #### 🗺 Localização Geográfica
 
@@ -462,6 +463,7 @@ Esse formato foi projetado para permitir **comparação direta** com a camada *s
 | CEP | Texto (8) | Sim | — | CEP |
 
 ---
+<br>
 
 #### 📄 Perfil Econômico, Tarifário e Técnico
 
@@ -481,8 +483,9 @@ Esse formato foi projetado para permitir **comparação direta** com a camada *s
 | DAT_CON | Texto (DD/MM/AAAA) | Sim | — | Data de conexão |
 
 ---
+<br>
 
-#### 📉´Séries Temporais — Demanda
+#### 📉 Séries Temporais — Demanda
 
 | campo_oficial | tipo_oficial | descricao_oficial |
 |---------------|--------------|-------------------|
@@ -491,6 +494,7 @@ Esse formato foi projetado para permitir **comparação direta** com a camada *s
 *Valores medidos, faturados ou estimados, conforme regras do PRODIST.*
 
 ---
+<br>
 
 #### 💡 Séries Temporais — Energia
 
@@ -501,6 +505,7 @@ Esse formato foi projetado para permitir **comparação direta** com a camada *s
 *Valores medidos, faturados ou estimados, conforme regras do PRODIST.*
 
 ---
+<br>
 
 #### ⚙ Continuidade e Controle
 
@@ -510,7 +515,7 @@ Esse formato foi projetado para permitir **comparação direta** com a camada *s
 | FIC | Decimal | Sim | Frequência anual de interrupções |
 | SEMRED | Inteiro | Sim | Indicador de conexão sem rede MT |
 | DESCR | Texto (255) | Não | Descrição livre |
-
+---
 <br>
 
 ### Finalidade Analítica da Etapa
