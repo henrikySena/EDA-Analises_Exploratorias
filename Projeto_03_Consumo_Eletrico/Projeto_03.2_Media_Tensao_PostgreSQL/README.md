@@ -392,3 +392,135 @@ Com isso, o projeto passa a dispor de **base estrutural e semântica sólida**, 
 - tipagem definitiva;
 - validação de domínios;
 - modelagem analítica e exploração dos dados.
+
+---
+<br>
+
+## Etapa 4 — Extração do Dicionário de Referência UCMT (Base Normativa)
+
+### Motivação
+
+Com a estrutura física do dataset consolidada na camada *stage* e a validação semântica oficial realizada, torna-se necessário criar um **artefato de referência explícito** que represente o **dicionário normativo da entidade UCMT**, de forma independente do dataset real.
+
+Essa etapa tem como objetivo **preparar o terreno para comparações futuras**, permitindo identificar de maneira objetiva:
+
+- campos ausentes no dataset;
+- campos adicionais não previstos no layout oficial;
+- divergências de nomenclatura, granularidade ou semântica;
+- diferenças decorrentes de versão, distribuidora ou recorte operacional.
+
+<br>
+
+### Princípio Metodológico
+
+> O manual PRODIST define **como os dados deveriam existir**.  
+> O CSV representa **como os dados realmente existem**.  
+> A análise técnica exige que ambos sejam tratados como fontes distintas.
+
+Assim, o dicionário UCMT foi extraído e estruturado como um **objeto de referência autônomo**, sem qualquer adaptação prévia ao dataset analisado.
+
+<br>
+
+### Estrutura do Dicionário de Referência
+
+O dicionário foi organizado de forma tabular, contendo, para cada campo oficial da UCMT:
+
+- nome do campo conforme o layout PRODIST;
+- tipo lógico definido pela ANEEL;
+- obrigatoriedade;
+- domínio ou tabela de referência (quando aplicável);
+- descrição oficial do significado do campo.
+
+Esse formato foi projetado para permitir **comparação direta** com a camada *stage* em etapas posteriores.
+
+<br>
+
+### Extração — Campos Oficiais da UCMT
+
+#### Identificação e Topologia Elétrica
+
+| campo_oficial | tipo_oficial | obrigatorio | dominio_referencia | descricao_oficial |
+|---------------|--------------|-------------|--------------------|-------------------|
+| COD_ID | Texto (20) | Sim | — | Código identificador da unidade consumidora |
+| PN_CON | Vinculado | Sim | PONNOT | Código do ponto notável |
+| DIST | Código externo | Sim | Base de Agentes | Código da distribuidora ANEEL |
+| PAC | Texto (20) | Sim | — | Ponto de acoplamento comum elétrico |
+| CTMT | Vinculado | Sim | CTMT | Circuito de média tensão |
+| UNI_TR_S | Vinculado | Sim | UNTRS | Unidade transformadora de subestação |
+| SUB | Vinculado | Sim | SUB | Subestação |
+| CONJ | Vinculado | Sim | CONJ | Conjunto de unidades consumidoras |
+
+---
+
+#### Localização Geográfica
+
+| campo_oficial | tipo_oficial | obrigatorio | dominio_referencia | descricao_oficial |
+|---------------|--------------|-------------|--------------------|-------------------|
+| MUN | Código externo | Sim | Malha Municipal Digital | Município |
+| LGRD | Texto (255) | Sim | — | Logradouro |
+| BRR | Texto (255) | Sim | — | Bairro |
+| CEP | Texto (8) | Sim | — | CEP |
+
+---
+
+#### Perfil Econômico, Tarifário e Técnico
+
+| campo_oficial | tipo_oficial | obrigatorio | dominio_referencia | descricao_oficial |
+|---------------|--------------|-------------|--------------------|-------------------|
+| CLAS_SUB | Código DDA | Sim | TCLASUBCLA | Classe e subclasse |
+| CNAE | Código externo | Sim | CNAE | Atividade econômica |
+| TIP_CC | Texto (20) | Sim | — | Tipologia de curva de carga |
+| FAS_CON | Código DDA | Sim | TFASCON | Fases de conexão |
+| GRU_TEN | Código DDA | Sim | TGRUTEN | Grupo de tensão |
+| TEN_FORN | Código DDA | Sim | TTEN | Tensão de fornecimento |
+| GRU_TAR | Código DDA | Sim | TGRUTAR | Grupo tarifário |
+| SIT_ATIV | Código DDA | Sim | TSITATI | Situação de ativação |
+| LIV | Inteiro | Sim | 0 / 1 | Consumidor livre |
+| ARE_LOC | Código DDA | Sim | TARE | Área de localização |
+| CAR_INST | Decimal | Sim | — | Carga instalada (kW) |
+| DAT_CON | Texto (DD/MM/AAAA) | Sim | — | Data de conexão |
+
+---
+
+#### Séries Temporais — Demanda
+
+| campo_oficial | tipo_oficial | descricao_oficial |
+|---------------|--------------|-------------------|
+| DEM_01 … DEM_12 | Decimal | Demanda ativa máxima mensal (kW) |
+
+*Valores medidos, faturados ou estimados, conforme regras do PRODIST.*
+
+---
+
+#### Séries Temporais — Energia
+
+| campo_oficial | tipo_oficial | descricao_oficial |
+|---------------|--------------|-------------------|
+| ENE_01 … ENE_12 | Decimal | Energia ativa consumida mensal (kWh) |
+
+*Valores medidos, faturados ou estimados, conforme regras do PRODIST.*
+
+---
+
+#### Continuidade e Controle
+
+| campo_oficial | tipo_oficial | obrigatorio | descricao_oficial |
+|---------------|--------------|-------------|-------------------|
+| DIC | Decimal | Sim | Duração anual de interrupções (horas) |
+| FIC | Decimal | Sim | Frequência anual de interrupções |
+| SEMRED | Inteiro | Sim | Indicador de conexão sem rede MT |
+| DESCR | Texto (255) | Não | Descrição livre |
+
+<br>
+
+### Finalidade Analítica da Etapa
+
+O dicionário de referência UCMT gerado nesta etapa **não sofre ajustes para se adequar ao dataset real**.  
+Ele será utilizado, nas próximas fases do projeto, como base para:
+
+- mapeamento *campo_stage × campo_oficial*;
+- identificação de divergências estruturais e semânticas;
+- documentação explícita de exceções e extensões do dataset;
+- suporte à modelagem analítica e à comunicação técnica do projeto.
+
+Essa separação deliberada entre **norma** e **implementação** assegura rigor metodológico, rastreabilidade e transparência analítica.
