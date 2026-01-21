@@ -10,7 +10,6 @@ Este documento funciona como um relatório vivo, alinhado ao padrão do Projeto 
 
 ---
 <br>
-
 ## Ambiente Técnico
 
 ### Banco de Dados
@@ -93,7 +92,7 @@ Essa estratégia permanece apenas como **registro histórico (legacy)**.
 ---
 <br>
 
-## Etapa 1 — Validação Controlada do Header (RAW Paralela)
+## Etapa 1 —  Validação Controlada do Header (RAW Paralela)
 
 ### Motivação
 
