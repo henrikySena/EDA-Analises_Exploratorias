@@ -2,11 +2,15 @@
 
 ## Resumo Executivo
 
-O Projeto 03.2 — Média Tensão integra o Projeto 03 — Consumo Elétrico (BDGD/ANEEL) e tem como objetivo a ingestão, validação, estruturação, análise e modelagem dos dados de Unidades Consumidoras de Média Tensão, cobrindo todo o ciclo analítico — da ingestão e engenharia de dados à geração de insumos analíticos.
+O Projeto 03.2 — Média Tensão integra o Projeto 03 — Consumo Elétrico (BDGD/ANEEL) e tem como objetivo a ingestão, validação, estruturação, exploração e modelagem dos dados de Unidades Consumidoras de Média Tensão (UCMT), cobrindo todo o ciclo analítico — da ingestão e engenharia de dados à geração de insumos analíticos confiáveis.
 
-O projeto adota uma abordagem incremental e metodologicamente rigorosa, iniciando pela construção de uma base sólida de ingestão e governança e evoluindo progressivamente para validação semântica, tipagem, exploração analítica, modelagem e integração com camadas analíticas superiores, em um contexto caracterizado por maior volume de registros, heterogeneidade histórica de layout, alta incidência de campos condicionais e dados ausentes legítimos, além de um schema significativamente mais amplo e heterogêneo, com conjunto de colunas distinto e mais complexo em relação ao subprojeto 03.1 — Alta Tensão.
+Mais do que a entrega de produtos analíticos finais, este subprojeto possui um caráter explicitamente formativo, sendo concebido como um ambiente de aprendizagem intencional para aprofundamento no uso do SQL como principal ferramenta de investigação, compreensão e validação de dados estruturados. Nesse contexto, o SQL é utilizado como lente de entendimento do dataset, permitindo explorar seu comportamento real, suas limitações, inconsistências e padrões, antes de qualquer preocupação com visualização, automação ou consumo por camadas superiores.
 
-Este documento funciona como um relatório vivo, alinhado ao padrão do Projeto 03, documentando decisões técnicas, aprendizados e a evolução do pipeline de dados ao longo de todas as etapas do projeto.
+O projeto adota uma abordagem incremental e metodologicamente rigorosa, iniciando pela construção de uma base sólida de ingestão e governança, avançando para validação estrutural e semântica oficial (PRODIST / ANEEL) e, posteriormente, para exploração analítica orientada a perguntas concretas sobre o funcionamento do dataset. As etapas de tipagem definitiva, modelagem analítica, automação e integração com ferramentas de visualização são tratadas como desdobramentos naturais, mas deliberadamente postergados em favor da consolidação conceitual.
+
+Esse cuidado é particularmente relevante em um contexto caracterizado por alto volume de registros, heterogeneidade histórica de layouts, campos condicionais, ausência legítima de dados e um schema significativamente mais amplo e complexo em comparação ao subprojeto 03.1 — Alta Tensão.
+
+Este documento funciona como um relatório vivo, alinhado ao padrão do Projeto 03, registrando não apenas decisões técnicas e resultados intermediários, mas também aprendizados, hipóteses testadas, validações empíricas e escolhas metodológicas, refletindo a evolução progressiva do pipeline de dados e do entendimento analítico ao longo do projeto.
 
 ---
 <br>
