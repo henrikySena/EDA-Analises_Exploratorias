@@ -515,6 +515,18 @@ Esse formato foi projetado para permitir **comparação direta** com a camada *s
 | FIC | Decimal | Sim | Frequência anual de interrupções |
 | SEMRED | Inteiro | Sim | Indicador de conexão sem rede MT |
 | DESCR | Texto (255) | Não | Descrição livre |
+
+---
+<br>
+
+### ⚠ Pontos de Atenção
+
+| campo_stage | campo_oficial | status | observacao |
+|------------|---------------|--------|------------|
+| COD_ID_ENCR | COD_ID | 🔶 Divergente | Versão criptografada |
+| DIC_01 | DIC | 🔶 Granularidade diferente | Manual define valor anual |
+| TIP_SIST | — | 🔴 Extra | Campo não previsto no UCMT |
+
 ---
 <br>
 
