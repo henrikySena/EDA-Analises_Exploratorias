@@ -525,7 +525,7 @@ Esse formato foi projetado para permitir **comparação direta** com a camada *s
 |------------|---------------|--------|------------|
 | COD_ID_ENCR | COD_ID | 🔶 Divergente | Versão criptografada |
 | DIC_01 | DIC | 🔶 Granularidade diferente | Manual define valor anual |
-| TIP_SIST | — | 🔴 Extra | Campo não previsto no UCMT |
+| TIP_SIST | — | 🔴 Não documentado | Campo não previsto no UCMT |
 
 ---
 <br>
