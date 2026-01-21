@@ -540,3 +540,6 @@ Ele será utilizado, nas próximas fases do projeto, como base para:
 - suporte à modelagem analítica e à comunicação técnica do projeto.
 
 Essa separação deliberada entre **norma** e **implementação** assegura rigor metodológico, rastreabilidade e transparência analítica.
+
+---
+<br>
