@@ -10,6 +10,7 @@ Este documento funciona como um relatório vivo, alinhado ao padrão do Projeto 
 
 ---
 <br>
+
 ## Ambiente Técnico
 
 ### Banco de Dados
