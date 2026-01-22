@@ -94,3 +94,68 @@ Foco em:
 
 ## 📂 Estrutura da Pasta
 
+```
+Projeto_03_Consumo_Eletrico/
+│
+├── Docs/
+│   ├── Manual_de_Instruções_da_BDGD.pdf
+│   ├── Modulo10_PRODIST.pdf
+│   └── URL_Dataset_Oficial_BDGD.txt
+│
+├── Projeto_03.1_Alta_Tensao_PowerBI/
+│   ├── Dataset/
+│   │   ├── ucat_pj.csv
+│   │   └── ucat_pj.txt
+│   │
+│   ├── Docs/
+│   │   └── dicionario_das_siglas_das_colunas-ucat_pj.txt
+│   │
+│   └── EDA/
+│       └── BDGD_AltaTensao_PBI.pbix
+│
+├── Projeto_03.2_Media_Tensao_PostgreSQL/
+│   └── Dataset/
+│       └── ucmt_pj.txt
+│
+└── Projeto_03.3_Baixa_Tensao_Python/
+    └── Dataset/
+        └── ucbt_pj.txt
+```
+
+---
+
+## 📉 Fonte dos Dados
+
+Os dados foram obtidos no portal de dados abertos da ANEEL:
+
+> **BDGD – Base de Dados Geográfica da Distribuidora**  
+> URL oficial disponível em: `Docs/URL_Dataset_Oficial_BDGD.txt`
+
+A base contém informações relacionadas a:
+
+- unidades consumidoras
+- infraestrutura elétrica
+- concessionárias e permissionárias
+- redes de alta, média e baixa tensão
+- dados geográficos do sistema elétrico
+
+---
+
+## 📚 Aprendizados-Chave
+
+- leitura e interpretação de bases públicas complexas
+- respeito à integridade do dado bruto
+- documentação de decisões técnicas
+- diferenciação entre análise exploratória e engenharia analítica
+- construção de pipelines progressivos e conscientes
+
+---
+
+## 🚀 Próximos Passos
+
+Os conhecimentos consolidados neste projeto servirão como base técnica para projetos futuros que:
+
+- integrem Power BI, SQL e Python simultaneamente
+- sejam orientados à resolução de problemas reais
+- explorem análises mais profundas e conclusivas
+- utilizem a BDGD ou bases similares como fonte primária
