@@ -31,7 +31,7 @@ Dessa forma, este projeto foi concebido como um **ambiente controlado de estudo*
 
 > **Aprender ferramentas de dados em profundidade, utilizando uma base real e complexa, antes de integrá-las em projetos orientados à resolução de problemas.**
 
-O foco do Projeto 03 é:
+O foco do Projeto 03 consiste em:
 
 - compreender como cada ferramenta se comporta em cenários reais
 - identificar limites, vantagens e desafios técnicos
@@ -159,4 +159,5 @@ Os conhecimentos consolidados neste projeto servirão como base técnica para pr
 - sejam orientados à resolução de problemas reais
 - explorem análises mais profundas e conclusivas
 - utilizem a BDGD ou bases similares como fonte primária
+
 
