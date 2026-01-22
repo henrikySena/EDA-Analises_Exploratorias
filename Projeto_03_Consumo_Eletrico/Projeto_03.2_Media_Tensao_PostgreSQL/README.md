@@ -2,15 +2,14 @@
 
 ## Resumo Executivo
 
-O Projeto 03.2 — Média Tensão integra o Projeto 03 — Consumo Elétrico (BDGD/ANEEL) e tem como objetivo a ingestão, validação, estruturação, exploração e modelagem dos dados de Unidades Consumidoras de Média Tensão (UCMT), cobrindo todo o ciclo analítico — da ingestão e engenharia de dados à geração de insumos analíticos confiáveis.
+O Projeto 03.2 — Média Tensão integra o Projeto 03 — Consumo Elétrico (BDGD/ANEEL) e tem como objetivo a ingestão, validação e estruturação dos dados de Unidades Consumidoras de Média Tensão (UCMT), utilizando o PostgreSQL como ferramenta central de investigação e entendimento do dataset.
 
-Mais do que a entrega de produtos analíticos finais, este subprojeto possui um caráter explicitamente formativo, sendo concebido como um ambiente de aprendizagem intencional para aprofundamento no uso do SQL como principal ferramenta de investigação, compreensão e validação de dados estruturados. Nesse contexto, o SQL é utilizado como lente de entendimento do dataset, permitindo explorar seu comportamento real, suas limitações, inconsistências e padrões, antes de qualquer preocupação com visualização, automação ou consumo por camadas superiores.
+- Este subprojeto possui caráter explicitamente formativo, sendo concebido como um ambiente de aprendizagem intencional voltado ao aprofundamento em SQL aplicado a dados reais, volumosos e estruturalmente complexos. O foco não está na entrega imediata de produtos analíticos finais, mas na construção de base conceitual sólida sobre ingestão, governança, validação estrutural e exploração orientada dos dados.
 
-O projeto adota uma abordagem incremental e metodologicamente rigorosa, iniciando pela construção de uma base sólida de ingestão e governança, avançando para validação estrutural e semântica oficial (PRODIST / ANEEL) e, posteriormente, para exploração analítica orientada a perguntas concretas sobre o funcionamento do dataset. As etapas de tipagem definitiva, modelagem analítica, automação e integração com ferramentas de visualização são tratadas como desdobramentos naturais, mas deliberadamente postergados em favor da consolidação conceitual.
+- A abordagem adotada é incremental e metodologicamente rigorosa, priorizando a fidelidade ao modelo oficial da ANEEL (BDGD/UCMT), a compreensão do comportamento real do dataset e a documentação cuidadosa das decisões técnicas. Etapas como modelagem analítica avançada, automação e integração com ferramentas de visualização são tratadas como desdobramentos futuros, após a consolidação do entendimento estrutural.
 
-Esse cuidado é particularmente relevante em um contexto caracterizado por alto volume de registros, heterogeneidade histórica de layouts, campos condicionais, ausência legítima de dados e um schema significativamente mais amplo e complexo em comparação ao subprojeto 03.1 — Alta Tensão.
+Este documento atua como um relatório vivo, registrando decisões, validações e aprendizados ao longo da evolução do pipeline de dados.
 
-Este documento funciona como um relatório vivo, alinhado ao padrão do Projeto 03, registrando não apenas decisões técnicas e resultados intermediários, mas também aprendizados, hipóteses testadas, validações empíricas e escolhas metodológicas, refletindo a evolução progressiva do pipeline de dados e do entendimento analítico ao longo do projeto.
 
 ---
 <br>
