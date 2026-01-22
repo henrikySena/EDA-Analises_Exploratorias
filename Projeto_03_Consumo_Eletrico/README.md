@@ -11,7 +11,7 @@ O **Projeto 03 não tem como objetivo principal responder perguntas de negócio 
 
 A estratégia adotada consiste em **isolar o aprendizado de cada ferramenta**, aplicando-a a um subconjunto coerente da base (segmentado por nível de tensão), antes de avançar para projetos futuros com **integração completa de tecnologias e foco em resolução de problemas**.
 
----
+<br>
 
 ## 🧠 Contexto e Motivação
 
@@ -25,7 +25,7 @@ A BDGD é uma base extensa, heterogênea e fortemente regulada, que combina:
 Bases com esse nível de complexidade **não são adequadas para abordagens superficiais ou análises exploratórias rápidas**.  
 Dessa forma, este projeto foi concebido como um **ambiente controlado de estudo**, no qual cada ferramenta é explorada de forma isolada, consciente e documentada.
 
----
+<br>
 
 ## 🎯 Objetivo Central do Projeto
 
@@ -38,7 +38,7 @@ O foco do Projeto 03 consiste em:
 - desenvolver um **modelo mental sólido**, e não apenas gerar outputs finais
 - criar uma base técnica confiável para projetos futuros mais integrados
 
----
+<br>
 
 ## 🧩 Estratégia de Segmentação por Nível de Tensão
 
@@ -52,7 +52,7 @@ A divisão da base por **alta, média e baixa tensão** não é apenas organizac
 
 Essa segmentação permitiu associar **uma ferramenta principal a cada nível**, maximizando o aprendizado técnico sem mascarar dificuldades por meio de soluções híbridas prematuras.
 
----
+<br>
 
 ## 🏗️ Arquitetura do Projeto
 
@@ -91,6 +91,7 @@ Foco em:
 - construção de scripts reutilizáveis
 
 ---
+<br>
 
 ## 📂 Estrutura da Pasta
 
@@ -123,6 +124,7 @@ Projeto_03_Consumo_Eletrico/
 ```
 
 ---
+<br>
 
 ## 📉 Fonte dos Dados
 
@@ -139,7 +141,7 @@ A base contém informações relacionadas a:
 - redes de alta, média e baixa tensão
 - dados geográficos do sistema elétrico
 
----
+<br>
 
 ## 📚 Aprendizados-Chave
 
@@ -149,7 +151,7 @@ A base contém informações relacionadas a:
 - diferenciação entre análise exploratória e engenharia analítica
 - construção de pipelines progressivos e conscientes
 
----
+<br>
 
 ## 🚀 Próximos Passos
 
@@ -159,5 +161,3 @@ Os conhecimentos consolidados neste projeto servirão como base técnica para pr
 - sejam orientados à resolução de problemas reais
 - explorem análises mais profundas e conclusivas
 - utilizem a BDGD ou bases similares como fonte primária
-
-
