@@ -85,10 +85,14 @@ Foco em:
 
 ### 🔹 Projeto 03.3 — Baixa Tensão | Python  
 Foco em:
-- limpeza avançada
-- manipulação de grandes volumes de dados
-- tratamento programático
-- construção de scripts reutilizáveis
+- automação de processos de limpeza e tratamento de dados
+- manipulação programática de grandes volumes de dados
+- construção de scripts reutilizáveis e escaláveis
+- desenvolvimento de pipelines automatizados de preparação de dados
+- exploração inicial de técnicas de **IA aplicada a dados**, como:
+  - apoio à detecção de padrões e inconsistências
+  - automação de validações e classificações
+  - suporte inteligente a etapas repetitivas do pipeline
 
 ---
 <br>
@@ -161,3 +165,4 @@ Os conhecimentos consolidados neste projeto servirão como base técnica para pr
 - sejam orientados à resolução de problemas reais
 - explorem análises mais profundas e conclusivas
 - utilizem a BDGD ou bases similares como fonte primária
+
