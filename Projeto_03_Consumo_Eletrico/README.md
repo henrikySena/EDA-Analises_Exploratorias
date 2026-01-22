@@ -20,7 +20,7 @@ A BDGD é uma base extensa, heterogênea e fortemente regulada, que combina:
 - informações geográficas
 - dados contratuais e operacionais
 - registros históricos de longa duração
-- normas técnicas do setor elétrico (ex.: PRODIST)
+- normas técnicas do setor elétrico
 
 Bases com esse nível de complexidade **não são adequadas para abordagens superficiais ou análises exploratórias rápidas**.  
 Dessa forma, este projeto foi concebido como um **ambiente controlado de estudo**, no qual cada ferramenta é explorada de forma isolada, consciente e documentada.
@@ -159,3 +159,4 @@ Os conhecimentos consolidados neste projeto servirão como base técnica para pr
 - sejam orientados à resolução de problemas reais
 - explorem análises mais profundas e conclusivas
 - utilizem a BDGD ou bases similares como fonte primária
+
