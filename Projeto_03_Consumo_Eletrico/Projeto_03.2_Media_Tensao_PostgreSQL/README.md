@@ -548,3 +548,94 @@ Essa separação deliberada entre **norma** e **implementação** assegura rigor
 
 ---
 <br>
+
+## Etapa 5 — Validação Estrutural e Aderência ao Modelo UCMT
+
+Nesta etapa, foi realizada a **validação estrutural completa** da tabela `bdgd_media_tensao_stage`, com foco exclusivo na **comparação nominal e estrutural** entre os campos presentes no banco de dados e o **modelo lógico oficial UCMT (Unidade Consumidora de Média Tensão)** definido no Manual da BDGD/ANEEL.
+
+⚠️ Ressalta-se que **não houve qualquer análise de valores, domínios, semântica ou comportamento dos dados**. O objetivo desta etapa foi estritamente confirmar **aderência estrutural e consistência de modelagem**.
+
+<br>
+
+### 🔹 5.1 Extração da Estrutura da Tabela
+
+Foi extraída a lista completa de colunas da tabela `bdgd_media_tensao_stage`, totalizando **72 campos**, incluindo:
+
+- Identificadores e vínculos institucionais
+- Campos de localização e endereço
+- Características contratuais, tarifárias e técnicas
+- Séries temporais mensais de demanda, energia e indicadores de continuidade
+- Campos operacionais e geoespaciais adicionais
+
+A extração foi realizada diretamente a partir do banco de dados, garantindo fidelidade absoluta à estrutura efetivamente ingerida.
+
+<br>
+
+### 🔹 5.2 Comparação Nominal com o Manual UCMT (BDGD)
+
+A estrutura extraída foi comparada **campo a campo** com os **53 atributos oficiais** definidos para a entidade UCMT no Manual da BDGD.
+
+#### 5.2.1 Campos aderentes ao modelo UCMT
+
+A ampla maioria dos campos apresentou **aderência direta**, com correspondência clara entre o nome lógico do manual e o nome físico no banco, considerando:
+
+- Padronização para `snake_case`
+- Inclusão de sufixos técnicos decorrentes do processo de ingestão (ex.: `_encr`, `_gd`, `_at`)
+- Adequação a convenções internas da base
+
+Não foram identificadas inconsistências estruturais nesses casos.
+
+<br>
+
+#### 5.2.2 Séries temporais mensais
+
+Os seguintes conjuntos de variáveis foram corretamente expandidos no banco em formato mensal:
+
+- `DEM_01` a `DEM_12` (Demanda)
+- `ENE_01` a `ENE_12` (Energia)
+
+Essa expansão está plenamente alinhada ao modelo lógico e às necessidades analíticas posteriores.
+
+<br>
+
+#### 5.2.3 Divergência estrutural documentada (DIC e FIC)
+
+No modelo UCMT oficial, os indicadores de continuidade:
+
+- `DIC`
+- `FIC`
+
+são definidos como **atributos anuais**.
+
+Na base ingerida, esses campos foram modelados como **séries mensais**:
+
+- `dic_01` a `dic_12`
+- `fic_01` a `fic_12`
+
+Essa divergência **não caracteriza erro**, mas sim uma **decisão de modelagem da distribuidora**, que deverá ser considerada explicitamente nas etapas analíticas futuras.
+
+<br>
+
+#### 5.2.4 Campos adicionais não previstos no modelo UCMT
+
+Foram identificados campos presentes no banco que **não constam no modelo lógico UCMT**, mas são compatíveis com a natureza operacional da BDGD:
+
+- `data_base` (referência temporal do snapshot)
+- `point_x`
+- `point_y` (coordenadas geoespaciais)
+
+Esses campos foram mantidos e documentados como **extensões técnicas da base**, sem impacto negativo na aderência estrutural.
+
+<br>
+
+### 🔹 5.3 Conclusão da Etapa
+
+---
+<br>
+
+
+A tabela `bdgd_media_tensao_stage` apresenta **alta aderência estrutural** ao modelo lógico UCMT definido pela ANEEL, com adaptações técnicas esperadas para ingestão, versionamento temporal e georreferenciamento.
+
+Nenhuma inconsistência estrutural crítica foi identificada.
+
+Com isso, a **Etapa 5 — Validação Estrutural** é considerada **formalmente concluída**, estando o projeto apto a avançar para etapas posteriores de validação de tipos, domínios ou análise, conforme planejamento metodológico.
