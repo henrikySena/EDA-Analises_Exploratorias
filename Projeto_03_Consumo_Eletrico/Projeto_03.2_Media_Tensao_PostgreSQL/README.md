@@ -438,6 +438,41 @@ Esse formato foi projetado para permitir **comparação direta** com a camada *s
 
 <br>
 
+### Organização Analítica do Dicionário UCMT
+
+O dicionário de referência UCMT foi deliberadamente organizado em **blocos conceituais**, que representam **eixos analíticos independentes e complementares**. Essa segmentação não tem caráter apenas documental, mas orienta diretamente **como as análises futuras serão estruturadas, validadas e interpretadas** ao longo do projeto.
+
+Cada bloco agrupa campos que compartilham natureza funcional semelhante, permitindo:
+
+- validações estruturais e semânticas focadas;
+- análises orientadas a contexto (técnico, geográfico, econômico);
+- separação clara entre atributos estáticos e séries temporais;
+- reutilização dos mesmos eixos analíticos em diferentes ferramentas e etapas do pipeline.
+
+Os blocos definidos são:
+
+- **Identificação e Topologia Elétrica**  
+  Campos que descrevem o vínculo da unidade consumidora com a infraestrutura elétrica e a organização do sistema de distribuição.
+
+- **Localização Geográfica**  
+  Atributos espaciais e de endereço, utilizados para análises territoriais, regionais e georreferenciadas.
+
+- **Perfil Econômico, Tarifário e Técnico**  
+  Campos que caracterizam o tipo de consumidor, sua classificação regulatória e parâmetros técnicos de fornecimento.
+
+- **Séries Temporais — Demanda**  
+  Variáveis mensais associadas à demanda elétrica, com comportamento temporal e sazonal.
+
+- **Séries Temporais — Energia**  
+  Variáveis mensais relacionadas ao consumo energético, fundamentais para análises de carga, perfil e eficiência.
+
+- **Continuidade e Controle**  
+  Indicadores regulatórios e operacionais relacionados à qualidade do serviço e condições especiais de fornecimento.
+
+Essa organização será mantida de forma consistente nas etapas posteriores do projeto, funcionando como **espinha dorsal analítica** tanto para validações em SQL quanto para explorações temporais, espaciais e futuras automatizações:
+
+<br>
+
 ## Extração — Campos Oficiais da UCMT
 
 ### 🔎 Identificação e Topologia Elétrica
