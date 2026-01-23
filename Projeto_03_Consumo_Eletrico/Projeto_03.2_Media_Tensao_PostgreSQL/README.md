@@ -713,6 +713,7 @@ A tabela a seguir consolida **todos os campos efetivamente utilizados nas análi
 | TIP_SIST | Exceção técnica | Não previsto no manual, mantido por relevância estrutural |
 
 ---
+<br>
 
 #### 🗺 Localização Geográfica
 
@@ -724,6 +725,7 @@ A tabela a seguir consolida **todos os campos efetivamente utilizados nas análi
 | CEP | Manual UCMT | Código postal |
 
 ---
+<br>
 
 #### 📄 Perfil Econômico, Tarifário e Técnico
 
@@ -743,6 +745,7 @@ A tabela a seguir consolida **todos os campos efetivamente utilizados nas análi
 | DAT_CON | Manual UCMT | Data de conexão |
 
 ---
+<br>
 
 #### 📉 Séries Temporais — Demanda
 
@@ -751,6 +754,7 @@ A tabela a seguir consolida **todos os campos efetivamente utilizados nas análi
 | DEM_01 … DEM_12 | Manual UCMT | Demanda mensal (kW) |
 
 ---
+<br>
 
 #### 💡 Séries Temporais — Energia
 
@@ -759,6 +763,7 @@ A tabela a seguir consolida **todos os campos efetivamente utilizados nas análi
 | ENE_01 … ENE_12 | Manual UCMT | Energia mensal (kWh) |
 
 ---
+<br>
 
 #### ⚙ Continuidade do Serviço
 
@@ -768,6 +773,7 @@ A tabela a seguir consolida **todos os campos efetivamente utilizados nas análi
 | FIC_01 … FIC_12 | Manual UCMT (adaptado) | Modelagem mensal na base |
 
 ---
+<br>
 
 #### 🚫 Campos Excluídos do Escopo Analítico
 
