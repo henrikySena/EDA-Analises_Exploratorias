@@ -591,19 +591,49 @@ Nesta etapa, foi realizada a **validação estrutural completa** da tabela `bdgd
 
 <br>
 
+---
+
+### 🔐 Princípio de Aderência Analítica ao Manual UCMT
+
+A partir desta etapa, estabelece-se formalmente o seguinte **princípio metodológico de condução das análises**:
+
+> **O Manual UCMT (BDGD/ANEEL) constitui a fonte normativa primária do modelo analítico.**  
+> Apenas campos **explicitamente definidos no manual** serão utilizados como base para análises, métricas, agregações e inferências.
+
+Campos **não previstos no modelo UCMT oficial** somente poderão ser incorporados às análises se atenderem **simultaneamente** aos seguintes critérios:
+
+1. relevância técnica ou elétrica comprovada;
+2. impacto direto na interpretação do comportamento do sistema;
+3. ausência de substituto normativo equivalente no manual;
+4. documentação explícita e justificada no relatório.
+
+Até o momento, **apenas um campo adicional atende a esses critérios**:
+
+- `TIP_SIST` — indicador de tipologia do sistema elétrico, considerado **estruturalmente relevante** para análises operacionais e de topologia, apesar de não constar no layout UCMT oficial.
+
+Todos os demais campos não normativos identificados na base foram **explicitamente excluídos do escopo analítico**, permanecendo apenas como suporte técnico ou metadado operacional.
+
+Esse princípio garante **rastreabilidade normativa**, **comparabilidade entre projetos** e **consistência metodológica** ao longo de todo o Projeto 03.
+
+<br>
+
+---
+
 ### 🔹 5.1 Extração da Estrutura da Tabela
 
 Foi extraída a lista completa de colunas da tabela `bdgd_media_tensao_stage`, totalizando **72 campos**, incluindo:
 
-- Identificadores e vínculos institucionais
-- Campos de localização e endereço
-- Características contratuais, tarifárias e técnicas
-- Séries temporais mensais de demanda, energia e indicadores de continuidade
-- Campos operacionais e geoespaciais adicionais
+- identificadores e vínculos institucionais;
+- campos de localização e endereço;
+- características contratuais, tarifárias e técnicas;
+- séries temporais mensais de demanda, energia e indicadores de continuidade;
+- campos operacionais e geoespaciais adicionais.
 
 A extração foi realizada diretamente a partir do banco de dados, garantindo fidelidade absoluta à estrutura efetivamente ingerida.
 
 <br>
+
+---
 
 ### 🔹 5.2 Comparação Nominal com o Manual UCMT (BDGD)
 
@@ -613,9 +643,9 @@ A estrutura extraída foi comparada **campo a campo** com os **53 atributos ofic
 
 A ampla maioria dos campos apresentou **aderência direta**, com correspondência clara entre o nome lógico do manual e o nome físico no banco, considerando:
 
-- Padronização para `snake_case`
-- Inclusão de sufixos técnicos decorrentes do processo de ingestão (ex.: `_encr`, `_gd`, `_at`)
-- Adequação a convenções internas da base
+- padronização para `snake_case`;
+- inclusão de sufixos técnicos decorrentes do processo de ingestão (ex.: `_encr`, `_gd`, `_at`);
+- adequação a convenções internas da base.
 
 Não foram identificadas inconsistências estruturais nesses casos.
 
@@ -625,8 +655,8 @@ Não foram identificadas inconsistências estruturais nesses casos.
 
 Os seguintes conjuntos de variáveis foram corretamente expandidos no banco em formato mensal:
 
-- `DEM_01` a `DEM_12` (Demanda)
-- `ENE_01` a `ENE_12` (Energia)
+- `DEM_01` a `DEM_12` (Demanda);
+- `ENE_01` a `ENE_12` (Energia).
 
 Essa expansão está plenamente alinhada ao modelo lógico e às necessidades analíticas posteriores.
 
@@ -636,15 +666,15 @@ Essa expansão está plenamente alinhada ao modelo lógico e às necessidades an
 
 No modelo UCMT oficial, os indicadores de continuidade:
 
-- `DIC`
-- `FIC`
+- `DIC`;
+- `FIC`;
 
 são definidos como **atributos anuais**.
 
 Na base ingerida, esses campos foram modelados como **séries mensais**:
 
-- `dic_01` a `dic_12`
-- `fic_01` a `fic_12`
+- `DIC_01` a `DIC_12`;
+- `FIC_01` a `FIC_12`.
 
 Essa divergência **não caracteriza erro**, mas sim uma **decisão de modelagem da distribuidora**, que deverá ser considerada explicitamente nas etapas analíticas futuras.
 
@@ -654,22 +684,109 @@ Essa divergência **não caracteriza erro**, mas sim uma **decisão de modelagem
 
 Foram identificados campos presentes no banco que **não constam no modelo lógico UCMT**, mas são compatíveis com a natureza operacional da BDGD:
 
-- `data_base` (referência temporal do snapshot)
-- `point_x`
-- `point_y` (coordenadas geoespaciais)
+- `data_base` (referência temporal do snapshot);
+- `point_x`;
+- `point_y` (coordenadas geoespaciais).
 
 Esses campos foram mantidos e documentados como **extensões técnicas da base**, sem impacto negativo na aderência estrutural.
 
 <br>
 
-### 🔹 5.3 Conclusão da Etapa
+---
+
+### 📋 Universo de Campos Utilizados nas Análises
+
+A tabela a seguir consolida **todos os campos efetivamente utilizados nas análises**, conforme o princípio de aderência normativa estabelecido.
+
+#### 🔎 Identificação e Topologia Elétrica
+
+| campo | origem | observacao |
+|------|--------|------------|
+| COD_ID | Manual UCMT | Identificador primário da UC |
+| PN_CON | Manual UCMT | Ponto notável |
+| DIST | Manual UCMT | Distribuidora |
+| PAC | Manual UCMT | Ponto de acoplamento comum |
+| CTMT | Manual UCMT | Circuito de média tensão |
+| UNI_TR_S | Manual UCMT | Unidade transformadora |
+| SUB | Manual UCMT | Subestação |
+| CONJ | Manual UCMT | Conjunto elétrico |
+| TIP_SIST | Exceção técnica | Não previsto no manual, mantido por relevância estrutural |
 
 ---
+
+#### 🗺 Localização Geográfica
+
+| campo | origem | observacao |
+|------|--------|------------|
+| MUN | Manual UCMT | Município |
+| LGRD | Manual UCMT | Logradouro |
+| BRR | Manual UCMT | Bairro |
+| CEP | Manual UCMT | Código postal |
+
+---
+
+#### 📄 Perfil Econômico, Tarifário e Técnico
+
+| campo | origem | observacao |
+|------|--------|------------|
+| CLAS_SUB | Manual UCMT | Classe e subclasse |
+| CNAE | Manual UCMT | Atividade econômica |
+| TIP_CC | Manual UCMT | Tipologia de curva de carga |
+| FAS_CON | Manual UCMT | Fases de conexão |
+| GRU_TEN | Manual UCMT | Grupo de tensão |
+| TEN_FORN | Manual UCMT | Tensão de fornecimento |
+| GRU_TAR | Manual UCMT | Grupo tarifário |
+| SIT_ATIV | Manual UCMT | Situação da UC |
+| LIV | Manual UCMT | Consumidor livre |
+| ARE_LOC | Manual UCMT | Área de localização |
+| CAR_INST | Manual UCMT | Carga instalada |
+| DAT_CON | Manual UCMT | Data de conexão |
+
+---
+
+#### 📉 Séries Temporais — Demanda
+
+| campo | origem | observacao |
+|------|--------|------------|
+| DEM_01 … DEM_12 | Manual UCMT | Demanda mensal (kW) |
+
+---
+
+#### 💡 Séries Temporais — Energia
+
+| campo | origem | observacao |
+|------|--------|------------|
+| ENE_01 … ENE_12 | Manual UCMT | Energia mensal (kWh) |
+
+---
+
+#### ⚙ Continuidade do Serviço
+
+| campo | origem | observacao |
+|------|--------|------------|
+| DIC_01 … DIC_12 | Manual UCMT (adaptado) | Manual define valor anual |
+| FIC_01 … FIC_12 | Manual UCMT (adaptado) | Modelagem mensal na base |
+
+---
+
+#### 🚫 Campos Excluídos do Escopo Analítico
+
+| campo | motivo |
+|------|--------|
+| data_base | Metadado de snapshot |
+| point_x / point_y | Uso geoespacial fora do escopo atual |
+| descr | Campo livre sem padronização |
+| campos operacionais adicionais | Não normativos |
+
 <br>
 
+---
+
+### 🔹 5.3 Conclusão da Etapa
 
 A tabela `bdgd_media_tensao_stage` apresenta **alta aderência estrutural** ao modelo lógico UCMT definido pela ANEEL, com adaptações técnicas esperadas para ingestão, versionamento temporal e georreferenciamento.
 
 Nenhuma inconsistência estrutural crítica foi identificada.
 
-Com isso, a **Etapa 5 — Validação Estrutural** é considerada **formalmente concluída**, estando o projeto apto a avançar para etapas posteriores de validação de tipos, domínios ou análise, conforme planejamento metodológico.
+Com isso, a **Etapa 5 — Validação Estrutural** é considerada **formalmente concluída**, estando o projeto apto a avançar para etapas posteriores de validação de domínios, tipagem ou análise, conforme planejamento metodológico.
+
