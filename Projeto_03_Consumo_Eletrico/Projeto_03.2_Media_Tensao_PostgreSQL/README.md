@@ -451,22 +451,22 @@ Cada bloco agrupa campos que compartilham natureza funcional semelhante, permiti
 
 Os blocos definidos são:
 
-- **Identificação e Topologia Elétrica**  
+- **BLOCO 1️⃣ - Identificação e Topologia Elétrica**  
   Campos que descrevem o vínculo da unidade consumidora com a infraestrutura elétrica e a organização do sistema de distribuição.
 
-- **Localização Geográfica**  
+- **BLOCO 1️⃣ - Localização Geográfica**  
   Atributos espaciais e de endereço, utilizados para análises territoriais, regionais e georreferenciadas.
 
-- **Perfil Econômico, Tarifário e Técnico**  
+- **BLOCO 2️⃣ - Perfil Econômico, Tarifário e Técnico**  
   Campos que caracterizam o tipo de consumidor, sua classificação regulatória e parâmetros técnicos de fornecimento.
 
-- **Séries Temporais — Demanda**  
+- **BLOCO 3️⃣ - Séries Temporais — Demanda**  
   Variáveis mensais associadas à demanda elétrica, com comportamento temporal e sazonal.
 
-- **Séries Temporais — Energia**  
+- **BLOCO 4️⃣ - Séries Temporais — Energia**  
   Variáveis mensais relacionadas ao consumo energético, fundamentais para análises de carga, perfil e eficiência.
 
-- **Continuidade e Controle**  
+- **BLOCO 5️⃣ - Continuidade e Controle**  
   Indicadores regulatórios e operacionais relacionados à qualidade do serviço e condições especiais de fornecimento.
 
 Essa organização será mantida de forma consistente nas etapas posteriores do projeto, funcionando como **espinha dorsal analítica** tanto para validações em SQL quanto para explorações temporais, espaciais e futuras automatizações:
@@ -796,3 +796,105 @@ Nenhuma inconsistência estrutural crítica foi identificada.
 
 Com isso, a **Etapa 5 — Validação Estrutural** é considerada **formalmente concluída**, estando o projeto apto a avançar para etapas posteriores de validação de domínios, tipagem ou análise, conforme planejamento metodológico.
 
+---
+<br>
+
+## Etapa 6 — Validação de Domínios, Tipagem Lógica e Qualidade dos Dados
+
+### Motivação
+
+Com a estrutura física, semântica e normativa da tabela `bdgd_media_tensao_stage` consolidadas até a Etapa 5, torna-se necessário avançar para a verificação da **qualidade interna dos valores armazenados**.
+
+Nesta etapa, o foco deixa de ser apenas a existência e o nome dos campos, passando a ser:
+
+- a conformidade dos valores com os domínios oficiais do PRODIST;
+- a consistência lógica entre campos correlatos;
+- a presença de valores inválidos, ausentes ou anômalos;
+- o alinhamento entre tipagem declarada (TEXT) e tipagem conceitual.
+
+Trata-se da transição formal entre **validação estrutural** e **validação analítica propriamente dita**.
+
+<br>
+
+---
+
+### Princípio Metodológico
+
+> Um campo semanticamente correto, mas com domínio inválido, compromete toda a análise derivada.
+
+A partir desta etapa, nenhum atributo será utilizado em análises, agregações ou modelos sem que:
+
+1. seu domínio esteja documentado;
+2. seus valores reais tenham sido auditados;
+3. eventuais desvios estejam explicitamente registrados.
+
+Esse princípio assegura confiabilidade estatística, interpretabilidade e reprodutibilidade dos resultados.
+
+<br>
+
+---
+
+### Objetivos da Etapa
+
+A Etapa 6 tem como objetivos centrais:
+
+- validar os códigos categóricos frente aos domínios oficiais;
+- identificar valores fora de especificação;
+- mapear padrões de ausência (NULL, vazios, placeholders);
+- avaliar a coerência entre campos relacionados;
+- preparar o terreno para tipagem definitiva nas próximas fases.
+
+<br>
+
+---
+
+### Escopo Inicial de Validação
+
+A validação será conduzida de forma incremental, priorizando inicialmente campos:
+
+- de alto impacto analítico;
+- com domínio regulatório explícito;
+- utilizados como filtros, segmentadores ou chaves analíticas.
+
+Na primeira iteração, serão priorizados:
+
+- `SIT_ATIV` — Situação de ativação da UC;
+- `GRU_TAR` — Grupo tarifário;
+- `LIV` — Indicador de consumidor livre.
+
+Novos campos serão incorporados progressivamente conforme a maturidade da etapa.
+
+<br>
+
+---
+
+### Estratégia de Análise
+
+A validação será realizada exclusivamente via SQL, utilizando:
+
+- agregações (`GROUP BY`);
+- contagens de frequência;
+- detecção de valores raros;
+- cruzamentos lógicos;
+- inspeções direcionadas.
+
+Não serão realizadas correções, imputações ou padronizações nesta fase.
+
+O objetivo é **diagnóstico técnico**, não intervenção.
+
+<br>
+
+---
+
+### Produto Esperado
+
+Ao final desta etapa, o projeto deverá dispor de:
+
+- inventário documentado dos domínios válidos;
+- lista de exceções e anomalias;
+- registro de inconsistências relevantes;
+- base confiável para tipagem física futura.
+
+Esses artefatos servirão como base para as etapas posteriores de modelagem e análise.
+
+---
