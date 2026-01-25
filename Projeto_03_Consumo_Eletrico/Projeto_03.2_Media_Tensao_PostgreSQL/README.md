@@ -807,7 +807,7 @@ Com a estrutura, semântica e aderência normativa da tabela `bdgd_media_tensao_
 
 O foco passa a ser a verificação da conformidade dos valores com os domínios regulatórios, a identificação de inconsistências e a avaliação da qualidade interna do dataset.
 
----
+<br>
 
 ### Abordagem Metodológica
 
@@ -831,11 +831,10 @@ A validação será conduzida por blocos analíticos, conforme a organização c
 - Bloco 6 — Continuidade e Controle  
   `DIC_01 a DIC_12, FIC_01 a FIC_12, SEMRED, DESCR`
 
----
 
-Cada bloco será analisado de forma independente, com registro das consultas executadas, padrões identificados e eventuais inconsistências observadas.
+> Cada bloco será analisado de forma independente, com registro das consultas executadas, padrões identificados e eventuais inconsistências observadas.
 
----
+<br>
 
 ### Diretriz Geral
 
