@@ -842,11 +842,45 @@ A validação será conduzida por blocos analíticos, conforme a organização c
 
 A análise inicial de preenchimento dos campos do Bloco 1 indicou elevada integridade estrutural do dataset.
 
-Os campos COD_ID_ENCR, DIST, PAC, CONJ e TIP_SIST apresentaram completude total (100% dos registros preenchidos).
+#### Consulta Executada
 
-Foram observadas perdas pontuais nos campos PN_CON (0,03%) e CTMT (0,007%), sem impacto estrutural relevante.
+```sql
+SELECT
+    COUNT(*)                            AS total_registros,
 
-O campo SUB apresentou 0,35% de registros nulos, indicando pequenas lacunas na representação da topologia de subestações.
+    COUNT(COD_ID_ENCR)                  AS cod_id_encr_preenchido,
+    COUNT(PN_CON)                       AS pn_con_preenchido,
+    COUNT(DIST)                         AS dist_preenchido,
+    COUNT(PAC)                          AS pac_preenchido,
+    COUNT(CTMT)                         AS ctmt_preenchido,
+    COUNT(UNI_TR_AT)                    AS uni_tr_at_preenchido,
+    COUNT(SUB)                          AS sub_preenchido,
+    COUNT(CONJ)                         AS conj_preenchido,
+    COUNT(TIP_SIST)                     AS tip_sist_preenchido
 
-Destaca-se o campo UNI_TR_AT, com aproximadamente 3,8% de ausência, sugerindo inconsistências técnicas associadas a registros legados ou processos de migração.
+FROM bdgd_media_tensao_stage;
+```
 
+<br>
+
+#### Resultado Obtido
+
+| Campo       | Registros Preenchidos | Registros Ausentes | Total    | Percentual |
+|-------------|------------------------|--------------------|----------|------------|
+| COD_ID_ENCR | 312.074                | 0                  | 312.074  | 100,00%    |
+| PN_CON      | 311.974                | 100                | 312.074  | 99,97%     |
+| DIST        | 312.074                | 0                  | 312.074  | 100,00%    |
+| PAC         | 312.074                | 0                  | 312.074  | 100,00%    |
+| CTMT        | 312.051                | 23                 | 312.074  | 99,99%     |
+| UNI_TR_AT   | 300.204                | 11.870             | 312.074  | 96,20%     |
+| SUB         | 310.995                | 1.079              | 312.074  | 99,65%     |
+| CONJ        | 312.074                | 0                  | 312.074  | 100,00%    |
+| TIP_SIST    | 312.074                | 0                  | 312.074  | 100,00%    |
+
+---
+
+#### Observações
+- Os campos COD_ID_ENCR, DIST, PAC, CONJ e TIP_SIST apresentaram completude total.
+- Foram observadas perdas pontuais nos campos PN_CON (≈0,03%) e CTMT (≈0,007%), sem impacto estrutural relevante.
+- O campo SUB apresentou 0,35% de registros nulos, indicando lacunas limitadas na representação da topologia.
+- Destaca-se o campo UNI_TR_AT, com aproximadamente 3,8% de ausência, sugerindo inconsistências associadas a registros legados ou processos de migração.
