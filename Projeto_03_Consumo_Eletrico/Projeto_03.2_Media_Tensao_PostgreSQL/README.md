@@ -807,6 +807,8 @@ Com a estrutura, semântica e aderência normativa da tabela `bdgd_media_tensao_
 
 O foco passa a ser a verificação da conformidade dos valores com os domínios regulatórios, a identificação de inconsistências e a avaliação da qualidade interna do dataset.
 
+Nesta etapa, não serão realizadas intervenções, correções ou transformações nos dados. O objetivo é diagnóstico técnico e documentação analítica, servindo como base para as fases posteriores de tipagem, modelagem e consolidação.
+
 <br>
 
 ### Abordagem Metodológica
@@ -836,9 +838,15 @@ A validação será conduzida por blocos analíticos, conforme a organização c
 
 <br>
 
-### Diretriz Geral
+### 6.1.1 — Completude dos Campos
 
-Nesta etapa, não serão realizadas intervenções, correções ou transformações nos dados.
+A análise inicial de preenchimento dos campos do Bloco 1 indicou elevada integridade estrutural do dataset.
 
-O objetivo é diagnóstico técnico e documentação analítica, servindo como base para as fases posteriores de tipagem, modelagem e consolidação.
+Os campos COD_ID_ENCR, DIST, PAC, CONJ e TIP_SIST apresentaram completude total (100% dos registros preenchidos).
+
+Foram observadas perdas pontuais nos campos PN_CON (0,03%) e CTMT (0,007%), sem impacto estrutural relevante.
+
+O campo SUB apresentou 0,35% de registros nulos, indicando pequenas lacunas na representação da topologia de subestações.
+
+Destaca-se o campo UNI_TR_AT, com aproximadamente 3,8% de ausência, sugerindo inconsistências técnicas associadas a registros legados ou processos de migração.
 
