@@ -799,102 +799,47 @@ Com isso, a **Etapa 5 — Validação Estrutural** é considerada **formalmente 
 ---
 <br>
 
-## Etapa 6 — Validação de Domínios, Tipagem Lógica e Qualidade dos Dados
+## Etapa 6 — Validação de Domínios e Qualidade dos Dados
 
-### Motivação
+### Contexto
 
-Com a estrutura física, semântica e normativa da tabela `bdgd_media_tensao_stage` consolidadas até a Etapa 5, torna-se necessário avançar para a verificação da **qualidade interna dos valores armazenados**.
+Com a estrutura, semântica e aderência normativa da tabela `bdgd_media_tensao_stage` consolidadas nas etapas anteriores, esta fase concentra-se na validação sistemática do conteúdo dos campos.
 
-Nesta etapa, o foco deixa de ser apenas a existência e o nome dos campos, passando a ser:
-
-- a conformidade dos valores com os domínios oficiais do PRODIST;
-- a consistência lógica entre campos correlatos;
-- a presença de valores inválidos, ausentes ou anômalos;
-- o alinhamento entre tipagem declarada (TEXT) e tipagem conceitual.
-
-Trata-se da transição formal entre **validação estrutural** e **validação analítica propriamente dita**.
-
-<br>
+O foco passa a ser a verificação da conformidade dos valores com os domínios regulatórios, a identificação de inconsistências e a avaliação da qualidade interna do dataset.
 
 ---
 
-### Princípio Metodológico
+### Abordagem Metodológica
 
-> Um campo semanticamente correto, mas com domínio inválido, compromete toda a análise derivada.
+A validação será conduzida por blocos analíticos, conforme a organização conceitual previamente definida no projeto, considerando os seguintes agrupamentos:
 
-A partir desta etapa, nenhum atributo será utilizado em análises, agregações ou modelos sem que:
+- Bloco 1 — Identificação e Topologia Elétrica  
+  `COD_ID_ENCR, PN_CON, DIST, PAC, CTMT, UNI_TR_AT, SUB, CONJ, TIP_SIST`
 
-1. seu domínio esteja documentado;
-2. seus valores reais tenham sido auditados;
-3. eventuais desvios estejam explicitamente registrados.
+- Bloco 2 — Localização Geográfica  
+  `MUN, LGRD, BRR, CEP, ARE_LOC`
 
-Esse princípio assegura confiabilidade estatística, interpretabilidade e reprodutibilidade dos resultados.
+- Bloco 3 — Perfil Econômico, Tarifário e Técnico  
+  `CLAS_SUB, CNAE, TIP_CC, FAS_CON, GRU_TEN, TEN_FORN, GRU_TAR, SIT_ATIV, LIV, CAR_INST, DAT_CON`
 
-<br>
+- Bloco 4 — Séries Temporais — Demanda  
+  `DEM_01 a DEM_12`
 
----
+- Bloco 5 — Séries Temporais — Energia  
+  `ENE_01 a ENE_12`
 
-### Objetivos da Etapa
-
-A Etapa 6 tem como objetivos centrais:
-
-- validar os códigos categóricos frente aos domínios oficiais;
-- identificar valores fora de especificação;
-- mapear padrões de ausência (NULL, vazios, placeholders);
-- avaliar a coerência entre campos relacionados;
-- preparar o terreno para tipagem definitiva nas próximas fases.
-
-<br>
+- Bloco 6 — Continuidade e Controle  
+  `DIC_01 a DIC_12, FIC_01 a FIC_12, SEMRED, DESCR`
 
 ---
 
-### Escopo Inicial de Validação
-
-A validação será conduzida de forma incremental, priorizando inicialmente campos:
-
-- de alto impacto analítico;
-- com domínio regulatório explícito;
-- utilizados como filtros, segmentadores ou chaves analíticas.
-
-Na primeira iteração, serão priorizados:
-
-- `SIT_ATIV` — Situação de ativação da UC;
-- `GRU_TAR` — Grupo tarifário;
-- `LIV` — Indicador de consumidor livre.
-
-Novos campos serão incorporados progressivamente conforme a maturidade da etapa.
-
-<br>
+Cada bloco será analisado de forma independente, com registro das consultas executadas, padrões identificados e eventuais inconsistências observadas.
 
 ---
 
-### Estratégia de Análise
+### Diretriz Geral
 
-A validação será realizada exclusivamente via SQL, utilizando:
+Nesta etapa, não serão realizadas intervenções, correções ou transformações nos dados.
 
-- agregações (`GROUP BY`);
-- contagens de frequência;
-- detecção de valores raros;
-- cruzamentos lógicos;
-- inspeções direcionadas.
+O objetivo é diagnóstico técnico e documentação analítica, servindo como base para as fases posteriores de tipagem, modelagem e consolidação.
 
-Não serão realizadas correções, imputações ou padronizações nesta fase.
-
-O objetivo é **diagnóstico técnico**, não intervenção.
-
-<br>
-
----
-
-### Produto Esperado
-
-Ao final desta etapa, o projeto deverá dispor de:
-
-- inventário documentado dos domínios válidos;
-- lista de exceções e anomalias;
-- registro de inconsistências relevantes;
-- base confiável para tipagem física futura.
-
-Esses artefatos servirão como base para as etapas posteriores de modelagem e análise.
-
----
