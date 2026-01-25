@@ -454,19 +454,19 @@ Os blocos definidos são:
 - **BLOCO 1️⃣ - Identificação e Topologia Elétrica**  
   Campos que descrevem o vínculo da unidade consumidora com a infraestrutura elétrica e a organização do sistema de distribuição.
 
-- **BLOCO 1️⃣ - Localização Geográfica**  
+- **BLOCO 2️⃣ - Localização Geográfica**  
   Atributos espaciais e de endereço, utilizados para análises territoriais, regionais e georreferenciadas.
 
-- **BLOCO 2️⃣ - Perfil Econômico, Tarifário e Técnico**  
+- **BLOCO 3️⃣ - Perfil Econômico, Tarifário e Técnico**  
   Campos que caracterizam o tipo de consumidor, sua classificação regulatória e parâmetros técnicos de fornecimento.
 
-- **BLOCO 3️⃣ - Séries Temporais — Demanda**  
+- **BLOCO 4️⃣ - Séries Temporais — Demanda**  
   Variáveis mensais associadas à demanda elétrica, com comportamento temporal e sazonal.
 
-- **BLOCO 4️⃣ - Séries Temporais — Energia**  
+- **BLOCO 5️⃣ - Séries Temporais — Energia**  
   Variáveis mensais relacionadas ao consumo energético, fundamentais para análises de carga, perfil e eficiência.
 
-- **BLOCO 5️⃣ - Continuidade e Controle**  
+- **BLOCO 6️⃣ - Continuidade e Controle**  
   Indicadores regulatórios e operacionais relacionados à qualidade do serviço e condições especiais de fornecimento.
 
 Essa organização será mantida de forma consistente nas etapas posteriores do projeto, funcionando como **espinha dorsal analítica** tanto para validações em SQL quanto para explorações temporais, espaciais e futuras automatizações:
