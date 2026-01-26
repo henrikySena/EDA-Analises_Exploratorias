@@ -838,7 +838,7 @@ A validação será conduzida por blocos analíticos, conforme a organização c
 
 <br>
 
-### 6.1.1 — Completude dos Campos
+### 6.1 — Completude dos Campos
 
 A análise inicial de preenchimento dos campos do Bloco 1 indicou elevada integridade estrutural do dataset.
 
@@ -883,4 +883,4 @@ FROM bdgd_media_tensao_stage;
 - Os campos COD_ID_ENCR, DIST, PAC, CONJ e TIP_SIST apresentaram completude total.
 - Foram observadas perdas pontuais nos campos PN_CON (≈0,03%) e CTMT (≈0,007%), sem impacto estrutural relevante.
 - O campo SUB apresentou 0,35% de registros nulos, indicando lacunas limitadas na representação da topologia.
-- Destaca-se o campo UNI_TR_AT, com aproximadamente 3,8% de ausência, sugerindo inconsistências associadas a registros legados ou processos de migração.
+- Destaca-se o campo UNI_TR_AT, com aproximadamente 3,8% de ausência (11.870 registros), sugerindo inconsistências associadas a registros legados ou processos de migração.
