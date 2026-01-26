@@ -172,9 +172,14 @@ Essa validação fundamenta toda a estruturação posterior.
 
 ### Princípio Central
 
-> Em projetos de dados reais, **colunas genéricas (`col_1`, `col_2`, …)** não são aceitáveis quando o schema original existe.
+A camada *stage* deve preservar semântica, governança e rastreabilidade, atuando como a primeira estrutura analítica estável do pipeline de dados.
 
-A camada *stage* deve **preservar semântica, governança e rastreabilidade**.
+Sua função não é apenas armazenar registros normalizados, mas consolidar uma representação fiel, auditável e interpretável da base original, respeitando a lógica regulatória, os significados institucionais dos campos e as relações estruturais previstas na documentação oficial.
+
+### Princípio Central
+
+A camada *stage* deve preservar semântica, governança e rastreabilidade, funcionando como a base estruturada e confiável do pipeline analítico. Seu papel é garantir que os dados mantenham seus significados originais, estejam organizados de forma documentada e possam ser rastreados até a fonte bruta, permitindo validações, auditorias e análises consistentes nas etapas posteriores.
+
 
 <br>
 
