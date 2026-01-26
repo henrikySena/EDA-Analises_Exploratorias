@@ -1,5 +1,22 @@
 # 🔌 Projeto 03.2 — Média Tensão [PostgreSQL]
 
+### 📌 Sumário
+
+- [Resumo Executivo](#resumo)
+- [Ambiente Técnico](#ambiente-técnico)
+- [Arquitetura de Ingestão](#arquitetura-ingestao)
+
+- [Etapa 0 — Ingestão RAW](#etapa0)
+- [Etapa 1 — Validação do Header](#etapa1)
+- [Etapa 2 — Camada STAGE](#etapa2)
+- [Etapa 3 — Validação Semântica](#etapa3)
+- [Etapa 4 — Dicionário UCMT](#etapa4)
+- [Etapa 5 — Validação Estrutural](#etapa5)
+- [Etapa 6 — Qualidade dos Dados](#etapa6)
+
+---
+<br>
+
 <a id="resumo"></a>
 ## Resumo Executivo
 
@@ -10,27 +27,6 @@ O Projeto 03.2 — Média Tensão integra o Projeto 03 — Consumo Elétrico (BD
 - A abordagem adotada é incremental e metodologicamente rigorosa, priorizando a fidelidade ao modelo oficial da ANEEL (BDGD/UCMT), a compreensão do comportamento real do dataset e a documentação cuidadosa das decisões técnicas. Etapas como modelagem analítica avançada, automação e integração com ferramentas de visualização são tratadas como desdobramentos futuros, após a consolidação do entendimento estrutural.
 
 Este documento atua como um relatório vivo, registrando decisões, validações e aprendizados ao longo da evolução do pipeline de dados.
-
----
-<br>
-
-### 📌 Sumário
-
-- [Resumo Executivo](#resumo)
-- [Ambiente Técnico](#ambiente-técnico)
-- [Arquitetura de Ingestão](#arquitetura-de-ingestão--visão-geral)
-
-- [Etapa 0 — Ingestão RAW](#etapa-0--ingestão-raw-versão-oficial)
-- [Etapa 1 — Validação do Header](#etapa-1----validação-controlada-do-header-raw-paralela)
-- [Etapa 2 — Camada STAGE](#etapa-2--criação-da-camada-stage-schema-explícito)
-- [Etapa 3 — Validação Semântica](#etapa-3--validação-semântica-oficial-layout-ucmt--prodist--aneel)
-- [Etapa 4 — Dicionário UCMT](#etapa-4--extração-do-dicionário-de-referência-ucmt-base-normativa)
-- [Etapa 5 — Validação Estrutural](#etapa-5--validação-estrutural-e-aderência-ao-modelo-ucmt)
-- [Etapa 6 — Qualidade dos Dados](#etapa-6--validação-de-domínios-e-qualidade-dos-dados)
-
-<br>
-
-
 
 ---
 <br>
@@ -55,6 +51,7 @@ Este documento atua como um relatório vivo, registrando decisões, validações
 
 <br>
 
+<a id="arquitetura-ingestao"></a>
 ## Arquitetura de Ingestão — Visão Geral
 
 A arquitetura adotada segue o princípio de **separação explícita entre dado bruto, estrutura e semântica**:
@@ -68,6 +65,7 @@ Nenhuma camada assume significado semântico sem validação documental.
 ---
 <br>
 
+<a id="etapa0"></a>
 ## Etapa 0 — Ingestão RAW (Versão Oficial)
 
 ### Objetivo
@@ -118,6 +116,7 @@ Essa estratégia permanece apenas como **registro histórico (legacy)**.
 ---
 <br>
 
+<a id="etapa1"></a>
 ## Etapa 1 —  Validação Controlada do Header (RAW Paralela)
 
 ### Motivação
@@ -168,6 +167,7 @@ Essa validação fundamenta toda a estruturação posterior.
 ---
 <br>
 
+<a id="etapa2"></a>
 ## Etapa 2 — Criação da Camada STAGE (Schema Explícito)
 
 ### Princípio Central
@@ -333,7 +333,7 @@ Com isso, a camada stage passa a atuar como base estrutural confiável para as p
 ---
 <br>
 
-
+<a id="etapa3"></a>
 ## Etapa 3 — Validação Semântica Oficial (Layout UCMT — PRODIST / ANEEL)
 
 ### Motivação
@@ -421,6 +421,7 @@ Com isso, o projeto passa a dispor de **base estrutural e semântica sólida**, 
 ---
 <br>
 
+<a id="etapa4"></a>
 ## Etapa 4 — Extração do Dicionário de Referência UCMT (Base Normativa)
 
 ### Motivação
@@ -605,6 +606,7 @@ Essa separação deliberada entre **norma** e **implementação** assegura rigor
 ---
 <br>
 
+<a id="etapa5"></a>
 ## Etapa 5 — Validação Estrutural e Aderência ao Modelo UCMT
 
 Nesta etapa, foi realizada a **validação estrutural completa** da tabela `bdgd_media_tensao_stage`, com foco exclusivo na **comparação nominal e estrutural** entre os campos presentes no banco de dados e o **modelo lógico oficial UCMT (Unidade Consumidora de Média Tensão)** definido no Manual da BDGD/ANEEL.
@@ -821,6 +823,7 @@ Com isso, a **Etapa 5 — Validação Estrutural** é considerada **formalmente 
 ---
 <br>
 
+<a id="etapa6"></a>
 ## Etapa 6 — Validação de Domínios e Qualidade dos Dados
 
 ### Contexto
