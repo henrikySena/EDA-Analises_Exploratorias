@@ -6,13 +6,13 @@
 - [Ambiente Técnico](#ambiente-técnico)
 - [Arquitetura de Ingestão](#arquitetura-ingestao)
 
-- [Etapa 0 — Ingestão RAW](#etapa0)
-- [Etapa 1 — Validação do Header](#etapa1)
-- [Etapa 2 — Camada STAGE](#etapa2)
-- [Etapa 3 — Validação Semântica](#etapa3)
-- [Etapa 4 — Dicionário UCMT](#etapa4)
-- [Etapa 5 — Validação Estrutural](#etapa5)
-- [Etapa 6 — Qualidade dos Dados](#etapa6)
+- [Etapa 0 — Ingestão RAW (Versão Legacy)](#etapa0)
+- [Etapa 1 — Validação Controlada do Header (RAW Paralela oficializada)](#etapa1)
+- [Etapa 2 — Criação da Camada STAGE (Schema Explícito)](#etapa2)
+- [Etapa 3 — Validação Semântica Oficial (Layout UCMT — PRODIST / ANEEL)](#etapa3)
+- [Etapa 4 — Extração do Dicionário de Referência UCMT (Base Normativa)](#etapa4)
+- [Etapa 5 — Validação Estrutural e Aderência ao Modelo UCMT](#etapa5)
+- [Etapa 6 — Validação de Domínios e Qualidade dos Dados](#etapa6)
 
 ---
 <br>
@@ -66,7 +66,7 @@ Nenhuma camada assume significado semântico sem validação documental.
 <br>
 
 <a id="etapa0"></a>
-## Etapa 0 — Ingestão RAW (Versão Oficial)
+## Etapa 0 — Ingestão RAW (Versão Legacy)
 
 ### Objetivo
 
@@ -92,7 +92,7 @@ Garantir a ingestão **integral e fiel** do dataset de Média Tensão, sem trans
 ---
 <br>
 
-## Seção Legacy — Experimento Exploratório Inicial (Descontinuado)
+> ⚠ Experimento Exploratório Inicial (Descontinuado)
 
 ### Contexto
 
@@ -117,7 +117,7 @@ Essa estratégia permanece apenas como **registro histórico (legacy)**.
 <br>
 
 <a id="etapa1"></a>
-## Etapa 1 —  Validação Controlada do Header (RAW Paralela)
+## Etapa 1 —  Validação Controlada do Header (RAW Paralela oficializada)
 
 ### Motivação
 
