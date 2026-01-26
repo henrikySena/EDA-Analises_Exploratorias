@@ -10,6 +10,22 @@ O Projeto 03.2 — Média Tensão integra o Projeto 03 — Consumo Elétrico (BD
 
 Este documento atua como um relatório vivo, registrando decisões, validações e aprendizados ao longo da evolução do pipeline de dados.
 
+<br>
+
+## 📌 Sumário
+
+- [Resumo Executivo](#resumo-executivo)
+- [Ambiente Técnico](#ambiente-técnico)
+- [Arquitetura de Ingestão](#arquitetura-de-ingestão--visão-geral)
+
+- [Etapa 0 — Ingestão RAW](#etapa-0--ingestão-raw-versão-oficial)
+- [Etapa 1 — Validação do Header](#etapa-1----validação-controlada-do-header-raw-paralela)
+- [Etapa 2 — Camada STAGE](#etapa-2--criação-da-camada-stage-schema-explícito)
+- [Etapa 3 — Validação Semântica](#etapa-3--validação-semântica-oficial-layout-ucmt--prodist--aneel)
+- [Etapa 4 — Dicionário UCMT](#etapa-4--extração-do-dicionário-de-referência-ucmt-base-normativa)
+- [Etapa 5 — Validação Estrutural](#etapa-5--validação-estrutural-e-aderência-ao-modelo-ucmt)
+- [Etapa 6 — Qualidade dos Dados](#etapa-6--validação-de-domínios-e-qualidade-dos-dados)
+
 
 ---
 <br>
