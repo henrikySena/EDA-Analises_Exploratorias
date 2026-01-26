@@ -7,7 +7,7 @@
 - [Arquitetura de Ingestão](#arquitetura-ingestao)
 
 - [Etapa 0 — Ingestão RAW (Versão Legacy)](#etapa0)
-- [Etapa 1 — Validação Controlada do Header (RAW Paralela oficializada)](#etapa1)
+- [Etapa 1 — Validação Controlada do Header (RAW Oficial)](#etapa1)
 - [Etapa 2 — Criação da Camada STAGE (Schema Explícito)](#etapa2)
 - [Etapa 3 — Validação Semântica Oficial (Layout UCMT — PRODIST / ANEEL)](#etapa3)
 - [Etapa 4 — Extração do Dicionário de Referência UCMT (Base Normativa)](#etapa4)
@@ -117,7 +117,7 @@ Essa estratégia permanece apenas como **registro histórico (legacy)**.
 <br>
 
 <a id="etapa1"></a>
-## Etapa 1 —  Validação Controlada do Header (RAW Paralela oficializada)
+## Etapa 1 —  Validação Controlada do Header (RAW Oficial)
 
 ### Motivação
 
