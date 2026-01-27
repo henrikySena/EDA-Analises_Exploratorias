@@ -865,7 +865,7 @@ A validação será conduzida por blocos analíticos, conforme a organização c
 
 <br>
 
-### 6.1 — Completude dos Campos
+### 6.1 — Completude dos Campos (Bloco 1 — Identificação e Topologia Elétrica )
 
 A análise inicial de preenchimento dos campos do Bloco 1 indicou elevada integridade estrutural do dataset.
 
@@ -914,9 +914,9 @@ FROM bdgd_media_tensao_stage;
 
 <br>
 
-## 6.2 --- Completude dos Campos (Bloco 2 --- Localização Geográfica)
+## 6.2 Completude dos Campos (Bloco 2 — Localização Geográfica )
 
-### Consulta Executada
+#### Consulta Executada
 
 ``` sql
 SELECT
@@ -931,27 +931,22 @@ SELECT
 FROM bdgd_media_tensao_stage;
 ```
 
-`<br>`{=html}
+<br>
 
-### Resultado Obtido
+#### Resultado Obtido
 
-  ----------------------------------------------------------------------------
-  Campo     Registros Preenchidos   Registros Ausentes  Total     Percentual
-  --------- ----------------------- ------------------- --------- ------------
-  MUN       312.074                 0                   312.074   100,00%
+| Campo   | Registros Preenchidos | Registros Ausentes | Total   | Percentual |
+|---------|------------------------|--------------------|---------|------------|
+| MUN     | 312.074                | 0                  | 312.074 | 100,00%    |
+| LGRD    | 311.986                | 88                 | 312.074 | 99,97%     |
+| BRR     | 312.074                | 0                  | 312.074 | 100,00%    |
+| CEP     | 311.737                | 337                | 312.074 | 99,89%     |
+| ARE_LOC | 312.074                | 0                  | 312.074 | 100,00%    |
 
-  LGRD      311.986                 88                  312.074   99,97%
+---
+<br>
 
-  BRR       312.074                 0                   312.074   100,00%
-
-  CEP       311.737                 337                 312.074   99,89%
-
-  ARE_LOC   312.074                 0                   312.074   100,00%
-  ----------------------------------------------------------------------------
-
-------------------------------------------------------------------------
-
-### Observações
+#### Observações
 
 -   Os campos MUN, BRR e ARE_LOC apresentaram completude total.
 -   O campo LGRD apresentou perdas pontuais (≈0,03%), sem impacto
