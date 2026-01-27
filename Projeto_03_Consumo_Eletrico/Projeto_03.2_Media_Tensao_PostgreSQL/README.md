@@ -866,9 +866,6 @@ A validação será conduzida por blocos analíticos, conforme a organização c
 <br>
 
 ### 6.1 — Completude dos Campos (Bloco 1 — Identificação e Topologia Elétrica )
-
-A análise inicial de preenchimento dos campos do Bloco 1 indicou elevada integridade estrutural do dataset.
-
 #### Consulta Executada
 
 ```sql
@@ -915,7 +912,6 @@ FROM bdgd_media_tensao_stage;
 <br>
 
 ## 6.2 Completude dos Campos (Bloco 2 — Localização Geográfica )
-
 #### Consulta Executada
 
 ``` sql
@@ -944,7 +940,6 @@ FROM bdgd_media_tensao_stage;
 | ARE_LOC | 312.074                | 0                  | 312.074 | 100,00%    |
 
 ---
-<br>
 
 #### Observações
 
