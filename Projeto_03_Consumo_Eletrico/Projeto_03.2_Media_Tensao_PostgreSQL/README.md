@@ -1,6 +1,8 @@
 # 🔌 Projeto 03.2 — Média Tensão [PostgreSQL]
 
-### 📌 Sumário
+<br>
+
+## Sumário
 
 - [Resumo Executivo](#resumo)
 - [Ambiente Técnico](#ambiente-técnico)
