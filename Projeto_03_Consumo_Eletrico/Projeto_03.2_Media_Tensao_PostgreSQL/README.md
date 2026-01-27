@@ -119,14 +119,17 @@ Essa estratégia permanece apenas como **registro histórico (legacy)**.
 <br>
 
 <a id="etapa1"></a>
-## Etapa 1 —  Validação Controlada do Header (RAW Oficial)
+---
+
+## Etapa 1 — Validação Controlada do Header (RAW Oficial)
 
 ### Motivação
 
 Para eliminar qualquer dúvida sobre:
-- existência do header no CSV;
-- comportamento do pgAdmin durante a importação;
-- integridade do arquivo original;
+
+* existência do header no CSV;
+* comportamento do pgAdmin durante a importação;
+* integridade do arquivo original;
 
 foi executado um **teste controlado, documentado e reproduzível**.
 
@@ -134,17 +137,16 @@ foi executado um **teste controlado, documentado e reproduzível**.
 
 ### Procedimento
 
-- Criação da tabela `bdgd_media_tensao_raw_v2` (1 coluna `linha`)
-- Importação do **mesmo CSV**, com:
-  - Delimitador: `;`
-  - Encoding: `LATIN1`
-  - **HEADER = NO**
+* Criação da tabela `bdgd_media_tensao_raw_v2` (1 coluna `linha`).
+* Importação do **mesmo CSV**, com:
+
+  * Delimitador: `;`
+  * Encoding: `LATIN1`
+  * **HEADER = NO**
 
 <br>
 
-### Evidência Empírica
-
-Consulta executada:
+### Consulta Executada
 
 ```sql
 SELECT *
@@ -152,9 +154,23 @@ FROM bdgd_media_tensao_raw_v2
 LIMIT 2;
 ```
 
-Resultado observado:
-- Primeira linha contendo os nomes das colunas (`COD_ID_ENCR;DIST;PN_CON;...;POINT_Y`)
-- Segunda linha iniciando os dados reais
+<br>
+
+### Resultado Obtido
+
+| Linha | Conteúdo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1     | `COD_ID_ENCR;DIST;PN_CON;PAC;CTMT;UNI_TR_AT;SUB;CONJ;MUN;CEG_GD;LGRD;BRR;CEP;CLAS_SUB;CNAE;TIP_CC;FAS_CON;GRU_TEN;TEN_FORN;GRU_TAR;SIT_ATIV;DAT_CON;CAR_INST;LIV;ARE_LOC;TIP_SIST;DEM_CONT;DEM_01;DEM_02;DEM_03;DEM_04;DEM_05;DEM_06;DEM_07;DEM_08;DEM_09;DEM_10;DEM_11;DEM_12;ENE_01;ENE_02;ENE_03;ENE_04;ENE_05;ENE_06;ENE_07;ENE_08;ENE_09;ENE_10;ENE_11;ENE_12;DIC_01;DIC_02;DIC_03;DIC_04;DIC_05;DIC_06;DIC_07;DIC_08;DIC_09;DIC_10;DIC_11;DIC_12;FIC_01;FIC_02;FIC_03;FIC_04;FIC_05;FIC_06;FIC_07;FIC_08;FIC_09;FIC_10;FIC_11;FIC_12;SEMRED;DESCR;DATA_BASE;POINT_X;POINT_Y`          |
+| 2     | `D485CC53E2C8E3F2E1F97401CC18B971CF3781D355B558298F7FC51C1344C21A;385;2105244401;SRP092105244401;SRP01_AL009;SRP01_ETR02;SRP01;13585;3547502;;R IRINEU BIANCHINI, 257;DIST IND NILTON NAITZEL JUNIOR;13670-000;IN;2229-3/03;MT-5;ABCN;MT;49;A4;AT;30/09/2017;242.81;1;UB;RD_ISOLADA;240;115.584;109.824;115.488;114.336;115.968;121.728;128.16;139.776;129.503;162.816;165.12;154.656;104877;151155;146597;153079;149165;152639;150745;158254;157340;151491;154294;162903.96667;0;0;0;0;0;0;0;0;0.92;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;;31DEC2024:00:00:00.0000000;-47.46412332;-21.70579997` |
+
+<br>
+
+### Observações
+
+* A primeira linha confirma a presença do **header completo**, garantindo a correspondência com o layout oficial do CSV.
+* A segunda linha evidencia que os dados reais foram importados corretamente, mantendo a estrutura esperada.
+* O teste valida que a importação com **HEADER = NO** não compromete a integridade dos dados e permite documentar de forma reproduzível a consistência do arquivo original.
+
 
 <br>
 
