@@ -911,7 +911,7 @@ FROM bdgd_media_tensao_stage;
 
 <br>
 
-## 6.2 Completude dos Campos (Bloco 2 — Localização Geográfica )
+### 6.2 Completude dos Campos (Bloco 2 — Localização Geográfica )
 #### Consulta Executada
 
 ``` sql
@@ -931,7 +931,7 @@ FROM bdgd_media_tensao_stage;
 
 #### Resultado Obtido
 
-| Campo   | Registros Preenchidos | Registros Ausentes | Total   | Percentual |
+| Campo   | Registros Preenchidos  | Registros Ausentes | Total   | Percentual |
 |---------|------------------------|--------------------|---------|------------|
 | MUN     | 312.074                | 0                  | 312.074 | 100,00%    |
 | LGRD    | 311.986                | 88                 | 312.074 | 99,97%     |
