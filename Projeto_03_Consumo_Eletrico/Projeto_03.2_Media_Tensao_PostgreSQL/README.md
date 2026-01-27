@@ -911,3 +911,53 @@ FROM bdgd_media_tensao_stage;
 - Foram observadas perdas pontuais nos campos PN_CON (≈0,03%) e CTMT (≈0,007%), sem impacto estrutural relevante.
 - O campo SUB apresentou 0,35% de registros nulos, indicando lacunas limitadas na representação da topologia.
 - Destaca-se o campo UNI_TR_AT, com aproximadamente 3,8% de ausência (11.870 registros), sugerindo inconsistências associadas a registros legados ou processos de migração.
+
+<br>
+
+## 6.2 --- Completude dos Campos (Bloco 2 --- Localização Geográfica)
+
+### Consulta Executada
+
+``` sql
+SELECT
+    COUNT(*)        AS total_registros,
+
+    COUNT(MUN)      AS mun_preenchido,
+    COUNT(LGRD)     AS lgrd_preenchido,
+    COUNT(BRR)      AS brr_preenchido,
+    COUNT(CEP)      AS cep_preenchido,
+    COUNT(ARE_LOC)  AS are_loc_preenchido
+
+FROM bdgd_media_tensao_stage;
+```
+
+`<br>`{=html}
+
+### Resultado Obtido
+
+  ----------------------------------------------------------------------------
+  Campo     Registros Preenchidos   Registros Ausentes  Total     Percentual
+  --------- ----------------------- ------------------- --------- ------------
+  MUN       312.074                 0                   312.074   100,00%
+
+  LGRD      311.986                 88                  312.074   99,97%
+
+  BRR       312.074                 0                   312.074   100,00%
+
+  CEP       311.737                 337                 312.074   99,89%
+
+  ARE_LOC   312.074                 0                   312.074   100,00%
+  ----------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+### Observações
+
+-   Os campos MUN, BRR e ARE_LOC apresentaram completude total.
+-   O campo LGRD apresentou perdas pontuais (≈0,03%), sem impacto
+    estrutural relevante.
+-   O campo CEP registrou aproximadamente 0,11% de ausência, indicando
+    lacunas limitadas na padronização dos dados de endereçamento.
+-   De forma geral, o Bloco 2 apresenta elevada integridade cadastral,
+    compatível com sua função de caracterização geográfica das unidades
+    consumidoras.
