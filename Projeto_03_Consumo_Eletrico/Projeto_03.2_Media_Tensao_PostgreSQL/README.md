@@ -879,6 +879,7 @@ A validação será conduzida por blocos analíticos, conforme a organização c
 
 > Cada bloco será analisado de forma independente, com registro das consultas executadas, padrões identificados e eventuais inconsistências observadas.
 
+---
 <br>
 
 ### 6.1 — Completude dos Campos (Bloco 1 — Identificação e Topologia Elétrica )
@@ -925,6 +926,7 @@ FROM bdgd_media_tensao_stage;
 - O campo SUB apresentou 0,35% de registros nulos, indicando lacunas limitadas na representação da topologia.
 - Destaca-se o campo UNI_TR_AT, com aproximadamente 3,8% de ausência (11.870 registros), sugerindo inconsistências associadas a registros legados ou processos de migração.
 
+---
 <br>
 
 ### 6.2 Completude dos Campos (Bloco 2 — Localização Geográfica )
