@@ -1022,3 +1022,56 @@ FROM bdgd_media_tensao_stage;
 -   O campo SIT_ATIV registrou apenas 2 valores nulos, caracterizando perda residual sem impacto analítico relevante.
 -   O campo DAT_CON apresentou cerca de 0,03% de ausência, sugerindo inconsistências pontuais no histórico contratual.
 -   De forma geral, o Bloco 3 apresenta elevada integridade cadastral, com exceção do campo TIP_CC, que deverá ser tratado com atenção nas etapas posteriores de modelagem e consolidação.
+
+---
+<br>
+
+### 6.4 Completude dos Campos (Bloco 4 — Séries Temporais — Demanda)
+#### Consulta Executada
+
+``` sql
+SELECT
+    COUNT(*) AS total_registros,
+
+    COUNT(DEM_01) AS dem_01_preenchido,
+    COUNT(DEM_02) AS dem_02_preenchido,
+    COUNT(DEM_03) AS dem_03_preenchido,
+    COUNT(DEM_04) AS dem_04_preenchido,
+    COUNT(DEM_05) AS dem_05_preenchido,
+    COUNT(DEM_06) AS dem_06_preenchido,
+    COUNT(DEM_07) AS dem_07_preenchido,
+    COUNT(DEM_08) AS dem_08_preenchido,
+    COUNT(DEM_09) AS dem_09_preenchido,
+    COUNT(DEM_10) AS dem_10_preenchido,
+    COUNT(DEM_11) AS dem_11_preenchido,
+    COUNT(DEM_12) AS dem_12_preenchido
+
+FROM bdgd_media_tensao_stage;
+```
+
+<br>
+
+#### Resultado Obtido
+
+| Campo  | Registros Preenchidos | Registros Ausentes | Total   | Percentual |
+|--------|------------------------|--------------------|---------|------------|
+| DEM_01 | 312.074                | 0                  | 312.074 | 100,00%    |
+| DEM_02 | 312.074                | 0                  | 312.074 | 100,00%    |
+| DEM_03 | 312.074                | 0                  | 312.074 | 100,00%    |
+| DEM_04 | 312.074                | 0                  | 312.074 | 100,00%    |
+| DEM_05 | 312.074                | 0                  | 312.074 | 100,00%    |
+| DEM_06 | 312.074                | 0                  | 312.074 | 100,00%    |
+| DEM_07 | 312.074                | 0                  | 312.074 | 100,00%    |
+| DEM_08 | 312.074                | 0                  | 312.074 | 100,00%    |
+| DEM_09 | 312.074                | 0                  | 312.074 | 100,00%    |
+| DEM_10 | 312.074                | 0                  | 312.074 | 100,00%    |
+| DEM_11 | 312.074                | 0                  | 312.074 | 100,00%    |
+| DEM_12 | 312.074                | 0                  | 312.074 | 100,00%    |
+
+---
+
+#### Observações
+
+-   Todos os campos referentes às séries temporais de demanda (DEM_01 a DEM_12) apresentaram completude total.
+-   Não foram identificados registros ausentes ao longo dos 12 meses analisados.
+-   O Bloco 4 demonstra elevada consistência cadastral, assegurando confiabilidade para análises temporais, modelagens de carga e estudos de sazonalidade.
