@@ -1075,3 +1075,56 @@ FROM bdgd_media_tensao_stage;
 -   Todos os campos referentes às séries temporais de demanda (DEM_01 a DEM_12) apresentaram completude total.
 -   Não foram identificados registros ausentes ao longo dos 12 meses analisados.
 -   O Bloco 4 demonstra elevada consistência cadastral, assegurando confiabilidade para análises temporais, modelagens de carga e estudos de sazonalidade.
+
+---
+<br>
+
+### 6.5 Completude dos Campos (Bloco 5 — Séries Temporais — Energia)
+#### Consulta Executada
+
+```sql
+SELECT
+    COUNT(*) AS total_registros,
+
+    COUNT(ENE_01) AS ene_01_preenchido,
+    COUNT(ENE_02) AS ene_02_preenchido,
+    COUNT(ENE_03) AS ene_03_preenchido,
+    COUNT(ENE_04) AS ene_04_preenchido,
+    COUNT(ENE_05) AS ene_05_preenchido,
+    COUNT(ENE_06) AS ene_06_preenchido,
+    COUNT(ENE_07) AS ene_07_preenchido,
+    COUNT(ENE_08) AS ene_08_preenchido,
+    COUNT(ENE_09) AS ene_09_preenchido,
+    COUNT(ENE_10) AS ene_10_preenchido,
+    COUNT(ENE_11) AS ene_11_preenchido,
+    COUNT(ENE_12) AS ene_12_preenchido
+
+FROM bdgd_media_tensao_stage;
+```
+
+<br>
+
+#### Resultado Obtido
+
+| Campo  | Registros Preenchidos | Registros Ausentes | Total   | Percentual |
+|--------|------------------------|--------------------|---------|------------|
+| ENE_01 | 312.074                | 0                  | 312.074 | 100,00%    |
+| ENE_02 | 312.074                | 0                  | 312.074 | 100,00%    |
+| ENE_03 | 312.074                | 0                  | 312.074 | 100,00%    |
+| ENE_04 | 312.074                | 0                  | 312.074 | 100,00%    |
+| ENE_05 | 312.074                | 0                  | 312.074 | 100,00%    |
+| ENE_06 | 312.074                | 0                  | 312.074 | 100,00%    |
+| ENE_07 | 312.074                | 0                  | 312.074 | 100,00%    |
+| ENE_08 | 312.074                | 0                  | 312.074 | 100,00%    |
+| ENE_09 | 312.074                | 0                  | 312.074 | 100,00%    |
+| ENE_10 | 312.074                | 0                  | 312.074 | 100,00%    |
+| ENE_11 | 312.074                | 0                  | 312.074 | 100,00%    |
+| ENE_12 | 312.074                | 0                  | 312.074 | 100,00%    |
+
+---
+
+#### Observações
+
+- Todos os campos referentes às séries temporais de energia (ENE_01 a ENE_12) apresentaram completude total.
+- Não foram identificados registros ausentes ao longo dos 12 meses analisados.
+- O Bloco 5 demonstra elevada integridade cadastral, assegurando confiabilidade para análises de consumo, modelagens energéticas e estudos de sazonalidade.
