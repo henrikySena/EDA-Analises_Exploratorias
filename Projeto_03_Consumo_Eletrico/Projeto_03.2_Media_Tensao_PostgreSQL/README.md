@@ -969,3 +969,56 @@ FROM bdgd_media_tensao_stage;
 -   De forma geral, o Bloco 2 apresenta elevada integridade cadastral,
     compatível com sua função de caracterização geográfica das unidades
     consumidoras.
+
+---
+<br>
+
+### 6.3 Completude dos Campos (Bloco 3 — Perfil Econômico, Tarifário e Técnico)
+#### Consulta Executada
+
+``` sql
+SELECT
+    COUNT(*) AS total_registros,
+
+    COUNT(CLAS_SUB)  AS clas_sub_preenchido,
+    COUNT(CNAE)      AS cnae_preenchido,
+    COUNT(TIP_CC)    AS tip_cc_preenchido,
+    COUNT(FAS_CON)   AS fas_con_preenchido,
+    COUNT(GRU_TEN)   AS gru_ten_preenchido,
+    COUNT(TEN_FORN)  AS ten_forn_preenchido,
+    COUNT(GRU_TAR)   AS gru_tar_preenchido,
+    COUNT(SIT_ATIV)  AS sit_ativ_preenchido,
+    COUNT(LIV)       AS liv_preenchido,
+    COUNT(CAR_INST)  AS car_inst_preenchido,
+    COUNT(DAT_CON)   AS dat_con_preenchido
+
+FROM bdgd_media_tensao_stage;
+```
+
+<br>
+
+#### Resultado Obtido
+
+| Campo     | Registros Preenchidos | Registros Ausentes | Total   | Percentual |
+|-----------|------------------------|--------------------|---------|------------|
+| CLAS_SUB  | 312.074                | 0                  | 312.074 | 100,00%    |
+| CNAE      | 312.074                | 0                  | 312.074 | 100,00%    |
+| TIP_CC    | 308.103                | 3.971              | 312.074 | 98,73%     |
+| FAS_CON   | 312.074                | 0                  | 312.074 | 100,00%    |
+| GRU_TEN   | 312.074                | 0                  | 312.074 | 100,00%    |
+| TEN_FORN  | 312.074                | 0                  | 312.074 | 100,00%    |
+| GRU_TAR   | 312.074                | 0                  | 312.074 | 100,00%    |
+| SIT_ATIV  | 312.072                | 2                  | 312.074 | 99,99%     |
+| LIV       | 312.074                | 0                  | 312.074 | 100,00%    |
+| CAR_INST  | 312.074                | 0                  | 312.074 | 100,00%    |
+| DAT_CON   | 311.965                | 109                | 312.074 | 99,97%     |
+
+---
+
+#### Observações
+
+-   Os campos CLAS_SUB, CNAE, FAS_CON, GRU_TEN, TEN_FORN, GRU_TAR, LIV e CAR_INST apresentaram completude total.
+-   O campo TIP_CC apresentou aproximadamente 1,27% de registros ausentes (3.971 ocorrências), indicando lacunas relevantes na classificação do tipo de consumidor.
+-   O campo SIT_ATIV registrou apenas 2 valores nulos, caracterizando perda residual sem impacto analítico relevante.
+-   O campo DAT_CON apresentou cerca de 0,03% de ausência, sugerindo inconsistências pontuais no histórico contratual.
+-   De forma geral, o Bloco 3 apresenta elevada integridade cadastral, com exceção do campo TIP_CC, que deverá ser tratado com atenção nas etapas posteriores de modelagem e consolidação.
