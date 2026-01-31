@@ -1210,5 +1210,19 @@ FROM bdgd_media_tensao_stage;
 
 - Todos os campos das séries DIC e FIC apresentaram completude total.
 - O campo SEMRED também apresentou preenchimento integral.
-- O campo DESCR apresentou aproximadamente 53,85% de ausência.
-> Apesar disso, o bloco mantém elevada relevância operacional.
+- O campo DESCR apresentou aproximadamente 53,85% de ausência, indicando baixa padronização e utilização limitada no conjunto analisado, o que reduz sua relevância analítica nesta etapa.
+
+<br>
+
+### Conclusão da Etapa 6 — Validação de Domínios e Qualidade dos Dados
+
+A Etapa 6 evidenciou elevada integridade estrutural e informacional da tabela `bdgd_media_tensao_stage`, com altos níveis de completude na maioria dos campos analisados.
+
+Os blocos relacionados à identificação, localização, séries temporais de demanda e energia apresentaram consistência plena, assegurando confiabilidade para análises históricas, operacionais e regulatórias.
+
+As ausências observadas concentram-se em campos específicos, como `UNI_TR_AT`, `TIP_CC` e `DESCR`, indicando impactos pontuais associados a processos legados, heterogeneidade cadastral ou uso inconsistente ao longo do tempo.
+
+De forma geral, o dataset demonstra maturidade técnica adequada para as próximas etapas de tipagem, modelagem e consolidação, estando apto para usos analíticos e decisórios com elevado grau de confiabilidade.
+
+---
+<br>
