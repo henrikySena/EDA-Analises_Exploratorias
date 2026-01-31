@@ -1132,4 +1132,83 @@ FROM bdgd_media_tensao_stage;
 ---
 <br>
 
+### 6.6 Completude dos Campos (Bloco 6 — Continuidade e Controle)
+#### Consulta Executada
 
+```sql
+SELECT
+    COUNT(*) AS total_registros,
+
+    COUNT(DIC_01) AS dic_01_preenchido,
+    COUNT(DIC_02) AS dic_02_preenchido,
+    COUNT(DIC_03) AS dic_03_preenchido,
+    COUNT(DIC_04) AS dic_04_preenchido,
+    COUNT(DIC_05) AS dic_05_preenchido,
+    COUNT(DIC_06) AS dic_06_preenchido,
+    COUNT(DIC_07) AS dic_07_preenchido,
+    COUNT(DIC_08) AS dic_08_preenchido,
+    COUNT(DIC_09) AS dic_09_preenchido,
+    COUNT(DIC_10) AS dic_10_preenchido,
+    COUNT(DIC_11) AS dic_11_preenchido,
+    COUNT(DIC_12) AS dic_12_preenchido,
+
+    COUNT(FIC_01) AS fic_01_preenchido,
+    COUNT(FIC_02) AS fic_02_preenchido,
+    COUNT(FIC_03) AS fic_03_preenchido,
+    COUNT(FIC_04) AS fic_04_preenchido,
+    COUNT(FIC_05) AS fic_05_preenchido,
+    COUNT(FIC_06) AS fic_06_preenchido,
+    COUNT(FIC_07) AS fic_07_preenchido,
+    COUNT(FIC_08) AS fic_08_preenchido,
+    COUNT(FIC_09) AS fic_09_preenchido,
+    COUNT(FIC_10) AS fic_10_preenchido,
+    COUNT(FIC_11) AS fic_11_preenchido,
+    COUNT(FIC_12) AS fic_12_preenchido,
+
+    COUNT(SEMRED) AS semred_preenchido,
+    COUNT(DESCR)  AS descr_preenchido
+
+FROM bdgd_media_tensao_stage;
+```
+
+<br>
+
+#### Resultado Obtido
+
+| Campo   | Registros Preenchidos | Registros Ausentes | Total   | Percentual |
+|---------|------------------------|--------------------|---------|------------|
+| DIC_01  | 312.074 | 0 | 312.074 | 100,00% |
+| DIC_02  | 312.074 | 0 | 312.074 | 100,00% |
+| DIC_03  | 312.074 | 0 | 312.074 | 100,00% |
+| DIC_04  | 312.074 | 0 | 312.074 | 100,00% |
+| DIC_05  | 312.074 | 0 | 312.074 | 100,00% |
+| DIC_06  | 312.074 | 0 | 312.074 | 100,00% |
+| DIC_07  | 312.074 | 0 | 312.074 | 100,00% |
+| DIC_08  | 312.074 | 0 | 312.074 | 100,00% |
+| DIC_09  | 312.074 | 0 | 312.074 | 100,00% |
+| DIC_10  | 312.074 | 0 | 312.074 | 100,00% |
+| DIC_11  | 312.074 | 0 | 312.074 | 100,00% |
+| DIC_12  | 312.074 | 0 | 312.074 | 100,00% |
+| FIC_01  | 312.074 | 0 | 312.074 | 100,00% |
+| FIC_02  | 312.074 | 0 | 312.074 | 100,00% |
+| FIC_03  | 312.074 | 0 | 312.074 | 100,00% |
+| FIC_04  | 312.074 | 0 | 312.074 | 100,00% |
+| FIC_05  | 312.074 | 0 | 312.074 | 100,00% |
+| FIC_06  | 312.074 | 0 | 312.074 | 100,00% |
+| FIC_07  | 312.074 | 0 | 312.074 | 100,00% |
+| FIC_08  | 312.074 | 0 | 312.074 | 100,00% |
+| FIC_09  | 312.074 | 0 | 312.074 | 100,00% |
+| FIC_10  | 312.074 | 0 | 312.074 | 100,00% |
+| FIC_11  | 312.074 | 0 | 312.074 | 100,00% |
+| FIC_12  | 312.074 | 0 | 312.074 | 100,00% |
+| SEMRED  | 312.074 | 0 | 312.074 | 100,00% |
+| DESCR   | 144.023 | 168.051 | 312.074 | 46,15% |
+
+---
+
+#### Observações
+
+- Todos os campos das séries DIC e FIC apresentaram completude total.
+- O campo SEMRED também apresentou preenchimento integral.
+- O campo DESCR apresentou aproximadamente 53,85% de ausência.
+> Apesar disso, o bloco mantém elevada relevância operacional.
