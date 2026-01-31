@@ -1128,3 +1128,8 @@ FROM bdgd_media_tensao_stage;
 - Todos os campos referentes às séries temporais de energia (ENE_01 a ENE_12) apresentaram completude total.
 - Não foram identificados registros ausentes ao longo dos 12 meses analisados.
 - O Bloco 5 demonstra elevada integridade cadastral, assegurando confiabilidade para análises de consumo, modelagens energéticas e estudos de sazonalidade.
+
+---
+<br>
+
+
